@@ -1606,3 +1606,238 @@ Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:18:24) [GET]
 Rendering template within layouts/application
 Rendering annonces/index
 Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:39:25) [GET]
+  [4;36;1mAnnonce Load (1.0ms)[0m   [0;1mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 25ms (View: 16, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:39:26) [GET]
+  [4;35;1mAnnonce Load (0.0ms)[0m   [0mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 12ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:44:41) [GET]
+  [4;36;1mAnnonce Load (1.0ms)[0m   [0;1mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 35ms (View: 27, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:44:42) [GET]
+  [4;35;1mAnnonce Load (1.0ms)[0m   [0mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:44:43) [GET]
+  [4;36;1mAnnonce Load (0.0ms)[0m   [0;1mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 11ms (View: 3, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:46:25) [GET]
+  [4;35;1mAnnonce Load (1.0ms)[0m   [0mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:46:27) [GET]
+  [4;36;1mAnnonce Load (1.0ms)[0m   [0;1mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 10ms (View: 2, DB: 1) | 200 OK [http://localhost/annonces]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:47:45) [GET]
+  [4;35;1mAnnonce Load (0.0ms)[0m   [0mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 14ms (View: 4, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:47:48) [GET]
+  [4;36;1mAnnonce Load (1.0ms)[0m   [0;1mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-21 13:57:03) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 20ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:57:09) [GET]
+  [4;35;1mAnnonce Load (0.0ms)[0m   [0mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/annonces]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 13:57:30) [GET]
+  [4;36;1mAnnonce Load (1.0ms)[0m   [0;1mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 21ms (View: 14, DB: 1) | 200 OK [http://localhost/annonces]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-21 13:57:32) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-21 13:58:59) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+
+ActionView::TemplateError (undefined local variable or method `pages_path' for #<ActionView::Base:0x63da9b8>) on line #14 of app/views/layouts/application.html.erb:
+11: 			<div id="header">
+12: 				<h1>Resasystem</h1>
+13: 				<ul id="header_menu">
+14: 					<li><%= link_to 'Accueil', pages_path %></li>
+15: 					<li><%= link_to 'Les annonces', annonces_path %></li>
+16: 					<li><a href="#" title="Les promotions">Les promotions</a></li>
+17: 					<li id="header_menu-item-end"><a href="#" title="Déposer une annonce">Déposer une annonce</a></li>
+
+    app/views/layouts/application.html.erb:14
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (62.0ms)
+Rendered rescues/_request_and_response (3.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-21 14:02:37) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 15ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 14:02:40) [GET]
+  [4;35;1mAnnonce Load (1.0ms)[0m   [0mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/annonces]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-21 14:02:41) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 4ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 14:02:42) [GET]
+  [4;36;1mAnnonce Load (1.0ms)[0m   [0;1mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 11ms (View: 3, DB: 1) | 200 OK [http://localhost/annonces]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 14:05:24) [GET]
+  [4;35;1mAnnonce Load (0.0ms)[0m   [0mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 10ms (View: 2, DB: 0) | 200 OK [http://localhost/annonces]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 14:07:58) [GET]
+  [4;36;1mAnnonce Load (0.0ms)[0m   [0;1mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 24ms (View: 17, DB: 0) | 200 OK [http://localhost/annonces]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 14:09:00) [GET]
+  [4;35;1mAnnonce Load (0.0ms)[0m   [0mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 11ms (View: 2, DB: 0) | 200 OK [http://localhost/annonces]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 14:10:09) [GET]
+  [4;36;1mAnnonce Load (1.0ms)[0m   [0;1mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 24ms (View: 17, DB: 1) | 200 OK [http://localhost/annonces]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 14:11:08) [GET]
+  [4;35;1mAnnonce Load (1.0ms)[0m   [0mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 27ms (View: 18, DB: 1) | 200 OK [http://localhost/annonces]
+
+
+Processing AnnoncesController#new (for 127.0.0.1 at 2010-03-21 14:11:11) [GET]
+Rendering template within layouts/application
+Rendering annonces/new
+Completed in 26ms (View: 16, DB: 0) | 200 OK [http://localhost/annonces/new]
+
+
+Processing AnnoncesController#create (for 127.0.0.1 at 2010-03-21 14:11:36) [POST]
+  Parameters: {"commit"=>"Create", "annonce"=>{"reference"=>"", "hebergement_id"=>"", "title"=>"Annonce de test", "is_validated"=>"1", "description"=>"Voici le corps de l'annonce de test"}, "authenticity_token"=>"dGCwD/mGruoDZw/uwNPbUedN3FQZCONE0Lhx7w2MAcg="}
+  [4;36;1mAnnonce Create (1.0ms)[0m   [0;1mINSERT INTO "annonces" ("reference", "hebergement_id", "updated_at", "title", "is_validated", "description", "created_at") VALUES('', NULL, '2010-03-21 13:11:36', 'Annonce de test', 't', 'Voici le corps de l''annonce de test', '2010-03-21 13:11:36')[0m
+Redirected to http://localhost:3001/annonces/1
+Completed in 19ms (DB: 1) | 302 Found [http://localhost/annonces]
+
+
+Processing AnnoncesController#show (for 127.0.0.1 at 2010-03-21 14:11:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mAnnonce Load (0.0ms)[0m   [0mSELECT * FROM "annonces" WHERE ("annonces"."id" = 1) [0m
+Rendering template within layouts/application
+Rendering annonces/show
+Completed in 21ms (View: 11, DB: 0) | 200 OK [http://localhost/annonces/1]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 14:11:38) [GET]
+  [4;36;1mAnnonce Load (0.0ms)[0m   [0;1mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 14ms (View: 6, DB: 0) | 200 OK [http://localhost/annonces]
+
+
+Processing AnnoncesController#new (for 127.0.0.1 at 2010-03-21 14:11:41) [GET]
+Rendering template within layouts/application
+Rendering annonces/new
+Completed in 17ms (View: 9, DB: 0) | 200 OK [http://localhost/annonces/new]
+
+
+Processing AnnoncesController#create (for 127.0.0.1 at 2010-03-21 14:12:01) [POST]
+  Parameters: {"commit"=>"Create", "annonce"=>{"reference"=>"", "hebergement_id"=>"", "title"=>"Annonce de test 2", "is_validated"=>"1", "description"=>"le text de l'annonce de test 2"}, "authenticity_token"=>"dGCwD/mGruoDZw/uwNPbUedN3FQZCONE0Lhx7w2MAcg="}
+  [4;35;1mAnnonce Create (1.0ms)[0m   [0mINSERT INTO "annonces" ("reference", "hebergement_id", "updated_at", "title", "is_validated", "description", "created_at") VALUES('', NULL, '2010-03-21 13:12:01', 'Annonce de test 2', 't', 'le text de l''annonce de test 2', '2010-03-21 13:12:01')[0m
+Redirected to http://localhost:3001/annonces/2
+Completed in 23ms (DB: 1) | 302 Found [http://localhost/annonces]
+
+
+Processing AnnoncesController#show (for 127.0.0.1 at 2010-03-21 14:12:01) [GET]
+  Parameters: {"id"=>"2"}
+  [4;36;1mAnnonce Load (1.0ms)[0m   [0;1mSELECT * FROM "annonces" WHERE ("annonces"."id" = 2) [0m
+Rendering template within layouts/application
+Rendering annonces/show
+Completed in 14ms (View: 5, DB: 1) | 200 OK [http://localhost/annonces/2]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 14:12:03) [GET]
+  [4;35;1mAnnonce Load (1.0ms)[0m   [0mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 13ms (View: 5, DB: 1) | 200 OK [http://localhost/annonces]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-21 14:14:15) [GET]
+  [4;36;1mAnnonce Load (1.0ms)[0m   [0;1mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Completed in 14ms (View: 6, DB: 1) | 200 OK [http://localhost/annonces]

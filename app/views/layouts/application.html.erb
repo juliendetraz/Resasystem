@@ -5,15 +5,14 @@
 		<title>Resasystem</title>
 		
 	  <%= stylesheet_link_tag 'style_layout' %>
-		<%= stylesheet_link_tag 'style_homepage' %> 
 	</head>
 	<body>
 		<div id="container">
 			<div id="header">
 				<h1>Resasystem</h1>
 				<ul id="header_menu">
-					<li><a href="#" title="Accueil" class="selected">Accueil</a></li>
-					<li><a href="#" title="Les annonces">Les annonces</a></li>
+					<li><%= link_to 'Accueil', {:action => 'index', :controller => 'pages'} %></li>
+					<li><%= link_to 'Les annonces', annonces_path %></li>
 					<li><a href="#" title="Les promotions">Les promotions</a></li>
 					<li id="header_menu-item-end"><a href="#" title="Déposer une annonce">Déposer une annonce</a></li>
 				</ul>

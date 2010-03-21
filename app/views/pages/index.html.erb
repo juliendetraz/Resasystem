@@ -1,66 +1,33 @@
-<%= stylesheet_link_tag 'style_annonces' %>
+<%= stylesheet_link_tag 'style_homepage' %>
 
 <div id="content_left">
-	<div class="pagination_bar">
-		<div class="pagination_bar_results">
-			<p>14 Résultats trouvés</p>
-		</div> <!-- .pagination_bar_results -->
-		<div class="pagination_bar_pages">
-			<div class="pagination_bar-next">
-				<a href="#" title="Page précédente"><span>Page précédente</span></a>
-			</div>
-			<p>Page : 1 / 3</p>
-			<div class="pagination_bar-prev">
-				<a href="#" title="Page précédente"><span>Page précédente</span></a>
-			</div>
-		</div> <!-- .pagination_bar_pages -->
-	</div> <!-- .pagination_bar -->
-	<div id="list_ads">
-		<%= link_to 'Nouvelle annonce', new_annonce_path %>
-		<% @annonces.each do |annonce| %>
-			<div id="item_ad-1" class="item_ad-container">
-				<div class="item_ad-header">
-					<span class="item-ad-nb">1</span>
-				</div>
-				<div class="item_ad-content">
-					<h2><%=h annonce.title %></h2>
-					<div class="item-ad-left">
-						<h3>Le Beausset (83),  Provence Alpes Côtes d’Azur, France</h3>
-						<p><%=h annonce.description %></p>
-					</div>
-					<div class="item-ad-right">
-						Photo
-					</div>
-				</div>
-				<div class="item_ad-footer">
-					<p><a href="#" title="Voir l'annonce">Voir l'annonce</a></p>
-				</div>
-			</div>
-		<% end %>
-	</div> <!-- #list_ads -->
-	<div class="pagination_bar">
-		<div class="pagination_bar_results">
-			<p>14 Résultats trouvés</p>
-		</div> <!-- .pagination_bar_results -->
-		<div class="pagination_bar_pages">
-			<div class="pagination_bar-next">
-				<a href="#" title="Page précédente"><span>Page précédente</span></a>
-			</div>
-			<p>Page : 1 / 3</p>
-			<div class="pagination_bar-prev">
-				<a href="#" title="Page précédente"><span>Page précédente</span></a>
-			</div>
-		</div> <!-- .pagination_bar_pages -->
-	</div> <!-- .pagination_bar -->
+	<div id="gmap">
+		<img src="images/fake-gmap.jpg" alt="GMap" width="628" height="402" />
+	</div> <!-- #gmap -->
+	<div id="your_favorits-container">
+		<div id="your_favorits-header">
+			<h2>Vos favoris</h2>
+		</div>
+		<div id="your_favorits-content">
+			The content
+		</div>
+		<div id="your_favorits-footer">&nbsp;</div>
+	</div> <!-- #your_favorits-container -->
+	<div id="our_loves-container">
+		<div id="our_loves-header">
+			<h2>Nos coups de coeurs</h2>
+		</div>
+		<div id="our_loves-content">
+			The content
+		</div>
+		<div id="our_loves-footer">&nbsp;</div>
+	</div> <!-- #our_loves-container -->
 </div> <!-- #content_left -->
 <div id="content_right">
 	<div id="search_block-container">
 		<div id="search_block-header">
 			<h2>Rechercher une location</h2>
 		</div>
-		<div id="gmap">
-			<img src="images/fake-gmap-mini.jpg" alt="GMap" width="398" height="348" />
-		</div> <!-- #gmap -->
 		<div id="search_block-content">
 			<form id="search_rent" action="">
 				<p>
@@ -136,4 +103,13 @@
 			</form>
 		</div>
 	</div> <!-- #search_block-container -->
+	<div id="promotions-container">
+		<div id="promotions-header">
+			<h2>Les promotions</h2>
+		</div>
+		<div id="promotions-content">
+			The content
+		</div>
+		<div id="promotions-footer">&nbsp;</div>
+	</div> <!-- #promotions-container -->
 </div> <!-- #content_right -->
