@@ -1,0 +1,217 @@
+body {
+	margin: 0;
+	padding: 0;
+	text-align: center; /* IE Bugfix */
+	width: 100%;
+	color: #565656;
+	font-family: Arial, Tahomas, sans-serif;
+	font-size:78%;
+}
+
+p {
+	padding: 0 0 1em 0;
+	margin: 0;
+}
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+
+/* Page container */
+#container {
+	width: 940px;
+	margin: 0 auto;
+	text-align: left;
+}
+	/* Header bar with menu */
+	#header {
+		height: 68px;
+		margin: 5px 0;
+		background: #fff url(../images/sprite-layout.png) 0 0 no-repeat;
+	}
+		#header h1 {
+			display: none;
+		}
+		#header_menu {
+			padding: 44px 0 0 321px;
+			list-style: none;
+			margin: 0;
+		}
+			#header_menu li {
+				padding: 0 11px;
+				display: block;
+				float: left;
+			}
+				#header_menu li a {
+					text-transform: uppercase;
+					text-decoration: none;
+					font-weight: bold;
+					font-size: 1.1em;
+					padding: 2px 8px;
+					color: #fff;
+				}
+				#header_menu li a:hover, #header_menu li a.selected {
+					background-color: #113356;
+					border-radius: 5px;
+					-moz-border-radius: 5px;
+					-khtml-border-radius: 5px;
+					-webkit-border-radius: 5px;
+				}
+				#header_menu li#header_menu-item-end {
+					padding: 0px 0px 2px 17px;
+				}
+
+	/* Header bar with signup button */
+	#headbar {
+		background: #f3fbea;
+		margin-bottom: 5px;
+		height: 22px;
+	}
+		/* Button to signup */
+		#signup_button {
+			text-align: center;
+			padding-top: 3px;
+			float: right;
+		}
+			#signup_button a {
+				text-transform: uppercase;
+				text-decoration: none;
+				font-weight: bold;
+				color: #fff;
+			}
+				#signup_button a span {
+					background: #f3fbea url(../images/sprite-layout.png) 0 -178px no-repeat;
+					padding: 3px 31px 4px 13px;
+				}
+				#signup_button a span:hover {
+					background: url(../images/sprite-layout.png) -114px -178px no-repeat;
+				}
+
+	/* Page content */
+	#content {
+		margin-bottom: 10px;
+	}
+
+	/* Footer */
+	#footer {
+		height: 110px;
+		background: #eee url(../images/sprite-layout.png) 0 -68px no-repeat;
+	}
+		#footer_lang_switcher {
+			margin: 43px 0 0 73px;
+			float: left;			
+		}
+			/* Flags to switch language in the footer */
+			#footer_lang_switcher ul {
+				list-style: none;
+				padding: 0;
+				margin: 0;
+			}
+				#footer_lang_switcher ul li {
+					margin: 0 5px 0 0;
+					display: block;
+					float: left;
+				}
+					#footer_lang_switcher ul li a span {
+						background-image: url(../images/sprite-layout.png);
+						background-repeat: no-repeat;
+						display: block;
+						height: 12px;
+						width: 14px;
+					}
+						#lang_fr {
+							background-position: 0 -200px;
+						}
+						#lang_en {
+							background-position: -14px -200px;
+						}
+						#lang_it {
+							background-position: -28px -200px;
+						}
+						#lang_nd {
+							background-position: -42px -200px;
+						}
+						#lang_de {
+							background-position: -56px -200px;
+						}
+						#lang_br {
+							background-position: -70px -200px;
+						}
+						#lang_es {
+							background-position: -84px -200px;
+						}
+							#footer_lang_switcher ul li a span span {
+								display: none;
+							}
+
+			/* Links in the footer */
+			#footer_links {
+				margin: 16px 0 0 0;
+			}
+				#footer_links ul {
+					list-style: none;
+					padding: 0;
+					margin: 0;
+				}
+					#footer_links ul li {
+						display: inline;
+					}
+						#footer_links ul li a {
+							color: #39b9ea;
+						}
+						#footer_links ul li a:hover {
+							color: #2d8fb4;
+						}
+
+			/* Copyright BandBCS */
+			#footer_copyright {
+				margin: 34px 0 0 0;
+			}
+				#footer_copyright p {
+					margin: 0;
+				}
+
+		/* Logo BandBCS */
+		#footer_logo_bcs {
+			padding: 43px 0 0 22px;
+		}
+			#footer_logo_bcs a {
+				display: block;
+				height: 49px;
+				width: 41px;
+			}
+				#footer_logo_bcs a span {
+					display: none;
+				}
+				
+				
+				

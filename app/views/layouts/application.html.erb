@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr-FR">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Resasystem</title>
+		
+	  <%= stylesheet_link_tag 'style_layout' %>
+		<%= stylesheet_link_tag 'style_homepage' %> 
+	</head>
+	<body>
+		<div id="container">
+			<div id="header">
+				<h1>Resasystem</h1>
+				<ul id="header_menu">
+					<li><a href="#" title="Accueil" class="selected">Accueil</a></li>
+					<li><a href="#" title="Les annonces">Les annonces</a></li>
+					<li><a href="#" title="Les promotions">Les promotions</a></li>
+					<li id="header_menu-item-end"><a href="#" title="Déposer une annonce">Déposer une annonce</a></li>
+				</ul>
+			</div> <!-- #header -->
+			<div id="headbar">
+				<div id="signup_button">
+					<a href="#" title="S'identifier"><span>S'identifier</span></a>
+				</div>
+			</div> <!-- #headbar -->
+			<div id="content">
+				<%= yield %>
+			</div> <!-- #content -->
+			<div id="footer">
+				<div id="footer_lang_switcher">
+					<ul>
+						<li><a href="#" title="Français"><span id="lang_fr"><span>Français</span></span></a></li>
+						<li><a href="#" title="English"><span id="lang_en"><span>English</span></span></a></li>
+						<li><a href="#" title="Italiano"><span id="lang_it"><span>Italiano</span></span></a></li>
+						<li><a href="#" title="Nederland"><span id="lang_nd"><span>Nederland</span></span></a></li>
+						<li><a href="#" title="Deutch"><span id="lang_de"><span>Deutch</span></span></a></li>
+						<li><a href="#" title="Brasilia"><span id="lang_br"><span>Brasilia</span></span></a></li>
+						<li><a href="#" title="Español"><span id="lang_es"><span>Español</span></span></a></li>
+					</ul>
+					<div id="footer_links">
+						<ul>
+							<li><a href="#" title="Qui sommes nous">Qui sommes nous</a> | </li>
+							<li><a href="#" title="Partenaires">Partenaires</a> | </li>
+							<li><a href="#" title="Conditions générales de ventes">Conditions générales de ventes</a> | </li>
+							<li><a href="#" title="Données personnelles">Données personnelles</a> | </li>
+							<li><a href="#" title="Contact">Contact</a> | </li>
+							<li><a href="#" title="Annulation de réservation">Annulation de réservation</a></li>
+						</ul>
+					</div> <!-- #footer_links -->
+					<div id="footer_copyright">
+						<p>BandBCS // Resasystem - Copyright &copy; 2009-2010 - Tous droits réservés</p>
+					</div> <!-- #footer_copyright -->
+				</div> <!-- #footer_lang_switcher -->
+				<div id="footer_logo_bcs"><a href="#" title="Band BCS"><span>Band BCS</span></a></div>
+			</div> <!-- #footer -->
+		</div> <!-- #container -->
+	</body>
+</html>

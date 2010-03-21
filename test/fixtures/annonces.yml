@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  reference: MyString
+  title: MyString
+  description: MyText
+  is_validated: false
+  hebergement_id: 1
+
+two:
+  reference: MyString
+  title: MyString
+  description: MyText
+  is_validated: false
+  hebergement_id: 1

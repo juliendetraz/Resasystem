@@ -1,0 +1,28 @@
+<h1>Listing annonces</h1>
+
+<table>
+  <tr>
+    <th>Reference</th>
+    <th>Title</th>
+    <th>Description</th>
+    <th>Is validated</th>
+    <th>Hebergement</th>
+  </tr>
+
+<% @annonces.each do |annonce| %>
+  <tr>
+    <td><%=h annonce.reference %></td>
+    <td><%=h annonce.title %></td>
+    <td><%=h annonce.description %></td>
+    <td><%=h annonce.is_validated %></td>
+    <td><%=h annonce.hebergement_id %></td>
+    <td><%= link_to 'Show', annonce %></td>
+    <td><%= link_to 'Edit', edit_annonce_path(annonce) %></td>
+    <td><%= link_to 'Destroy', annonce, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New annonce', new_annonce_path %>
