@@ -1,0 +1,14 @@
+<p>
+  <b>Hebergement:</b>
+  <%=h @hebergement.hebergement_id %>
+</p>
+
+<p>
+  <b>Offre:</b>
+  <%=h @hebergement.offre_id %>
+</p>
+
+<%= link_to 'Nouvelle offre pour cet hébergement', new_offre_path(:hebergement_id => @hebergement.hebergement_id) %>
+
+<%= link_to 'Edit', edit_hebergement_path(@hebergement) %> |
+<%= link_to 'Back', hebergements_path %>

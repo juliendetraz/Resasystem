@@ -1,0 +1,79 @@
+<p>
+  <b>Hebergement:</b>
+  <%=h @offre.hebergement_id %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%=h @offre.address_id %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @offre.user_id %>
+</p>
+
+<p>
+  <b>Phone contact:</b>
+  <%=h @offre.phone_contact %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%=h @offre.email %>
+</p>
+
+<p>
+  <b>Website:</b>
+  <%=h @offre.website %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @offre.name %>
+</p>
+
+<p>
+  <b>Is visible:</b>
+  <%=h @offre.is_visible %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @offre.type %>
+</p>
+
+<p>
+  <b>Url alias:</b>
+  <%=h @offre.url_alias %>
+</p>
+
+<p>
+  <b>Distance commerce:</b>
+  <%=h @offre.distance_commerce %>
+</p>
+
+<p>
+  <b>Distance train:</b>
+  <%=h @offre.distance_train %>
+</p>
+
+<p>
+  <b>Distance transport:</b>
+  <%=h @offre.distance_transport %>
+</p>
+
+<p>
+  <b>Gmap latitude:</b>
+  <%=h @offre.gmap_latitude %>
+</p>
+
+<p>
+  <b>Gmap longitude:</b>
+  <%=h @offre.gmap_longitude %>
+</p>
+
+<%= link_to 'Nouvelle annonce pour cette offre', new_annonce_path(:hebergement_id => @offre.hebergement_id) %>
+
+<%= link_to 'Edit', edit_offre_path(@offre) %> |
+<%= link_to 'Back', offres_path %>
