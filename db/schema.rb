@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100321120609) do
+ActiveRecord::Schema.define(:version => 20100325164621) do
 
   create_table "annonces", :force => true do |t|
     t.string   "reference"
@@ -17,6 +17,33 @@ ActiveRecord::Schema.define(:version => 20100321120609) do
     t.text     "description"
     t.boolean  "is_validated"
     t.integer  "hebergement_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "hebergements", :force => true do |t|
+    t.integer  "hebergement_id"
+    t.integer  "offre_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "offres", :force => true do |t|
+    t.integer  "hebergement_id"
+    t.integer  "address_id"
+    t.integer  "user_id"
+    t.string   "phone_contact"
+    t.string   "email"
+    t.string   "website"
+    t.string   "name"
+    t.string   "is_visible"
+    t.string   "type"
+    t.string   "url_alias"
+    t.string   "distance_commerce"
+    t.string   "distance_train"
+    t.string   "distance_transport"
+    t.string   "gmap_latitude"
+    t.string   "gmap_longitude"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

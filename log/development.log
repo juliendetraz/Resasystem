@@ -2676,3 +2676,168 @@ Rendered annonces/_pagination_bar (6.0ms)
 Rendered annonces/_pagination_bar (1.0ms)
 Rendered layouts/_sidebar_search (0.0ms)
 Completed in 21ms (View: 16, DB: 1) | 200 OK [http://localhost/annonces]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-25 17:38:29) [GET]
+  [4;35;1mAnnonce Load (0.0ms)[0m   [0mSELECT * FROM "annonces" [0m
+Rendering template within layouts/application
+Rendering annonces/index
+Rendered annonces/_pagination_bar (0.0ms)
+Rendered annonces/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 25ms (View: 11, DB: 0) | 200 OK [http://localhost/annonces]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-25 17:38:36) [GET]
+
+ActionController::RoutingError (No route matches "/offre" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-25 17:39:00) [GET]
+
+ActionController::RoutingError (No route matches "/offre" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing OffresController#index (for 127.0.0.1 at 2010-03-25 17:39:04) [GET]
+  [4;36;1mOffre Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: offres: SELECT * FROM "offres" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: offres: SELECT * FROM "offres" ):
+  app/controllers/offres_controller.rb:5:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (75.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("annonces")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offres")[0m
+
+
+Processing OffresController#index (for 127.0.0.1 at 2010-03-25 17:39:52) [GET]
+  [4;35;1mOffre Load (0.0ms)[0m   [0mSELECT * FROM "offres" [0m
+Rendering template within layouts/offres
+Rendering offres/index
+Completed in 3404ms (View: 3396, DB: 0) | 200 OK [http://localhost/offres]
+
+
+Processing OffresController#new (for 127.0.0.1 at 2010-03-25 17:40:01) [GET]
+Rendering template within layouts/offres
+Rendering offres/new
+Completed in 29ms (View: 19, DB: 0) | 200 OK [http://localhost/offres/new]
+
+
+Processing OffresController#new (for 127.0.0.1 at 2010-03-25 17:40:35) [GET]
+Rendering template within layouts/offres
+Rendering offres/new
+Completed in 26ms (View: 16, DB: 0) | 200 OK [http://localhost/offres/new]
+
+
+Processing OffresController#create (for 127.0.0.1 at 2010-03-25 17:42:35) [POST]
+  Parameters: {"commit"=>"Create", "offre"=>{"url_alias"=>"Meiss blog", "is_visible"=>"", "name"=>"Jonathan Meiss", "gmap_latitude"=>"48.797887", "type"=>"gite", "phone_contact"=>"0610339598", "distance_commerce"=>"3", "website"=>"www.meiss.fr", "distance_train"=>"15", "gmap_longitude"=>"2.382428", "distance_transport"=>"1", "email"=>"jonathan@meiss.fr"}, "authenticity_token"=>"H2mjxKTL2Lhk0Se/cOeN/UhonGj/Eqiz1EWsQ4QoOJc="}
+WARNING: Can't mass-assign these protected attributes: type
+  [4;36;1mOffre Create (1.0ms)[0m   [0;1mINSERT INTO "offres" ("name", "is_visible", "url_alias", "hebergement_id", "updated_at", "phone_contact", "type", "gmap_latitude", "website", "distance_commerce", "address_id", "user_id", "distance_train", "distance_transport", "gmap_longitude", "email", "created_at") VALUES('Jonathan Meiss', '', 'Meiss blog', NULL, '2010-03-25 16:42:35', '0610339598', NULL, '48.797887', 'www.meiss.fr', '3', NULL, NULL, '15', '1', '2.382428', 'jonathan@meiss.fr', '2010-03-25 16:42:35')[0m
+Redirected to http://localhost:3000/offres/1
+Completed in 52ms (DB: 1) | 302 Found [http://localhost/offres]
+
+
+Processing OffresController#show (for 127.0.0.1 at 2010-03-25 17:42:36) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mOffre Load (0.0ms)[0m   [0mSELECT * FROM "offres" WHERE ("offres"."id" = 1) [0m
+Rendering template within layouts/offres
+Rendering offres/show
+Completed in 17ms (View: 10, DB: 0) | 200 OK [http://localhost/offres/1]
+
+
+Processing OffresController#index (for 127.0.0.1 at 2010-03-25 17:42:40) [GET]
+  [4;36;1mOffre Load (0.0ms)[0m   [0;1mSELECT * FROM "offres" [0m
+Rendering template within layouts/offres
+Rendering offres/index
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/offres]
+
+
+Processing OffresController#show (for 127.0.0.1 at 2010-03-25 17:42:44) [GET]
+  Parameters: {"id"=>"1"}
+  [4;35;1mOffre Load (1.0ms)[0m   [0mSELECT * FROM "offres" WHERE ("offres"."id" = 1) [0m
+Rendering template within layouts/offres
+Rendering offres/show
+Completed in 11ms (View: 4, DB: 1) | 200 OK [http://localhost/offres/1]
+
+
+Processing OffresController#show (for 127.0.0.1 at 2010-03-25 17:45:34) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mOffre Load (0.0ms)[0m   [0;1mSELECT * FROM "offres" WHERE ("offres"."id" = 1) [0m
+Rendering template within layouts/offres
+Rendering offres/show
+Completed in 19ms (View: 10, DB: 0) | 200 OK [http://localhost/offres/1]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("annonces")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("hebergements")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offres")[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-25 17:56:17) [GET]
+
+ActionController::RoutingError (No route matches "/hebergement" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing HebergementsController#index (for 127.0.0.1 at 2010-03-25 17:56:20) [GET]
+  [4;35;1mHebergement Load (1.0ms)[0m   [0mSELECT * FROM "hebergements" [0m
+Rendering template within layouts/hebergements
+Rendering hebergements/index
+Completed in 20ms (View: 15, DB: 1) | 200 OK [http://localhost/hebergements]
+
+
+Processing HebergementsController#new (for 127.0.0.1 at 2010-03-25 17:56:24) [GET]
+Rendering template within layouts/hebergements
+Rendering hebergements/new
+Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/hebergements/new]
