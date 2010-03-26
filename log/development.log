@@ -3860,3 +3860,57 @@ Processing AdsController#new (for 127.0.0.1 at 2010-03-26 15:51:51) [GET]
 Rendering template within layouts/application
 Rendering ads/new
 Completed in 60ms (View: 55, DB: 0) | 200 OK [http://localhost/ads/new]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 16:05:10) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 18ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 16:05:58) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 16:06:38) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 16:06:42) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 16:08:24) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 16:08:53) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 16:10:17) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 16:11:13) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 15ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 16:28:27) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]

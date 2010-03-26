@@ -138,15 +138,19 @@ fr:
         even: "doit être pair"
         record_invalid: "La validation a échoué : {{errors}}"
 
+  homepage:
+    homepage: Accueil
+
   pagination_bar:
     results_found: résultats trouvés
     page_prev: Page précédente
     page_next: Page suivante
     page: Page
     
-  annonces:
-    new_annonce: Nouvelle annonce
-    view_annonce: Voir l'annonce
+  ads:
+    new_ad: Nouvelle annonce
+    view_ad: Voir l'annonce
+    ads: Les annonces
     
     
     

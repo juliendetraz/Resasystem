@@ -58,9 +58,15 @@ p {
 		margin: 5px 0;
 		background: #fff url(../images/sprite-layout.png) 0 0 no-repeat;
 	}
-		#header h1 {
-			display: none;
-		}
+    #header span {
+      display: block;
+      width: 250px;
+      height: 65px;
+      float: left;
+    }
+  		#header h1 {
+  			display: none;
+  		}
 		#header_menu {
 			padding: 44px 0 0 321px;
 			list-style: none;
