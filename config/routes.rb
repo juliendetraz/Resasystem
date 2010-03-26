@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :hebergements
-  map.resources :offres
-  map.resources :annonces
+  map.resources :offers
+  map.resources :housings
+  map.resources :ads
 
   # The priority is based upon order of creation: first created -> highest priority.
 

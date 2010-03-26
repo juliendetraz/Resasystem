@@ -3433,3 +3433,430 @@ Migrating to RenameHebergementToOffer (20100326135518)
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ad")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer")[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 15:22:23) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 80ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AnnoncesController#index (for 127.0.0.1 at 2010-03-26 15:22:29) [GET]
+  [4;36;1mAnnonce Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: annonces: SELECT * FROM "annonces" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: annonces: SELECT * FROM "annonces" ):
+  app/controllers/annonces_controller.rb:5:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (55.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 15:30:11) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 15:31:02) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 10ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 15:31:11) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 79ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 15:31:14) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 3ms (View: 2, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-03-26 15:31:20) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSQLite3::SQLException: no such table: ads: SELECT * FROM "ads" [0m
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such table: ads: SELECT * FROM "ads" ):
+  app/controllers/ads_controller.rb:5:in `index'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (36.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (25.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "annonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "hebergement_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321120609')[0m
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+Migrating to RenameAnnoncesToAds (20100326131438)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE annonces RENAME TO ads[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ads")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "ads"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_ads"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "ads" ADD "ad_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOffresToHousings (20100326132108)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE offres RENAME TO housingss[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (35.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (25.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "annonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "hebergement_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321120609')[0m
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+Migrating to RenameAnnoncesToAds (20100326131438)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE annonces RENAME TO ads[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ads")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "ads"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_ads"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "ads" ADD "ad_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOffresToHousings (20100326132108)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE offres RENAME TO housings[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "housings" ADD "housings_id" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housings" ADD "has_elevator" boolean[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "housings" ADD "floor" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housings" ADD "capacity" integer[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "housings" ADD "is_visible" boolean[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326132108')[0m
+Migrating to RenameHebergementsToOffers (20100326135518)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE hebergements RENAME TO offerss[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (25.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "annonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "hebergement_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321120609')[0m
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+Migrating to RenameAnnoncesToAds (20100326131438)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE annonces RENAME TO ads[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ads")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "ads"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_ads")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "altered_ads"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "ads" ADD "ad_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOffresToHousings (20100326132108)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE offres RENAME TO housings[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housings" ADD "housings_id" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housings" ADD "has_elevator" boolean[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housings" ADD "floor" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housings" ADD "capacity" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housings" ADD "is_visible" boolean[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326132108')[0m
+Migrating to RenameHebergementsToOffers (20100326135518)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE hebergements RENAME TO offers[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "offers"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "offers"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "offers" ADD "price_id" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "offers" ADD "calendar_id" int[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326135518')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-03-26 15:36:34) [GET]
+  [4;35;1mAd Load (1.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (8.0ms)
+
+ActionView::TemplateError (undefined local variable or method `new_annonce_path' for #<ActionView::Base:0x5d7729c>) on line #7 of app/views/ads/index.html.erb:
+4:   <%= render :partial => "pagination_bar" %>
+5: 
+6: 	<div id="list_ads">
+7: 		<%= link_to t("annonces.new_annonce"), new_annonce_path %>
+8: 
+9: 		<% @annonces.each do |annonce| %>
+10: 			<div id="item_ad-1" class="item_ad-container">
+
+    app/views/ads/index.html.erb:7
+    app/controllers/ads_controller.rb:7:in `index'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (89.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-03-26 15:40:14) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (5.0ms)
+Rendered ads/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (12.0ms)
+Completed in 33ms (View: 27, DB: 0) | 200 OK [http://localhost/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-26 15:40:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 15:40:21) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 4ms (View: 1, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-03-26 15:40:24) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (5.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 13ms (View: 9, DB: 0) | 200 OK [http://localhost/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-26 15:40:25) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-03-26 15:41:40) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (5.0ms)
+Rendered ads/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 14ms (View: 9, DB: 0) | 200 OK [http://localhost/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-26 15:41:42) [GET]
+
+ActionController::RoutingError (No route matches "/images/sprite-advertisements.png" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-03-26 15:41:43) [GET]
+
+ActionController::RoutingError (No route matches "/images/sprite-advertisements.png" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-03-26 15:41:57) [GET]
+  [4;35;1mAd Load (0.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (51.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 59ms (View: 55, DB: 0) | 200 OK [http://localhost/ads]
+
+
+Processing AdsController#new (for 127.0.0.1 at 2010-03-26 15:42:07) [GET]
+Rendering template within layouts/application
+Rendering ads/new
+
+ActionView::TemplateError (undefined method `hebergement_id' for #<Ad:0x5eb8de0>) on line #24 of app/views/ads/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :hebergement_id %><br />
+24:     <%= f.text_field :hebergement_id %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/ads/new.html.erb:24
+    app/views/ads/new.html.erb:3
+    app/controllers/ads_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-03-26 15:44:21) [GET]
+  [4;36;1mAd Load (0.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (60.0ms)
+Rendered ads/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (5.0ms)
+Completed in 106ms (View: 91, DB: 0) | 200 OK [http://localhost/ads]
+
+
+Processing AdsController#new (for 127.0.0.1 at 2010-03-26 15:44:24) [GET]
+Rendering template within layouts/application
+Rendering ads/new
+
+ActionView::TemplateError (undefined method `hebergement_id' for #<Ad:0x5efa4ac>) on line #24 of app/views/ads/new.html.erb:
+21:   </p>
+22:   <p>
+23:     <%= f.label :hebergement_id %><br />
+24:     <%= f.text_field :hebergement_id %>
+25:   </p>
+26:   <p>
+27:     <%= f.submit 'Create' %>
+
+    app/views/ads/new.html.erb:24
+    app/views/ads/new.html.erb:3
+    app/controllers/ads_controller.rb:29:in `new'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-03-26 15:51:47) [GET]
+  [4;35;1mAd Load (1.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (7.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/ads]
+
+
+Processing AdsController#new (for 127.0.0.1 at 2010-03-26 15:51:51) [GET]
+Rendering template within layouts/application
+Rendering ads/new
+Completed in 60ms (View: 55, DB: 0) | 200 OK [http://localhost/ads/new]

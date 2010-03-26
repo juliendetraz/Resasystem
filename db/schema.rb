@@ -11,7 +11,7 @@
 
 ActiveRecord::Schema.define(:version => 20100326135518) do
 
-  create_table "ad", :force => true do |t|
+  create_table "ads", :force => true do |t|
     t.string   "reference"
     t.string   "title"
     t.text     "description"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20100326135518) do
     t.integer  "ad_id"
   end
 
-  create_table "housing", :force => true do |t|
+  create_table "housings", :force => true do |t|
     t.integer  "address_id"
     t.integer  "user_id"
     t.string   "phone_contact"
@@ -36,15 +36,15 @@ ActiveRecord::Schema.define(:version => 20100326135518) do
     t.string   "distance_transport"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "housing_id"
+    t.integer  "housings_id"
     t.boolean  "has_elevator"
     t.integer  "floor"
     t.integer  "capacity"
     t.boolean  "is_visible"
   end
 
-  create_table "offer", :force => true do |t|
-    t.integer  "offer_id"
+  create_table "offers", :force => true do |t|
+    t.integer  "offers_id"
     t.integer  "housing_id"
     t.datetime "created_at"
     t.datetime "updated_at"
