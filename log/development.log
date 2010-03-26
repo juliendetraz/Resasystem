@@ -2841,3 +2841,595 @@ Processing HebergementsController#new (for 127.0.0.1 at 2010-03-25 17:56:24) [GE
 Rendering template within layouts/hebergements
 Rendering hebergements/new
 Completed in 14ms (View: 8, DB: 0) | 200 OK [http://localhost/hebergements/new]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-03-26 14:15:41) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 80ms (View: 78, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (121.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAd (20100326131438)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE annonces RENAME TO ad[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ad")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "ad"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_ad")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_ad"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOfferToHousing (20100326132108)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE offres RENAME TO housing[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "has_elevator" boolean[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "housing" ADD "floor" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "capacity" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326132108')[0m
+Migrating to RenameHebergementToOffer (20100326135518)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE hebergements RENAME TO offer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "offer"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offer")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "altered_offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "offer" ADD "calendar_id" varchar(255)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "offer" ADD "price_id" varchar(255)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: duplicate column name: calendar_id: ALTER TABLE "offer" ADD "calendar_id" int[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAd (20100326131438)
+Migrating to RenameOfferToHousing (20100326132108)
+Migrating to RenameHebergementToOffer (20100326135518)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE hebergements RENAME TO offer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offer")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offer")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "offer" ADD "price_id" varchar(255)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "offer" ADD "calendar_id" int[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326135518')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ad")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAd (20100326131438)
+Migrating to RenameOfferToHousing (20100326132108)
+Migrating to RenameHebergementToOffer (20100326135518)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ad")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (903.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (27.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "annonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "hebergement_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321120609')[0m
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+Migrating to RenameAnnoncesToAd (20100326131438)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE annonces RENAME TO ad[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ad")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "ad"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_ad")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "altered_ad"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "ad" ADD "ad_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOfferToHousing (20100326132108)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE offres RENAME TO housing[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "has_elevator" boolean[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "housing" ADD "floor" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "capacity" integer[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326132108')[0m
+Migrating to RenameHebergementToOffer (20100326135518)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE hebergements RENAME TO offer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mDROP TABLE "offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "offer" ADD "price_id" varchar(255)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "offer" ADD "calendar_id" int[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326135518')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ad")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (847.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (27.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "annonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "hebergement_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321120609')[0m
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+Migrating to RenameAnnoncesToAd (20100326131438)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE annonces RENAME TO ad[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ad")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "ad"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_ad")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "altered_ad"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "ad" ADD "ad_id" integer[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOfferToHousing (20100326132108)
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE offres RENAME TO housing[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "housing" ADD "housing_id" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housing" ADD "has_elevator" boolean[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "housing" ADD "floor" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housing" ADD "capacity" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326132108')[0m
+Migrating to RenameHebergementToOffer (20100326135518)
+  [4;35;1mSQL (5.0ms)[0m   [0mALTER TABLE hebergements RENAME TO offer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "offer"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offer")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "altered_offer"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offer")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "altered_offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "offer" ADD "price_id" varchar(255)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "offer" ADD "calendar_id" int[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326135518')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ad")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (545.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (27.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+  [4;36;1mSQL (2.0ms)[0m   [0;1mCREATE TABLE "annonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "hebergement_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321120609')[0m
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+Migrating to RenameAnnoncesToAd (20100326131438)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE annonces RENAME TO ad[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ad")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "ad"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_ad")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_ad"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "ad" ADD "ad_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOfferToHousing (20100326132108)
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE offres RENAME TO housing[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "housing_id" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housing" ADD "has_elevator" boolean[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "floor" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housing" ADD "capacity" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime, "housing_id" integer, "has_elevator" boolean, "floor" integer, "capacity" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" boolean(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime, "housing_id" integer, "has_elevator" boolean, "floor" integer, "capacity" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326132108')[0m
+Migrating to RenameHebergementToOffer (20100326135518)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE hebergements RENAME TO offer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offer")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offer")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_offer"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "offer" ADD "price_id" varchar(255)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "offer" ADD "calendar_id" int[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326135518')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ad")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1174.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (27.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "annonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "hebergement_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321120609')[0m
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+Migrating to RenameAnnoncesToAd (20100326131438)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE annonces RENAME TO ad[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1mPRAGMA index_list("ad")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "ad"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_ad")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "altered_ad"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "ad" ADD "ad_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOfferToHousing (20100326132108)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE offres RENAME TO housing[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "housing" ADD "housing_id" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housing" ADD "has_elevator" boolean[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "housing" ADD "floor" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housing" ADD "capacity" integer[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime, "housing_id" integer, "has_elevator" boolean, "floor" integer, "capacity" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" boolean(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime, "housing_id" integer, "has_elevator" boolean, "floor" integer, "capacity" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326132108')[0m
+Migrating to RenameHebergementToOffer (20100326135518)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE hebergements RENAME TO offer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offer")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offer")[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mDROP TABLE "altered_offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "offer" ADD "price_id" varchar(255)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "offer" ADD "calendar_id" int[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326135518')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ad")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (40.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (25.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "annonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "hebergement_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321120609')[0m
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+Migrating to RenameAnnoncesToAd (20100326131438)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE annonces RENAME TO ad[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ad")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "ad"[0m
+  [4;36;1mSQL (10.0ms)[0m   [0;1mCREATE TABLE "ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_ad")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "altered_ad"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "ad" ADD "ad_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOfferToHousing (20100326132108)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE offres RENAME TO housing[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "housing_id" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housing" ADD "has_elevator" boolean[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "floor" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housing" ADD "capacity" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "is_visible" boolean[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326132108')[0m
+Migrating to RenameHebergementToOffer (20100326135518)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE hebergements RENAME TO offer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("altered_offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "offer" ADD "price_id" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "offer" ADD "calendar_id" int[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326135518')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("ad")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (42.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (25.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "annonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "hebergement_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321120609')[0m
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+Migrating to RenameAnnoncesToAd (20100326131438)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE annonces RENAME TO ad[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ad")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "ad"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "ad" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_ad")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_ad"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "ad" ADD "ad_id" integer[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOfferToHousing (20100326132108)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE offres RENAME TO housing[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housing"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housing" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housing"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "housing_id" integer[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "housing" ADD "has_elevator" boolean[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "floor" integer[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "housing" ADD "capacity" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housing" ADD "is_visible" boolean[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326132108')[0m
+Migrating to RenameHebergementToOffer (20100326135518)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE hebergements RENAME TO offer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "offer"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offer"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "offer"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offer" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offer")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offer"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "offer" ADD "price_id" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "offer" ADD "calendar_id" int[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326135518')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ad")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer")[0m
