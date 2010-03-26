@@ -1,4 +1,5 @@
 class Housing < ActiveRecord::Base
   belongs_to :offer
-  has_many :ad
+  belongs_to :housing_service
+  belongs_to :ad
 end

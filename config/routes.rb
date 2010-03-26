@@ -1,4 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :housing_pois
+
+  map.resources :housing_services
+
+  map.resources :services
+
   map.resources :offers
   map.resources :housings
   map.resources :ads

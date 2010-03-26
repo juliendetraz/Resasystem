@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  housing_poi_id: 1
+  housing_id: 1
+  name: MyString
+  distance: 
+
+two:
+  housing_poi_id: 1
+  housing_id: 1
+  name: MyString
+  distance: 
