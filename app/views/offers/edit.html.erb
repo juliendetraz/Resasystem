@@ -1,0 +1,28 @@
+<h1>Editing offer</h1>
+
+<% form_for(@offer) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :offer_id %><br />
+    <%= f.text_field :offer_id %>
+  </p>
+  <p>
+    <%= f.label :housing_id %><br />
+    <%= f.text_field :housing_id %>
+  </p>
+  <p>
+    <%= f.label :calendar_id %><br />
+    <%= f.text_field :calendar_id %>
+  </p>
+  <p>
+    <%= f.label :price_id %><br />
+    <%= f.text_field :price_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @offer %> |
+<%= link_to 'Back', offers_path %>
