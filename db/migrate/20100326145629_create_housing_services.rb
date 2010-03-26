@@ -3,7 +3,7 @@ class CreateHousingServices < ActiveRecord::Migration
     create_table :housing_services do |t|
       t.integer :housing_id
       t.integer :service_id
-      t.decimal(5,2) :price
+      t.decimal :price, :precision => 5, :scale => 2
 
       t.timestamps
     end

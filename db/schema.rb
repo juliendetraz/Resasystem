@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100326135518) do
+ActiveRecord::Schema.define(:version => 20100326150121) do
 
   create_table "ads", :force => true do |t|
     t.string   "reference"
@@ -20,6 +20,30 @@ ActiveRecord::Schema.define(:version => 20100326135518) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "ad_id"
+  end
+
+  create_table "housing_pictures", :force => true do |t|
+    t.integer  "housing_id"
+    t.integer  "picture_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "housing_pois", :force => true do |t|
+    t.integer  "housing_poi_id"
+    t.integer  "housing_id"
+    t.string   "name"
+    t.decimal  "distance",       :precision => 5, :scale => 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "housing_services", :force => true do |t|
+    t.integer  "housing_id"
+    t.integer  "service_id"
+    t.decimal  "price",      :precision => 5, :scale => 2
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "housings", :force => true do |t|
@@ -50,6 +74,14 @@ ActiveRecord::Schema.define(:version => 20100326135518) do
     t.datetime "updated_at"
     t.string   "price_id"
     t.integer  "calendar_id"
+  end
+
+  create_table "services", :force => true do |t|
+    t.integer  "service_id"
+    t.string   "service"
+    t.string   "type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

@@ -4,7 +4,7 @@ class CreateHousingPois < ActiveRecord::Migration
       t.integer :housing_poi_id
       t.integer :housing_id
       t.string :name
-      t.decimal(5,2) :distance
+      t.decimal :distance, :precision => 5, :scale => 2
 
       t.timestamps
     end

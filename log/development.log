@@ -3914,3 +3914,43 @@ Processing PagesController#index (for 127.0.0.1 at 2010-03-26 16:28:27) [GET]
 Rendering template within layouts/application
 Rendering pages/index
 Completed in 10ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "service_id" integer, "service" varchar(255), "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326145358')[0m
+Migrating to CreateHousingServices (20100326145629)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "housing_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "housing_id" integer, "service_id" integer, "price" decimal(5,2), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326145629')[0m
+Migrating to CreateHousingPois (20100326145733)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "housing_pois" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "housing_poi_id" integer, "housing_id" integer, "name" varchar(255), "distance" decimal(5,2), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326145733')[0m
+Migrating to CreateHousingPictures (20100326150121)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "housing_pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "housing_id" integer, "picture_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326150121')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ads")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pois")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("services")[0m
