@@ -3954,3 +3954,9 @@ Migrating to CreateHousingPictures (20100326150121)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housings")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("services")[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-04-18 16:33:19) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 67ms (View: 65, DB: 0) | 200 OK [http://localhost/]

@@ -1,4 +1,12 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :dinningrooms
+
+  map.resources :kitchens
+
+  map.resources :bathrooms
+
+  map.resources :bedrooms
+
   map.resources :housing_pictures
 
   map.resources :housing_pois

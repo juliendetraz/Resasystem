@@ -1,9 +1,0 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-one:
-  housing_id: 1
-  picture_id: 1
-
-two:
-  housing_id: 1
-  picture_id: 1
