@@ -1,0 +1,43 @@
+<p>
+  <b>Room:</b>
+  <%=h @bedroom.room_id %>
+</p>
+
+<p>
+  <b>Beds simple quantity:</b>
+  <%=h @bedroom.beds_simple_quantity %>
+</p>
+
+<p>
+  <b>Beds double quantity:</b>
+  <%=h @bedroom.beds_double_quantity %>
+</p>
+
+<p>
+  <b>Beds bunk quantity:</b>
+  <%=h @bedroom.beds_bunk_quantity %>
+</p>
+
+<p>
+  <b>Beds cott quantity:</b>
+  <%=h @bedroom.beds_cott_quantity %>
+</p>
+
+<p>
+  <b>Has shared bathroom:</b>
+  <%=h @bedroom.has_shared_bathroom %>
+</p>
+
+<p>
+  <b>Has shared toilets:</b>
+  <%=h @bedroom.has_shared_toilets %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @bedroom.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_bedroom_path(@bedroom) %> |
+<%= link_to 'Back', bedrooms_path %>

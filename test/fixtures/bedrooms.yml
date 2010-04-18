@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  room_id: 1
+  beds_simple_quantity: 1
+  beds_double_quantity: 1
+  beds_bunk_quantity: 1
+  beds_cott_quantity: 1
+  has_shared_bathroom: false
+  has_shared_toilets: false
+  name: 
+
+two:
+  room_id: 1
+  beds_simple_quantity: 1
+  beds_double_quantity: 1
+  beds_bunk_quantity: 1
+  beds_cott_quantity: 1
+  has_shared_bathroom: false
+  has_shared_toilets: false
+  name: 

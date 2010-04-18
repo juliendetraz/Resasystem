@@ -1,0 +1,23 @@
+<p>
+  <b>Room:</b>
+  <%=h @bathroom.room_id %>
+</p>
+
+<p>
+  <b>Has bath:</b>
+  <%=h @bathroom.has_bath %>
+</p>
+
+<p>
+  <b>Has toilets:</b>
+  <%=h @bathroom.has_toilets %>
+</p>
+
+<p>
+  <b>Has shower:</b>
+  <%=h @bathroom.has_shower %>
+</p>
+
+
+<%= link_to 'Edit', edit_bathroom_path(@bathroom) %> |
+<%= link_to 'Back', bathrooms_path %>

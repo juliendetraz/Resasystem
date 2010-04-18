@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  room_id: 1
+  has_bath: false
+  has_toilets: false
+  has_shower: false
+
+two:
+  room_id: 1
+  has_bath: false
+  has_toilets: false
+  has_shower: false

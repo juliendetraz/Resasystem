@@ -1,4 +1,5 @@
-log/*.log
+log/
+tmp/
 db/*.sqlite3
 .project
 .tmp_*

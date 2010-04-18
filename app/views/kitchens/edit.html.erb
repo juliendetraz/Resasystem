@@ -1,0 +1,20 @@
+<h1>Editing kitchen</h1>
+
+<% form_for(@kitchen) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :room_id %><br />
+    <%= f.text_field :room_id %>
+  </p>
+  <p>
+    <%= f.label :type %><br />
+    <%= f.text_field :type %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @kitchen %> |
+<%= link_to 'Back', kitchens_path %>
