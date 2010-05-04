@@ -22,8 +22,11 @@ ActiveSupport.escape_html_entities_in_json = false
 
 # patch maison pour ruby-postgres sous windows
 # "quote_ident not found"
-unless PGconn.respond_to?("quote_ident")
-  def PGconn.quote_ident(name)
-    %("#{name}")
+if defined?(PGconn)
+  unless PGconn.respond_to?("quote_ident")
+    def PGconn.quote_ident(name)
+      %("#{name}")
+    end
   end
 end
+
