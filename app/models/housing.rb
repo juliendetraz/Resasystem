@@ -1,6 +1,14 @@
 class Housing < ActiveRecord::Base
-  belongs_to :offer
-  belongs_to :housing_service
-  belongs_to :ad
-  belongs_to :housing_pictures
+  has_many :ads
+  has_many :offers
+  has_many :housing_pois
+  has_many :housing_services
+  
+  belongs_to :user
+  belongs_to :address
+  
+  has_and_belongs_to_many :pictures
+  #TODO cette relation n'a pas ete testee il est possible qu'elle ne
+  #fonctionne pas car il y a une double relation entre User et Housing
+  has_and_belongs_to_many :users, :class_name => "Favorites"
 end

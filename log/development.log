@@ -4077,3 +4077,196 @@ Migrating to CreateOrganizationUser (20100505211607)
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("rooms")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("services")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime, "price_id" varchar(255), "calendar_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "offers"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime, "calendar_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offers")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "altered_offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime, "calendar_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "offers"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505215840')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("addresses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ads")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bathrooms")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("bedrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("calendars")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("dinningrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pois")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_user")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("kitchens")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("livingrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("message_usergroups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("messages")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("news")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_prices")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("organization_user")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organizations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("reservations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("room_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("services")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("addresses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bathrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bedrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("calendars")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("dinningrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_pois")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_services")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_user")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("kitchens")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("livingrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("message_usergroups")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("messages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("news")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_prices")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organization_user")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("organizations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("reservations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("room_pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m

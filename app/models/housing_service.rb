@@ -1,4 +1,4 @@
 class HousingService < ActiveRecord::Base
-  has_many :housing
-  has_many :service
+  belongs_to :housing
+  belongs_to :service
 end
