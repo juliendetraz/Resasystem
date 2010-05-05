@@ -3960,3 +3960,120 @@ Processing PagesController#index (for 127.0.0.1 at 2010-04-18 16:33:19) [GET]
 Rendering template within layouts/application
 Rendering pages/index
 Completed in 67ms (View: 65, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-05 21:56:59) [GET]
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 48ms (View: 46, DB: 0) | 200 OK [http://localhost/]
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "bedrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "beds_simple_quantity" integer, "beds_double_quantity" integer, "beds_bunk_quantity" integer, "beds_cott_quantity" integer, "has_shared_bathroom" boolean, "has_shared_toilets" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100418145404')[0m
+Migrating to CreateBathrooms (20100418145527)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "bathrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "has_bath" boolean, "has_toilets" boolean, "has_shower" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100418145527')[0m
+Migrating to CreateKitchens (20100418151322)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "kitchens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100418151322')[0m
+Migrating to CreateDinningrooms (20100418151418)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "dinningrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100418151418')[0m
+Migrating to CreateOfferRooms (20100505194405)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "offer_rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "offer_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505194405')[0m
+Migrating to CreateRooms (20100505194513)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505194513')[0m
+Migrating to CreateRoomPictures (20100505194729)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "room_pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "picture_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505194729')[0m
+Migrating to CreateLivingrooms (20100505194858)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "livingrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505194858')[0m
+Migrating to CreatePictures (20100505195013)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "path" varchar(255), "order" varchar(255), "is_default" boolean, "is_visible" boolean, "is_validated" boolean, "date_validated" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505195013')[0m
+Migrating to CreateAddresses (20100505201058)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "addresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "street" varchar(255), "complement" varchar(255), "zip" varchar(255), "state_province_country" varchar(255), "other_address_details" varchar(255), "city" varchar(255), "country" varchar(255), "gmap_latitude" decimal(10,7), "gmap_longitude" decimal(10,7), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505201058')[0m
+Migrating to CreateOfferPrices (20100505201238)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "offer_prices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "price" decimal(5,2), "season" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505201238')[0m
+Migrating to CreateCalendars (20100505201349)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "calendars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" varchar(255), "start_date" datetime, "end_date" datetime, "availability_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505201349')[0m
+Migrating to CreateReservations (20100505201505)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_id" integer, "calendar_id" integer, "reservation_status" varchar(255), "reservation_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505201505')[0m
+Migrating to CreateUsers (20100505203805)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password" varchar(255), "gender" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "phone_contact" varchar(255), "phone_fax" varchar(255), "phone_mobile" varchar(255), "phone_pro" varchar(255), "phone_home" varchar(255), "role" varchar(255), "is_active" boolean, "language" varchar(255), "has_subscribed" boolean, "firstday_week" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505203805')[0m
+Migrating to CreateOrganizations (20100505205230)
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505205230')[0m
+Migrating to CreateMessages (20100505205623)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "message_usergroup_id" integer, "parent_message" integer, "subject" varchar(255), "body" text, "is_sent" boolean, "is_new" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505205623')[0m
+Migrating to CreateMessageUsergroups (20100505205658)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "message_usergroups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505205658')[0m
+Migrating to CreateNews (20100505205759)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "news" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "language" varchar(255), "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505205759')[0m
+Migrating to CreateHousingUser (20100505211548)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "housing_user" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505211548')[0m
+Migrating to CreateOrganizationUser (20100505211607)
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "organization_user" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505211607')[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("addresses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bathrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bedrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("calendars")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("dinningrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_pois")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_services")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_user")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("kitchens")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("livingrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("message_usergroups")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("messages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("news")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_prices")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organization_user")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("organizations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("reservations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("room_pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m

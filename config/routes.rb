@@ -1,4 +1,32 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :news
+
+  map.resources :message_usergroups
+
+  map.resources :messages
+
+  map.resources :organizations
+
+  map.resources :users
+
+  map.resources :reservations
+
+  map.resources :calendars
+
+  map.resources :offer_prices
+
+  map.resources :addresses
+
+  map.resources :pictures
+
+  map.resources :livingrooms
+
+  map.resources :room_pictures
+
+  map.resources :rooms
+
+  map.resources :offer_rooms
+
   map.resources :dinningrooms
 
   map.resources :kitchens

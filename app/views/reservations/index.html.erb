@@ -1,0 +1,26 @@
+<h1>Listing reservations</h1>
+
+<table>
+  <tr>
+    <th>Customer</th>
+    <th>Calendar</th>
+    <th>Reservation status</th>
+    <th>Reservation date</th>
+  </tr>
+
+<% @reservations.each do |reservation| %>
+  <tr>
+    <td><%=h reservation.customer_id %></td>
+    <td><%=h reservation.calendar_id %></td>
+    <td><%=h reservation.reservation_status %></td>
+    <td><%=h reservation.reservation_date %></td>
+    <td><%= link_to 'Show', reservation %></td>
+    <td><%= link_to 'Edit', edit_reservation_path(reservation) %></td>
+    <td><%= link_to 'Destroy', reservation, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New reservation', new_reservation_path %>

@@ -1,0 +1,48 @@
+<h1>Editing address</h1>
+
+<% form_for(@address) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :street %><br />
+    <%= f.text_field :street %>
+  </p>
+  <p>
+    <%= f.label :complement %><br />
+    <%= f.text_field :complement %>
+  </p>
+  <p>
+    <%= f.label :zip %><br />
+    <%= f.text_field :zip %>
+  </p>
+  <p>
+    <%= f.label :state_province_country %><br />
+    <%= f.text_field :state_province_country %>
+  </p>
+  <p>
+    <%= f.label :other_address_details %><br />
+    <%= f.text_field :other_address_details %>
+  </p>
+  <p>
+    <%= f.label :city %><br />
+    <%= f.text_field :city %>
+  </p>
+  <p>
+    <%= f.label :country %><br />
+    <%= f.text_field :country %>
+  </p>
+  <p>
+    <%= f.label :gmap_latitude %><br />
+    <%= f.text_field :gmap_latitude %>
+  </p>
+  <p>
+    <%= f.label :gmap_longitude %><br />
+    <%= f.text_field :gmap_longitude %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @address %> |
+<%= link_to 'Back', addresses_path %>

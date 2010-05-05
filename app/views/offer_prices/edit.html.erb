@@ -1,0 +1,24 @@
+<h1>Editing offer_price</h1>
+
+<% form_for(@offer_price) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :offer_id %><br />
+    <%= f.text_field :offer_id %>
+  </p>
+  <p>
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.label :season %><br />
+    <%= f.text_field :season %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @offer_price %> |
+<%= link_to 'Back', offer_prices_path %>
