@@ -1,29 +1,31 @@
 ActionController::Routing::Routes.draw do |map|
-  map.resources :news
-  map.resources :message_usergroups
-  map.resources :messages
-  map.resources :organizations
-  map.resources :users
-  map.resources :reservations
-  map.resources :calendars
-  map.resources :offer_prices
-  map.resources :addresses
-  map.resources :pictures
-  map.resources :livingrooms
-  map.resources :room_pictures
-  map.resources :rooms
-  map.resources :offer_rooms
-  map.resources :dinningrooms
-  map.resources :kitchens
-  map.resources :bathrooms
-  map.resources :bedrooms
-  map.resources :housing_pictures
-  map.resources :housing_pois
-  map.resources :housing_services
-  map.resources :services
-  map.resources :offers
-  map.resources :housings
-  map.resources :ads
+  map.devise_for :users, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+
+  map.resources :ads, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :news, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :rooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :offers, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :messages, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :pictures, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :kitchens, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :bedrooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :housings, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :services, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :addresses, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :bathrooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :calendars, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :livingrooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :offer_rooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :dinningrooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :housing_pois, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :offer_prices, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :reservations, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :organizations, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :room_pictures, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :housing_pictures, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :housing_services, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :message_usergroups, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -65,6 +67,6 @@ ActionController::Routing::Routes.draw do |map|
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
   # consider removing or commenting them out if you're using named routes and resources.
-  map.connect ':controller/:action/:id'
-  map.connect ':controller/:action/:id.:format'
+  map.connect ':locale/:controller/:action/:id', :requirements => { :locale => /(fr)|(en)/ } 
+  map.connect ':locale/:controller/:action/:id.:format', :requirements => { :locale => /(fr)|(en)/ } 
 end

@@ -4843,3 +4843,1544 @@ Rendered ads/_pagination_bar (5.0ms)
 Rendered ads/_pagination_bar (1.0ms)
 Rendered layouts/_sidebar_search (0.0ms)
 Completed in 17ms (View: 10, DB: 1) | 200 OK [http://localhost/ads]
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("addresses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bathrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bedrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("calendars")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("dinningrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_pois")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_services")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_user")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("kitchens")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("livingrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("message_usergroups")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("messages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("news")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_prices")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organization_user")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("organizations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("reservations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("room_pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+Migrating to DeviseForUser (20100506142651)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+Migrating to DeviseForUser (20100506142651)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+Migrating to DeviseForUser (20100506142651)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+Migrating to DeviseForUser (20100506142651)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100506142651')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("addresses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bathrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bedrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("calendars")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("dinningrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_pois")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("housing_services")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_user")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("kitchens")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("livingrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("message_usergroups")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("messages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("news")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_prices")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organization_user")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("organizations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("reservations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("room_pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("services")[0m
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from c:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:4)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+Migrating to DeviseCreateUsers (20100506145839)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "password_salt" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "reset_password_token" varchar(255), "remember_token" varchar(255), "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "password" varchar(255), "gender" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "phone_contact" varchar(255), "phone_fax" varchar(255), "phone_mobile" varchar(255), "phone_pro" varchar(255), "phone_home" varchar(255), "role" varchar(255), "is_active" boolean, "language" varchar(255), "has_subscribed" boolean, "firstday_week" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100506145839')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (2.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("addresses")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ads")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bathrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bedrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("calendars")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("dinningrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pois")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_user")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("kitchens")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("livingrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("message_usergroups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("messages")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("news")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_prices")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("organization_user")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organizations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("reservations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("room_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("services")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_users_on_email')[0m
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from c:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:4)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to DeviseCreateUsers (20100506145839)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDELETE FROM schema_migrations WHERE version = '20100506145839'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("addresses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bathrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bedrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("calendars")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("dinningrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_pois")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_services")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_user")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("kitchens")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("livingrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("message_usergroups")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("messages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("news")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_prices")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organization_user")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("organizations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("pictures")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("reservations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("room_pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("services")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+Migrating to DeviseCreateUsers (20100506145839)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "password_salt" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "reset_password_token" varchar(255), "remember_token" varchar(255), "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "password" varchar(255), "gender" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "phone_contact" varchar(255), "phone_fax" varchar(255), "phone_mobile" varchar(255), "phone_pro" varchar(255), "phone_home" varchar(255), "role" varchar(255), "is_active" boolean, "language" varchar(255), "has_subscribed" boolean, "firstday_week" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100506145839')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("addresses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bathrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bedrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("calendars")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("dinningrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_pois")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_services")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_user")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("kitchens")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("livingrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("message_usergroups")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("messages")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("news")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_prices")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organization_user")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("organizations")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("reservations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("room_pictures")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_users_on_email')[0m
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from c:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:4)
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (33.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (25.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "annonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "hebergement_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321120609')[0m
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+Migrating to RenameAnnoncesToAds (20100326131438)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE annonces RENAME TO ads[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ads")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "ads"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_ads")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "altered_ads"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "ads" ADD "ad_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOffresToHousings (20100326132108)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE offres RENAME TO housings[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housings" ADD "housings_id" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housings" ADD "has_elevator" boolean[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE "housings" ADD "floor" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housings" ADD "capacity" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housings" ADD "is_visible" boolean[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326132108')[0m
+Migrating to RenameHebergementsToOffers (20100326135518)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE hebergements RENAME TO offers[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "offers"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "offers"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "offers" ADD "price_id" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "offers" ADD "calendar_id" int[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326135518')[0m
+Migrating to CreateServices (20100326145358)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "service_id" integer, "service" varchar(255), "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326145358')[0m
+Migrating to CreateHousingServices (20100326145629)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "housing_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "housing_id" integer, "service_id" integer, "price" decimal(5,2), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326145629')[0m
+Migrating to CreateHousingPois (20100326145733)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "housing_pois" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "housing_poi_id" integer, "housing_id" integer, "name" varchar(255), "distance" decimal(5,2), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326145733')[0m
+Migrating to CreateBedrooms (20100418145404)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "bedrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "beds_simple_quantity" integer, "beds_double_quantity" integer, "beds_bunk_quantity" integer, "beds_cott_quantity" integer, "has_shared_bathroom" boolean, "has_shared_toilets" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100418145404')[0m
+Migrating to CreateBathrooms (20100418145527)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "bathrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "has_bath" boolean, "has_toilets" boolean, "has_shower" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100418145527')[0m
+Migrating to CreateKitchens (20100418151322)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "kitchens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100418151322')[0m
+Migrating to CreateDinningrooms (20100418151418)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "dinningrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100418151418')[0m
+Migrating to CreateOfferRooms (20100505194405)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offer_rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "offer_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505194405')[0m
+Migrating to CreateRooms (20100505194513)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505194513')[0m
+Migrating to CreateRoomPictures (20100505194729)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "room_pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "picture_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505194729')[0m
+Migrating to CreateLivingrooms (20100505194858)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "livingrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505194858')[0m
+Migrating to CreatePictures (20100505195013)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "path" varchar(255), "order" varchar(255), "is_default" boolean, "is_visible" boolean, "is_validated" boolean, "date_validated" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505195013')[0m
+Migrating to CreateAddresses (20100505201058)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "addresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "street" varchar(255), "complement" varchar(255), "zip" varchar(255), "state_province_country" varchar(255), "other_address_details" varchar(255), "city" varchar(255), "country" varchar(255), "gmap_latitude" decimal(10,7), "gmap_longitude" decimal(10,7), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505201058')[0m
+Migrating to CreateOfferPrices (20100505201238)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offer_prices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "price" decimal(5,2), "season" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505201238')[0m
+Migrating to CreateCalendars (20100505201349)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "calendars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" varchar(255), "start_date" datetime, "end_date" datetime, "availability_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505201349')[0m
+Migrating to CreateReservations (20100505201505)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_id" integer, "calendar_id" integer, "reservation_status" varchar(255), "reservation_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505201505')[0m
+Migrating to CreateUsers (20100505203805)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password" varchar(255), "gender" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "phone_contact" varchar(255), "phone_fax" varchar(255), "phone_mobile" varchar(255), "phone_pro" varchar(255), "phone_home" varchar(255), "role" varchar(255), "is_active" boolean, "language" varchar(255), "has_subscribed" boolean, "firstday_week" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505203805')[0m
+Migrating to CreateOrganizations (20100505205230)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505205230')[0m
+Migrating to CreateMessages (20100505205623)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "message_usergroup_id" integer, "parent_message" integer, "subject" varchar(255), "body" text, "is_sent" boolean, "is_new" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505205623')[0m
+Migrating to CreateMessageUsergroups (20100505205658)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "message_usergroups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505205658')[0m
+Migrating to CreateNews (20100505205759)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "news" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "language" varchar(255), "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505205759')[0m
+Migrating to CreateHousingUser (20100505211548)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "housing_user" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505211548')[0m
+Migrating to CreateOrganizationUser (20100505211607)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "organization_user" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505211607')[0m
+Migrating to RemoveFieldsFromOffer (20100505215840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime, "price_id" varchar(255), "calendar_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime, "calendar_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_offers"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime, "calendar_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_offers"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505215840')[0m
+Migrating to DeviseCreateUsers (20100506145839)
+  [4;35;1mSQL (0.0ms)[0m   [0mSQLite3::SQLException: table "users" already exists: CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "password_salt" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "reset_password_token" varchar(255), "remember_token" varchar(255), "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "password" varchar(255), "gender" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "phone_contact" varchar(255), "phone_fax" varchar(255), "phone_mobile" varchar(255), "phone_pro" varchar(255), "phone_home" varchar(255), "role" varchar(255), "is_active" boolean, "language" varchar(255), "has_subscribed" boolean, "firstday_week" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from c:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:4)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mselect sqlite_version(*)[0m
+  [4;36;1mSQL (36.0ms)[0m   [0;1mCREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) [0m
+  [4;35;1mSQL (25.0ms)[0m   [0mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "annonces" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "hebergement_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100321120609')[0m
+Migrating to CreateOffres (20100325163241)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offres" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325163241')[0m
+Migrating to CreateHebergements (20100325164621)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "hebergements" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100325164621')[0m
+Migrating to RenameAnnoncesToAds (20100326131438)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE annonces RENAME TO ads[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("ads")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "ads"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_ads")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "altered_ads"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "ads" ADD "ad_id" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100326131438')[0m
+Migrating to RenameOffresToHousings (20100326132108)
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE offres RENAME TO housings[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "hebergement_id" integer, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_latitude" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "gmap_longitude" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "is_visible" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "housings"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_housings")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_housings"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housings" ADD "housings_id" integer[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mALTER TABLE "housings" ADD "has_elevator" boolean[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housings" ADD "floor" integer[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "housings" ADD "capacity" integer[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "housings" ADD "is_visible" boolean[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326132108')[0m
+Migrating to RenameHebergementsToOffers (20100326135518)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mALTER TABLE hebergements RENAME TO offers[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "offers"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "offre_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "offers"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mALTER TABLE "offers" ADD "price_id" varchar(255)[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mALTER TABLE "offers" ADD "calendar_id" int[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326135518')[0m
+Migrating to CreateServices (20100326145358)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "service_id" integer, "service" varchar(255), "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326145358')[0m
+Migrating to CreateHousingServices (20100326145629)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "housing_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "housing_id" integer, "service_id" integer, "price" decimal(5,2), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326145629')[0m
+Migrating to CreateHousingPois (20100326145733)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "housing_pois" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "housing_poi_id" integer, "housing_id" integer, "name" varchar(255), "distance" decimal(5,2), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100326145733')[0m
+Migrating to CreateBedrooms (20100418145404)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "bedrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "beds_simple_quantity" integer, "beds_double_quantity" integer, "beds_bunk_quantity" integer, "beds_cott_quantity" integer, "has_shared_bathroom" boolean, "has_shared_toilets" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100418145404')[0m
+Migrating to CreateBathrooms (20100418145527)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "bathrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "has_bath" boolean, "has_toilets" boolean, "has_shower" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100418145527')[0m
+Migrating to CreateKitchens (20100418151322)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "kitchens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100418151322')[0m
+Migrating to CreateDinningrooms (20100418151418)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "dinningrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100418151418')[0m
+Migrating to CreateOfferRooms (20100505194405)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offer_rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "offer_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505194405')[0m
+Migrating to CreateRooms (20100505194513)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505194513')[0m
+Migrating to CreateRoomPictures (20100505194729)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "room_pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "picture_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505194729')[0m
+Migrating to CreateLivingrooms (20100505194858)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "livingrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505194858')[0m
+Migrating to CreatePictures (20100505195013)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "path" varchar(255), "order" varchar(255), "is_default" boolean, "is_visible" boolean, "is_validated" boolean, "date_validated" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505195013')[0m
+Migrating to CreateAddresses (20100505201058)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "addresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "street" varchar(255), "complement" varchar(255), "zip" varchar(255), "state_province_country" varchar(255), "other_address_details" varchar(255), "city" varchar(255), "country" varchar(255), "gmap_latitude" decimal(10,7), "gmap_longitude" decimal(10,7), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505201058')[0m
+Migrating to CreateOfferPrices (20100505201238)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "offer_prices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "price" decimal(5,2), "season" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505201238')[0m
+Migrating to CreateCalendars (20100505201349)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "calendars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" varchar(255), "start_date" datetime, "end_date" datetime, "availability_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505201349')[0m
+Migrating to CreateReservations (20100505201505)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_id" integer, "calendar_id" integer, "reservation_status" varchar(255), "reservation_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505201505')[0m
+Migrating to CreateUsers (20100505203805)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "password" varchar(255), "gender" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "phone_contact" varchar(255), "phone_fax" varchar(255), "phone_mobile" varchar(255), "phone_pro" varchar(255), "phone_home" varchar(255), "role" varchar(255), "is_active" boolean, "language" varchar(255), "has_subscribed" boolean, "firstday_week" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505203805')[0m
+Migrating to CreateOrganizations (20100505205230)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505205230')[0m
+Migrating to CreateMessages (20100505205623)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "message_usergroup_id" integer, "parent_message" integer, "subject" varchar(255), "body" text, "is_sent" boolean, "is_new" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505205623')[0m
+Migrating to CreateMessageUsergroups (20100505205658)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "message_usergroups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505205658')[0m
+Migrating to CreateNews (20100505205759)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "news" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "language" varchar(255), "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505205759')[0m
+Migrating to CreateHousingUser (20100505211548)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "housing_user" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505211548')[0m
+Migrating to CreateOrganizationUser (20100505211607)
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "organization_user" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100505211607')[0m
+Migrating to RemoveFieldsFromOffer (20100505215840)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime, "price_id" varchar(255), "calendar_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mDROP TABLE "offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime, "calendar_id" integer) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offers")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mDROP TABLE "altered_offers"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TEMPORARY TABLE "altered_offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime, "calendar_id" integer) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "offers"[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("altered_offers")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mDROP TABLE "altered_offers"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100505215840')[0m
+Migrating to DeviseCreateUsers (20100506145839)
+  [4;35;1mSQL (2.0ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "password_salt" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "reset_password_token" varchar(255), "remember_token" varchar(255), "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "password" varchar(255), "gender" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "phone_contact" varchar(255), "phone_fax" varchar(255), "phone_mobile" varchar(255), "phone_pro" varchar(255), "phone_home" varchar(255), "role" varchar(255), "is_active" boolean, "language" varchar(255), "has_subscribed" boolean, "firstday_week" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100506145839')[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("addresses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bathrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bedrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("calendars")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("dinningrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pois")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_user")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("kitchens")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("livingrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("message_usergroups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("messages")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("news")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_prices")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("organization_user")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organizations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("reservations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("room_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("services")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_users_on_email')[0m
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from c:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:4)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from c:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+Migrating to DeviseCreateUsers (20100506145839)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("addresses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bathrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bedrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("calendars")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("dinningrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pois")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_user")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("kitchens")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("livingrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("message_usergroups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("messages")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("news")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_prices")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("organization_user")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organizations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("reservations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("room_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("services")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:07:33) [GET]
+
+ActionController::RoutingError (No route matches "/fr/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:08:58) [GET]
+
+ActionController::RoutingError (No route matches "/fr/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:08:58) [GET]
+
+ActionController::RoutingError (No route matches "/fr/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:08:59) [GET]
+
+ActionController::RoutingError (No route matches "/fr/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from c:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from c:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:09:48) [GET]
+
+ActionController::RoutingError (No route matches "/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:09:50) [GET]
+
+ActionController::RoutingError (No route matches "/fr/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:09:54) [GET]
+
+ActionController::RoutingError (No route matches "/en/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:10:20) [GET]
+
+ActionController::RoutingError (No route matches "/fr/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:10:21) [GET]
+
+ActionController::RoutingError (No route matches "/fr/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:10:21) [GET]
+
+ActionController::RoutingError (No route matches "/fr/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:10:21) [GET]
+
+ActionController::RoutingError (No route matches "/fr/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:10:21) [GET]
+
+ActionController::RoutingError (No route matches "/fr/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:10:21) [GET]
+
+ActionController::RoutingError (No route matches "/fr/ads" with {:method=>:get}):
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-06 17:11:43) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (27.0ms)
+Rendered ads/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (4.0ms)
+Completed in 69ms (View: 61, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:11:44) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-06 17:11:46) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mAd Load (1.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (6.0ms)
+Rendered ads/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 18ms (View: 10, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:11:46) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-06 17:11:48) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (6.0ms)
+Rendered ads/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:11:49) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:11:51) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 20ms (View: 18, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:11:52) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 11ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-06 17:11:53) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mAd Load (1.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (7.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 18ms (View: 11, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:11:53) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-06 17:12:16) [GET]
+  Parameters: {"locale"=>"fr"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (3.0ms)
+Completed in 38ms (View: 26, DB: 0) | 200 OK [http://localhost/fr/users/sign_up]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-05-06 17:12:25) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"test", "password"=>"test", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign up", "authenticity_token"=>"Z6DYGDfaoywXmge3Wsdlz9mHNMxqQwmH0+8Qnl6vI5I=", "locale"=>"fr"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (2.0ms)
+Completed in 4009ms (View: 15, DB: 1) | 200 OK [http://localhost/fr/users]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-05-06 17:15:27) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"test", "password"=>"test", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign up", "authenticity_token"=>"Z6DYGDfaoywXmge3Wsdlz9mHNMxqQwmH0+8Qnl6vI5I=", "locale"=>"fr"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (1.0ms)
+Completed in 35ms (View: 16, DB: 0) | 200 OK [http://localhost/fr/users]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-05-06 17:15:31) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"test", "password"=>"test", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign up", "authenticity_token"=>"Z6DYGDfaoywXmge3Wsdlz9mHNMxqQwmH0+8Qnl6vI5I=", "locale"=>"fr"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (1.0ms)
+Completed in 34ms (View: 15, DB: 0) | 200 OK [http://localhost/fr/users]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2010-05-06 17:15:33) [GET]
+  Parameters: {"locale"=>"fr"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+Rendering template within layouts/application
+Rendering users/index
+
+ActionView::TemplateError (undefined local variable or method `new_user_path' for #<ActionView::Base:0x6a4cae4>) on line #50 of app/views/users/index.html.erb:
+47: 
+48: <br />
+49: 
+50: <%= link_to 'New user', new_user_path %>
+
+    app/views/users/index.html.erb:50
+    app/controllers/users_controller.rb:7:in `index'
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (100.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-06 17:15:41) [GET]
+  Parameters: {"locale"=>"fr"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (8.0ms)
+Completed in 29ms (View: 16, DB: 0) | 200 OK [http://localhost/fr/users/sign_up]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-05-06 17:15:45) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"test", "password"=>"test", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign up", "authenticity_token"=>"Z6DYGDfaoywXmge3Wsdlz9mHNMxqQwmH0+8Qnl6vI5I=", "locale"=>"fr"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (2.0ms)
+Completed in 34ms (View: 15, DB: 0) | 200 OK [http://localhost/fr/users]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-05-06 17:18:31) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"totototo", "password"=>"totototo", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign up", "authenticity_token"=>"Z6DYGDfaoywXmge3Wsdlz9mHNMxqQwmH0+8Qnl6vI5I=", "locale"=>"fr"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("encrypted_password", "confirmed_at", "last_sign_in_ip", "phone_fax", "phone_mobile", "updated_at", "last_sign_in_at", "language", "has_subscribed", "password_salt", "phone_contact", "role", "confirmation_sent_at", "sign_in_count", "current_sign_in_ip", "gender", "phone_home", "is_active", "current_sign_in_at", "phone_pro", "remember_token", "firstday_week", "confirmation_token", "first_name", "reset_password_token", "password", "last_name", "email", "remember_created_at", "created_at") VALUES('d3009add81c74339bf9ea603b72e796463fd3390', NULL, NULL, NULL, NULL, '2010-05-06 15:18:31', NULL, NULL, NULL, 'OuB0oHyWQ1IbNlcpefRH', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'jonathan@meiss.fr', NULL, '2010-05-06 15:18:31')[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "sign_in_count" = 1, "current_sign_in_at" = '2010-05-06 15:18:31', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2010-05-06 15:18:31', "updated_at" = '2010-05-06 15:18:31', "last_sign_in_ip" = '127.0.0.1' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 285ms (DB: 1) | 302 Found [http://localhost/fr/users]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:18:32) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-06 17:18:52) [GET]
+  Parameters: {"locale"=>"fr"}
+DEPRECATION WARNING: :authenticatable as module is deprecated. Please give :database_authenticatable instead.. (called from C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/models/user.rb:14)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 13ms (DB: 1) | 302 Found [http://localhost/fr/users/sign_up]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:18:52) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:19:23) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-06 17:19:33) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 13ms (DB: 2) | 302 Found [http://localhost/fr/users/sign_up]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:19:33) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-06 17:19:55) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 62ms (DB: 1) | 302 Found [http://localhost/fr/users/sign_in]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:19:55) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-05-06 17:20:03) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Redirected to http://localhost:3000/
+Completed in 26ms (DB: 1) | 302 Found [http://localhost/fr/users/sign_out]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:20:03) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:20:37) [GET]
+
+ActionController::RoutingError (No route matches "/users/password/new" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing PasswordsController#new (for 127.0.0.1 at 2010-05-06 17:22:09) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering passwords/new
+Rendered shared/_devise_links (2.0ms)
+Completed in 27ms (View: 19, DB: 0) | 200 OK [http://localhost/fr/users/password/new]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-06 17:22:27) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Completed in 33ms (View: 21, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 17:22:37) [POST]
+  Parameters: {"user"=>{"password"=>"totototo", "remember_me"=>"1", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign in", "authenticity_token"=>"Z6DYGDfaoywXmge3Wsdlz9mHNMxqQwmH0+8Qnl6vI5I=", "locale"=>"fr"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "remember_token" = 'VStV4qJ_1ON7Qx9bUABL', "remember_created_at" = '2010-05-06 15:22:37', "updated_at" = '2010-05-06 15:22:37' WHERE "id" = 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "sign_in_count" = 2, "current_sign_in_at" = '2010-05-06 15:22:37', "updated_at" = '2010-05-06 15:22:37' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 123ms (DB: 3) | 302 Found [http://localhost/fr/users/sign_in]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:22:37) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:25:32) [GET]
+
+ActionController::RoutingError (No route matches "/fr/register" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:25:35) [GET]
+
+ActionController::RoutingError (No route matches "/register" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing UsersController#register (for 127.0.0.1 at 2010-05-06 17:25:47) [GET]
+  Parameters: {"locale"=>"fr"}
+
+ActionController::UnknownAction (No action responded to register. Actions: create, destroy, edit, index, new, show et update):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-06 17:25:55) [GET]
+
+ActionController::UnknownAction (ActionController::UnknownAction):
+  devise (1.0.7) lib/devise/controllers/internal_helpers.rb:65:in `is_devise_resource?'
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:47:30) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 54ms (View: 50, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:47:33) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 67ms (View: 63, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-06 17:47:44) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Redirected to http://localhost:3000/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 12ms (DB: 1) | 302 Found [http://localhost/fr/users/sign_up]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:47:44) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 19ms (View: 17, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-05-06 17:47:55) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "remember_token" = NULL, "remember_created_at" = NULL, "updated_at" = '2010-05-06 15:47:55' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 112ms (DB: 2) | 302 Found [http://localhost/fr/users/sign_out]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:47:55) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 11ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-06 17:48:52) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-06 17:48:58) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (3.0ms)
+Completed in 38ms (View: 26, DB: 0) | 200 OK [http://localhost/fr/users/sign_up]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-06 17:49:02) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (2.0ms)
+Completed in 34ms (View: 21, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 17:49:05) [POST]
+  Parameters: {"user"=>{"password"=>"totototo", "remember_me"=>"1", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign in", "authenticity_token"=>"Z6DYGDfaoywXmge3Wsdlz9mHNMxqQwmH0+8Qnl6vI5I=", "locale"=>"fr"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: remember_me
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Completed in 3930ms (View: 7, DB: 1) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 17:49:51) [POST]
+  Parameters: {"user"=>{"password"=>"totototo", "remember_me"=>"0", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign in", "authenticity_token"=>"Z6DYGDfaoywXmge3Wsdlz9mHNMxqQwmH0+8Qnl6vI5I=", "locale"=>"fr"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: remember_me
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (2.0ms)
+Completed in 32ms (View: 6, DB: 1) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-06 17:49:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/error.png" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 17:50:29) [POST]
+  Parameters: {"user"=>{"password"=>"", "remember_me"=>"0", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign in", "authenticity_token"=>"Z6DYGDfaoywXmge3Wsdlz9mHNMxqQwmH0+8Qnl6vI5I=", "locale"=>"fr"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: remember_me
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (2.0ms)
+Completed in 31ms (View: 7, DB: 1) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-06 17:50:30) [POST]
+  Parameters: {"user"=>{"password"=>"totototo", "remember_me"=>"0", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign in", "authenticity_token"=>"Z6DYGDfaoywXmge3Wsdlz9mHNMxqQwmH0+8Qnl6vI5I=", "locale"=>"fr"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: remember_me
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Completed in 32ms (View: 7, DB: 2) | 200 OK [http://localhost/fr/users/sign_in]
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m

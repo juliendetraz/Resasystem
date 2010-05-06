@@ -4,7 +4,10 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title>Resasystem</title>
 		
+    <%= stylesheet_link_tag 'style_html' %>
 	  <%= stylesheet_link_tag 'style_layout' %>
+    <%= yield :additional_css %>
+    <%= yield :additional_js %>
 	</head>
 	<body>
 		<div id="container">
@@ -23,6 +26,9 @@
 				</div>
 			</div> <!-- #headbar -->
 			<div id="content">
+			  <% flash.each do |key, msg| %>
+          <%= content_tag :div, msg, :id => key %>
+        <% end %>
 				<%= yield %>
 			</div> <!-- #content -->
 			<div id="footer">
