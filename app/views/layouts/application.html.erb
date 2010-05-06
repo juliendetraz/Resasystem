@@ -9,9 +9,9 @@
 	<body>
 		<div id="container">
 			<div id="header">
-				<%= link_to '<span><h1>Resasystem</h1></span>', {:action => 'index', :controller => 'pages'}, :title => t("homepage.homepage") %>
+				<%= link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") %>
 				<ul id="header_menu">
-					<li><%= link_to t("homepage.homepage"), {:action => 'index', :controller => 'pages'}, :title => t("homepage.homepage") %></li>
+					<li><%= link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") %></li>
 					<li><%= link_to t("ads.ads"), ads_path %></li>
 					<li><a href="#" title="Les promotions">Les promotions</a></li>
 					<li id="header_menu-item-end"><a href="#" title="Déposer une annonce">Déposer une annonce</a></li>
