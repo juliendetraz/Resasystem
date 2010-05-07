@@ -105,7 +105,6 @@ p {
 		/* Button to signup */
 		#signup_button {
 			text-align: center;
-			padding-top: 3px;
 			float: right;
 		}
 			#signup_button a {
@@ -116,10 +115,12 @@ p {
 			}
 				#signup_button a span {
 					background: #f3fbea url(../images/sprite-layout.png) 0 -178px no-repeat;
-					padding: 3px 31px 4px 13px;
+					padding: 3px 23px 4px 13px;
+          display: block;
+          width: 79px;
 				}
 				#signup_button a span:hover {
-					background: url(../images/sprite-layout.png) -114px -178px no-repeat;
+					background: #f3fbea url(../images/sprite-layout.png) -114px -178px no-repeat;
 				}
 
 	/* Page content */

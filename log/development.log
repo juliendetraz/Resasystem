@@ -6384,3 +6384,1308 @@ Rendering sessions/new
 Rendered shared/_devise_links (1.0ms)
 Completed in 32ms (View: 7, DB: 2) | 200 OK [http://localhost/fr/users/sign_in]
   [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" ORDER BY users.id DESC LIMIT 1[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 15:33:59) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 5060ms (View: 5056, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 22:51:13) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 4964ms (View: 4960, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 22:51:20) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mAd Load (2.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (3.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (5.0ms)
+Completed in 111ms (View: 100, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 22:51:20) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#new (for 127.0.0.1 at 2010-05-07 22:51:24) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering ads/new
+Completed in 38ms (View: 26, DB: 0) | 200 OK [http://localhost/fr/ads/new]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 22:51:30) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 15ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 22:51:35) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mAd Load (1.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (10.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (1.0ms)
+Completed in 28ms (View: 16, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 22:51:35) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 22:56:41) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mAd Load (2.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (9.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 38ms (View: 26, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 22:56:41) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 22:56:42) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mAd Load (1.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (9.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 28ms (View: 16, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 22:56:42) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 22:56:52) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (3.0ms)
+Completed in 51ms (View: 35, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 23:07:55) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (10.0ms)
+Rendered ads/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 95ms (View: 16, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:07:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:07:56) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:07:57) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 16ms (View: 12, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:07:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_homepage.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:08:50) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 27ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 23:08:55) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mAd Load (1.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (9.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 27ms (View: 16, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:08:55) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:08:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 23:08:56) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mAd Load (2.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (9.0ms)
+Rendered ads/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 27ms (View: 16, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:08:56) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:08:56) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 23:12:06) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mAd Load (2.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (79.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (1.0ms)
+Completed in 98ms (View: 86, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:12:06) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:12:07) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 23:12:07) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (9.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 27ms (View: 15, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:12:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:12:08) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:12:09) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 28ms (View: 25, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:12:10) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:12:21) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 79ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:12:22) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 23:12:24) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mAd Load (2.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (9.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 27ms (View: 16, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:12:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:12:25) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 23:12:25) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (9.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (1.0ms)
+Completed in 29ms (View: 16, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:12:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:12:26) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 23:13:02) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mAd Load (1.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (11.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 92ms (View: 18, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:13:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:13:02) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 23:14:03) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (8.0ms)
+Rendered ads/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 27ms (View: 15, DB: 1) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:14:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:14:04) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-07 23:14:04) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mAd Load (2.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (9.0ms)
+Rendered ads/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Completed in 28ms (View: 17, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:14:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-07 23:14:05) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:15:32) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 42ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:16:25) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 39ms (View: 22, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:16:27) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 40ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:16:28) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 44ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:16:40) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 40ms (View: 22, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:16:41) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (9.0ms)
+Completed in 41ms (View: 22, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:17:29) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (4.0ms)
+Completed in 103ms (View: 93, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:18:18) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (11.0ms)
+Completed in 114ms (View: 34, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:18:20) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 40ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:18:20) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 40ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:18:49) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (9.0ms)
+Completed in 42ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:18:50) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (9.0ms)
+Completed in 40ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:19:12) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (9.0ms)
+Completed in 40ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:19:13) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (12.0ms)
+Completed in 45ms (View: 27, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:19:19) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 43ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:19:56) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 39ms (View: 22, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:19:57) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 43ms (View: 25, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:20:03) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 40ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:20:04) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 39ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:20:08) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 43ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:20:09) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 40ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:20:13) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 40ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:20:14) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 42ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:20:24) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (9.0ms)
+Completed in 40ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:20:25) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 39ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:20:35) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 43ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:20:36) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (9.0ms)
+Completed in 41ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:20:48) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (14.0ms)
+Completed in 5538ms (View: 28, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:21:23) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (11.0ms)
+Completed in 43ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:21:24) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (9.0ms)
+Completed in 40ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:21:29) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 41ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:21:34) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (15.0ms)
+Completed in 69ms (View: 30, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:21:35) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 43ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:22:07) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (9.0ms)
+Completed in 41ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:22:33) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (11.0ms)
+Completed in 42ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:22:34) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 41ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:25:24) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (78.0ms)
+Completed in 110ms (View: 92, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:25:26) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 41ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:25:46) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 54ms (View: 33, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" [0m
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-07 23:28:01) [POST]
+  Parameters: {"user"=>{"password"=>"totototo", "remember_me"=>"0", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign in", "authenticity_token"=>"GWxswhhHsqcOuBqNwqKVEoPR5VEmSBAB/euWZ4ckLBQ=", "locale"=>"fr"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: remember_me
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Completed in 163ms (View: 9, DB: 1) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-07 23:28:05) [POST]
+  Parameters: {"user"=>{"password"=>"tototo", "remember_me"=>"0", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign in", "authenticity_token"=>"GWxswhhHsqcOuBqNwqKVEoPR5VEmSBAB/euWZ4ckLBQ=", "locale"=>"fr"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: remember_me
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Completed in 49ms (View: 9, DB: 1) | 200 OK [http://localhost/fr/users/sign_in]
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" LIMIT 1[0m
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-07 23:28:57) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (1.0ms)
+Completed in 47ms (View: 29, DB: 0) | 200 OK [http://localhost/fr/users/sign_up]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-05-07 23:29:12) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"zenith", "password"=>"zenith", "email"=>"starguezer@gmail.com"}, "commit"=>"Sign up", "authenticity_token"=>"GWxswhhHsqcOuBqNwqKVEoPR5VEmSBAB/euWZ4ckLBQ=", "locale"=>"fr"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'starguezer@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "confirmed_at", "last_sign_in_ip", "phone_fax", "phone_mobile", "updated_at", "last_sign_in_at", "language", "has_subscribed", "password_salt", "phone_contact", "role", "confirmation_sent_at", "sign_in_count", "current_sign_in_ip", "gender", "phone_home", "is_active", "current_sign_in_at", "phone_pro", "remember_token", "firstday_week", "confirmation_token", "first_name", "reset_password_token", "password", "last_name", "email", "remember_created_at", "created_at") VALUES('0f8745e98d7daf32c398649aa2a6c6cc7879a46e', NULL, NULL, NULL, NULL, '2010-05-07 21:29:13', NULL, NULL, NULL, 'rheVe0ng-ci-6Lr2yiS8', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'starguezer@gmail.com', NULL, '2010-05-07 21:29:13')[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "sign_in_count" = 1, "current_sign_in_at" = '2010-05-07 21:29:13', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2010-05-07 21:29:13', "updated_at" = '2010-05-07 21:29:13', "last_sign_in_ip" = '127.0.0.1' WHERE "id" = 2[0m
+Redirected to http://localhost:3001/
+Completed in 401ms (DB: 3) | 302 Found [http://localhost/fr/users]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:29:13) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 51ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:29:27) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3001/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 17ms (DB: 2) | 302 Found [http://localhost/fr/users/sign_in]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:29:27) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 29ms (View: 26, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:29:31) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3001/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/fr/users/sign_in]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:29:31) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 28ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-05-07 23:29:48) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"", "password"=>"", "email"=>"starguezer@gmail.com"}, "commit"=>"Sign up", "authenticity_token"=>"GWxswhhHsqcOuBqNwqKVEoPR5VEmSBAB/euWZ4ckLBQ=", "locale"=>"fr"}
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3001/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 17ms (DB: 1) | 302 Found [http://localhost/fr/users]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:29:48) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 29ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:29:51) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Redirected to http://localhost:3001/
+Filter chain halted as [:require_no_authentication] rendered_or_redirected.
+Completed in 18ms (DB: 2) | 302 Found [http://localhost/fr/users/sign_in]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:29:52) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 28ms (View: 24, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:30:26) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 51ms (View: 46, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:30:27) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 104ms (View: 99, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:30:54) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 51ms (View: 44, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-05-07 23:31:31) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Redirected to http://localhost:3001/
+Completed in 98ms (DB: 3) | 302 Found [http://localhost/fr/users/sign_out]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:31:32) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 18ms (View: 15, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:31:53) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 31ms (View: 28, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:31:54) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-07 23:31:58) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 40ms (View: 23, DB: 0) | 200 OK [http://localhost/fr/users/sign_up]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:32:00) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+Completed in 42ms (View: 24, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-07 23:32:06) [POST]
+  Parameters: {"user"=>{"password"=>"zenith", "remember_me"=>"1", "email"=>"starguezer@gmail.com"}, "commit"=>"Sign in", "authenticity_token"=>"GWxswhhHsqcOuBqNwqKVEoPR5VEmSBAB/euWZ4ckLBQ=", "locale"=>"fr"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'starguezer@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "remember_token" = 'hfgfuOBw8BWnVvQmjLcZ', "remember_created_at" = '2010-05-07 21:32:06', "updated_at" = '2010-05-07 21:32:06' WHERE "id" = 2[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "sign_in_count" = 2, "current_sign_in_at" = '2010-05-07 21:32:06', "updated_at" = '2010-05-07 21:32:06' WHERE "id" = 2[0m
+Redirected to http://localhost:3001/
+Completed in 46ms (DB: 4) | 302 Found [http://localhost/fr/users/sign_in]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:32:06) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 40ms (View: 36, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-05-07 23:33:04) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mUser Update (1.0ms)[0m   [0;1mUPDATE "users" SET "remember_token" = NULL, "remember_created_at" = NULL, "updated_at" = '2010-05-07 21:33:04' WHERE "id" = 2[0m
+Redirected to http://localhost:3001/
+Completed in 42ms (DB: 4) | 302 Found [http://localhost/fr/users/sign_out]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:33:05) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+Completed in 40ms (View: 34, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:33:08) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (11.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+Completed in 45ms (View: 25, DB: 1) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-07 23:33:10) [POST]
+  Parameters: {"user"=>{"password"=>"zenith", "remember_me"=>"0", "email"=>"starguezer@gmail.com"}, "commit"=>"Sign in", "authenticity_token"=>"GWxswhhHsqcOuBqNwqKVEoPR5VEmSBAB/euWZ4ckLBQ=", "locale"=>"fr"}
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'starguezer@gmail.com') LIMIT 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "sign_in_count" = 3, "current_sign_in_at" = '2010-05-07 21:33:10', "last_sign_in_at" = '2010-05-07 21:32:06', "updated_at" = '2010-05-07 21:33:10' WHERE "id" = 2[0m
+Redirected to http://localhost:3001/
+Completed in 43ms (DB: 4) | 302 Found [http://localhost/fr/users/sign_in]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:33:11) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 40ms (View: 35, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:33:19) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+Completed in 40ms (View: 34, DB: 2) | 200 OK [http://localhost/]
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (2.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mDROP TABLE "addresses"[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "addresses" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "street" varchar(255), "complement" varchar(255), "zip" varchar(255), "state_province_country" varchar(255), "other_address_details" varchar(255), "city" varchar(255), "country" varchar(255), "gmap_latitude" decimal(10,7), "gmap_longitude" decimal(10,7), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "ads"[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "ads" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "reference" varchar(255), "title" varchar(255), "description" text, "is_validated" boolean, "housing_id" integer, "created_at" datetime, "updated_at" datetime, "ad_id" integer) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mDROP TABLE "bathrooms"[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE "bathrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "has_bath" boolean, "has_toilets" boolean, "has_shower" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "bedrooms"[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE "bedrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "beds_simple_quantity" integer, "beds_double_quantity" integer, "beds_bunk_quantity" integer, "beds_cott_quantity" integer, "has_shared_bathroom" boolean, "has_shared_toilets" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mDROP TABLE "calendars"[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE "calendars" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" varchar(255), "start_date" datetime, "end_date" datetime, "availability_type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mDROP TABLE "dinningrooms"[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mCREATE TABLE "dinningrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mDROP TABLE "housing_pois"[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCREATE TABLE "housing_pois" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "housing_poi_id" integer, "housing_id" integer, "name" varchar(255), "distance" decimal(5,2), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "housing_services"[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE "housing_services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "housing_id" integer, "service_id" integer, "price" decimal(5,2), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mDROP TABLE "housing_user"[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mCREATE TABLE "housing_user" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "housings"[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE TABLE "housings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "address_id" integer, "user_id" integer, "phone_contact" varchar(255), "email" varchar(255), "website" varchar(255), "name" varchar(255), "type" varchar(255), "url_alias" varchar(255), "distance_commerce" varchar(255), "distance_train" varchar(255), "distance_transport" varchar(255), "created_at" datetime, "updated_at" datetime, "housings_id" integer, "has_elevator" boolean, "floor" integer, "capacity" integer, "is_visible" boolean) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mDROP TABLE "kitchens"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "kitchens" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "livingrooms"[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE "livingrooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mDROP TABLE "message_usergroups"[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mCREATE TABLE "message_usergroups" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "group" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "messages"[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE "messages" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "message_usergroup_id" integer, "parent_message" integer, "subject" varchar(255), "body" text, "is_sent" boolean, "is_new" boolean, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mDROP TABLE "news"[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mCREATE TABLE "news" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "language" varchar(255), "title" varchar(255), "body" text, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (4.0ms)[0m   [0mDROP TABLE "offer_prices"[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mCREATE TABLE "offer_prices" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offer_id" integer, "price" decimal(5,2), "season" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (4.0ms)[0m   [0;1mDROP TABLE "offer_rooms"[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCREATE TABLE "offer_rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "offer_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "offers"[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mCREATE TABLE "offers" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "offers_id" integer, "housing_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mDROP TABLE "organization_user"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "organization_user" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "organization_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (3.0ms)[0m   [0mDROP TABLE "organizations"[0m
+  [4;36;1mSQL (19.0ms)[0m   [0;1mCREATE TABLE "organizations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (9.0ms)[0m   [0;1mDROP TABLE "pictures"[0m
+  [4;35;1mSQL (6.0ms)[0m   [0mCREATE TABLE "pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "url" varchar(255), "path" varchar(255), "order" varchar(255), "is_default" boolean, "is_visible" boolean, "is_validated" boolean, "date_validated" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mDROP TABLE "reservations"[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE TABLE "reservations" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "customer_id" integer, "calendar_id" integer, "reservation_status" varchar(255), "reservation_date" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (3.0ms)[0m   [0;1mDROP TABLE "room_pictures"[0m
+  [4;35;1mSQL (8.0ms)[0m   [0mCREATE TABLE "room_pictures" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "room_id" integer, "picture_id" integer, "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (7.0ms)[0m   [0mDROP TABLE "rooms"[0m
+  [4;36;1mSQL (6.0ms)[0m   [0;1mCREATE TABLE "rooms" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (5.0ms)[0m   [0;1mDROP TABLE "services"[0m
+  [4;35;1mSQL (5.0ms)[0m   [0mCREATE TABLE "services" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "service_id" integer, "service" varchar(255), "type" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mDROP TABLE "users"[0m
+  [4;36;1mSQL (11.0ms)[0m   [0;1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255), "encrypted_password" varchar(128) DEFAULT '' NOT NULL, "password_salt" varchar(255) DEFAULT '' NOT NULL, "confirmation_token" varchar(255), "confirmed_at" datetime, "confirmation_sent_at" datetime, "reset_password_token" varchar(255), "remember_token" varchar(255), "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "password" varchar(255), "gender" varchar(255), "first_name" varchar(255), "last_name" varchar(255), "phone_contact" varchar(255), "phone_fax" varchar(255), "phone_mobile" varchar(255), "phone_pro" varchar(255), "phone_home" varchar(255), "role" varchar(255), "is_active" boolean, "language" varchar(255), "has_subscribed" boolean, "firstday_week" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (7.0ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [4;36;1mSQL (7.0ms)[0m   [0;1mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [4;35;1mSQL (9.0ms)[0m   [0mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM "schema_migrations"[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."email" = 'admin@resasystem.com') LIMIT 1[0m
+  [4;35;1mUser Create (1.0ms)[0m   [0mINSERT INTO "users" ("encrypted_password", "confirmed_at", "last_sign_in_ip", "phone_fax", "phone_mobile", "updated_at", "last_sign_in_at", "language", "has_subscribed", "password_salt", "phone_contact", "role", "confirmation_sent_at", "sign_in_count", "current_sign_in_ip", "gender", "phone_home", "is_active", "current_sign_in_at", "phone_pro", "remember_token", "firstday_week", "confirmation_token", "first_name", "reset_password_token", "password", "last_name", "email", "remember_created_at", "created_at") VALUES('0025463abca4d0830378f50502c5f1870384d37b', NULL, NULL, NULL, NULL, '2010-05-07 21:34:36', NULL, NULL, NULL, 'dgjnGxQrlteYOLwJ3a5y', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'admin@resasystem.com', NULL, '2010-05-07 21:34:36')[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSQLite3::SQLException: database schema has changed: SELECT * FROM "users" [0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" [0m
+
+
+Processing SessionsController#destroy (for 127.0.0.1 at 2010-05-07 23:34:50) [GET]
+  Parameters: {"locale"=>"fr"}
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 2) LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+Redirected to http://localhost:3001/
+Completed in 17ms (DB: 3) | 302 Found [http://localhost/fr/users/sign_out]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:34:50) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+Completed in 94ms (View: 89, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-07 23:34:52) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (10.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+Completed in 42ms (View: 24, DB: 1) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-05-07 23:35:03) [POST]
+  Parameters: {"user"=>{"password"=>"toto42", "remember_me"=>"1", "email"=>"admin@resasystem.com"}, "commit"=>"Sign in", "authenticity_token"=>"GWxswhhHsqcOuBqNwqKVEoPR5VEmSBAB/euWZ4ckLBQ=", "locale"=>"fr"}
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '2') LIMIT 1[0m
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."email" = 'admin@resasystem.com') LIMIT 1[0m
+  [4;36;1mUser Update (2.0ms)[0m   [0;1mUPDATE "users" SET "remember_token" = 'zTElsHZTGbe20a-Zw6MG', "remember_created_at" = '2010-05-07 21:35:03', "updated_at" = '2010-05-07 21:35:03' WHERE "id" = 1[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "sign_in_count" = 1, "current_sign_in_at" = '2010-05-07 21:35:03', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2010-05-07 21:35:03', "updated_at" = '2010-05-07 21:35:03', "last_sign_in_ip" = '127.0.0.1' WHERE "id" = 1[0m
+Redirected to http://localhost:3001/
+Completed in 48ms (DB: 5) | 302 Found [http://localhost/fr/users/sign_in]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-07 23:35:03) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed in 106ms (View: 100, DB: 2) | 200 OK [http://localhost/]

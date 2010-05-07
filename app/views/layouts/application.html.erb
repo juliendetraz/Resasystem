@@ -21,9 +21,15 @@
 				</ul>
 			</div> <!-- #header -->
 			<div id="headbar">
-				<div id="signup_button">
-					<a href="#" title="S'identifier"><span>S'identifier</span></a>
-				</div>
+		    <% if user_signed_in? %>
+          Signed in as <%= current_user.email %>. Not you?
+          <%= link_to "Sign out", destroy_user_session_path %>
+        <% else %>
+          <%= link_to "Sign up", new_user_registration_path %>
+  				<div id="signup_button">
+  					<%= link_to '<span>' + t("devise.sessions.link") + '</span>', new_user_session_path, :title => t("devise.sessions.link") %>
+  				</div>
+        <% end %>
 			</div> <!-- #headbar -->
 			<div id="content">
 			  <% flash.each do |key, msg| %>

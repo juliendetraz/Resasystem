@@ -140,7 +140,9 @@ fr:
 
   homepage:
     homepage: Accueil
-
+  
+  users:
+    
   pagination_bar:
     results_found: résultats trouvés
     page_prev: Page précédente
