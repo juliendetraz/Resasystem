@@ -2,6 +2,7 @@ en:
   devise:
     sessions:
       link: 'Sign in'
+      link_sign_out: Sign out
       signed_in: 'Signed in successfully.'
       signed_out: 'Signed out successfully.'
       unauthenticated: 'You need to sign in or sign up before continuing.'

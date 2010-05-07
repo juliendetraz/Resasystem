@@ -1,0 +1,17 @@
+<div id="headbar_logged">
+  <div id="headbar_logged_left">
+    <%= current_user.full_name %>
+  </div>
+  <div id="headbar_logged_right">
+    <div id="sign_out_button">
+      <%= link_to '<span>' + t("devise.sessions.link_sign_out") + '</span>', destroy_user_session_path, :title => t("devise.sessions.link_sign_out") %>
+    </div>
+    <ul id="headbar_logged_icons">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+    </ul>
+  </div>
+</div>

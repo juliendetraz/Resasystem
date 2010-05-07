@@ -22,13 +22,9 @@
 			</div> <!-- #header -->
 			<div id="headbar">
 		    <% if user_signed_in? %>
-          Signed in as <%= current_user.email %>. Not you?
-          <%= link_to "Sign out", destroy_user_session_path %>
+          <%= render :partial => "users/headbar_logged" %>
         <% else %>
-          <%= link_to "Sign up", new_user_registration_path %>
-  				<div id="signup_button">
-  					<%= link_to '<span>' + t("devise.sessions.link") + '</span>', new_user_session_path, :title => t("devise.sessions.link") %>
-  				</div>
+          <%= render :partial => "users/headbar_log_in" %>
         <% end %>
 			</div> <!-- #headbar -->
 			<div id="content">

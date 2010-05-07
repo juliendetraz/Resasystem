@@ -284,3 +284,81 @@
             background-position: -96px -33px;
           }
 
+/* HEADBAR LOG IN */
+#headbar_log_in {
+  height: 22px;
+}
+  #signup_button {
+    text-align: center;
+    float: right;
+  }
+    #signup_button a {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      color: #fff;
+    }
+      #signup_button a span {
+        background: #f3fbea url(../images/sprite-layout.png) 0 -178px no-repeat;
+        padding: 3px 23px 4px 13px;
+        display: block;
+        width: 79px;
+      }
+      #signup_button a span:hover {
+        background: #f3fbea url(../images/sprite-layout.png) -114px -178px no-repeat;
+      }
+
+/* HEADBAR LOGGED */
+#headbar_logged {
+  height: 70px;
+}
+  #headbar_logged_left {
+    padding: 5px 10px;
+    width: 205px;
+    float: left;
+  }
+  #headbar_logged_right {
+    margin-left: 230px;
+    padding: 5px 0 0;
+  }
+    ul#headbar_logged_icons {
+      background: #f3fbea url(../images/sprite-layout.png) 0 -212px no-repeat;
+      list-style: none;
+      width: 621px;
+      height: 62px;
+      padding: 0;
+      margin: 0;
+    }
+      ul#headbar_logged_icons li {
+        text-align: center;
+        display: block;
+        width: 120px;
+        height: 70px;
+        float: left;
+      }
+        ul#headbar_logged_icons li#news {
+        }
+        ul#headbar_logged_icons li#resa {
+        }
+        ul#headbar_logged_icons li#email {
+        }
+        ul#headbar_logged_icons li#coeur {
+        }
+        ul#headbar_logged_icons li#profil {
+        }
+    #sign_out_button {
+      float: right;
+      margin: 0 5px 0;
+    }
+      #sign_out_button a {
+        background: #f3fbea url(../images/sprite-layout.png) -528px -178px no-repeat;
+        display: block;
+        width: 22px;
+        height: 22px;
+      }
+      #sign_out_button a:hover {
+        background: #f3fbea url(../images/sprite-layout.png) -550px -178px no-repeat;
+      }
+         #sign_out_button a span {
+           display: none;
+         }

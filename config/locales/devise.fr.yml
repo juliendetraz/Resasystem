@@ -2,6 +2,7 @@ fr:
   devise:
     sessions:
       link: S'indentifier
+      link_sign_out: Déconnexion
       signed_in: 'Signed in successfully.'
       signed_out: 'Signed out successfully.'
       unauthenticated: 'You need to sign in or sign up before continuing.'
