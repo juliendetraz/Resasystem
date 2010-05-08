@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   has_and_belongs_to_many :organizations
   #TODO cette relation n'a pas ete testee il est possible qu'elle ne
   #fonctionne pas car il y a une double relation entre User et Housing
-  has_and_belongs_to_many :housings, :class_name => "Favorites"
+#  has_and_belongs_to_many :housings, :class_name => "Favorites"
 
   # Include default devise modules. Others available are:
   # :http_authenticatable, :token_authenticatable, :confirmable, :lockable, :timeoutable and :activatable

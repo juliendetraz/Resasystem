@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :ads, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :news, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.resources :users, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :rooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :offers, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :messages, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }

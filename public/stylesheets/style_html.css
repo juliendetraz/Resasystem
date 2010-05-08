@@ -329,23 +329,33 @@
       padding: 0;
       margin: 0;
     }
-      ul#headbar_logged_icons li {
+      ul#headbar_logged_icons li a {
         text-align: center;
         display: block;
-        width: 120px;
-        height: 70px;
+        height: 65px;
         float: left;
       }
-        ul#headbar_logged_icons li#news {
+        ul#headbar_logged_icons li#news a {
+          margin: 0 20px 0 0;
+          width: 100px;
         }
-        ul#headbar_logged_icons li#resa {
+        ul#headbar_logged_icons li#resa a {
+          margin: 0 30px;
+          width: 110px;
         }
-        ul#headbar_logged_icons li#email {
+        ul#headbar_logged_icons li#email a {
+          width: 80px;
         }
-        ul#headbar_logged_icons li#coeur {
+        ul#headbar_logged_icons li#coeur a {
+          margin: 0 20px 0 40px;
+          width: 100px;
         }
-        ul#headbar_logged_icons li#profil {
+        ul#headbar_logged_icons li#profil a {
+          width: 90px;
         }
+      ul#headbar_logged_icons li a span {
+        display: none;
+      }
     #sign_out_button {
       float: right;
       margin: 0 5px 0;

@@ -1,17 +1,27 @@
 <div id="headbar_logged">
   <div id="headbar_logged_left">
-    <%= current_user.full_name %>
+    <strong><%= current_user.full_name %></strong>
   </div>
   <div id="headbar_logged_right">
     <div id="sign_out_button">
       <%= link_to '<span>' + t("devise.sessions.link_sign_out") + '</span>', destroy_user_session_path, :title => t("devise.sessions.link_sign_out") %>
     </div>
     <ul id="headbar_logged_icons">
-      <li>Item 1</li>
-      <li>Item 2</li>
-      <li>Item 3</li>
-      <li>Item 4</li>
-      <li>Item 5</li>
+      <li id="news">
+        <%= link_to '<span>' + t("news.news_link") + '</span>', user_path, :title => t("news.news_link") %>
+      </li>
+      <li id="resa">
+        <%= link_to '<span>' + t("users.your_reservations_link") + '</span>', user_path, :title => t("users.your_reservations_link") %>
+      </li>
+      <li id="email">
+        <%= link_to '<span>' + t("messages.your_messages_link") + '</span>', user_path, :title => t("messages.your_messages_link") %>
+      </li>
+      <li id="coeur">
+        <%= link_to '<span>' + t("users.favorites_link") + '</span>', user_path, :title => t("users.favorites_link") %>
+      </li>
+      <li id="profil">
+        <%= link_to '<span>' + t("users.your_profile_link") + '</span>', user_path(I18n.locale, current_user), :title => t("users.your_profile_link") %>
+      </li>
     </ul>
   </div>
 </div>
