@@ -14,18 +14,14 @@
 			<div id="header">
 				<%= link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") %>
 				<ul id="header_menu">
-					<li><%= link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") %></li>
-					<li><%= link_to t("ads.ads"), ads_path %></li>
-					<li><a href="#" title="Les promotions">Les promotions</a></li>
-					<li id="header_menu-item-end"><a href="#" title="Déposer une annonce">Déposer une annonce</a></li>
+					<li id=""><%= link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") %></li>
+					<li id=""><%= link_to t("ads.ads"), ads_path, :title => t("ads.ads") %></li>
+					<li id=""><%= link_to t("offers.offers"), ads_path, :title => t("offers.offers") %></li>
+					<li id="header_menu-item-end"><%= link_to t("ads.add_ads"), ads_path, :title => t("ads.add_ads") %></li>
 				</ul>
 			</div> <!-- #header -->
 			<div id="headbar">
-		    <% if user_signed_in? %>
-          <%= render :partial => "users/headbar_logged" %>
-        <% else %>
-          <%= render :partial => "users/headbar_log_in" %>
-        <% end %>
+		    <%= user_signed_in? ? render(:partial => "users/headbar_logged") : render(:partial => "users/headbar_log_in") %>
 			</div> <!-- #headbar -->
 			<div id="content">
 			  <% flash.each do |key, msg| %>
@@ -36,13 +32,8 @@
 			<div id="footer">
 				<div id="footer_lang_switcher">
 					<ul>
-						<li><a href="#" title="Français"><span id="lang_fr"><span>Français</span></span></a></li>
-						<li><a href="#" title="English"><span id="lang_en"><span>English</span></span></a></li>
-						<li><a href="#" title="Italiano"><span id="lang_it"><span>Italiano</span></span></a></li>
-						<li><a href="#" title="Nederland"><span id="lang_nd"><span>Nederland</span></span></a></li>
-						<li><a href="#" title="Deutch"><span id="lang_de"><span>Deutch</span></span></a></li>
-						<li><a href="#" title="Brasilia"><span id="lang_br"><span>Brasilia</span></span></a></li>
-						<li><a href="#" title="Español"><span id="lang_es"><span>Español</span></span></a></li>
+						<%= locale_switch_tag :locale => 'fr' %>
+						<%= locale_switch_tag :locale => 'en' %>
 					</ul>
 					<div id="footer_links">
 						<ul>

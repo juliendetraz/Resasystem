@@ -10543,3 +10543,2136 @@ Rendering users/show
   [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
 Rendered users/_headbar_logged (6.0ms)
 Completed in 50ms (View: 29, DB: 2) | 200 OK [http://localhost/fr/users/1]
+  [4;36;1mSQL (2.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+Migrating to DeviseCreateUsers (20100506145839)
+Migrating to RenameOrganizationUserTable (20100508075159)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (1.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("addresses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bathrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bedrooms")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("calendars")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("dinningrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pois")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_user")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("kitchens")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("livingrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("message_usergroups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("messages")[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mPRAGMA index_list("news")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_prices")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("organizations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organizations_users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("reservations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("room_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("services")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_users_on_email')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_users_on_confirmation_token')[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateAnnonces (20100321120609)
+Migrating to CreateOffres (20100325163241)
+Migrating to CreateHebergements (20100325164621)
+Migrating to RenameAnnoncesToAds (20100326131438)
+Migrating to RenameOffresToHousings (20100326132108)
+Migrating to RenameHebergementsToOffers (20100326135518)
+Migrating to CreateServices (20100326145358)
+Migrating to CreateHousingServices (20100326145629)
+Migrating to CreateHousingPois (20100326145733)
+Migrating to CreateBedrooms (20100418145404)
+Migrating to CreateBathrooms (20100418145527)
+Migrating to CreateKitchens (20100418151322)
+Migrating to CreateDinningrooms (20100418151418)
+Migrating to CreateOfferRooms (20100505194405)
+Migrating to CreateRooms (20100505194513)
+Migrating to CreateRoomPictures (20100505194729)
+Migrating to CreateLivingrooms (20100505194858)
+Migrating to CreatePictures (20100505195013)
+Migrating to CreateAddresses (20100505201058)
+Migrating to CreateOfferPrices (20100505201238)
+Migrating to CreateCalendars (20100505201349)
+Migrating to CreateReservations (20100505201505)
+Migrating to CreateUsers (20100505203805)
+Migrating to CreateOrganizations (20100505205230)
+Migrating to CreateMessages (20100505205623)
+Migrating to CreateMessageUsergroups (20100505205658)
+Migrating to CreateNews (20100505205759)
+Migrating to CreateHousingUser (20100505211548)
+Migrating to CreateOrganizationUser (20100505211607)
+Migrating to RemoveFieldsFromOffer (20100505215840)
+Migrating to DeviseCreateUsers (20100506145839)
+Migrating to RenameOrganizationUserTable (20100508075159)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("addresses")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("ads")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("bathrooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("bedrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("calendars")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("dinningrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_pois")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housing_services")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("housing_user")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("housings")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("kitchens")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("livingrooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("message_usergroups")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("messages")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("news")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offer_prices")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("offer_rooms")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("offers")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("organizations")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("organizations_users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("reservations")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("room_pictures")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("rooms")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("services")[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mPRAGMA index_list("users")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_users_on_reset_password_token')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_info('index_users_on_email')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_info('index_users_on_confirmation_token')[0m
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:24:51) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (2.0ms)
+Completed in 3630ms (View: 3627, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:36:45) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+
+ActionView::TemplateError (No route matches {:locale=>"it", :controller=>"pages", :action=>"index"}) on line #41 of app/views/layouts/application.html.erb:
+38: 					<ul>
+39: 						<li><%= locale_switch_tag :locale => 'fr' %></li>
+40: 						<li><a href="#" title="English"><span id="lang_en"><span><%= locale_switch_tag :locale => 'en' %></span></span></a></li>
+41: 						<li><a href="#" title="Italiano"><span id="lang_it"><span><%= locale_switch_tag :locale => 'it' %></span></span></a></li>
+42: 						<li><a href="#" title="Nederland"><span id="lang_nd"><span><%= locale_switch_tag :locale => 'nd' %></span></span></a></li>
+43: 						<li><a href="#" title="Deutch"><span id="lang_de"><span><%= locale_switch_tag :locale => 'de' %></span></span></a></li>
+44: 						<li><a href="#" title="Brasilia"><span id="lang_br"><span><%= locale_switch_tag :locale => 'br' %></span></span></a></li>
+
+    app/helpers/application_helper.rb:9:in `locale_switch_tag'
+    app/helpers/application_helper.rb:8:in `locale_switch_tag'
+    app/views/layouts/application.html.erb:41
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (54.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:37:32) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+
+ActionView::TemplateError (No route matches {:locale=>"it", :controller=>"pages", :action=>"index"}) on line #41 of app/views/layouts/application.html.erb:
+38: 					<ul>
+39: 						<li><%= locale_switch_tag :locale => 'fr' %></li>
+40: 						<li><%= locale_switch_tag :locale => 'en' %></li>
+41: 						<li><%= locale_switch_tag :locale => 'it' %></li>
+42: 						<li><%= locale_switch_tag :locale => 'nd' %></li>
+43: 						<li><%= locale_switch_tag :locale => 'de' %></li>
+44: 						<li><%= locale_switch_tag :locale => 'br' %></li>
+
+    app/helpers/application_helper.rb:9:in `locale_switch_tag'
+    app/helpers/application_helper.rb:8:in `locale_switch_tag'
+    app/views/layouts/application.html.erb:41
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (53.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:39:03) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" dir=\"ltr\" lang=\"fr-FR\">\n"
+@output_buffer.concat "\t<head>\n"
+@output_buffer.concat "\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "\t\t<title>Resasystem</title>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag 'style_html' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( stylesheet_link_tag 'style_layout' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_css ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_js ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</head>\n"
+@output_buffer.concat "\t<body>\n"
+@output_buffer.concat "\t\t<div id=\"container\">\n"
+@output_buffer.concat "\t\t\t<div id=\"header\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<ul id=\"header_menu\">\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("ads.ads"), ads_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li><a href=\"#\" title=\"Les promotions\">Les promotions</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t<li id=\"header_menu-item-end\"><a href=\"#\" title=\"D\303\251poser une annonce\">D\303\251poser une annonce</a></li>\n"
+@output_buffer.concat "\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #header -->\n"
+@output_buffer.concat "\t\t\t<div id=\"headbar\">\n"
+@output_buffer.concat "\t\t    ";  if user_signed_in? ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_logged" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_log_in" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #headbar -->\n"
+@output_buffer.concat "\t\t\t<div id=\"content\">\n"
+@output_buffer.concat "\t\t\t  ";  flash.each do |key, msg| ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( content_tag :div, msg, :id => key ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #content -->\n"
+@output_buffer.concat "\t\t\t<div id=\"footer\">\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_lang_switcher\">\n"
+@output_buffer.concat "\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'fr' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'en' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'it' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'nd' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'de' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'br' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'es' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_links\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Qui sommes nous\">Qui sommes nous</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Partenaires\">Partenaires</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Conditions g\303\251n\303\251rales de ventes\">Conditions g\303\251n\303\251rales de ventes</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Donn\303\251es personnelles\">Donn\303\251es personnelles</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Contact\">Contact</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Annulation de r\303\251servation\">Annulation de r\303\251servation</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_links -->\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_copyright\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>BandBCS // Resasystem - Copyright &copy; 2009-2010 - Tous droits r\303\251serv\303\251s</p>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_copyright -->\n"
+@output_buffer.concat "\t\t\t\t</div> <!-- #footer_lang_switcher -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_logo_bcs\"><a href=\"#\" title=\"Band BCS\"><span>Band BCS</span></a></div>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #footer -->\n"
+@output_buffer.concat "\t\t</div> <!-- #container -->\n"
+@output_buffer.concat "\t</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:35:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `catch'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')') on line #67 of app/views/layouts/application.html.erb:
+64: 	</body>
+65: </html>
+
+    app/views/layouts/application.html.erb:69:in `compile!'
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (43.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:39:44) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" dir=\"ltr\" lang=\"fr-FR\">\n"
+@output_buffer.concat "\t<head>\n"
+@output_buffer.concat "\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "\t\t<title>Resasystem</title>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag 'style_html' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( stylesheet_link_tag 'style_layout' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_css ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_js ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</head>\n"
+@output_buffer.concat "\t<body>\n"
+@output_buffer.concat "\t\t<div id=\"container\">\n"
+@output_buffer.concat "\t\t\t<div id=\"header\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<ul id=\"header_menu\">\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("ads.ads"), ads_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li><a href=\"#\" title=\"Les promotions\">Les promotions</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t<li id=\"header_menu-item-end\"><a href=\"#\" title=\"D\303\251poser une annonce\">D\303\251poser une annonce</a></li>\n"
+@output_buffer.concat "\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #header -->\n"
+@output_buffer.concat "\t\t\t<div id=\"headbar\">\n"
+@output_buffer.concat "\t\t    ";  if user_signed_in? ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_logged" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_log_in" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #headbar -->\n"
+@output_buffer.concat "\t\t\t<div id=\"content\">\n"
+@output_buffer.concat "\t\t\t  ";  flash.each do |key, msg| ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( content_tag :div, msg, :id => key ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #content -->\n"
+@output_buffer.concat "\t\t\t<div id=\"footer\">\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_lang_switcher\">\n"
+@output_buffer.concat "\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'fr' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'en' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'it' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'nd' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'de' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'br' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'es' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_links\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Qui sommes nous\">Qui sommes nous</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Partenaires\">Partenaires</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Conditions g\303\251n\303\251rales de ventes\">Conditions g\303\251n\303\251rales de ventes</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Donn\303\251es personnelles\">Donn\303\251es personnelles</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Contact\">Contact</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Annulation de r\303\251servation\">Annulation de r\303\251servation</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_links -->\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_copyright\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>BandBCS // Resasystem - Copyright &copy; 2009-2010 - Tous droits r\303\251serv\303\251s</p>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_copyright -->\n"
+@output_buffer.concat "\t\t\t\t</div> <!-- #footer_lang_switcher -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_logo_bcs\"><a href=\"#\" title=\"Band BCS\"><span>Band BCS</span></a></div>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #footer -->\n"
+@output_buffer.concat "\t\t</div> <!-- #container -->\n"
+@output_buffer.concat "\t</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:35:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `catch'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')') on line #67 of app/views/layouts/application.html.erb:
+64: 	</body>
+65: </html>
+
+    app/views/layouts/application.html.erb:69:in `compile!'
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:39:45) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" dir=\"ltr\" lang=\"fr-FR\">\n"
+@output_buffer.concat "\t<head>\n"
+@output_buffer.concat "\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "\t\t<title>Resasystem</title>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag 'style_html' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( stylesheet_link_tag 'style_layout' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_css ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_js ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</head>\n"
+@output_buffer.concat "\t<body>\n"
+@output_buffer.concat "\t\t<div id=\"container\">\n"
+@output_buffer.concat "\t\t\t<div id=\"header\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<ul id=\"header_menu\">\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("ads.ads"), ads_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li><a href=\"#\" title=\"Les promotions\">Les promotions</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t<li id=\"header_menu-item-end\"><a href=\"#\" title=\"D\303\251poser une annonce\">D\303\251poser une annonce</a></li>\n"
+@output_buffer.concat "\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #header -->\n"
+@output_buffer.concat "\t\t\t<div id=\"headbar\">\n"
+@output_buffer.concat "\t\t    ";  if user_signed_in? ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_logged" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_log_in" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #headbar -->\n"
+@output_buffer.concat "\t\t\t<div id=\"content\">\n"
+@output_buffer.concat "\t\t\t  ";  flash.each do |key, msg| ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( content_tag :div, msg, :id => key ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #content -->\n"
+@output_buffer.concat "\t\t\t<div id=\"footer\">\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_lang_switcher\">\n"
+@output_buffer.concat "\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'fr' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'en' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'it' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'nd' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'de' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'br' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'es' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_links\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Qui sommes nous\">Qui sommes nous</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Partenaires\">Partenaires</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Conditions g\303\251n\303\251rales de ventes\">Conditions g\303\251n\303\251rales de ventes</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Donn\303\251es personnelles\">Donn\303\251es personnelles</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Contact\">Contact</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Annulation de r\303\251servation\">Annulation de r\303\251servation</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_links -->\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_copyright\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>BandBCS // Resasystem - Copyright &copy; 2009-2010 - Tous droits r\303\251serv\303\251s</p>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_copyright -->\n"
+@output_buffer.concat "\t\t\t\t</div> <!-- #footer_lang_switcher -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_logo_bcs\"><a href=\"#\" title=\"Band BCS\"><span>Band BCS</span></a></div>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #footer -->\n"
+@output_buffer.concat "\t\t</div> <!-- #container -->\n"
+@output_buffer.concat "\t</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:35:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `catch'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')') on line #67 of app/views/layouts/application.html.erb:
+64: 	</body>
+65: </html>
+
+    app/views/layouts/application.html.erb:69:in `compile!'
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (92.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:40:13) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" dir=\"ltr\" lang=\"fr-FR\">\n"
+@output_buffer.concat "\t<head>\n"
+@output_buffer.concat "\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "\t\t<title>Resasystem</title>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag 'style_html' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( stylesheet_link_tag 'style_layout' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_css ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_js ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</head>\n"
+@output_buffer.concat "\t<body>\n"
+@output_buffer.concat "\t\t<div id=\"container\">\n"
+@output_buffer.concat "\t\t\t<div id=\"header\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<ul id=\"header_menu\">\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("ads.ads"), ads_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li><a href=\"#\" title=\"Les promotions\">Les promotions</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t<li id=\"header_menu-item-end\"><a href=\"#\" title=\"D\303\251poser une annonce\">D\303\251poser une annonce</a></li>\n"
+@output_buffer.concat "\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #header -->\n"
+@output_buffer.concat "\t\t\t<div id=\"headbar\">\n"
+@output_buffer.concat "\t\t    ";  if user_signed_in? ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_logged" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_log_in" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #headbar -->\n"
+@output_buffer.concat "\t\t\t<div id=\"content\">\n"
+@output_buffer.concat "\t\t\t  ";  flash.each do |key, msg| ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( content_tag :div, msg, :id => key ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #content -->\n"
+@output_buffer.concat "\t\t\t<div id=\"footer\">\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_lang_switcher\">\n"
+@output_buffer.concat "\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'fr' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'en' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'it' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'nd' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'de' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'br' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'es' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_links\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Qui sommes nous\">Qui sommes nous</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Partenaires\">Partenaires</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Conditions g\303\251n\303\251rales de ventes\">Conditions g\303\251n\303\251rales de ventes</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Donn\303\251es personnelles\">Donn\303\251es personnelles</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Contact\">Contact</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Annulation de r\303\251servation\">Annulation de r\303\251servation</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_links -->\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_copyright\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>BandBCS // Resasystem - Copyright &copy; 2009-2010 - Tous droits r\303\251serv\303\251s</p>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_copyright -->\n"
+@output_buffer.concat "\t\t\t\t</div> <!-- #footer_lang_switcher -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_logo_bcs\"><a href=\"#\" title=\"Band BCS\"><span>Band BCS</span></a></div>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #footer -->\n"
+@output_buffer.concat "\t\t</div> <!-- #container -->\n"
+@output_buffer.concat "\t</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:35:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `catch'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')') on line #67 of app/views/layouts/application.html.erb:
+64: 	</body>
+65: </html>
+
+    app/views/layouts/application.html.erb:69:in `compile!'
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:40:14) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" dir=\"ltr\" lang=\"fr-FR\">\n"
+@output_buffer.concat "\t<head>\n"
+@output_buffer.concat "\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "\t\t<title>Resasystem</title>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag 'style_html' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( stylesheet_link_tag 'style_layout' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_css ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_js ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</head>\n"
+@output_buffer.concat "\t<body>\n"
+@output_buffer.concat "\t\t<div id=\"container\">\n"
+@output_buffer.concat "\t\t\t<div id=\"header\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<ul id=\"header_menu\">\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("ads.ads"), ads_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li><a href=\"#\" title=\"Les promotions\">Les promotions</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t<li id=\"header_menu-item-end\"><a href=\"#\" title=\"D\303\251poser une annonce\">D\303\251poser une annonce</a></li>\n"
+@output_buffer.concat "\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #header -->\n"
+@output_buffer.concat "\t\t\t<div id=\"headbar\">\n"
+@output_buffer.concat "\t\t    ";  if user_signed_in? ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_logged" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_log_in" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #headbar -->\n"
+@output_buffer.concat "\t\t\t<div id=\"content\">\n"
+@output_buffer.concat "\t\t\t  ";  flash.each do |key, msg| ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( content_tag :div, msg, :id => key ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #content -->\n"
+@output_buffer.concat "\t\t\t<div id=\"footer\">\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_lang_switcher\">\n"
+@output_buffer.concat "\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'fr' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'en' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'it' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'nd' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'de' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'br' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'es' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_links\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Qui sommes nous\">Qui sommes nous</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Partenaires\">Partenaires</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Conditions g\303\251n\303\251rales de ventes\">Conditions g\303\251n\303\251rales de ventes</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Donn\303\251es personnelles\">Donn\303\251es personnelles</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Contact\">Contact</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Annulation de r\303\251servation\">Annulation de r\303\251servation</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_links -->\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_copyright\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>BandBCS // Resasystem - Copyright &copy; 2009-2010 - Tous droits r\303\251serv\303\251s</p>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_copyright -->\n"
+@output_buffer.concat "\t\t\t\t</div> <!-- #footer_lang_switcher -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_logo_bcs\"><a href=\"#\" title=\"Band BCS\"><span>Band BCS</span></a></div>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #footer -->\n"
+@output_buffer.concat "\t\t</div> <!-- #container -->\n"
+@output_buffer.concat "\t</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:35:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `catch'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')') on line #67 of app/views/layouts/application.html.erb:
+64: 	</body>
+65: </html>
+
+    app/views/layouts/application.html.erb:69:in `compile!'
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (93.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:40:18) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" dir=\"ltr\" lang=\"fr-FR\">\n"
+@output_buffer.concat "\t<head>\n"
+@output_buffer.concat "\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "\t\t<title>Resasystem</title>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag 'style_html' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( stylesheet_link_tag 'style_layout' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_css ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_js ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</head>\n"
+@output_buffer.concat "\t<body>\n"
+@output_buffer.concat "\t\t<div id=\"container\">\n"
+@output_buffer.concat "\t\t\t<div id=\"header\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<ul id=\"header_menu\">\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("ads.ads"), ads_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li><a href=\"#\" title=\"Les promotions\">Les promotions</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t<li id=\"header_menu-item-end\"><a href=\"#\" title=\"D\303\251poser une annonce\">D\303\251poser une annonce</a></li>\n"
+@output_buffer.concat "\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #header -->\n"
+@output_buffer.concat "\t\t\t<div id=\"headbar\">\n"
+@output_buffer.concat "\t\t    ";  if user_signed_in? ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_logged" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_log_in" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #headbar -->\n"
+@output_buffer.concat "\t\t\t<div id=\"content\">\n"
+@output_buffer.concat "\t\t\t  ";  flash.each do |key, msg| ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( content_tag :div, msg, :id => key ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #content -->\n"
+@output_buffer.concat "\t\t\t<div id=\"footer\">\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_lang_switcher\">\n"
+@output_buffer.concat "\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'fr' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'en' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'it' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'nd' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'de' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'br' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'es' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_links\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Qui sommes nous\">Qui sommes nous</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Partenaires\">Partenaires</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Conditions g\303\251n\303\251rales de ventes\">Conditions g\303\251n\303\251rales de ventes</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Donn\303\251es personnelles\">Donn\303\251es personnelles</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Contact\">Contact</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Annulation de r\303\251servation\">Annulation de r\303\251servation</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_links -->\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_copyright\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>BandBCS // Resasystem - Copyright &copy; 2009-2010 - Tous droits r\303\251serv\303\251s</p>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_copyright -->\n"
+@output_buffer.concat "\t\t\t\t</div> <!-- #footer_lang_switcher -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_logo_bcs\"><a href=\"#\" title=\"Band BCS\"><span>Band BCS</span></a></div>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #footer -->\n"
+@output_buffer.concat "\t\t</div> <!-- #container -->\n"
+@output_buffer.concat "\t</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:35:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `catch'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')') on line #67 of app/views/layouts/application.html.erb:
+64: 	</body>
+65: </html>
+
+    app/views/layouts/application.html.erb:69:in `compile!'
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:42:21) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" dir=\"ltr\" lang=\"fr-FR\">\n"
+@output_buffer.concat "\t<head>\n"
+@output_buffer.concat "\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "\t\t<title>Resasystem</title>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag 'style_html' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( stylesheet_link_tag 'style_layout' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_css ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_js ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</head>\n"
+@output_buffer.concat "\t<body>\n"
+@output_buffer.concat "\t\t<div id=\"container\">\n"
+@output_buffer.concat "\t\t\t<div id=\"header\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<ul id=\"header_menu\">\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("ads.ads"), ads_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li><a href=\"#\" title=\"Les promotions\">Les promotions</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t<li id=\"header_menu-item-end\"><a href=\"#\" title=\"D\303\251poser une annonce\">D\303\251poser une annonce</a></li>\n"
+@output_buffer.concat "\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #header -->\n"
+@output_buffer.concat "\t\t\t<div id=\"headbar\">\n"
+@output_buffer.concat "\t\t    ";  if user_signed_in? ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_logged" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_log_in" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #headbar -->\n"
+@output_buffer.concat "\t\t\t<div id=\"content\">\n"
+@output_buffer.concat "\t\t\t  ";  flash.each do |key, msg| ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( content_tag :div, msg, :id => key ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #content -->\n"
+@output_buffer.concat "\t\t\t<div id=\"footer\">\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_lang_switcher\">\n"
+@output_buffer.concat "\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'fr' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'en' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'it' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'nd' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'de' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'br' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'es' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_links\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Qui sommes nous\">Qui sommes nous</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Partenaires\">Partenaires</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Conditions g\303\251n\303\251rales de ventes\">Conditions g\303\251n\303\251rales de ventes</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Donn\303\251es personnelles\">Donn\303\251es personnelles</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Contact\">Contact</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Annulation de r\303\251servation\">Annulation de r\303\251servation</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_links -->\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_copyright\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>BandBCS // Resasystem - Copyright &copy; 2009-2010 - Tous droits r\303\251serv\303\251s</p>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_copyright -->\n"
+@output_buffer.concat "\t\t\t\t</div> <!-- #footer_lang_switcher -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_logo_bcs\"><a href=\"#\" title=\"Band BCS\"><span>Band BCS</span></a></div>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #footer -->\n"
+@output_buffer.concat "\t\t</div> <!-- #container -->\n"
+@output_buffer.concat "\t</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:35:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `catch'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')') on line #67 of app/views/layouts/application.html.erb:
+64: 	</body>
+65: </html>
+
+    app/views/layouts/application.html.erb:69:in `compile!'
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:42:22) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" dir=\"ltr\" lang=\"fr-FR\">\n"
+@output_buffer.concat "\t<head>\n"
+@output_buffer.concat "\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "\t\t<title>Resasystem</title>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag 'style_html' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( stylesheet_link_tag 'style_layout' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_css ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_js ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</head>\n"
+@output_buffer.concat "\t<body>\n"
+@output_buffer.concat "\t\t<div id=\"container\">\n"
+@output_buffer.concat "\t\t\t<div id=\"header\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<ul id=\"header_menu\">\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("ads.ads"), ads_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li><a href=\"#\" title=\"Les promotions\">Les promotions</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t<li id=\"header_menu-item-end\"><a href=\"#\" title=\"D\303\251poser une annonce\">D\303\251poser une annonce</a></li>\n"
+@output_buffer.concat "\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #header -->\n"
+@output_buffer.concat "\t\t\t<div id=\"headbar\">\n"
+@output_buffer.concat "\t\t    ";  if user_signed_in? ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_logged" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_log_in" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #headbar -->\n"
+@output_buffer.concat "\t\t\t<div id=\"content\">\n"
+@output_buffer.concat "\t\t\t  ";  flash.each do |key, msg| ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( content_tag :div, msg, :id => key ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #content -->\n"
+@output_buffer.concat "\t\t\t<div id=\"footer\">\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_lang_switcher\">\n"
+@output_buffer.concat "\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'fr' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'en' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'it' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'nd' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'de' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'br' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'es' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_links\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Qui sommes nous\">Qui sommes nous</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Partenaires\">Partenaires</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Conditions g\303\251n\303\251rales de ventes\">Conditions g\303\251n\303\251rales de ventes</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Donn\303\251es personnelles\">Donn\303\251es personnelles</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Contact\">Contact</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Annulation de r\303\251servation\">Annulation de r\303\251servation</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_links -->\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_copyright\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>BandBCS // Resasystem - Copyright &copy; 2009-2010 - Tous droits r\303\251serv\303\251s</p>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_copyright -->\n"
+@output_buffer.concat "\t\t\t\t</div> <!-- #footer_lang_switcher -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_logo_bcs\"><a href=\"#\" title=\"Band BCS\"><span>Band BCS</span></a></div>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #footer -->\n"
+@output_buffer.concat "\t\t</div> <!-- #container -->\n"
+@output_buffer.concat "\t</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:35:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `catch'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')') on line #67 of app/views/layouts/application.html.erb:
+64: 	</body>
+65: </html>
+
+    app/views/layouts/application.html.erb:69:in `compile!'
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:42:22) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+ERROR: compiling _run_erb_app47views47layouts47application46html46erb RAISED compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')'
+Function body:           def _run_erb_app47views47layouts47application46html46erb(local_assigns)
+            old_output_buffer = output_buffer;;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Transitional//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd\">\n"
+@output_buffer.concat "<html xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr\" dir=\"ltr\" lang=\"fr-FR\">\n"
+@output_buffer.concat "\t<head>\n"
+@output_buffer.concat "\t\t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" />\n"
+@output_buffer.concat "\t\t<title>Resasystem</title>\n"
+@output_buffer.concat "\t\t\n"
+@output_buffer.concat "    "; @output_buffer.concat(( stylesheet_link_tag 'style_html' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t  "; @output_buffer.concat(( stylesheet_link_tag 'style_layout' ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_css ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "    "; @output_buffer.concat(( yield :additional_js ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t</head>\n"
+@output_buffer.concat "\t<body>\n"
+@output_buffer.concat "\t\t<div id=\"container\">\n"
+@output_buffer.concat "\t\t\t<div id=\"header\">\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t<ul id=\"header_menu\">\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li>"; @output_buffer.concat(( link_to t("ads.ads"), ads_path ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t<li><a href=\"#\" title=\"Les promotions\">Les promotions</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t<li id=\"header_menu-item-end\"><a href=\"#\" title=\"D\303\251poser une annonce\">D\303\251poser une annonce</a></li>\n"
+@output_buffer.concat "\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #header -->\n"
+@output_buffer.concat "\t\t\t<div id=\"headbar\">\n"
+@output_buffer.concat "\t\t    ";  if user_signed_in? ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_logged" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  else ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( render :partial => "users/headbar_log_in" ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #headbar -->\n"
+@output_buffer.concat "\t\t\t<div id=\"content\">\n"
+@output_buffer.concat "\t\t\t  ";  flash.each do |key, msg| ; @output_buffer.concat "\n"
+@output_buffer.concat "          "; @output_buffer.concat(( content_tag :div, msg, :id => key ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "        ";  end ; @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t\t"; @output_buffer.concat(( yield ).to_s); @output_buffer.concat "\n"
+@output_buffer.concat "\t\t\t</div> <!-- #content -->\n"
+@output_buffer.concat "\t\t\t<div id=\"footer\">\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_lang_switcher\">\n"
+@output_buffer.concat "\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'fr' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( locale_switch_tag :locale => 'en' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'it' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'nd' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'de' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'br' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t\t<li>"; @output_buffer.concat(( #locale_switch_tag :locale => 'es' ).to_s); @output_buffer.concat "</li>\n"
+@output_buffer.concat "\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_links\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<ul>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Qui sommes nous\">Qui sommes nous</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Partenaires\">Partenaires</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Conditions g\303\251n\303\251rales de ventes\">Conditions g\303\251n\303\251rales de ventes</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Donn\303\251es personnelles\">Donn\303\251es personnelles</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Contact\">Contact</a> | </li>\n"
+@output_buffer.concat "\t\t\t\t\t\t\t<li><a href=\"#\" title=\"Annulation de r\303\251servation\">Annulation de r\303\251servation</a></li>\n"
+@output_buffer.concat "\t\t\t\t\t\t</ul>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_links -->\n"
+@output_buffer.concat "\t\t\t\t\t<div id=\"footer_copyright\">\n"
+@output_buffer.concat "\t\t\t\t\t\t<p>BandBCS // Resasystem - Copyright &copy; 2009-2010 - Tous droits r\303\251serv\303\251s</p>\n"
+@output_buffer.concat "\t\t\t\t\t</div> <!-- #footer_copyright -->\n"
+@output_buffer.concat "\t\t\t\t</div> <!-- #footer_lang_switcher -->\n"
+@output_buffer.concat "\t\t\t\t<div id=\"footer_logo_bcs\"><a href=\"#\" title=\"Band BCS\"><span>Band BCS</span></a></div>\n"
+@output_buffer.concat "\t\t\t</div> <!-- #footer -->\n"
+@output_buffer.concat "\t\t</div> <!-- #container -->\n"
+@output_buffer.concat "\t</body>\n"
+@output_buffer.concat "</html>\n"
+@output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69:in `compile!'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:61:in `compile'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/renderable.rb:28:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/template.rb:205:in `render_template'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:265:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:352:in `_render_with_layout'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_view/base.rb:262:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1250:in `render_for_file'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:945:in `render_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:51:in `render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1326:in `default_render'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:1338:in `perform_action_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:617:in `call_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:10:in `realtime'
+C:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.5/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/flash.rb:146:in `perform_action'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `send'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:532:in `process_without_filters'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/filters.rb:606:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:391:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/base.rb:386:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/routing/route_set.rb:437:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:87:in `dispatch'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:121:in `_call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:130:in `build_middleware_stack'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:29:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:9:in `cache'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/query_cache.rb:28:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.5/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:35:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `catch'
+C:/Ruby/lib/ruby/gems/1.8/gems/warden-0.10.3/lib/warden/manager.rb:34:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/string_coercion.rb:25:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/head.rb:9:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/methodoverride.rb:24:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/params_parser.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/session/cookie_store.rb:93:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/failsafe.rb:26:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `synchronize'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/lock.rb:11:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:114:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/reloader.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.5/lib/action_controller/dispatcher.rb:108:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/static.rb:31:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:46:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/urlmap.rb:40:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/rails/rack/log_tailer.rb:17:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/content_length.rb:13:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/chunked.rb:15:in `call'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:64:in `process'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:159:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `each'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:158:in `process_client'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:285:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `initialize'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `new'
+C:/Ruby/lib/ruby/gems/1.8/gems/mongrel-1.1.5-x86-mswin32-60/lib/mongrel.rb:268:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rack-1.0.1/lib/rack/handler/mongrel.rb:34:in `run'
+C:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.5/lib/commands/server.rb:111
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+C:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+./script/server:3
+-e:2:in `load'
+-e:2
+
+ActionView::TemplateError (compile error
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:67: syntax error, unexpected kENSURE, expecting ')'
+C:/Users/Jonathan/ROR Projects/www.resasystem.com/app/views/layouts/application.html.erb:69: syntax error, unexpected kEND, expecting ')') on line #67 of app/views/layouts/application.html.erb:
+64: 	</body>
+65: </html>
+
+    app/views/layouts/application.html.erb:69:in `compile!'
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (42.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:42:38) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 22ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:43:40) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+
+ActionView::TemplateError (No route matches {:locale=>"it", :controller=>"pages", :action=>"index"}) on line #41 of app/views/layouts/application.html.erb:
+38: 					<ul>
+39: 						<%= locale_switch_tag :locale => 'fr' %>
+40: 						<%= locale_switch_tag :locale => 'en' %>
+41: 						<% locale_switch_tag :locale => 'it' %>
+42: 						<% locale_switch_tag :locale => 'nd' %>
+43: 						<% locale_switch_tag :locale => 'de' %>
+44: 						<% locale_switch_tag :locale => 'br' %>
+
+    app/helpers/application_helper.rb:9:in `locale_switch_tag'
+    app/helpers/application_helper.rb:8:in `locale_switch_tag'
+    app/views/layouts/application.html.erb:41
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (52.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:43:58) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+
+ActionView::TemplateError (No route matches {:locale=>"it", :controller=>"pages", :action=>"index"}) on line #41 of app/views/layouts/application.html.erb:
+38: 					<ul>
+39: 						<%= locale_switch_tag :locale => 'fr' %>
+40: 						<%= locale_switch_tag :locale => 'en' %>
+41: 						<%= locale_switch_tag :locale => 'it' %>
+42: 						<%= locale_switch_tag :locale => 'nd' %>
+43: 						<%= locale_switch_tag :locale => 'de' %>
+44: 						<%= locale_switch_tag :locale => 'br' %>
+
+    app/helpers/application_helper.rb:9:in `locale_switch_tag'
+    app/helpers/application_helper.rb:8:in `locale_switch_tag'
+    app/views/layouts/application.html.erb:41
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (104.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:44:01) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 22ms (View: 19, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:44:31) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:44:39) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:44:42) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:44:45) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:49:32) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 23ms (View: 20, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:49:33) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:49:45) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:50:49) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:50:51) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:50:53) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:50:55) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-08 16:51:06) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (2.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (4.0ms)
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 41ms (View: 33, DB: 1) | 200 OK [http://localhost/en/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-08 16:51:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-08 16:51:06) [GET]
+
+ActionController::RoutingError (No route matches "/en/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-05-08 16:51:08) [GET]
+  Parameters: {"locale"=>"en"}
+  [4;35;1mAd Load (1.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (7.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 23ms (View: 16, DB: 1) | 200 OK [http://localhost/en/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-08 16:51:08) [GET]
+
+ActionController::RoutingError (No route matches "/en/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-05-08 16:51:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:51:10) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:54:08) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 62ms (View: 60, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:54:09) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 19ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:54:20) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 14, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:54:36) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 23ms (View: 21, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:54:37) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:55:44) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:55:45) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:55:48) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-08 16:55:54) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (2.0ms)
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 3935ms (View: 3874, DB: 0) | 200 OK [http://localhost/en/users/sign_up]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 16:56:00) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:00:20) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/]

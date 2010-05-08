@@ -156,6 +156,10 @@ fr:
     new_ad: Nouvelle annonce
     view_ad: Voir l'annonce
     ads: Les annonces
+    add_ads: Déposer une annonce
+    
+  offers:
+    offers: Les promotions
   
   news:
     news_link: News
