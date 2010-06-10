@@ -1,4 +1,4 @@
-class PagesController < ApplicationController
+class Client::PagesController < Client::ClientApplicationController
   def about
     
   end

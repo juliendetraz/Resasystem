@@ -13748,3 +13748,153 @@ ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg"
   -e:2
 
 Rendering rescues/layout (not_found)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 13:58:11) [GET]
+  Parameters: {"locale"=>"fr"}
+
+NameError (uninitialized constant AdsController):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (85.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 13:58:14) [GET]
+  Parameters: {"locale"=>"fr"}
+
+NameError (uninitialized constant PagesController):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendered rescues/_trace (31.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 13:59:56) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 13:59:57) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 13:59:57) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 13:59:57) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 14:01:14) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 14:01:14) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 14:01:15) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 14:01:15) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 14:01:15) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ActionController::Base#index (for 127.0.0.1 at 2010-06-10 14:01:16) [GET]
+
+ActionController::RoutingError (No route matches "/" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
