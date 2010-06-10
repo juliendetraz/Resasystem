@@ -1,4 +1,4 @@
-class OrganizationsController < ApplicationController
+class ClientOrganizationsController < Client::ClientApplicationController
   # GET /organizations
   # GET /organizations.xml
   def index

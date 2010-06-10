@@ -1,4 +1,4 @@
-class LivingroomsController < ApplicationController
+class Client::LivingroomsController < Client::ClientApplicationController
   # GET /livingrooms
   # GET /livingrooms.xml
   def index

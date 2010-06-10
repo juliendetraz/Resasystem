@@ -1,4 +1,4 @@
-class HousingPoisController < ApplicationController
+class Client::HousingPoisController < Client::ClientApplicationController
   # GET /housing_pois
   # GET /housing_pois.xml
   def index

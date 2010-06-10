@@ -1,4 +1,4 @@
-class OffersController < ApplicationController
+class Member::OffersController < Member::MemberApplicationController
   # GET /offers
   # GET /offers.xml
   def index

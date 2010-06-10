@@ -1,4 +1,4 @@
-class PicturesController < ApplicationController
+class Member::PicturesController < Member::MemberApplicationController
   # GET /pictures
   # GET /pictures.xml
   def index

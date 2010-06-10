@@ -1,4 +1,4 @@
-class HousingServicesController < ApplicationController
+class Member::HousingServicesController < Member::MemberApplicationController
   # GET /housing_services
   # GET /housing_services.xml
   def index

@@ -1,4 +1,4 @@
-class BathroomsController < ApplicationController
+class Member::BathroomsController < Member::MemberApplicationController
   # GET /bathrooms
   # GET /bathrooms.xml
   def index

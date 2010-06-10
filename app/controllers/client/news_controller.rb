@@ -1,4 +1,4 @@
-class NewsController < ApplicationController
+class Client::NewsController < Client::ClientApplicationController
   # GET /news
   # GET /news.xml
   def index

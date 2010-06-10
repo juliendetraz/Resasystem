@@ -1,4 +1,4 @@
-class CalendarsController < ApplicationController
+class Member::CalendarsController < Member::MemberApplicationController
   # GET /calendars
   # GET /calendars.xml
   def index

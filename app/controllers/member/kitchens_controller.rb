@@ -1,4 +1,4 @@
-class KitchensController < ApplicationController
+class Member::KitchensController < Member::MemberApplicationController
   # GET /kitchens
   # GET /kitchens.xml
   def index

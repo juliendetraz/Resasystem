@@ -1,4 +1,4 @@
-class MessageUsergroupsController < ApplicationController
+class Member::MessageUsergroupsController < Member::MemberApplicationController
   # GET /message_usergroups
   # GET /message_usergroups.xml
   def index

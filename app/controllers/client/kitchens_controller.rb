@@ -1,4 +1,4 @@
-class KitchensController < ApplicationController
+class Client::KitchensController < Client::ClientApplicationController
   # GET /kitchens
   # GET /kitchens.xml
   def index

@@ -1,4 +1,4 @@
-class AdsController < ApplicationController
+class Member::AdsController < Member::MemberApplicationController
   # GET /ads
   # GET /ads.xml
   def index
