@@ -1,4 +1,4 @@
-class ReservationsController < ApplicationController
+class Admin::ReservationsController < Admin::AdminApplicationController
   # GET /reservations
   # GET /reservations.xml
   def index

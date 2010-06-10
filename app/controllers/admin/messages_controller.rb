@@ -1,4 +1,4 @@
-class MessagesController < ApplicationController
+class Admin::MessagesController < Admin::AdminApplicationController
   # GET /messages
   # GET /messages.xml
   def index

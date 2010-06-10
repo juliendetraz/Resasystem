@@ -1,5 +1,3 @@
-class PagesController < ApplicationController
-  def about
-    
-  end
+class Admin::PagesController < Admin::AdminApplicationController
+
 end
