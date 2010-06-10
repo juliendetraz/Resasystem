@@ -1,0 +1,38 @@
+<p>
+  <b>User:</b>
+  <%=h @message.user_id %>
+</p>
+
+<p>
+  <b>Message usergroup:</b>
+  <%=h @message.message_usergroup_id %>
+</p>
+
+<p>
+  <b>Parent message:</b>
+  <%=h @message.parent_message %>
+</p>
+
+<p>
+  <b>Subject:</b>
+  <%=h @message.subject %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%=h @message.body %>
+</p>
+
+<p>
+  <b>Is sent:</b>
+  <%=h @message.is_sent %>
+</p>
+
+<p>
+  <b>Is new:</b>
+  <%=h @message.is_new %>
+</p>
+
+
+<%= link_to 'Edit', edit_message_path(@message) %> |
+<%= link_to 'Back', messages_path %>

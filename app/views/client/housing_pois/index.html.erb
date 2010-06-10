@@ -1,0 +1,26 @@
+<h1>Listing housing_pois</h1>
+
+<table>
+  <tr>
+    <th>Housing poi</th>
+    <th>Housing</th>
+    <th>Name</th>
+    <th>Distance</th>
+  </tr>
+
+<% @housing_pois.each do |housing_poi| %>
+  <tr>
+    <td><%=h housing_poi.housing_poi_id %></td>
+    <td><%=h housing_poi.housing_id %></td>
+    <td><%=h housing_poi.name %></td>
+    <td><%=h housing_poi.distance %></td>
+    <td><%= link_to 'Show', housing_poi %></td>
+    <td><%= link_to 'Edit', edit_housing_poi_path(housing_poi) %></td>
+    <td><%= link_to 'Destroy', housing_poi, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New housing_poi', new_housing_poi_path %>

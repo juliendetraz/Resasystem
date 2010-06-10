@@ -4,27 +4,14 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :ads, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :news, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :users, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :rooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :offers, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :messages, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :pictures, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :kitchens, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :bedrooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :housings, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :services, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :addresses, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :bathrooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :calendars, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :livingrooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :offer_rooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :dinningrooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :housing_pois, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :offer_prices, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :reservations, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :organizations, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :room_pictures, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :housing_pictures, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-  map.resources :housing_services, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   map.resources :message_usergroups, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
   
 

@@ -68,21 +68,26 @@ p {
   			display: none;
   		}
 		#header_menu {
-			padding: 44px 0 0 321px;
+			padding: 44px 0 0 290px;
 			list-style: none;
+      width: 440px;
 			margin: 0;
 		}
 			#header_menu li {
-				padding: 0 11px;
+			  text-align: center;
 				display: block;
 				float: left;
+        width: 33%;
 			}
 				#header_menu li a {
+					padding: 2px 8px;
+        }
+				#header_menu li a,
+        a#header_menu-item-last {
 					text-transform: uppercase;
 					text-decoration: none;
 					font-weight: bold;
 					font-size: 1.1em;
-					padding: 2px 8px;
 					color: #fff;
 				}
 				#header_menu li a:hover, #header_menu li a.selected {
@@ -92,8 +97,10 @@ p {
 					-khtml-border-radius: 5px;
 					-webkit-border-radius: 5px;
 				}
-				#header_menu li#header_menu-item-end {
-					padding: 0px 0px 2px 17px;
+				#header_menu-item-last {
+				  text-align: center;
+          float: right;
+          width: 205px;
 				}
 
 /* Header bar with signup button */

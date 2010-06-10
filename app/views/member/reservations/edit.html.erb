@@ -1,0 +1,28 @@
+<h1>Editing reservation</h1>
+
+<% form_for(@reservation) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :customer_id %><br />
+    <%= f.text_field :customer_id %>
+  </p>
+  <p>
+    <%= f.label :calendar_id %><br />
+    <%= f.text_field :calendar_id %>
+  </p>
+  <p>
+    <%= f.label :reservation_status %><br />
+    <%= f.text_field :reservation_status %>
+  </p>
+  <p>
+    <%= f.label :reservation_date %><br />
+    <%= f.datetime_select :reservation_date %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @reservation %> |
+<%= link_to 'Back', reservations_path %>

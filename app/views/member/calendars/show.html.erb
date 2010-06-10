@@ -1,0 +1,23 @@
+<p>
+  <b>Offer:</b>
+  <%=h @calendar.offer_id %>
+</p>
+
+<p>
+  <b>Start date:</b>
+  <%=h @calendar.start_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%=h @calendar.end_date %>
+</p>
+
+<p>
+  <b>Availability type:</b>
+  <%=h @calendar.availability_type %>
+</p>
+
+
+<%= link_to 'Edit', edit_calendar_path(@calendar) %> |
+<%= link_to 'Back', calendars_path %>

@@ -1,0 +1,32 @@
+<h1>Listing pictures</h1>
+
+<table>
+  <tr>
+    <th>Url</th>
+    <th>Path</th>
+    <th>Order</th>
+    <th>Is default</th>
+    <th>Is visible</th>
+    <th>Is validated</th>
+    <th>Date validated</th>
+  </tr>
+
+<% @pictures.each do |picture| %>
+  <tr>
+    <td><%=h picture.url %></td>
+    <td><%=h picture.path %></td>
+    <td><%=h picture.order %></td>
+    <td><%=h picture.is_default %></td>
+    <td><%=h picture.is_visible %></td>
+    <td><%=h picture.is_validated %></td>
+    <td><%=h picture.date_validated %></td>
+    <td><%= link_to 'Show', picture %></td>
+    <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
+    <td><%= link_to 'Destroy', picture, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New picture', new_picture_path %>

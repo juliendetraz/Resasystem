@@ -1,0 +1,78 @@
+<p>
+  <b>Email:</b>
+  <%=h @user.email %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @user.password %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%=h @user.gender %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%=h @user.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%=h @user.last_name %>
+</p>
+
+<p>
+  <b>Phone contact:</b>
+  <%=h @user.phone_contact %>
+</p>
+
+<p>
+  <b>Phone fax:</b>
+  <%=h @user.phone_fax %>
+</p>
+
+<p>
+  <b>Phone mobile:</b>
+  <%=h @user.phone_mobile %>
+</p>
+
+<p>
+  <b>Phone pro:</b>
+  <%=h @user.phone_pro %>
+</p>
+
+<p>
+  <b>Phone home:</b>
+  <%=h @user.phone_home %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%=h @user.role %>
+</p>
+
+<p>
+  <b>Is active:</b>
+  <%=h @user.is_active %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%=h @user.language %>
+</p>
+
+<p>
+  <b>Has subscribed:</b>
+  <%=h @user.has_subscribed %>
+</p>
+
+<p>
+  <b>Firstday week:</b>
+  <%=h @user.firstday_week %>
+</p>
+
+
+<%= link_to 'Edit', edit_user_path(I18n.locale, @user) %> |
+<%= link_to 'Back', users_path(I18n.locale) %>

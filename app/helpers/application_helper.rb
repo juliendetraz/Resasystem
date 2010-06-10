@@ -6,7 +6,10 @@ module ApplicationHelper
     classes = ["langItem"]
     classes << "currentLang" if locale == I18n.locale
     content_tag :li, :class => classes.join(" ") do
-      link_to "<span id=\"lang_#{locale}\"><span>" + t("lang.label_#{locale}") + '</span></span>', params.merge(:locale => locale), :id => "switcher#{locale.capitalize}", :title => I18n.t("lang.switch_#{locale}")
+      link_to "<span id=\"lang_#{locale}\"><span>" + t("lang.label_#{locale}") + '</span></span>', 
+              params.merge(:locale => locale), 
+              :id => "switcher#{locale.capitalize}", 
+              :title => I18n.t("lang.switch_#{locale}")
     end
   end
 

@@ -12676,3 +12676,1075 @@ Rendering template within layouts/application
 Rendering pages/index
 Rendered users/_headbar_log_in (1.0ms)
 Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:17:47) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:18:46) [GET]
+  Parameters: {"locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+
+ActionView::TemplateError (fr) on line #35 of app/views/layouts/application.html.erb:
+32: 			<div id="footer">
+33: 				<div id="footer_lang_switcher">
+34: 					<ul>
+35: 						<%= locale_switch_tag :locale => 'fr' %>
+36: 						<%= locale_switch_tag :locale => 'en' %>
+37: 					</ul>
+38: 					<div id="footer_links">
+
+    app/helpers/application_helper.rb:6:in `locale_switch_tag'
+    app/views/layouts/application.html.erb:35
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (46.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:18:51) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+
+ActionView::TemplateError (fr) on line #35 of app/views/layouts/application.html.erb:
+32: 			<div id="footer">
+33: 				<div id="footer_lang_switcher">
+34: 					<ul>
+35: 						<%= locale_switch_tag :locale => 'fr' %>
+36: 						<%= locale_switch_tag :locale => 'en' %>
+37: 					</ul>
+38: 					<div id="footer_links">
+
+    app/helpers/application_helper.rb:6:in `locale_switch_tag'
+    app/views/layouts/application.html.erb:35
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (44.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:19:00) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:19:09) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:19:14) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:19:18) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:19:27) [GET]
+  Parameters: {"locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:22:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 14, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:22:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:22:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 13, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:23:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (2.0ms)
+Completed in 65ms (View: 56, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:25:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:26:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 17ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:28:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:28:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:29:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:29:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 16ms (View: 6, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:30:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:30:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 64ms (View: 55, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:31:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:31:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 23ms (View: 13, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:32:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 20ms (View: 10, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:32:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:33:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:33:46) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 19ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:33:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 65ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:34:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:34:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:34:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:34:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:34:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 17ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:35:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:35:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:35:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:36:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:36:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:36:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:36:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:36:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:36:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:36:57) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:38:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:38:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:38:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:39:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:39:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:39:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:39:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:39:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:40:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:40:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 65ms (View: 56, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:40:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:40:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:40:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:40:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:41:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 17ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:41:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 17ms (View: 8, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:41:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 17ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:41:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:41:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:41:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"en"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/en]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 17:41:30) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-08 18:34:49) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (2.0ms)
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 43ms (View: 25, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-08 18:34:54) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_headbar_log_in (0.0ms)
+Completed in 39ms (View: 21, DB: 0) | 200 OK [http://localhost/fr/users/sign_up]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-05-08 18:34:56) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 33ms (View: 14, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-05-08 18:34:58) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 33ms (View: 14, DB: 0) | 200 OK [http://localhost/fr/users/sign_up]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-08 18:34:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 16ms (View: 7, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-05-13 17:47:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+Rendered users/_headbar_log_in (2.0ms)
+Completed in 3606ms (View: 75, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-06-06 10:37:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+Rendered users/_headbar_log_in (2.0ms)
+Completed in 183ms (View: 99, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2010-06-06 10:39:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"sessions", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (12.0ms)
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 53ms (View: 34, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2010-06-06 10:39:33) [POST]
+  Parameters: {"user"=>{"password"=>"[FILTERED]", "remember_me"=>"0", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign in", "action"=>"create", "authenticity_token"=>"Feg6/T5kEJ5jd+9brouJZFUzf+N9zoZcKnpj9FZTvmU=", "controller"=>"sessions", "locale"=>"fr"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+WARNING: Can't mass-assign these protected attributes: remember_me
+Rendering template within layouts/application
+Rendering sessions/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 3868ms (View: 12, DB: 0) | 200 OK [http://localhost/fr/users/sign_in]
+
+
+Processing RegistrationsController#new (for 127.0.0.1 at 2010-06-06 10:39:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"registrations", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering registrations/new
+Rendered shared/_devise_links (1.0ms)
+Rendered users/_headbar_log_in (1.0ms)
+Completed in 38ms (View: 20, DB: 0) | 200 OK [http://localhost/fr/users/sign_up]
+
+
+Processing RegistrationsController#create (for 127.0.0.1 at 2010-06-06 10:39:45) [POST]
+  Parameters: {"user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "email"=>"jonathan@meiss.fr"}, "commit"=>"Sign up", "action"=>"create", "authenticity_token"=>"Feg6/T5kEJ5jd+9brouJZFUzf+N9zoZcKnpj9FZTvmU=", "controller"=>"registrations", "locale"=>"fr"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."email" = 'jonathan@meiss.fr') LIMIT 1[0m
+  [4;36;1mUser Create (0.0ms)[0m   [0;1mINSERT INTO "users" ("encrypted_password", "confirmed_at", "last_sign_in_ip", "phone_fax", "phone_mobile", "updated_at", "last_sign_in_at", "language", "has_subscribed", "password_salt", "phone_contact", "role", "confirmation_sent_at", "sign_in_count", "current_sign_in_ip", "gender", "phone_home", "is_active", "current_sign_in_at", "phone_pro", "remember_token", "firstday_week", "confirmation_token", "first_name", "reset_password_token", "password", "last_name", "email", "remember_created_at", "created_at") VALUES('5dfa8a0894cfe3c48cc197f9e8a9435fb93314f0', NULL, NULL, NULL, NULL, '2010-06-06 08:39:45', NULL, NULL, NULL, 'bjR29_-Jv58Z6Sx--sUq', NULL, NULL, NULL, 0, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'jonathan@meiss.fr', NULL, '2010-06-06 08:39:45')[0m
+  [4;35;1mUser Update (1.0ms)[0m   [0mUPDATE "users" SET "sign_in_count" = 1, "current_sign_in_at" = '2010-06-06 08:39:45', "current_sign_in_ip" = '127.0.0.1', "last_sign_in_at" = '2010-06-06 08:39:45', "updated_at" = '2010-06-06 08:39:45', "last_sign_in_ip" = '127.0.0.1' WHERE "id" = 3[0m
+Redirected to http://localhost:3000/
+Completed in 442ms (DB: 1) | 302 Found [http://localhost/fr/users]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-06-06 10:39:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+ActionView::TemplateError (user_url failed to generate from {:controller=>"users", :action=>"show"} - you may have ambiguous routes, or you may need to supply additional parameters for this route.  content_url has the following required parameters: [:locale, "users", :id] - are they all satisfied?) on line #11 of app/views/users/_headbar_logged.html.erb:
+8:     </div>
+9:     <ul id="headbar_logged_icons">
+10:       <li id="news">
+11:         <%= link_to '<span>' + t("news.news_link") + '</span>', user_path, :title => t("news.news_link") %>
+12:       </li>
+13:       <li id="resa">
+14:         <%= link_to '<span>' + t("users.your_reservations_link") + '</span>', user_path, :title => t("users.your_reservations_link") %>
+
+    (eval):16:in `user_path'
+    app/views/users/_headbar_logged.html.erb:11
+    app/views/layouts/application.html.erb:24
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (116.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-06-06 10:40:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+ActionView::TemplateError (user_url failed to generate from {:locale=>"fr", :controller=>"users", :action=>"show"}, expected: {:controller=>"users", :action=>"show"}, diff: {:locale=>"fr"}) on line #11 of app/views/users/_headbar_logged.html.erb:
+8:     </div>
+9:     <ul id="headbar_logged_icons">
+10:       <li id="news">
+11:         <%= link_to '<span>' + t("news.news_link") + '</span>', user_path(I18n.locale), :title => t("news.news_link") %>
+12:       </li>
+13:       <li id="resa">
+14:         <%= link_to '<span>' + t("users.your_reservations_link") + '</span>', user_path(I18n.locale), :title => t("users.your_reservations_link") %>
+
+    (eval):16:in `user_path'
+    app/views/users/_headbar_logged.html.erb:11
+    app/views/layouts/application.html.erb:24
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (109.0ms)
+Rendered rescues/_request_and_response (1.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-06-06 10:41:01) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+ActionView::TemplateError (user_url failed to generate from {:locale=>"fr", :controller=>"users", :action=>"show"}, expected: {:controller=>"users", :action=>"show"}, diff: {:locale=>"fr"}) on line #11 of app/views/users/_headbar_logged.html.erb:
+8:     </div>
+9:     <ul id="headbar_logged_icons">
+10:       <li id="news">
+11:         <%= link_to '<span>' + t("news.news_link") + '</span>', user_path(I18n.locale), :title => t("news.news_link") %>
+12:       </li>
+13:       <li id="resa">
+14:         <%= link_to '<span>' + t("users.your_reservations_link") + '</span>', user_path(I18n.locale), :title => t("users.your_reservations_link") %>
+
+    (eval):16:in `user_path'
+    app/views/users/_headbar_logged.html.erb:11
+    app/views/layouts/application.html.erb:24
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-06-06 10:48:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+ActionView::TemplateError (user_url failed to generate from {:locale=>"fr", :controller=>"users", :action=>"show"}, expected: {:controller=>"users", :action=>"show"}, diff: {:locale=>"fr"}) on line #11 of app/views/users/_headbar_logged.html.erb:
+8:     </div>
+9:     <ul id="headbar_logged_icons">
+10:       <li id="news">
+11:         <%= link_to '<span>' + t("news.news_link") + '</span>', user_path(I18n.locale), :title => t("news.news_link") %>
+12:       </li>
+13:       <li id="resa">
+14:         <%= link_to '<span>' + t("users.your_reservations_link") + '</span>', user_path(I18n.locale), :title => t("users.your_reservations_link") %>
+
+    (eval):16:in `user_path'
+    app/views/users/_headbar_logged.html.erb:11
+    app/views/layouts/application.html.erb:24
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (56.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-06-06 10:49:05) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mUser Load (2.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+
+ActionView::TemplateError (user_url failed to generate from {:locale=>"fr", :controller=>"users", :action=>"show"}, expected: {:controller=>"users", :action=>"show"}, diff: {:locale=>"fr"}) on line #11 of app/views/users/_headbar_logged.html.erb:
+8:     </div>
+9:     <ul id="headbar_logged_icons">
+10:       <li id="news">
+11:         <%= link_to '<span>' + t("news.news_link") + '</span>', user_path(I18n.locale), :title => t("news.news_link") %>
+12:       </li>
+13:       <li id="resa">
+14:         <%= link_to '<span>' + t("users.your_reservations_link") + '</span>', user_path(I18n.locale), :title => t("users.your_reservations_link") %>
+
+    (eval):16:in `user_path'
+    app/views/users/_headbar_logged.html.erb:11
+    app/views/layouts/application.html.erb:24
+    warden (0.10.3) lib/warden/manager.rb:35:in `call'
+    warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+    warden (0.10.3) lib/warden/manager.rb:34:in `call'
+    -e:2:in `load'
+    -e:2
+
+Rendered rescues/_trace (58.0ms)
+Rendered rescues/_request_and_response (2.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-06-06 10:50:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/_headbar_logged (8.0ms)
+Completed in 85ms (View: 22, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-06-06 10:52:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"ads", "locale"=>"fr"}
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (11.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (17.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/_headbar_logged (7.0ms)
+Completed in 91ms (View: 71, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-06 10:52:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-06 10:52:08) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-06-06 10:52:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"ads", "locale"=>"fr"}
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (1.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/_headbar_logged (7.0ms)
+Completed in 38ms (View: 18, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-06 10:52:14) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-06 10:52:14) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-06-06 10:52:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"ads", "locale"=>"fr"}
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (0.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/_headbar_logged (7.0ms)
+Completed in 38ms (View: 18, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-06 10:52:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-06 10:52:15) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-06-06 10:52:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/_headbar_logged (7.0ms)
+Completed in 33ms (View: 17, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-06-06 10:52:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"ads", "locale"=>"fr"}
+  [4;35;1mAd Load (1.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (1.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (0.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/_headbar_logged (6.0ms)
+Completed in 39ms (View: 18, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-06 10:52:17) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-06 10:52:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-06-06 11:08:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;35;1mUser Load (2.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/_headbar_logged (55.0ms)
+Completed in 80ms (View: 64, DB: 2) | 200 OK [http://localhost/]
+
+
+Processing PagesController#index (for 127.0.0.1 at 2010-06-06 11:10:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"pages", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering pages/index
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/_headbar_logged (6.0ms)
+Completed in 33ms (View: 17, DB: 1) | 200 OK [http://localhost/]
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-06-06 11:10:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"ads", "locale"=>"fr"}
+  [4;35;1mAd Load (1.0ms)[0m   [0mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (0.0ms)
+Rendered ads/_pagination_bar (0.0ms)
+Rendered layouts/_sidebar_search (1.0ms)
+  [4;36;1mUser Load (1.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/_headbar_logged (9.0ms)
+Completed in 46ms (View: 23, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-06 11:10:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-06 11:10:27) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#new (for 127.0.0.1 at 2010-06-06 11:11:20) [GET]
+  Parameters: {"action"=>"new", "controller"=>"ads", "locale"=>"fr"}
+Rendering template within layouts/application
+Rendering ads/new
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/_headbar_logged (6.0ms)
+Completed in 55ms (View: 35, DB: 1) | 200 OK [http://localhost/fr/ads/new]
+
+
+Processing AdsController#create (for 127.0.0.1 at 2010-06-06 11:11:50) [POST]
+  Parameters: {"commit"=>"Create", "ad"=>{"reference"=>"", "title"=>"Week-end dégustation", "is_validated"=>"0", "description"=>"La villa construite en 2002", "housing_id"=>""}, "action"=>"create", "authenticity_token"=>"Feg6/T5kEJ5jd+9brouJZFUzf+N9zoZcKnpj9FZTvmU=", "controller"=>"ads", "locale"=>"fr"}
+  [4;36;1mAd Create (1.0ms)[0m   [0;1mINSERT INTO "ads" ("reference", "updated_at", "ad_id", "title", "is_validated", "description", "housing_id", "created_at") VALUES('', '2010-06-06 09:11:50', NULL, 'Week-end dégustation', 'f', 'La villa construite en 2002', NULL, '2010-06-06 09:11:50')[0m
+
+ActionController::RoutingError (ad_url failed to generate from {:locale=>#<Ad id: 1, reference: "", title: "Week-end dégustation", description: "La villa construite en 2002", is_validated: false, housing_id: nil, created_at: "2010-06-06 09:11:50", updated_at: "2010-06-06 09:11:50", ad_id: nil>, :controller=>"ads", :action=>"show"}, expected: {:controller=>"ads", :action=>"show"}, diff: {:locale=>#<Ad id: 1, reference: "", title: "Week-end dégustation", description: "La villa construite en 2002", is_validated: false, housing_id: nil, created_at: "2010-06-06 09:11:50", updated_at: "2010-06-06 09:11:50", ad_id: nil>}):
+  (eval):16:in `ad_url'
+  app/controllers/ads_controller.rb:48:in `create'
+  app/controllers/ads_controller.rb:45:in `create'
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing AdsController#index (for 127.0.0.1 at 2010-06-10 11:25:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"ads", "locale"=>"fr"}
+  [4;36;1mAd Load (1.0ms)[0m   [0;1mSELECT * FROM "ads" [0m
+Rendering template within layouts/application
+Rendering ads/index
+Rendered ads/_pagination_bar (80.0ms)
+Rendered ads/_pagination_bar (1.0ms)
+Rendered layouts/_sidebar_search (4.0ms)
+  [4;35;1mUser Load (1.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+Rendered users/_headbar_logged (10.0ms)
+Completed in 266ms (View: 208, DB: 2) | 200 OK [http://localhost/fr/ads]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-10 11:25:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/style_ads.css" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-06-10 11:25:10) [GET]
+
+ActionController::RoutingError (No route matches "/fr/images/fake-gmap-mini.jpg" with {:method=>:get}):
+  warden (0.10.3) lib/warden/manager.rb:35:in `call'
+  warden (0.10.3) lib/warden/manager.rb:34:in `catch'
+  warden (0.10.3) lib/warden/manager.rb:34:in `call'
+  -e:2:in `load'
+  -e:2
+
+Rendering rescues/layout (not_found)

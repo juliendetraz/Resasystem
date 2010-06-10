@@ -1,0 +1,24 @@
+<h1>Listing housing_services</h1>
+
+<table>
+  <tr>
+    <th>Housing</th>
+    <th>Service</th>
+    <th>Price</th>
+  </tr>
+
+<% @housing_services.each do |housing_service| %>
+  <tr>
+    <td><%=h housing_service.housing_id %></td>
+    <td><%=h housing_service.service_id %></td>
+    <td><%=h housing_service.price %></td>
+    <td><%= link_to 'Show', housing_service %></td>
+    <td><%= link_to 'Edit', edit_housing_service_path(housing_service) %></td>
+    <td><%= link_to 'Destroy', housing_service, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New housing_service', new_housing_service_path %>

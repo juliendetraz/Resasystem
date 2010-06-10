@@ -1,0 +1,22 @@
+<h1>Listing dinningrooms</h1>
+
+<table>
+  <tr>
+    <th>Room</th>
+    <th>Sofa bed option</th>
+  </tr>
+
+<% @dinningrooms.each do |dinningroom| %>
+  <tr>
+    <td><%=h dinningroom.room_id %></td>
+    <td><%=h dinningroom.sofa_bed_option %></td>
+    <td><%= link_to 'Show', dinningroom %></td>
+    <td><%= link_to 'Edit', edit_dinningroom_path(dinningroom) %></td>
+    <td><%= link_to 'Destroy', dinningroom, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New dinningroom', new_dinningroom_path %>

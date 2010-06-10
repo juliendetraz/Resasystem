@@ -1,0 +1,36 @@
+<%= stylesheet_link_tag 'style_ads' %>
+
+<div id="content_left">
+  <%= render :partial => "pagination_bar" %>
+
+	<div id="list_ads">
+		<%= link_to t("ads.new_ad"), new_ad_path %>
+
+		<% @ads.each do |ad| %>
+			<div id="item_ad-1" class="item_ad-container">
+				<div class="item_ad-header">
+					<span class="item-ad-nb">1</span>
+				</div>
+				<div class="item_ad-content">
+					<h2><%=h ad.title %></h2>
+					<div class="item-ad-left">
+						<h3>Le Beausset (83),  Provence Alpes Côtes d’Azur, France</h3>
+						<p><%=h ad.description %></p>
+					</div>
+					<div class="item-ad-right">
+						Photo
+					</div>
+				</div>
+				<div class="item_ad-footer">
+					<p><a href="#" title="<%= t("ads.view_ad") %>"><%= t("ads.view_ad") %></a></p>
+				</div>
+			</div>
+		<% end %>
+	</div>
+
+  <%= render :partial => "pagination_bar" %>
+</div>
+
+<div id="content_right">
+  <%= render :partial => "layouts/sidebar_search" %>
+</div>

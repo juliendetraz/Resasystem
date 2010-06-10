@@ -1,0 +1,13 @@
+<p>
+  <b>Room:</b>
+  <%=h @kitchen.room_id %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @kitchen.type %>
+</p>
+
+
+<%= link_to 'Edit', edit_kitchen_path(@kitchen) %> |
+<%= link_to 'Back', kitchens_path %>

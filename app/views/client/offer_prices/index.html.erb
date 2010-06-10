@@ -1,0 +1,24 @@
+<h1>Listing offer_prices</h1>
+
+<table>
+  <tr>
+    <th>Offer</th>
+    <th>Price</th>
+    <th>Season</th>
+  </tr>
+
+<% @offer_prices.each do |offer_price| %>
+  <tr>
+    <td><%=h offer_price.offer_id %></td>
+    <td><%=h offer_price.price %></td>
+    <td><%=h offer_price.season %></td>
+    <td><%= link_to 'Show', offer_price %></td>
+    <td><%= link_to 'Edit', edit_offer_price_path(offer_price) %></td>
+    <td><%= link_to 'Destroy', offer_price, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New offer_price', new_offer_price_path %>

@@ -1,0 +1,23 @@
+<p>
+  <b>Customer:</b>
+  <%=h @reservation.customer_id %>
+</p>
+
+<p>
+  <b>Calendar:</b>
+  <%=h @reservation.calendar_id %>
+</p>
+
+<p>
+  <b>Reservation status:</b>
+  <%=h @reservation.reservation_status %>
+</p>
+
+<p>
+  <b>Reservation date:</b>
+  <%=h @reservation.reservation_date %>
+</p>
+
+
+<%= link_to 'Edit', edit_reservation_path(@reservation) %> |
+<%= link_to 'Back', reservations_path %>

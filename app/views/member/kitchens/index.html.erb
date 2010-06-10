@@ -1,0 +1,22 @@
+<h1>Listing kitchens</h1>
+
+<table>
+  <tr>
+    <th>Room</th>
+    <th>Type</th>
+  </tr>
+
+<% @kitchens.each do |kitchen| %>
+  <tr>
+    <td><%=h kitchen.room_id %></td>
+    <td><%=h kitchen.type %></td>
+    <td><%= link_to 'Show', kitchen %></td>
+    <td><%= link_to 'Edit', edit_kitchen_path(kitchen) %></td>
+    <td><%= link_to 'Destroy', kitchen, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New kitchen', new_kitchen_path %>

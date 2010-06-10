@@ -1,0 +1,24 @@
+<h1>Editing housing_service</h1>
+
+<% form_for(@housing_service) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :housing_id %><br />
+    <%= f.text_field :housing_id %>
+  </p>
+  <p>
+    <%= f.label :service_id %><br />
+    <%= f.text_field :service_id %>
+  </p>
+  <p>
+    <%= f.label :price %><br />
+    <%= f.text_field :price %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @housing_service %> |
+<%= link_to 'Back', housing_services_path %>

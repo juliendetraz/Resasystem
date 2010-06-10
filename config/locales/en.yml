@@ -139,3 +139,31 @@ en:
         even: "doit être pair"
         record_invalid: "La validation a échoué : {{errors}}"
         
+  homepage:
+    homepage: Homepage
+  
+  users:
+    your_profile_link: My account
+    favorites_link: My favorits
+    your_reservations_link: My reservations
+    
+  pagination_bar:
+    results_found: found results
+    page_prev: Previous page
+    page_next: Next page
+    page: Page
+    
+  ads:
+    new_ad: New ad
+    view_ad: See ad
+    ads: Ads
+    add_ads: Add ad
+    
+  offers:
+    offers: Offers
+  
+  news:
+    news_link: News
+    
+  messages:
+    your_messages_link: My messages

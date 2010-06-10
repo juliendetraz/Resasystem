@@ -1,0 +1,48 @@
+<p>
+  <b>Street:</b>
+  <%=h @address.street %>
+</p>
+
+<p>
+  <b>Complement:</b>
+  <%=h @address.complement %>
+</p>
+
+<p>
+  <b>Zip:</b>
+  <%=h @address.zip %>
+</p>
+
+<p>
+  <b>State province country:</b>
+  <%=h @address.state_province_country %>
+</p>
+
+<p>
+  <b>Other address details:</b>
+  <%=h @address.other_address_details %>
+</p>
+
+<p>
+  <b>City:</b>
+  <%=h @address.city %>
+</p>
+
+<p>
+  <b>Country:</b>
+  <%=h @address.country %>
+</p>
+
+<p>
+  <b>Gmap latitude:</b>
+  <%=h @address.gmap_latitude %>
+</p>
+
+<p>
+  <b>Gmap longitude:</b>
+  <%=h @address.gmap_longitude %>
+</p>
+
+
+<%= link_to 'Edit', edit_address_path(@address) %> |
+<%= link_to 'Back', addresses_path %>
