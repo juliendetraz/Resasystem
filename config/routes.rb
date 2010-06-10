@@ -32,7 +32,7 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
 
-  map.client :client do |client|
+  map.namespace :client do |client|
     client.resources :ads, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
     client.resources :news, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
     client.resources :users, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }

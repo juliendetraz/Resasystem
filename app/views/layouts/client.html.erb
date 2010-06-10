@@ -15,13 +15,13 @@
 				<%= link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") %>
 				<ul id="header_menu">
 					<li id=""><%= link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") %></li>
-					<li id=""><%= link_to t("ads.ads"), ads_path, :title => t("ads.ads") %></li>
-					<li id=""><%= link_to t("offers.offers"), ads_path, :title => t("offers.offers") %></li>
+					<li id=""><%= link_to t("ads.ads"), member_ads_path, :title => t("ads.ads") %></li>
+					<li id=""><%= link_to t("offers.offers"), member_ads_path, :title => t("offers.offers") %></li>
 				</ul>
-				<%= link_to t("ads.add_ads"), ads_path, :title => t("ads.add_ads"), :id => 'header_menu-item-last' %>
+				<%= link_to t("ads.add_ads"), member_ads_path, :title => t("ads.add_ads"), :id => 'header_menu-item-last' %>
 			</div> <!-- #header -->
 			<div id="headbar">
-		    <%= user_signed_in? ? render(:partial => "users/headbar_logged") : render(:partial => "users/headbar_log_in") %>
+		    <%= user_signed_in? ? render(:partial => "client/users/headbar_logged") : render(:partial => "client/users/headbar_log_in") %>
 			</div> <!-- #headbar -->
 			<div id="content">
 			  <% flash.each do |key, msg| %>
