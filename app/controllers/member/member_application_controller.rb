@@ -2,5 +2,5 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class Member::MemberApplicationController < ActionController::Base
-  layout 'member'
+  layout 'member/application'
 end

@@ -2,5 +2,5 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class Admin::AdminApplicationController < ActionController::Base
-  layout 'admin'
+  layout 'admin/application'
 end

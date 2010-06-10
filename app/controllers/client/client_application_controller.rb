@@ -2,5 +2,5 @@
 # Likewise, all the methods added will be available for all controllers.
 
 class Client::ClientApplicationController < ActionController::Base
-  layout 'client'
+  layout 'client/application'
 end
