@@ -1,4 +1,4 @@
-class BedroomsController < ApplicationController
+class Admin::BedroomsController < Admin::AdminApplicationController
   # GET /bedrooms
   # GET /bedrooms.xml
   def index

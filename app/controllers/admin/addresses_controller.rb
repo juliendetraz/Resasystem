@@ -1,4 +1,4 @@
-class AddressesController < ApplicationController
+class Admin::AddressesController < Admin::AdminApplicationController
   # GET /addresses
   # GET /addresses.xml
   def index
