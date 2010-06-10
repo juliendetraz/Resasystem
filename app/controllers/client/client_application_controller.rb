@@ -3,4 +3,5 @@
 
 class Client::ClientApplicationController < ActionController::Base
   layout 'client/application'
+  helper :all
 end
