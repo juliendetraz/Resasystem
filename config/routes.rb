@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.devise_for :users, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.devise_for :users
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -32,27 +32,52 @@ ActionController::Routing::Routes.draw do |map|
   #     admin.resources :products
   #   end
 
-  map.namespace :client do |client|
-    client.resources :ads, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-    client.resources :news, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-    client.resources :users, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-    client.resources :offers, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-    client.resources :messages, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-    client.resources :pictures, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-    client.resources :housings, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-    client.resources :bathrooms, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-    client.resources :calendars, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-    client.resources :reservations, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-    client.resources :organizations, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
-    client.resources :message_usergroups, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ }
+  map.namespace :client, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ } do |client|
+#    client.devise_for :users
+    client.resources :ads
+    client.resources :news
+    client.resources :users
+    client.resources :offers
+    client.resources :messages
+    client.resources :pictures
+    client.resources :housings
+    client.resources :bathrooms
+    client.resources :calendars
+    client.resources :reservations
+    client.resources :organizations
+    client.resources :message_usergroups
   end
 
-  map.namespace :member do |member|
+  map.namespace :member, :path_prefix => ":locale/member", :requirements => { :locale => /(fr)|(en)/ } do |member|
+#    member.devise_for :users
     member.resources :ads
+    member.resources :news
+    member.resources :users
+    member.resources :offers
+    member.resources :messages
+    member.resources :pictures
+    member.resources :housings
+    member.resources :bathrooms
+    member.resources :calendars
+    member.resources :reservations
+    member.resources :organizations
+    member.resources :message_usergroups
   end
   
-  map.namespace :admin do |admin|
+  map.namespace :admin, :path_prefix => ":locale/admin", :requirements => { :locale => /(fr)|(en)/ } do |admin|
+#    admin.devise_for :users
     admin.resources :ads
+    admin.resources :news
+    admin.resources :users
+    admin.resources :offers
+    admin.resources :messages
+    admin.resources :pictures
+    admin.resources :housings
+    admin.resources :bathrooms
+    admin.resources :calendars
+    admin.resources :reservations
+    admin.resources :organizations
+    admin.resources :message_usergroups
   end
 
 

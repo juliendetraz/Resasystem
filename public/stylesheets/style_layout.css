@@ -90,7 +90,10 @@ p {
 					font-size: 1.1em;
 					color: #fff;
 				}
-				#header_menu li a:hover, #header_menu li a.selected {
+				#header_menu li a:hover,
+        #header_menu li a.selected,
+        a#header_menu-item-last:hover,
+        a#header_menu-item-last.selected {
 					background-color: #113356;
 					border-radius: 5px;
 					-moz-border-radius: 5px;
@@ -102,6 +105,10 @@ p {
           float: right;
           width: 205px;
 				}
+        a#header_menu-item-last:hover,
+        a#header_menu-item-last.selected {
+          padding: 0 5px;
+        }
 
 /* Header bar with signup button */
 #headbar {
