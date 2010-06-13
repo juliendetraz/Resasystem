@@ -3,4 +3,5 @@
 
 class Admin::AdminApplicationController < ActionController::Base
   layout 'admin/application'
+  helper :all
 end

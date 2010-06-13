@@ -3,4 +3,5 @@
 
 class Member::MemberApplicationController < ActionController::Base
   layout 'member/application'
+  helper :all
 end

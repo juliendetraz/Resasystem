@@ -4,7 +4,7 @@
   <%= render :partial => "pagination_bar" %>
 
 	<div id="list_ads">
-		<%= link_to t("ads.new_ad"), new_ad_path %>
+		<%= link_to t("ads.new_ad"), new_member_ad_path %>
 
 		<% @ads.each do |ad| %>
 			<div id="item_ad-1" class="item_ad-container">
@@ -32,5 +32,5 @@
 </div>
 
 <div id="content_right">
-  <%= render :partial => "layouts/sidebar_search" %>
+  <%= render :partial => "layouts/member/sidebar_search" %>
 </div>
