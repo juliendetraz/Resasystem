@@ -1,5 +1,5 @@
 ActionController::Routing::Routes.draw do |map|
-  map.devise_for :users
+#  map.devise_for :users, :path_names => { :sign_in => 'client/login', :sign_out => 'client/logout', :password => 'client/secret', :confirmation => 'client/verification' } 
 
   # The priority is based upon order of creation: first created -> highest priority.
 
@@ -33,7 +33,7 @@ ActionController::Routing::Routes.draw do |map|
   #   end
 
   map.namespace :client, :path_prefix => ":locale", :requirements => { :locale => /(fr)|(en)/ } do |client|
-#    client.devise_for :users
+    client.devise_for :client_user, :as => 'users', :class_name => 'User'
     client.resources :ads
     client.resources :news
     client.resources :users
@@ -49,7 +49,7 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.namespace :member, :path_prefix => ":locale/member", :requirements => { :locale => /(fr)|(en)/ } do |member|
-#    member.devise_for :users
+    member.devise_for :member_user, :as => 'users', :class_name => 'User'
     member.resources :ads
     member.resources :news
     member.resources :users
@@ -65,7 +65,7 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.namespace :admin, :path_prefix => ":locale/admin", :requirements => { :locale => /(fr)|(en)/ } do |admin|
-#    admin.devise_for :users
+    admin.devise_for :admin_user, :as => 'users', :class_name => 'User'
     admin.resources :ads
     admin.resources :news
     admin.resources :users

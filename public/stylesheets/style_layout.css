@@ -88,6 +88,7 @@ p {
 					text-decoration: none;
 					font-weight: bold;
 					font-size: 1.1em;
+          height: 16px;
 					color: #fff;
 				}
 				#header_menu li a:hover,
@@ -102,12 +103,15 @@ p {
 				}
 				#header_menu-item-last {
 				  text-align: center;
+          margin: 0 6px 0 0;
           float: right;
-          width: 205px;
+          width: 190px;
 				}
         a#header_menu-item-last:hover,
         a#header_menu-item-last.selected {
-          padding: 0 5px;
+          padding-top: 2px;
+          margin-top: -2px;
+          height: 18px;
         }
 
 /* Header bar with signup button */

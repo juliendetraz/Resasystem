@@ -288,10 +288,24 @@
 #headbar_log_in {
   height: 22px;
 }
-  #signup_button {
+  #sign_list {
+    list-style: none;
+    height: 22px;
+    padding: 0;
+    margin: 0;
+  }
+  #sign_list li {
+    /*background-color: #89db39;*/
     text-align: center;
+    margin: 0 5px 0 0;
+    display: block;
     float: right;
   }
+  #signin_button {
+  }
+  #signup_button {
+  }
+    #signin_button a,
     #signup_button a {
       text-transform: uppercase;
       text-decoration: none;
@@ -372,3 +386,42 @@
          #sign_out_button a span {
            display: none;
          }
+
+         
+/* GREEN BUTTON EXTENSIBLE */
+a.green_button-extensible { 
+    display:-moz-inline-box; 
+    display:inline-block; 
+    margin:0; 
+    padding:0; 
+    white-space:nowrap; 
+    text-align:center; 
+    vertical-align:middle; 
+    cursor:pointer; 
+    border:0; 
+    background:none; 
+}
+a.green_button-extensible span,
+a.green_button-extensible span span,
+a.green_button-extensible span span span {
+  background-image:url(../images/green_button-sprite.png);
+}
+a.green_button-extensible span { 
+    position:relative; 
+    float:left; 
+    padding:0 0 0 8px; 
+    vertical-align:middle;
+    background-position: left top; 
+} 
+a.green_button-extensible span span { 
+    padding:0 8px 0 0;
+    background-position: right -22px; 
+} 
+a.green_button-extensible span span span { 
+    height:22px; 
+    padding:1px 8px 0; 
+    line-height:1.5; 
+    background-repeat: repeat-x; 
+    background-position: left -44px;
+} 
+ 
