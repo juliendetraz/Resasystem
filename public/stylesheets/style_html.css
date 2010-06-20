@@ -440,7 +440,13 @@ a.green_button-extensible span span span {
 /* 
  * MEMBER PART
  */
-
+#content_member_left h2 {
+  margin: 0 0 15px;
+  color: #113356;
+}
+h3.blue-sky {
+  color: #3996ea;
+}
 h3.blue-bottom-bar {
   font-size: 1em;
   color: #113356;
@@ -453,4 +459,14 @@ h3.grey-bg {
   color: #252525;
   padding: 4px 7px;
   background-color: #e5e5e5;
+}
+a.link-blue-dot {
+  color: #3996ea;
+  padding-left: 18px;
+  background: url(../images/blue-dot.gif) left 2px no-repeat;
+}
+
+.p-form label {
+  float: left;
+  width: 200px;
 }

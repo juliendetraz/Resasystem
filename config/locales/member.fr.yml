@@ -1,10 +1,17 @@
 fr:
-  members:
-    users:
+  member:
+    title: Adhérent
+    user:
       profile:
+        title: Votre compte
         your_news: Vos actualités
         personnal_infos: Informations personnelles
         define_offers: Définissez vos offres
         validate_reservations: Vos réservations à valider
         your_emails: Vos emails
         your_rent: Vos locations
+    housing:
+      title: Ajouter un gîte, maison ou appartement de vacances
+      add_house: Ajouter un gîte, maison ou appartement de vacances
+      step1_gite: "Etape 1/6 : Votre gîte"
+      address: Adresse
