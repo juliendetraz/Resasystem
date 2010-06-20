@@ -1,0 +1,40 @@
+<h3 class="blue-bottom-bar"><%= t('member.housing.address') %></h3>
+
+<% f.fields_for :addresses do |address_form| %>
+  <p class="p-form">
+    <%= address_form.label :street %>
+    <%= address_form.text_field :street %>
+  </p>
+  <p class="p-form">
+    <%= address_form.label :complement %>
+    <%= address_form.text_field :complement %>
+  </p>
+  <p class="p-form">
+    <%= address_form.label :zip %>
+    <%= address_form.text_field :zip %>
+  </p>
+  <p class="p-form">
+    <%= address_form.label :state_province_country %>
+    <%= address_form.text_field :state_province_country %>
+  </p>
+  <p class="p-form">
+    <%= address_form.label :other_address_details %>
+    <%= address_form.text_field :other_address_details %>
+  </p>
+  <p class="p-form">
+    <%= address_form.label :city %>
+    <%= address_form.text_field :city %>
+  </p>
+  <p class="p-form">
+    <%= address_form.label :country %>
+    <%= address_form.text_field :country %>
+  </p>
+  <p class="p-form">
+    <%= address_form.label :gmap_latitude %>
+    <%= address_form.text_field :gmap_latitude %>
+  </p>
+  <p class="p-form">
+    <%= address_form.label :gmap_longitude %>
+    <%= address_form.text_field :gmap_longitude %>
+  </p>
+<% end %>

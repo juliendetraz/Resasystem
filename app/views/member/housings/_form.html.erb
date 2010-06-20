@@ -6,6 +6,8 @@
 <% form_for(:member, @housing) do |f| %>
   <%= f.error_messages %>
 
+  <%= render :partial => "form_addresses", :locals => {:f => f } %> 
+
   <h3 class="blue-bottom-bar"><%= t('member.housing.address') %></h3>
   <p class="p-form">
     <%= f.label :phone_contact %>
