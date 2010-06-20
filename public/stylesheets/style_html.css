@@ -56,6 +56,17 @@
 }
 
 
+/* MEMBERS PAGES */
+#content_member_left {
+  width: 630px;
+  float: left;
+}
+#content_member_right {
+  margin: 0 0 0 640px;
+  width: 300px;
+}
+
+
 /* Google map */
 #gmap {
   border: 1px solid #999;
@@ -425,3 +436,21 @@ a.green_button-extensible span span span {
     background-position: left -44px;
 } 
  
+
+/* 
+ * MEMBER PART
+ */
+
+h3.blue-bottom-bar {
+  font-size: 1em;
+  color: #113356;
+  padding: 0 0 0 5px;
+  text-transform: uppercase;
+  border-bottom: 1px solid #113356;
+}
+h3.grey-bg {
+  font-size: 1em;
+  color: #252525;
+  padding: 4px 7px;
+  background-color: #e5e5e5;
+}
