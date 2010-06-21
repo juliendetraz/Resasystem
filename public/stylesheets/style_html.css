@@ -466,7 +466,10 @@ a.link-blue-dot {
   background: url(../images/blue-dot.gif) left 2px no-repeat;
 }
 
-.p-form label {
+.p-text_field label {
   float: left;
   width: 200px;
+}
+.p-radio-type label {
+  padding-right: 30px;
 }

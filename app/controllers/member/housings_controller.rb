@@ -19,8 +19,9 @@ class Member::HousingsController < Member::MemberApplicationController
     @housing = Housing.new(params[:housing])
     if @housing.save
       flash[:notice] = 'Housing was successfully created.'
-      redirect_to(@housing)
+      redirect_to member_housing_path(I18n.locale, @housing)
     else
+      flash[:error] = 'Error will creating housing.'
       render :action => "new"
     end
   end

@@ -1,9 +1,4 @@
 <p>
-  <b>Hebergement:</b>
-  <%=h @housing.hebergement_id %>
-</p>
-
-<p>
   <b>Address:</b>
   <%=h @housing.address_id %>
 </p>
@@ -63,17 +58,7 @@
   <%=h @housing.distance_transport %>
 </p>
 
-<p>
-  <b>Gmap latitude:</b>
-  <%=h @housing.gmap_latitude %>
-</p>
+<%= link_to 'Nouvelle annonce pour cette housing', new_member_ad_path(I18n.locale, @housing) %>
 
-<p>
-  <b>Gmap longitude:</b>
-  <%=h @housing.gmap_longitude %>
-</p>
-
-<%= link_to 'Nouvelle annonce pour cette housing', new_annonce_path(:hebergement_id => @housing.hebergement_id) %>
-
-<%= link_to 'Edit', edit_housing_path(@housing) %> |
-<%= link_to 'Back', housings_path %>
+<%= link_to 'Edit', edit_member_housing_path(I18n.locale, @housing) %> |
+<%= link_to 'Back', member_housings_path %>
