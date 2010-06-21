@@ -84,7 +84,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :namespace => 'client', :controller => "pages", :locale => "fr", :requirements => { :locale => /(fr)|(en)/ }
   
   map.client 'client', :namespace => 'client', :controller => 'pages'
-  map.member 'member', :namespace => 'member', :controller => 'ads'
+  map.member 'member', :namespace => 'member', :controller => 'users', :action => 'profile'
   map.admin 'admin', :namespace => 'admin', :controller => 'ads'
 
   map.connect ":locale", :controller => "pages", :requirements => { :locale => /(fr)|(en)/ }

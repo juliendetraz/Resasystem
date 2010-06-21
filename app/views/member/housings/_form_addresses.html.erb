@@ -1,0 +1,41 @@
+<h3 class="blue-bottom-bar"><%= t('member.housing.address') %></h3>
+
+<% f.fields_for :address do |address_form| %>
+  <p class="p-text_field">
+    <%= address_form.label :street, t('member.housing.street') %>
+    <%= address_form.text_field :street %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :complement, t('member.housing.complement') %>
+    <%= address_form.text_field :complement %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :zip, t('member.housing.zip') %>
+    <%= address_form.text_field :zip %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :state_province_country, t('member.housing.state_province_country') %>
+    <%= address_form.text_field :state_province_country %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :other_address_details, t('member.housing.other_address_details') %>
+    <%= address_form.text_field :other_address_details %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :city, t('member.housing.city') %>
+    <%= address_form.text_field :city %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :country, t('member.housing.country') %>
+    <%= address_form.text_field :country %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :gmap_latitude, t('member.housing.gmap_latitude') %>
+    <%= address_form.text_field :gmap_latitude %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :gmap_longitude, t('member.housing.gmap_longitude') %>
+    <%= address_form.text_field :gmap_longitude %>
+  </p>
+  <p>TODO: Faire un GMap picker avec le pointer localisé en fonction de l'adresse saisie</p>
+<% end %>

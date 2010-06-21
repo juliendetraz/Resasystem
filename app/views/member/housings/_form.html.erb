@@ -1,0 +1,70 @@
+<% title t('member.housing.title') %>
+<h2><%= t('member.housing.title') %></h2>
+
+<h3 class="blue-sky"><%= t('member.housing.step1_gite') %></h3>
+
+<% form_for [:member, @housing], :url => polymorphic_path([:member, @housing]) do |f| %>
+  <%= f.error_messages %>
+
+  <%= render :partial => "form_addresses", :locals => {:f => f } %> 
+
+  <h3 class="blue-bottom-bar"><%= t('member.housing.infos_housing') %></h3>
+  <p class="p-text_field">
+    <%= f.label :name, t('member.housing.name') %>
+    <%= f.text_field :name %>
+  </p>
+  <p class="p-text_field">
+    <%= f.label :phone_contact, t('member.housing.phone_to_contact') %>
+    <%= f.text_field :phone_contact %>
+  </p>
+  <p class="p-text_field">
+    <%= f.label :email, t('member.housing.email_to_contact') %>
+    <%= f.text_field :email %>
+  </p>
+  <p class="p-text_field">
+    <%= f.label :website, t('member.housing.website') %>
+    <%= f.text_field :website %>
+  </p>
+  <p class="p-text_field">
+    <%= f.label :url_alias, t('member.housing.url_alias') %>
+    <%= f.text_field :url_alias %>
+  </p>
+
+  <h3 class="blue-bottom-bar"><%= t('member.housing.infos_housing') %></h3>
+  <p><%= t('member.housing.type.housing_type') %></p>
+  <p class="p-radio-type">
+    <%= f.radio_button :type, t('member.housing.type.house_alone') %>
+    <%= f.label :type_house_alone, t('member.housing.type.house_alone') %>
+    
+    <%= f.radio_button :type, t('member.housing.type.house_tween') %>
+    <%= f.label :type_house_tween, t('member.housing.type.house_tween') %>
+    
+    <%= f.radio_button :type, t('member.housing.type.flat') %>
+    <%= f.label :type_flat, t('member.housing.type.flat') %>
+    
+    <%= f.radio_button :type, t('member.housing.type.bungalo') %>
+    <%= f.label :type_bungalo, t('member.housing.type.bungalo') %>
+  </p>
+  <p>
+    <%= f.radio_button :type, t('member.housing.type.other') %>
+    <%= f.label :type_other, t('member.housing.type.other') %>&nbsp;
+    <%= f.text_field :type %>
+  </p>
+  
+  
+  <p class="p-text_field">
+    <%= f.label :distance_commerce, t('member.housing.distance_commerce') %>
+    <%= f.text_field :distance_commerce %>
+  </p>
+  <p class="p-text_field">
+    <%= f.label :distance_train, t('member.housing.distance_train') %>
+    <%= f.text_field :distance_train %>
+  </p>
+  <p class="p-text_field">
+    <%= f.label :distance_transport, t('member.housing.distance_transport') %>
+    <%= f.text_field :distance_transport %>
+  </p>
+  <p>
+    <%= f.submit t('member.housing.create_go_step2') %>
+  </p>
+<% end %>

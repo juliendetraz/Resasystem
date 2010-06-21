@@ -11,4 +11,6 @@ class Housing < ActiveRecord::Base
   #TODO cette relation n'a pas ete testee il est possible qu'elle ne
   #fonctionne pas car il y a une double relation entre User et Housing
   has_and_belongs_to_many :users, :class_name => "Favorites"
+  
+  accepts_nested_attributes_for :address, :allow_destroy => true
 end

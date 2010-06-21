@@ -1,0 +1,43 @@
+fr:
+  member:
+    title: Adhérent
+    user:
+      profile:
+        title: Votre compte
+        your_news: Vos actualités
+        personnal_infos: Informations personnelles
+        define_offers: Définissez vos offres
+        validate_reservations: Vos réservations à valider
+        your_emails: Vos emails
+        your_rent: Vos locations
+    housing:
+      title: Ajouter un gîte, maison ou appartement de vacances
+      add_house: Ajouter un gîte, maison ou appartement de vacances
+      step1_gite: "Etape 1/6 : Votre gîte"
+      address: Adresse de votre gîte
+      street: Rue
+      complement: Complément d'adresse
+      zip: Code postale
+      state_province_country: Etat / Province / Région
+      other_address_details: Autres détails
+      city: Ville
+      country: Pays
+      gmap_latitude: Latitude
+      gmap_longitude: Longitude
+      website: Site internet du gîte
+      url_alias: Nom du site internet
+      infos_housing: Informations sur le gîte
+      name: Nom du gîte
+      phone_to_contact: Numéro à contacter
+      email_to_contact: Email à contacter
+      type:
+        housing_type: "Le gîte se situe dans :"
+        house_alone: Une maison individuelle
+        house_tween: Une maison jumelée
+        flat: Un immeuble
+        bungalo: Un bungalo
+        other: Autre
+      distance_commerce: Distance des commerces (km)
+      distance_train: Distance du train (km)
+      distance_transport: Distance des transport (km)
+      create_go_step2: Valider et passer à l'étape 2

@@ -13,14 +13,8 @@ module ApplicationHelper
     end
   end
   
-  def page_title
-    if @title_page
-      @title_page + " &laquo;"
-    elsif @title == nil
-      @title
-    else
-      @title + " &laquo;"
-    end
+  def title(page_title)
+    content_for(:title) { page_title + ' - ' }
   end
 
 end

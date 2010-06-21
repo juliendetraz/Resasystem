@@ -1,10 +1,10 @@
 <%= stylesheet_link_tag 'style_ads' %>
 
-<div id="content_left">
+<div id="content_left" style="min-height:750px;">
   <%= render :partial => "pagination_bar" %>
 
 	<div id="list_ads">
-		<%= link_to t("ads.new_ad"), new_member_ad_path %>
+		<%= link_to t("ads.new_ad"), new_member_ad_path(I18n.locale) %>
 
 		<% @ads.each do |ad| %>
 			<div id="item_ad-1" class="item_ad-container">
