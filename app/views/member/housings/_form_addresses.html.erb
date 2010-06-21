@@ -1,5 +1,6 @@
 <h3 class="blue-bottom-bar"><%= t('member.housing.address') %></h3>
 
+<% @housing.build_address unless @housing.address %>
 <% f.fields_for :address do |address_form| %>
   <p class="p-text_field">
     <%= address_form.label :street, t('member.housing.street') %>

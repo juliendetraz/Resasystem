@@ -1,72 +1,15 @@
-<h1>Editing housing</h1>
+<% title t('member.housing.edit.title') + ' ' + @housing.name, true %>
+<h2><%= t('member.housing.edit.title') + ' ' + @housing.name %></h2>
 
-<% form_for(@housing) do |f| %>
-  <%= f.error_messages %>
+<div id="content_member_left">
+  <% form_for [:member, @housing], :url => member_housing_path() do |f| %>
+    <%= f.error_messages %>
+    <%= render :partial => "form_addresses", :locals => { :f => f } %> 
+    <%= render :partial => "form_fields", :locals => { :f => f } %> 
+    <p><%= f.submit t('member.housing.edit.submit') %></p>
+  <% end %>
+</div>
 
-  <p>
-    <%= f.label :hebergement_id %><br />
-    <%= f.text_field :hebergement_id %>
-  </p>
-  <p>
-    <%= f.label :address_id %><br />
-    <%= f.text_field :address_id %>
-  </p>
-  <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </p>
-  <p>
-    <%= f.label :phone_contact %><br />
-    <%= f.text_field :phone_contact %>
-  </p>
-  <p>
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
-  </p>
-  <p>
-    <%= f.label :website %><br />
-    <%= f.text_field :website %>
-  </p>
-  <p>
-    <%= f.label :name %><br />
-    <%= f.text_field :name %>
-  </p>
-  <p>
-    <%= f.label :is_visible %><br />
-    <%= f.text_field :is_visible %>
-  </p>
-  <p>
-    <%= f.label :type %><br />
-    <%= f.text_field :type %>
-  </p>
-  <p>
-    <%= f.label :url_alias %><br />
-    <%= f.text_field :url_alias %>
-  </p>
-  <p>
-    <%= f.label :distance_commerce %><br />
-    <%= f.text_field :distance_commerce %>
-  </p>
-  <p>
-    <%= f.label :distance_train %><br />
-    <%= f.text_field :distance_train %>
-  </p>
-  <p>
-    <%= f.label :distance_transport %><br />
-    <%= f.text_field :distance_transport %>
-  </p>
-  <p>
-    <%= f.label :gmap_latitude %><br />
-    <%= f.text_field :gmap_latitude %>
-  </p>
-  <p>
-    <%= f.label :gmap_longitude %><br />
-    <%= f.text_field :gmap_longitude %>
-  </p>
-  <p>
-    <%= f.submit 'Update' %>
-  </p>
-<% end %>
-
-<%= link_to 'Show', @housing %> |
-<%= link_to 'Back', housings_path %>
+<div id="content_member_right">
+  <%= render :partial => 'member/users/right_column' %>
+</div>

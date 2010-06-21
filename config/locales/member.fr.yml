@@ -11,9 +11,14 @@ fr:
         your_emails: Vos emails
         your_rent: Vos locations
     housing:
-      title: Ajouter un gîte, maison ou appartement de vacances
+      add:
+        title: Ajouter un gîte, maison ou appartement de vacances
+        step1_gite: "Etape 1/6 : Votre gîte"
+        create_go_step2: Valider et passer à l'étape 2
+      edit:
+        title: 'Edition du gîte :'
+        submit: Valider les modifications
       add_house: Ajouter un gîte, maison ou appartement de vacances
-      step1_gite: "Etape 1/6 : Votre gîte"
       address: Adresse de votre gîte
       street: Rue
       complement: Complément d'adresse
@@ -40,4 +45,3 @@ fr:
       distance_commerce: Distance des commerces (km)
       distance_train: Distance du train (km)
       distance_transport: Distance des transport (km)
-      create_go_step2: Valider et passer à l'étape 2

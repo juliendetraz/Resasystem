@@ -1,5 +1,14 @@
+<% title t('member.housing.add.title') %>
+<h2><%= t('member.housing.add.title') %></h2>
+
 <div id="content_member_left">
-  <%= render :partial => 'member/housings/form' %>
+  <h3 class="blue-sky"><%= t('member.housing.add.step1_gite') %></h3>
+  <% form_for [:member, @housing] do |f| %>
+    <%= f.error_messages %>
+    <%= render :partial => "form_addresses", :locals => { :f => f } %> 
+    <%= render :partial => "form_fields", :locals => { :f => f } %> 
+    <p><%= f.submit t('member.housing.add.create_go_step2') %></p>
+  <% end %>
 </div>
 
 <div id="content_member_right">

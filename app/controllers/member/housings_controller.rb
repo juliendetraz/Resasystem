@@ -31,7 +31,7 @@ class Member::HousingsController < Member::MemberApplicationController
 
     if @housing.update_attributes(params[:housing])
       flash[:notice] = 'Housing was successfully updated.'
-      redirect_to(@housing)
+      redirect_to member_housing_path(I18n.locale, @housing)
     else
       render :action => "edit"
     end
