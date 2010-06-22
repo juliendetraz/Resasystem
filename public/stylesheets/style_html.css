@@ -473,3 +473,39 @@ a.link-blue-dot {
 .p-radio-type label {
   padding-right: 30px;
 }
+
+#rooms_list_titles {
+  border-bottom: 1px solid #1e4858;
+  margin-bottom: 8px;
+  font-weight: bold;
+  height: 18px;
+}
+.line_room {
+  border-bottom: 1px solid #d1d1d1;
+  padding: 8px 0 2px;
+  height: 20px;
+}
+  .col_room_nb {
+    text-align: center;
+    width: 20px;
+    float: left;
+  }
+  .col_room_type {
+    width: 150px;
+    float: left;
+  }
+  .col_room_offers {
+    width: 150px;
+    float: left;
+  }
+  .col_submit {
+    text-align: right;
+  }
+#line_add_room {
+  background-color: #b1d5f7;
+  padding: 5px;
+}
+  #line_add_room p {
+    padding-bottom:3px;
+    font-weight: bold;
+  }

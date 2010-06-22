@@ -52,6 +52,7 @@ ActionController::Routing::Routes.draw do |map|
     member.resources :ads
     member.resources :news
     member.resources :users
+    member.resources :rooms
     member.resources :offers
     member.resources :messages
     member.resources :pictures

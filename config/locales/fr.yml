@@ -138,6 +138,10 @@ fr:
         even: "doit être pair"
         record_invalid: "La validation a échoué : {{errors}}"
 
+  #misc
+  are_you_sure: Etes-vous sur ?
+  
+  
   homepage:
     homepage: Accueil
   

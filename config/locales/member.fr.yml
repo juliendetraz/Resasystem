@@ -36,7 +36,7 @@ fr:
       phone_to_contact: Numéro à contacter
       email_to_contact: Email à contacter
       type:
-        housing_type: "Le gîte se situe dans :"
+        housing_type: "Le gîte se situe dans : "
         house_alone: Une maison individuelle
         house_tween: Une maison jumelée
         flat: Un immeuble
@@ -45,3 +45,17 @@ fr:
       distance_commerce: Distance des commerces (km)
       distance_train: Distance du train (km)
       distance_transport: Distance des transport (km)
+      add_rooms: Indiquez les pièces disponibles
+    room:
+      add:
+        submit: Ajouter une pièce
+        destroy: Supprimer
+      room_type: "Type de pièce : "
+      add_room: "Ajouter une pièce : "
+      rooms_type:
+        bedroom: Lit
+        bathroom: Salle de bain
+        kitchen: Cuisine
+        dinningroom: Salle à manger
+        livingroom: Salle à vivre
+

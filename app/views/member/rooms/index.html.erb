@@ -3,13 +3,11 @@
 <table>
   <tr>
     <th>Type</th>
-    <th>Surface area</th>
   </tr>
 
 <% @rooms.each do |room| %>
   <tr>
-    <td><%=h room.type %></td>
-    <td><%=h room.surface_area %></td>
+    <td><%=h room.room_type %></td>
     <td><%= link_to 'Show', room %></td>
     <td><%= link_to 'Edit', edit_room_path(room) %></td>
     <td><%= link_to 'Destroy', room, :confirm => 'Are you sure?', :method => :delete %></td>
