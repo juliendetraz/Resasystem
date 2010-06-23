@@ -24,7 +24,7 @@ class Member::RoomsController < Member::MemberApplicationController
         format.html { redirect_to(@room) }
         format.js { 
           @room
-          render :partial => 'room'
+          render :partial => 'form_room_type_' + params[:room][:room_type] if params[:room][:room_type]
         }
       else
         format.html { render :action => "new" }
@@ -59,6 +59,6 @@ class Member::RoomsController < Member::MemberApplicationController
   end
   
   def return_room_type
-    render :partial => 'room_type'
+    render :partial => 'room_type_' + params[:room][:room_type] if params[:room][:room_type]
   end
 end

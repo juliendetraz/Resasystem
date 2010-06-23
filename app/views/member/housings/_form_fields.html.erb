@@ -24,22 +24,22 @@
 <h3 class="blue-bottom-bar"><%= t('member.housing.infos_housing') %></h3>
 <p><%= t('member.housing.type.housing_type') %></p>
 <p class="p-radio-type">
-  <%= f.radio_button :type, t('member.housing.type.house_alone') %>
-  <%= f.label :type_house_alone, t('member.housing.type.house_alone') %>
+  <%= f.radio_button :housing_type, :house_alone %>
+  <%= f.label :housing_type_house_alone, t('member.housing.type.house_alone') %>
   
-  <%= f.radio_button :type, t('member.housing.type.house_tween') %>
-  <%= f.label :type_house_tween, t('member.housing.type.house_tween') %>
+  <%= f.radio_button :housing_type, :house_tween %>
+  <%= f.label :housing_type_house_tween, t('member.housing.type.house_tween') %>
   
-  <%= f.radio_button :type, t('member.housing.type.flat') %>
-  <%= f.label :type_flat, t('member.housing.type.flat') %>
+  <%= f.radio_button :housing_type, :flat %>
+  <%= f.label :housing_type_flat, t('member.housing.type.flat') %>
   
-  <%= f.radio_button :type, t('member.housing.type.bungalo') %>
-  <%= f.label :type_bungalo, t('member.housing.type.bungalo') %>
+  <%= f.radio_button :housing_type, :bungalo %>
+  <%= f.label :housing_type_bungalo, t('member.housing.type.bungalo') %>
 </p>
 <p>
-  <%= f.radio_button :type, t('member.housing.type.other') %>
-  <%= f.label :type_other, t('member.housing.type.other') %>&nbsp;
-  <%= f.text_field :type %>
+  <%= f.radio_button :housing_type, :other %>
+  <%= f.label :housing_type_other, t('member.housing.type.other') %>&nbsp;
+  <%= f.text_field :housing_type %>
 </p>
 
 

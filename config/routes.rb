@@ -57,6 +57,7 @@ ActionController::Routing::Routes.draw do |map|
     member.resources :messages
     member.resources :pictures
     member.resources :housings, :has_many => :rooms
+    member.resources :rooms, :has_many => [:bathrooms, :bedrooms, :dinningrooms, :kitchens, :livingrooms]
     member.resources :bathrooms
     member.resources :calendars
     member.resources :reservations

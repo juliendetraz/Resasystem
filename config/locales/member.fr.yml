@@ -61,4 +61,9 @@ fr:
         kitchen: Cuisine
         dinningroom: Salle à manger
         livingroom: Salle à vivre
+    kitchen:
+      add:
+        submit: Ajouter la cuisine
+      kitchens_type:
+        american: Américaine
 

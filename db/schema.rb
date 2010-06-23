@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100623181701) do
+ActiveRecord::Schema.define(:version => 20100623215400) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -55,6 +55,7 @@ ActiveRecord::Schema.define(:version => 20100623181701) do
     t.boolean  "has_shared_toilets"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "name"
   end
 
   create_table "calendars", :force => true do |t|
@@ -70,6 +71,7 @@ ActiveRecord::Schema.define(:version => 20100623181701) do
     t.integer  "room_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "sofa_bed_option"
   end
 
   create_table "housing_pois", :force => true do |t|
@@ -121,6 +123,7 @@ ActiveRecord::Schema.define(:version => 20100623181701) do
     t.integer  "room_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "kitchen_type"
   end
 
   create_table "livingrooms", :force => true do |t|
