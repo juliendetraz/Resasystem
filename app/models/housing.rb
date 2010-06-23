@@ -1,5 +1,6 @@
 class Housing < ActiveRecord::Base
   has_many :ads
+  has_many :rooms
   has_many :offers
   has_many :housing_pois
   has_many :housing_services

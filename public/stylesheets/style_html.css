@@ -485,12 +485,8 @@ a.link-blue-dot {
   padding: 8px 0 2px;
   height: 20px;
 }
-  .col_room_nb {
-    text-align: center;
-    width: 20px;
-    float: left;
-  }
   .col_room_type {
+    padding-left: 10px;
     width: 150px;
     float: left;
   }
@@ -498,9 +494,14 @@ a.link-blue-dot {
     width: 150px;
     float: left;
   }
-  .col_submit {
-    text-align: right;
+  .line_room .col_room_submit {
+    padding-right: 5px;
+    float: right;
+    width: 20px;
   }
+    .line_room .col_room_submit a img {
+      border: none;
+    }
 #line_add_room {
   background-color: #b1d5f7;
   padding: 5px;
@@ -508,4 +509,7 @@ a.link-blue-dot {
   #line_add_room p {
     padding-bottom:3px;
     font-weight: bold;
+  }
+  #line_add_room .col_room_submit {
+    text-align: right;
   }

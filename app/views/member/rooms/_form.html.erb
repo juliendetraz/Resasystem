@@ -1,0 +1,20 @@
+<% form_remote_for :room, :url => member_rooms_path, :update => "rooms_list", :position => :bottom do |room_form| %>
+  <%= room_form.hidden_field :housing_id, :value => params[:housing_id] %>
+
+  <div id="line_add_room">
+    <p><%= t('member.room.add_room') %></p>
+    <div class="col_room_type">
+      <%= room_form.select 	:room_type, 
+													 	list_room_type, 
+														{ :include_blank => true }, 
+														{ :onchange => remote_function(
+																:url => { :action => 'return_room_type' }, 
+																:update => 'room_offers',
+         												:with => 'Form.Element.serialize(this)'
+															)
+														} %>
+    </div>
+    <div class="col_room_offers" id="room_offers"></div>
+    <div class="col_room_submit"><%= room_form.submit t('member.room.add.submit') %></div>
+  </div>
+<% end %>

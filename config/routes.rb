@@ -39,7 +39,7 @@ ActionController::Routing::Routes.draw do |map|
     client.resources :offers
     client.resources :messages
     client.resources :pictures
-    client.resources :housings
+    client.resources :housings, :has_many => :rooms
     client.resources :bathrooms
     client.resources :calendars
     client.resources :reservations
@@ -56,7 +56,7 @@ ActionController::Routing::Routes.draw do |map|
     member.resources :offers
     member.resources :messages
     member.resources :pictures
-    member.resources :housings
+    member.resources :housings, :has_many => :rooms
     member.resources :bathrooms
     member.resources :calendars
     member.resources :reservations

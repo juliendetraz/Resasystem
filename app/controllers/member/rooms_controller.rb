@@ -9,6 +9,7 @@ class Member::RoomsController < Member::MemberApplicationController
 
   def new
     @room = Room.new
+    @rooms = Room.find_all_by_housing_id(params[:housing_id]) if params[:housing_id]
   end
 
   def edit
@@ -20,12 +21,14 @@ class Member::RoomsController < Member::MemberApplicationController
     
     respond_to do |format|
       if @room.save
-        flash[:notice] = 'Room was successfully created.'
         format.html { redirect_to(@room) }
-        format.js { @room }
+        format.js { 
+          @room
+          render :partial => 'room'
+        }
       else
         format.html { render :action => "new" }
-        format.js {  }
+        format.js { }
       end
     end
   end
@@ -49,7 +52,13 @@ class Member::RoomsController < Member::MemberApplicationController
 
     respond_to do |format|
       format.html { redirect_to(rooms_url) }
-      format.js {}
+      format.js {
+        render Room.find_all_by_housing_id(@room.housing)
+      }
     end
+  end
+  
+  def return_room_type
+    render :partial => 'room_type'
   end
 end

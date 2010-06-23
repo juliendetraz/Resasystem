@@ -48,8 +48,11 @@ fr:
       add_rooms: Indiquez les pièces disponibles
     room:
       add:
+        title: Ajouter une pièce à votre gîte, maison ou appartement de vacances
+        step2_gite: "Etape 2/6 : Les pièces de votre gîte"
         submit: Ajouter une pièce
-        destroy: Supprimer
+      destroy:
+        submit: Supprimer
       room_type: "Type de pièce : "
       add_room: "Ajouter une pièce : "
       rooms_type:
