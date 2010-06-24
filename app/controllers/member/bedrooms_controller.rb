@@ -16,20 +16,17 @@ class Member::BedroomsController < Member::MemberApplicationController
   end
 
   def create
-    @room = Room.find(params[:room_id]) if params[:room_id]
     @bedroom = Bedroom.new(params[:bedroom])
 
     respond_to do |format|
       if @bedroom.save
         format.html { redirect_to(@bedroom) }
         format.js  {
-          @room
-          @item = @bedroom
-          render :partial => 'member/rooms/room_item'
+          render :partial => 'member/rooms/room_item', :locals => { :item => @bedroom }
         }
       else
         format.html { render :action => "new" }
-        format.js { }
+        format.js   { }
       end
     end
   end
@@ -53,7 +50,7 @@ class Member::BedroomsController < Member::MemberApplicationController
 
     respond_to do |format|
       format.html { redirect_to(bedrooms_url) }
-      format.js { }
+      format.js   { }
     end
   end
 end

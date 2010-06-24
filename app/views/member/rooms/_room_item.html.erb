@@ -1,3 +1,4 @@
+<% @room = Room.find(params[:room_id]) if params[:room_id] %>
 <div class="line_room" id="line_room_<%= @room.id %>">
   <div class="col_room_type">
     <%= t("member.room.rooms_type.#{@room.room_type}") %>
@@ -10,6 +11,6 @@
 												:confirm => t('are_you_sure') %>
   </div>
   <div class="col_room_offers">
-    <%= render :partial => "member/rooms/room_type_#{@room.room_type}", :locals => { :room_type => @item } %>
+    <%= render :partial => "member/rooms/room_type_#{@room.room_type}", :locals => { :room_type => item } %>
   </div>
 </div>

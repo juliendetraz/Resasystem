@@ -60,10 +60,11 @@ fr:
         bathroom: Salle de bain
         kitchen: Cuisine
         dinningroom: Salle à manger
-        livingroom: Salle à vivre
+        livingroom: Salon
     kitchen:
       add:
         submit: Ajouter la cuisine
+      kitchen_type: "Type de cuisine :"
       kitchens_type:
         american: Américaine
         separated: Séparée
@@ -82,4 +83,25 @@ fr:
         beds_bunk_quantity: Lit(s) bunk
         beds_cott: lit(s) cott
         beds_cott_quantity: Lit(s) cott
+    bathroom:
+      add:
+        submit: Ajouter la salle de bain
+      has_bath: baignoire
+      has_toilets: toilettes
+      has_shower: douche
+    dinningroom:
+      add:
+        submit: Ajouter la salle à manger
+      sofa_bed_option: "Type de lit d'appoint :"
+      sofa_bed_type:
+        clicclac: Clic-clac
+        bz: BZ
+    livingroom:
+      add:
+        submit: Ajouter le salon
+      livingroom: Salon
+      
+      
+      
+      
 

@@ -1,0 +1,23 @@
+<% @room = room if defined?(room) %>
+<div id="form_line_room_<%= @room.id %>">
+  <% form_remote_for :bathroom, :url => member_room_bathrooms_path(:room_id => @room), :update => "form_line_room_#{@room.id}" do |f| %>
+    <%= f.hidden_field :room_id, :value => @room.id %>
+  
+    <div class="line_room" id="line_room_<%= @room.id %>">
+      <div class="col_room_type">
+        <%= t("member.room.rooms_type.#{@room.room_type}") %>
+      </div>
+      <div style="float:right;">
+        <%= f.submit t('member.bathroom.add.submit') %>
+      </div>
+      <div class="col_room_offers">
+        <%= f.check_box :has_bath %>
+        <%= f.label :has_bath, t('member.bathroom.has_bath') %><br />
+        <%= f.check_box :has_toilets %>
+        <%= f.label :has_toilets, t('member.bathroom.has_toilets') %><br />
+        <%= f.check_box :has_shower %>
+        <%= f.label :has_shower, t('member.bathroom.has_shower') %><br />
+      </div>
+    </div>
+  <% end %>
+</div>

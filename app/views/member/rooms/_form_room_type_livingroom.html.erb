@@ -1,6 +1,6 @@
 <% @room = room if defined?(room) %>
 <div id="form_line_room_<%= @room.id %>">
-  <% form_remote_for :kitchen, :url => member_room_kitchens_path(:room_id => @room), :update => "form_line_room_#{@room.id}" do |f| %>
+  <% form_remote_for :livingroom, :url => member_room_livingrooms_path(:room_id => @room), :update => "form_line_room_#{@room.id}" do |f| %>
     <%= f.hidden_field :room_id, :value => @room.id %>
   
     <div class="line_room" id="line_room_<%= @room.id %>">
@@ -8,11 +8,10 @@
         <%= t("member.room.rooms_type.#{@room.room_type}") %>
       </div>
       <div style="float:right;">
-        <%= f.submit t('member.kitchen.add.submit') %>
+        <%= f.submit t('member.livingroom.add.submit') %>
       </div>
       <div class="col_room_offers">
-        <%= f.label :kitchen_type, t('member.kitchen.kitchen_type') %><br />
-        <%= f.select :kitchen_type, list_kitchen_type, { :include_blank => true } %>
+        <%= t("member.livingroom.livingroom") %>
       </div>
     </div>
   <% end %>
