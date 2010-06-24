@@ -1,7 +1,7 @@
 <% @room = Room.find(params[:room_id]) if params[:room_id] %>
 <div class="line_room" id="line_room_<%= @room.id %>">
   <div class="col_room_type">
-    <%= t("member.room.rooms_type.#{@room.room_type}") %>
+    <strong><%= t("member.room.rooms_type.#{@room.room_type}") %></strong>
   </div>
   <div class="col_room_submit">
     <%= link_to_remote	image_tag('icons/delete.png', :alt => 'delete'),

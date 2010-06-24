@@ -74,6 +74,7 @@ fr:
       name : Nom
       has_shared_bathroom: salle de bain partagée
       has_shared_toilets: toilettes partagés
+      name: "Nom : "
       bedrooms_type:
         beds_simple: lit(s) simple(s)
         beds_simple_quantity: Lit(s) simple(s)

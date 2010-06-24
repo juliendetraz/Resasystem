@@ -1,7 +1,7 @@
-<%= room_type.name + '<br />' if room_type.name %>
-<%= "#{room_type.beds_simple_quantity} " + t("member.bedroom.bedrooms_type.beds_simple") + '<br />' if room_type.beds_simple_quantity %>
-<%= "#{room_type.beds_double_quantity} " + t("member.bedroom.bedrooms_type.beds_double") + '<br />' if room_type.beds_double_quantity %>
-<%= "#{room_type.beds_bunk_quantity} " + t("member.bedroom.bedrooms_type.beds_bunk") + '<br />' if room_type.beds_bunk_quantity %>
-<%= "#{room_type.beds_cott_quantity} " + t("member.bedroom.bedrooms_type.beds_cott") + '<br />' if room_type.beds_cott_quantity %>
+<%= '<strong>' + room_type.name + ' :</strong><br />' unless room_type.name.blank? %>
+<%= "#{room_type.beds_simple_quantity} " + t("member.bedroom.bedrooms_type.beds_simple") + '<br />' if room_type.beds_simple_quantity > 0 %>
+<%= "#{room_type.beds_double_quantity} " + t("member.bedroom.bedrooms_type.beds_double") + '<br />' if room_type.beds_double_quantity > 0 %>
+<%= "#{room_type.beds_bunk_quantity} " + t("member.bedroom.bedrooms_type.beds_bunk") + '<br />' if room_type.beds_bunk_quantity > 0 %>
+<%= "#{room_type.beds_cott_quantity} " + t("member.bedroom.bedrooms_type.beds_cott") + '<br />' if room_type.beds_cott_quantity > 0 %>
 <%= t("member.bedroom.has_shared_bathroom") + '<br />' if room_type.has_shared_bathroom %>
 <%= t("member.bedroom.has_shared_toilets") if room_type.has_shared_toilets %>
