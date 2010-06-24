@@ -3,5 +3,5 @@
 <%= "#{room_type.beds_double_quantity} " + t("member.bedroom.bedrooms_type.beds_double") + '<br />' if room_type.beds_double_quantity %>
 <%= "#{room_type.beds_bunk_quantity} " + t("member.bedroom.bedrooms_type.beds_bunk") + '<br />' if room_type.beds_bunk_quantity %>
 <%= "#{room_type.beds_cott_quantity} " + t("member.bedroom.bedrooms_type.beds_cott") + '<br />' if room_type.beds_cott_quantity %>
-<%= "#{room_type.has_shared_bathroom} " + t("member.bedroom.has_shared_bathroom") + '<br />' if room_type.has_shared_bathroom %>
-<%= "#{room_type.has_shared_toilets} " + t("member.bedroom.has_shared_toilets") + '<br />' if room_type.has_shared_toilets %>
+<%= t("member.bedroom.has_shared_bathroom") + '<br />' if room_type.has_shared_bathroom %>
+<%= t("member.bedroom.has_shared_toilets") if room_type.has_shared_toilets %>

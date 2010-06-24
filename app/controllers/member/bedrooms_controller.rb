@@ -16,16 +16,16 @@ class Member::BedroomsController < Member::MemberApplicationController
   end
 
   def create
-    @bedroom = Bedroom.new(params[:bedroom])
     @room = Room.find(params[:room_id]) if params[:room_id]
+    @bedroom = Bedroom.new(params[:bedroom])
 
     respond_to do |format|
       if @bedroom.save
         format.html { redirect_to(@bedroom) }
         format.js  {
-          @bedroom
           @room
-          render :partial => 'member/rooms/room_bedroom'
+          @item = @bedroom
+          render :partial => 'member/rooms/room_item'
         }
       else
         format.html { render :action => "new" }

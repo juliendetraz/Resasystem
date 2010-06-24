@@ -10,6 +10,6 @@
 												:confirm => t('are_you_sure') %>
   </div>
   <div class="col_room_offers">
-    <%= render :partial => 'member/rooms/room_type_bedroom', :locals => { :room_type => @bedroom } %>
+    <%= render :partial => "member/rooms/room_type_#{@room.room_type}", :locals => { :room_type => @item } %>
   </div>
 </div>

@@ -17,16 +17,16 @@ class Member::KitchensController < Member::MemberApplicationController
   end
 
   def create
-    @kitchen = Kitchen.new(params[:kitchen])
     @room = Room.find(params[:room_id]) if params[:room_id]
+    @kitchen = Kitchen.new(params[:kitchen])
 
     respond_to do |format|
       if @kitchen.save
         format.html { redirect_to(@kitchen) }
         format.js  {
-          @kitchen
           @room
-          render :partial => 'member/rooms/room_kitchen'
+          @item = @kitchen
+          render :partial => 'member/rooms/room_item'
         }
       else
         format.html { render :action => "new" }
