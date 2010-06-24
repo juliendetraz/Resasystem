@@ -1,14 +1,14 @@
 <div class="line_room" id="line_room_<%= @room.id %>">
   <div class="col_room_type">
-    <%= @room.room_type -%>
+    <%= t("member.room.rooms_type.#{@room.room_type}") %>
   </div>
   <div class="col_room_offers">
-    <%= @kitchen.kitchen_type -%>
+    <%= t("member.kitchen.kitchens_type.#{@kitchen.kitchen_type}") %>
   </div>
   <div class="col_room_submit">
     <%= link_to_remote	image_tag('icons/delete.png', :alt => 'delete'),
 												:update => "rooms_list", 
-												:url => { :action => :destroy, :id => @room.id }, 
+												:url => member_room_path(I18n.locale, @room.id), 
 												:method => :delete, 
 												:confirm => t('are_you_sure') %>
   </div>

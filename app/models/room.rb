@@ -1,9 +1,9 @@
 class Room < ActiveRecord::Base
-  has_many :kitchens
-  has_many :bedrooms
-  has_many :bathrooms
-  has_many :livingrooms
-  has_many :dinningrooms
+  has_many :kitchens, :dependent => :destroy
+  has_many :bedrooms, :dependent => :destroy
+  has_many :bathrooms, :dependent => :destroy
+  has_many :livingrooms, :dependent => :destroy
+  has_many :dinningrooms, :dependent => :destroy
 
   belongs_to :housing
   

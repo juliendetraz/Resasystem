@@ -42,10 +42,8 @@ class Member::KitchensController < Member::MemberApplicationController
       if @kitchen.update_attributes(params[:kitchen])
         flash[:notice] = 'Kitchen was successfully updated.'
         format.html { redirect_to(@kitchen) }
-        format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
-        format.xml  { render :xml => @kitchen.errors, :status => :unprocessable_entity }
       end
     end
   end
@@ -58,7 +56,7 @@ class Member::KitchensController < Member::MemberApplicationController
 
     respond_to do |format|
       format.html { redirect_to(kitchens_url) }
-      format.xml  { head :ok }
+      format.js { }
     end
   end
 end
