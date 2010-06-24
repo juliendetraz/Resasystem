@@ -1,15 +1,19 @@
-<div class="line_room" id="line_room_<%= room.id %>">
-  <div class="col_room_type">
-    <%= t("member.room.rooms_type.#{room.room_type}") %>
+<% if @room_type = eval(room.room_type.capitalize).find_by_room_id(room.id) %>
+  <div class="line_room" id="line_room_<%= room.id %>">
+    <div class="col_room_type">
+      <%= t("member.room.rooms_type.#{room.room_type}") %>
+    </div>
+    <div class="col_room_submit">
+      <%= link_to_remote	image_tag('icons/delete.png', :alt => 'delete'),
+  												:update => "rooms_list", 
+  												:url => { :action => :destroy, :id => room.id }, 
+  												:method => :delete, 
+  												:confirm => t('are_you_sure') %>
+    </div>
+    <div class="col_room_offers">
+      <%= render :partial => "room_type_#{room.room_type}", :locals => { :room_type => @room_type } %>
+    </div>
   </div>
-  <div class="col_room_offers">
-    <%= render :partial => 'room_type_' + room.room_type, :locals => { :room => room, :housing_id => params[:housing_id] } %>
-  </div>
-  <div class="col_room_submit">
-    <%= link_to_remote	image_tag('icons/delete.png', :alt => 'delete'),
-												:update => "rooms_list", 
-												:url => { :action => :destroy, :id => room.id }, 
-												:method => :delete, 
-												:confirm => t('are_you_sure') %>
-  </div>
-</div>
+<% else %>
+  <%= render :partial => "form_room_type_#{room.room_type}", :locals => { :room => room } %>
+<% end %>

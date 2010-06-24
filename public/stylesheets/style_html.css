@@ -482,8 +482,8 @@ a.link-blue-dot {
 }
 .line_room {
   border-bottom: 1px solid #d1d1d1;
-  padding: 8px 0 2px;
-  height: 20px;
+  min-height: 15px;
+  padding: 8px 0;
 }
   .col_room_type {
     padding-left: 10px;
@@ -491,8 +491,8 @@ a.link-blue-dot {
     float: left;
   }
   .col_room_offers {
+    margin-left: 160px;
     width: 150px;
-    float: left;
   }
   .line_room .col_room_submit {
     padding-right: 5px;

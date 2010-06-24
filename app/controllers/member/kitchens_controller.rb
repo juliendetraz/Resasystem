@@ -30,7 +30,7 @@ class Member::KitchensController < Member::MemberApplicationController
         }
       else
         format.html { render :action => "new" }
-        format.js  { }
+        format.js { }
       end
     end
   end
@@ -48,8 +48,6 @@ class Member::KitchensController < Member::MemberApplicationController
     end
   end
 
-  # DELETE /kitchens/1
-  # DELETE /kitchens/1.xml
   def destroy
     @kitchen = Kitchen.find(params[:id])
     @kitchen.destroy

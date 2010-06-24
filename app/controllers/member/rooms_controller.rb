@@ -57,8 +57,4 @@ class Member::RoomsController < Member::MemberApplicationController
       }
     end
   end
-  
-  def return_room_type
-    render :partial => 'room_type_' + params[:room][:room_type] if params[:room][:room_type]
-  end
 end

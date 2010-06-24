@@ -56,7 +56,7 @@ fr:
       room_type: "Type de pièce : "
       add_room: "Ajouter une pièce : "
       rooms_type:
-        bedroom: Lit
+        bedroom: Chambre
         bathroom: Salle de bain
         kitchen: Cuisine
         dinningroom: Salle à manger
@@ -67,4 +67,19 @@ fr:
       kitchens_type:
         american: Américaine
         separated: Séparée
+    bedroom:
+      add:
+        submit: Ajouter la chambre
+      name : Nom
+      has_shared_bathroom: salle de bain partagée
+      has_shared_toilets: toilettes partagés
+      bedrooms_type:
+        beds_simple: lit(s) simple(s)
+        beds_simple_quantity: Lit(s) simple(s)
+        beds_double: lits(s) double(s)
+        beds_double_quantity: Lits(s) double(s)
+        beds_bunk: lit(s) bunk
+        beds_bunk_quantity: Lit(s) bunk
+        beds_cott: lit(s) cott
+        beds_cott_quantity: Lit(s) cott
 
