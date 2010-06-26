@@ -18,7 +18,9 @@
 
   <%= render :partial => "form" %>
   
-  LINK GO STEP 3 
+  <div id="submit_go_next_step">
+    <%= link_to t('member.room.add.create_go_step3'), { :controller => :housings, :locale => I18n.locale, :id => params[:housing_id], :action => :add_services }, :title => t('member.room.add.create_go_step3') %>
+  </div>
 </div>
 
 <div id="content_member_right">

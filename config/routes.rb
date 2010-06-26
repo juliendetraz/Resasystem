@@ -52,12 +52,12 @@ ActionController::Routing::Routes.draw do |map|
     member.resources :ads
     member.resources :news
     member.resources :users
-    member.resources :rooms
+    member.resources :rooms, :has_many => [:bathrooms, :bedrooms, :dinningrooms, :kitchens, :livingrooms]
     member.resources :offers
     member.resources :messages
     member.resources :pictures
-    member.resources :housings, :has_many => :rooms
-    member.resources :rooms, :has_many => [:bathrooms, :bedrooms, :dinningrooms, :kitchens, :livingrooms]
+    member.resources :housings, :has_many => [:rooms, :services]
+    member.resources :services
     member.resources :bathrooms
     member.resources :calendars
     member.resources :reservations
@@ -74,6 +74,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :messages
     admin.resources :pictures
     admin.resources :housings
+    admin.resources :services
     admin.resources :bathrooms
     admin.resources :calendars
     admin.resources :reservations

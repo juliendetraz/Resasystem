@@ -50,6 +50,7 @@ fr:
       add:
         title: Ajouter une pièce à votre gîte, maison ou appartement de vacances
         step2_gite: "Etape 2/6 : Les pièces de votre gîte"
+        create_go_step3: Valider et passer à l'étape 3
         submit: Ajouter une pièce
       destroy:
         submit: Supprimer
@@ -87,9 +88,9 @@ fr:
     bathroom:
       add:
         submit: Ajouter la salle de bain
-      has_bath: baignoire
-      has_toilets: toilettes
-      has_shower: douche
+      has_bath: Baignoire
+      has_toilets: Toilettes
+      has_shower: Douche
     dinningroom:
       add:
         submit: Ajouter la salle à manger
@@ -101,6 +102,37 @@ fr:
       add:
         submit: Ajouter le salon
       livingroom: Salon
+    service:
+      add:
+        title: Ajouter des services à
+        step3_gite: "Etape 3/6 : Vos services"
+        create_go_step4: Valider et passer à l'étape 4
+      services_type:
+        comfort: Confort
+        asset: Atout
+        activity: Activité
+      comfort:
+        title: De quel(s) équiements de confort votre logement dispose ?
+        comfort_type:
+          washing_maching: Lave ligne
+          refrigerator: Réfrigérateur
+          microwave: Micro-ondes
+          television: Télévision
+          dryer: Séche ligne
+          freezer: Congélateur
+          hotplates: Plaques de cuisson
+          iron: Fer à repasser
+          oven: Four
+          dishwasher: Lave vaisselle
+      asset:
+        title: De quel(s) atout(s) votre logement bénéficie-t-il ?
+        asset_type:
+          swimming_pool: Piscine
+      activity:
+        title: De quelle(s) activité(s) de proximité votre logement bénéficie-t-il ?
+        activity_type:
+          swim: Baignade
+      
       
       
       

@@ -43,4 +43,12 @@ class Member::HousingsController < Member::MemberApplicationController
     
     redirect_to(housings_url)
   end
+  
+  def add_services
+    @housing = Housing.find(params[:id])
+    
+    @assets = Service.find_all_by_service_type 'asset'
+    @comforts = Service.find_all_by_service_type 'comfort'
+    @activities = Service.find_all_by_service_type 'activity'
+  end
 end

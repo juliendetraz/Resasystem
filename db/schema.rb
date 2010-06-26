@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100623215400) do
+ActiveRecord::Schema.define(:version => 20100626074223) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -83,14 +83,6 @@ ActiveRecord::Schema.define(:version => 20100623215400) do
     t.datetime "updated_at"
   end
 
-  create_table "housing_services", :force => true do |t|
-    t.integer  "housing_id"
-    t.integer  "service_id"
-    t.decimal  "price",      :precision => 5, :scale => 2
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "housing_user", :force => true do |t|
     t.integer  "user_id"
     t.integer  "housing_id"
@@ -117,6 +109,11 @@ ActiveRecord::Schema.define(:version => 20100623215400) do
     t.integer  "floor"
     t.integer  "capacity"
     t.boolean  "is_visible"
+  end
+
+  create_table "housings_services", :id => false, :force => true do |t|
+    t.integer "housing_id"
+    t.integer "service_id"
   end
 
   create_table "kitchens", :force => true do |t|
@@ -229,11 +226,11 @@ ActiveRecord::Schema.define(:version => 20100623215400) do
   end
 
   create_table "services", :force => true do |t|
-    t.integer  "service_id"
-    t.string   "service"
+    t.string   "name"
     t.string   "service_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "slug"
   end
 
   create_table "users", :force => true do |t|

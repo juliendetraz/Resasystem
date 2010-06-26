@@ -6,8 +6,11 @@
   <% form_for [:member, @housing] do |f| %>
     <%= f.error_messages %>
     <%= render :partial => "form_addresses", :locals => { :f => f } %> 
-    <%= render :partial => "form_fields", :locals => { :f => f } %> 
-    <p><%= f.submit t('member.housing.add.create_go_step2') %></p>
+    <%= render :partial => "form_fields", :locals => { :f => f } %>
+    
+    <div id="submit_go_next_step_button">
+      <p><%= f.submit t('member.housing.add.create_go_step2') %></p>
+    </div>
   <% end %>
 </div>
 

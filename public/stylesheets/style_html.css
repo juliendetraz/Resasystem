@@ -446,6 +446,7 @@ a.green_button-extensible span span span {
 }
 h3.blue-sky {
   color: #3996ea;
+  margin-top: 0;
 }
 h3.blue-bottom-bar {
   font-size: 1em;
@@ -473,6 +474,30 @@ a.link-blue-dot {
 .p-radio-type label {
   padding-right: 30px;
 }
+
+#submit_go_next_step_button {
+  margin: 20px 0;
+  float: right;
+}
+  #submit_go_next_step_button input {
+    background-color: #0c3c6c;
+    padding: 2px 8px;
+    border: none;
+    color: #FFF;
+  }
+#submit_go_next_step {
+  background-color: #0c3c6c;
+  padding: 3px 10px;
+  margin: 20px 0;
+  float: right;
+}
+  #submit_go_next_step a {
+    text-decoration: none;
+    color: #FFF;
+  }
+  #submit_go_next_step a:hover {
+    text-decoration: underline;
+  }
 
 #rooms_list_titles {
   border-bottom: 1px solid #1e4858;
@@ -510,4 +535,11 @@ a.link-blue-dot {
   }
   #line_add_room .col_room_submit {
     text-align: right;
+  }
+
+.add_services_list {
+  padding-left: 20px;
+}
+  .add_services_list li {
+    list-style: none;
   }

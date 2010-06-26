@@ -1,24 +1,17 @@
-<h1>Listing services</h1>
+<% title t('member.service.add.title') %>
+<h2><%= t('member.service.add.title') %></h2>
 
-<table>
-  <tr>
-    <th>Service</th>
-    <th>Service</th>
-    <th>Type</th>
-  </tr>
+<div id="content_member_left">
+  <h3 class="blue-sky"><%= t('member.service.add.step2_gite') %></h3>
+  <% form_for member_housing_path(:id => @housing, :locale => I18n.locale) do |f| %>
+    <%= f.error_messages %>
+    <% @comforts.each do |comfort| %>
+      <%= f.check_box :service, comfort.id %>
+    <% end %>
+    <p><%= f.submit t('member.service.add.create_go_step4') %></p>
+  <% end %>
+</div>
 
-<% @services.each do |service| %>
-  <tr>
-    <td><%=h service.service_id %></td>
-    <td><%=h service.service %></td>
-    <td><%=h service.type %></td>
-    <td><%= link_to 'Show', service %></td>
-    <td><%= link_to 'Edit', edit_service_path(service) %></td>
-    <td><%= link_to 'Destroy', service, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
-
-<br />
-
-<%= link_to 'New service', new_service_path %>
+<div id="content_member_right">
+  <%= render :partial => 'member/users/right_column' %>
+</div>

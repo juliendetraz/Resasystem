@@ -1,0 +1,9 @@
+<h3 class="blue-bottom-bar"><%= t("member.service.#{services.first.service_type}.title") %></h3>
+<ul class="add_services_list">
+  <% services.each do |service| %>
+    <li>
+      <%= check_box_tag "housing[service_ids][]", service.id, false, { :id => "housing_service_ids_#{service.id}" } %>
+      <%= f.label "service_ids_#{service.id}", t("member.service.#{service.service_type}.#{service.service_type}_type.#{service.slug}") %>
+    </li>
+  <% end %>
+</ul>
