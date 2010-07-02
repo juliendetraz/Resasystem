@@ -1,36 +1,39 @@
 fr:
   devise:
     sessions:
-      link: S'identifier
-      link_sign_out: Déconnexion
-      signed_in: 'Signed in successfully.'
-      signed_out: 'Signed out successfully.'
-      unauthenticated: 'You need to sign in or sign up before continuing.'
-      unconfirmed: 'You have to confirm your account before continuing.'
-      locked: 'Your account is locked.'
-      invalid: 'Invalid email or password.'
-      invalid_token: 'Invalid authentication token.'
-      timeout: 'Your session expired, please sign in again to continue.'
-      inactive: 'Your account was not activated yet.'
+      link: "S'identifier"
+      link_sign_out: "Déconnexion"
+      signed_in: "Vous êtes connecté"
+      signed_out: "Vous êtes déconnecté"
     passwords:
-      link: 'Forgot password?'
-      send_instructions: 'You will receive an email with instructions about how to reset your password in a few minutes.'
-      updated: 'Your password was changed successfully. You are now signed in.'
+      link: "Mot de passe oublié ?"
+      send_instructions: "Dans quelques minutes vous allez recevoir un courriel avec les instructions pour récuperer votre mot de passe."
+      updated: "Mot de passe changé avec succes. Vous êtes connecté."
     confirmations:
-      link: "Didn't receive confirmation instructions?"
-      send_instructions: 'You will receive an email with instructions about how to confirm your account in a few minutes.'
-      confirmed: 'Your account was successfully confirmed. You are now signed in.'
+      link: "Vous n'avez pas reçu les instructions de confirmation de votre compte ?"
+      send_instructions: "Dans quelques minutes vous allez recevoir un courriel avec les instructions pour activer votre compte."
+      confirmed: "Votre compte vient d'être activé. Vous êtes maintenant connecté."
     registrations:
-      link: S'inscrire
-      signed_up: 'You have signed up successfully. If enabled, a confirmation was sent to your e-mail.'
-      updated: 'You updated your account successfully.'
-      destroyed: 'Bye! Your account was successfully cancelled. We hope to see you again soon.'
+      link: "S'inscrire"
+      signed_up: "Votre compte vient d'être créé. Un courriel de confirmation vient de vous être envoyé."
+      updated: "Votre compte a été mis à jour."
+      destroyed: "Votre compte a bien été supprimé."
     unlocks:
-      link: "Didn't receive unlock instructions?"
-      send_instructions: 'You will receive an email with instructions about how to unlock your account in a few minutes.'
-      unlocked: 'Your account was successfully unlocked. You are now signed in.'
+      link: "Vous n'avez toujours pas reçu les instructions pour debloquer votre compte ?"
+      send_instructions: "Dans quelques minutes vous allez recevoir un courriel avec les instructions pour debloquer votre compte."
+      unlocked: "Votre compte a été debloqué, vous êtes maintenant connecté."
+    failure:
+      unauthenticated: "Vous devez vous connecter ou créer un compte pour pouvoir continuer."
+      unconfirmed: "Vous devez activer votre compte avant de pouvoir continuer."
+      locked: "Votre compte est bloqué."
+      invalid: "Adresse email ou mot de passe incorrect."
+      invalid_token: "Invalid authentication token."
+      timeout: "Votre session a expiré, veuillez vous reconnecter pour continuer."
+      inactive: "Votre compte n'est pas encore activé."
     mailer:
-      confirmation_instructions: 'Confirmation instructions'
-      reset_password_instructions: 'Reset password instructions'
-      unlock_instructions: 'Unlock Instructions'
-
+      confirmation_instructions:
+        subject: "Instructions pour activer votre compte"
+      reset_password_instructions:
+        subject: "Instructions pour récuperer votre mot de passe perdu"
+      unlock_instructions:
+        subject: "Instructions pour débloquer votre compte"

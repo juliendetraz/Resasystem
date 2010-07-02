@@ -45,7 +45,7 @@ class Admin::ServicesController < Admin::AdminApplicationController
     respond_to do |format|
       if @service.save
         flash[:notice] = 'Service was successfully created.'
-        format.html { redirect_to admin_service_path(I18n.locale, @service) }
+        format.html { redirect_to(@service) }
         format.xml  { render :xml => @service, :status => :created, :location => @service }
       else
         format.html { render :action => "new" }

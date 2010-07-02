@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
 
   belongs_to :address
 
-  has_and_belongs_to_many :organizations
+  # FIXME Primary key is not allowed in a has_and_belongs_to_many join table (organizations_users)
+  #has_and_belongs_to_many :organizations
   #TODO cette relation n'a pas ete testee il est possible qu'elle ne
   #fonctionne pas car il y a une double relation entre User et Housing
 #  has_and_belongs_to_many :housings, :class_name => "Favorites"

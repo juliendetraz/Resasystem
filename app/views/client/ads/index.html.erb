@@ -9,7 +9,7 @@
 		<% @ads.each do |ad| %>
 			<div id="item_ad-1" class="item_ad-container">
 				<div class="item_ad-header">
-					<span class="item-ad-nb">1</span>
+					<span class="item-ad-nb"><%= ad.id %></span>
 				</div>
 				<div class="item_ad-content">
 					<h2><%=h ad.title %></h2>
@@ -22,7 +22,7 @@
 					</div>
 				</div>
 				<div class="item_ad-footer">
-					<p><a href="#" title="<%= t("ads.view_ad") %>"><%= t("ads.view_ad") %></a></p>
+					<p><%= link_to t("ads.view_ad"), client_ad_path(:id => ad.id), :title => t("ads.view_ad") %></p>
 				</div>
 			</div>
 		<% end %>

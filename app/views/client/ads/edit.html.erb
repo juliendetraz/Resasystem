@@ -1,6 +1,6 @@
 <h1>Editing ad</h1>
 
-<% form_for(@ad) do |f| %>
+<% form_for [:client, @ad], :url => client_ad_path do |f| %>
   <%= f.error_messages %>
 
   <p>
@@ -28,5 +28,5 @@
   </p>
 <% end %>
 
-<%= link_to 'Show', @ad %> |
-<%= link_to 'Back', ads_path %>
+<%= link_to 'Show', client_ad_path %> |
+<%= link_to 'Back', client_ads_path %>

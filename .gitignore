@@ -1,6 +1,7 @@
 log/*.log
 db/*.sqlite3
 config/database.yml
+.bundle
 .project
 .tmp_*
 test/integration/webrat-*

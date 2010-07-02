@@ -4,23 +4,23 @@
   </div>
   <div id="headbar_logged_right">
     <div id="sign_out_button">
-      <%= link_to '<span>' + t("devise.sessions.link_sign_out") + '</span>', destroy_user_session_path, :title => t("devise.sessions.link_sign_out") %>
+      <%= link_to '<span>'.html_safe + t("devise.sessions.link_sign_out") + '</span>'.html_safe, client_destroy_client_user_session_path, :title => t("devise.sessions.link_sign_out") %>
     </div>
     <ul id="headbar_logged_icons">
       <li id="news">
-        <%= link_to '<span>' + t("news.news_link") + '</span>', client_user_path(I18n.locale, current_user), :title => t("news.news_link") %>
+        <%= link_to '<span>'.html_safe + t("news.news_link") + '</span>'.html_safe, user_path(I18n.locale, current_client_user), :title => t("news.news_link") %>
       </li>
       <li id="resa">
-        <%= link_to '<span>' + t("users.your_reservations_link") + '</span>', client_user_path(I18n.locale, current_user), :title => t("users.your_reservations_link") %>
+        <%= link_to '<span>'.html_safe + t("users.your_reservations_link") + '</span>'.html_safe, user_path(I18n.locale, current_client_user), :title => t("users.your_reservations_link") %>
       </li>
       <li id="email">
-        <%= link_to '<span>' + t("messages.your_messages_link") + '</span>', client_user_path(I18n.locale, current_user), :title => t("messages.your_messages_link") %>
+        <%= link_to '<span>'.html_safe + t("messages.your_messages_link") + '</span>'.html_safe, user_path(I18n.locale, current_client_user), :title => t("messages.your_messages_link") %>
       </li>
       <li id="coeur">
-        <%= link_to '<span>' + t("users.favorites_link") + '</span>', client_user_path(I18n.locale, current_user), :title => t("users.favorites_link") %>
+        <%= link_to '<span>'.html_safe + t("users.favorites_link") + '</span>'.html_safe, user_path(I18n.locale, current_client_user), :title => t("users.favorites_link") %>
       </li>
       <li id="profil">
-        <%= link_to '<span>' + t("users.your_profile_link") + '</span>', client_user_path(I18n.locale, current_user), :title => t("users.your_profile_link") %>
+        <%= link_to '<span>'.html_safe + t("users.your_profile_link") + '</span>'.html_safe, user_path(I18n.locale, current_client_user), :title => t("users.your_profile_link") %>
       </li>
     </ul>
   </div>

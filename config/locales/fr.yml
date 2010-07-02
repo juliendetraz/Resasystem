@@ -1,8 +1,49 @@
 # French translations for Ruby on Rails 
 # by Christian Lescuyer (christian@flyingcoders.com)
 # contributor: Sebastien Grosjean - ZenCocoon.com
+#
+# http://wiki.github.com/kwi/i18n_routing/scopes-namespaces
+#fr:
+#  resources:
+#    members: 'membres'
+#  resource:
+#    contact: 'contactez-nous'
+#  named_routes_path:
+#    about: 'a-propos'
+#  path_names:
+#    new: 'nouveau'
+#    edit: 'edition'
+#  routes:
+#    users:
+#      as: utilisateurs
+#      path_names:
+#        level: 'niveau'
+#        groups: 'groupe'
+#        new: 'nouvel_utilisateur'
+#        edit: 'edition_utilisateur'
 
 fr:
+  path_names:
+    new: 'nouveau'
+    edit: 'modifier'
+  resources:
+    ads: annonces
+    users: utilisateurs
+    housings: hebergements
+    pages: pages
+  routes:
+    users:
+      as: utilisateurs
+      path_names:
+        login: 'shit'
+        sign_in: 'crap'
+    ads:
+      as: annonces
+      path_names:
+        new: 'nouvelle'
+        edit: 'modifier'
+    
+
   date:
     formats:
       default: "%d/%m/%Y"
@@ -138,10 +179,6 @@ fr:
         even: "doit être pair"
         record_invalid: "La validation a échoué : {{errors}}"
 
-  #misc
-  are_you_sure: Etes-vous sur ?
-  
-  
   homepage:
     homepage: Accueil
   
@@ -170,5 +207,3 @@ fr:
     
   messages:
     your_messages_link: Mes messages
-    
-    
