@@ -3,8 +3,8 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 		<title><%= yield :title %><%= t('member.title') %> - Resasystem</title>
-		
-    <%= stylesheet_link_tag 'style_html' %>
+                <base href="<%= root_url %>" />
+          <%= stylesheet_link_tag 'style_html' %>
 	  <%= stylesheet_link_tag 'style_layout' %>
     
 	  <%= javascript_include_tag :defaults %>
@@ -15,7 +15,7 @@
 	<body>
 		<div id="container">
 			<div id="header">
-				<%= link_to '<span><h1>Resasystem</h1></span>', root_url, :title => t("homepage.homepage") %>
+				<%= link_to '<span><h1>Resasystem</h1></span>'.html_safe, root_url, :title => t("homepage.homepage") %>
 				<ul id="header_menu">
 					<li id=""><%= link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") %></li>
 					<li id=""><%= link_to t("ads.ads"), member_ads_path(I18n.locale), :title => t("ads.ads") %></li>

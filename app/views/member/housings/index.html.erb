@@ -21,23 +21,23 @@
 
 <% @housings.each do |housing| %>
   <tr>
-    <td><%=h housing.hebergement_id %></td>
-    <td><%=h housing.address_id %></td>
-    <td><%=h housing.user_id %></td>
-    <td><%=h housing.phone_contact %></td>
-    <td><%=h housing.email %></td>
-    <td><%=h housing.website %></td>
-    <td><%=h housing.name %></td>
-    <td><%=h housing.is_visible %></td>
-    <td><%=h housing.type %></td>
-    <td><%=h housing.url_alias %></td>
-    <td><%=h housing.distance_commerce %></td>
-    <td><%=h housing.distance_train %></td>
-    <td><%=h housing.distance_transport %></td>
-    <td><%=h housing.gmap_latitude %></td>
-    <td><%=h housing.gmap_longitude %></td>
-    <td><%= link_to 'Show', housing %></td>
-    <td><%= link_to 'Edit', edit_housing_path(housing) %></td>
+    <td><%= housing.housings_id %></td>
+    <td><%= housing.address_id %></td>
+    <td><%= housing.user_id %></td>
+    <td><%= housing.phone_contact %></td>
+    <td><%= housing.email %></td>
+    <td><%= housing.website %></td>
+    <td><%= housing.name %></td>
+    <td><%= housing.is_visible %></td>
+    <td><%#=h housing.type %></td>
+    <td><%= housing.url_alias %></td>
+    <td><%= housing.distance_commerce %></td>
+    <td><%= housing.distance_train %></td>
+    <td><%= housing.distance_transport %></td>
+    <td><%#= housing.gmap_latitude %></td>
+    <td><%#= housing.gmap_longitude %></td>
+    <td><%= link_to 'Show', housings_path(housing.id) %></td>
+    <td><%= link_to 'Edit', edit_member_housing_path(housing) %></td>
     <td><%= link_to 'Destroy', housing, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
@@ -45,4 +45,4 @@
 
 <br />
 
-<%= link_to 'New housing', new_housing_path %>
+<%= link_to 'New housing', new_member_housing_path %>

@@ -5,7 +5,7 @@
 
 
 <h3 class="grey-bg"><%= t('member.user.profile.your_rent') %></h3>
-<% if current_user.housings %>
+<% if current_muser.housings %>
   <ul>
     <% current_user.housings.each do |housing| %>
       <li><%= link_to housing.name, member_housing_path(I18n.locale, housing), :title => housing.name %></li>

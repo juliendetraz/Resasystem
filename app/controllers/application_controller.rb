@@ -15,11 +15,19 @@ class ApplicationController < ActionController::Base
   def self.default_url_options
     { :locale => I18n.locale }
   end
-#private
-#  def current_user
-##    TODO: cette ligne est là pour continuer le dev'
-##    le temps que devise fonctionne avec les namespaces
-#    @current_user = User.find 1
-#  end
-
+private
+  def current_user
+#    TODO: cette ligne est là pour continuer le dev'
+#    le temps que devise fonctionne avec les namespaces
+    @current_user = User.find 1
+  end
+  def current_auser
+    current_user
+  end
+  def current_cuser
+    current_user
+  end
+  def current_muser
+    current_user
+  end
 end
