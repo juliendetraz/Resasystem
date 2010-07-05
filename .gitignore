@@ -5,5 +5,5 @@ config/database.yml
 .project
 .tmp_*
 test/integration/webrat-*
-tmp/webrat*
+tmp
 nbproject
