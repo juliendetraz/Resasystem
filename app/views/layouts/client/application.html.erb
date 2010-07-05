@@ -18,7 +18,7 @@
           <li id=""><%= link_to t("ads.ads"), get_module_path("%_ads"), :title => t("ads.ads") %></li>
           <li id=""><%= link_to t("offers.offers"), get_module_path("%_ads"), :title => t("offers.offers") %></li>
         </ul>
-        <%= link_to t("ads.add_ads"), client_ads_path, :title => t("ads.add_ads"), :id => 'header_menu-item-last' %>
+        <%= link_to t("ads.add_ads"), get_module_path("%_ads"), :title => t("ads.add_ads"), :id => 'header_menu-item-last' %>
       </div> <!-- #header -->
       <div id="headbar">
         <%= devise_user_signed_in? ? render(:partial => "#{get_module_name.to_s}/users/headbar_logged") : render(:partial => "#{get_module_name.to_s}/users/headbar_log_in") %>

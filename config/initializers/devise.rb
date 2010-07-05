@@ -3,10 +3,12 @@
 Devise.setup do |config|
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in DeviseMailer.
-  config.mailer_sender = "jonathan@meiss.fr"
+  config.mailer_sender = "noreply@resasystem.com"
 
   # Configure the class responsible to send e-mails.
   # config.mailer = "Devise::Mailer"
+  # app/mailers/devise_mailer : mailer custom pour avoir les scoped templates
+  config.mailer = "DeviseMailer"
 
   # ==> ORM configuration
   # Load and configure the ORM. Supports :active_record (default), :mongoid
@@ -97,7 +99,7 @@ Devise.setup do |config|
   # Turn scoped views on. Before rendering "sessions/new", it will first check for
   # "sessions/users/new". It's turned off by default because it's slower if you
   # are using only default views.
-  config.scoped_views = false
+  config.scoped_views = true
 
   # By default, devise detects the role accessed based on the url. So whenever
   # accessing "/users/sign_in", it knows you are accessing an User. This makes
