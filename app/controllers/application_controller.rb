@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
 
   before_filter :set_locale
 
-  helper_method :current_user
+  helper_method :get_module_name, :get_module_path, :current_devise_user, :devise_user_signed_in?
 
   def set_locale
     locale = params[:locale] if params[:locale] && I18n.available_locales.member?(params[:locale].to_sym)
@@ -15,19 +15,20 @@ class ApplicationController < ActionController::Base
   def self.default_url_options
     { :locale => I18n.locale }
   end
-private
-  def current_user
-#    TODO: cette ligne est là pour continuer le dev'
-#    le temps que devise fonctionne avec les namespaces
-    @current_user = User.find 1
+
+  def get_module_name
+    self.class.name.split("::").first.downcase.to_sym
   end
-  def current_auser
-    current_user
+
+  def get_module_path(some_path, *param)
+    send("#{some_path.gsub('%', self.class.name.split("::").first.downcase).squeeze('_')}_path", *param)
   end
-  def current_cuser
-    current_user
+
+  def current_devise_user
+    send("current_#{resource_name.to_s}")
   end
-  def current_muser
-    current_user
+
+  def devise_user_signed_in?
+    send("#{resource_name.to_s}_signed_in?")
   end
 end

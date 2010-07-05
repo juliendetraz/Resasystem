@@ -45,7 +45,7 @@ class Client::AdsController < Client::ClientApplicationController
     respond_to do |format|
       if @ad.save
         flash[:notice] = 'Ad was successfully created.'
-        format.html { redirect_to(@ad) }
+        format.html { redirect_to([get_module_name, @ad]) }
         format.xml  { render :xml => @ad, :status => :created, :location => @ad }
       else
         format.html { render :action => "new" }
@@ -62,7 +62,7 @@ class Client::AdsController < Client::ClientApplicationController
     respond_to do |format|
       if @ad.update_attributes(params[:ad])
         flash[:notice] = 'Ad was successfully updated.'
-        format.html { redirect_to(@ad) }
+        format.html { redirect_to([get_module_name, @ad]) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -78,7 +78,7 @@ class Client::AdsController < Client::ClientApplicationController
     @ad.destroy
 
     respond_to do |format|
-      format.html { redirect_to(ads_url) }
+      format.html { redirect_to(client_ads_url) }
       format.xml  { head :ok }
     end
   end

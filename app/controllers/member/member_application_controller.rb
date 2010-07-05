@@ -4,4 +4,10 @@
 class Member::MemberApplicationController < ApplicationController
   layout 'member/application'
   helper :all
+  helper_method :resource_name
+
+private
+  def resource_name
+    :member_muser
+  end
 end

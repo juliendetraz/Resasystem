@@ -4,4 +4,10 @@
 class Admin::AdminApplicationController < ApplicationController
   layout 'admin/application'
   helper :all
+  helper_method :resource_name
+
+private
+  def resource_name
+    :admin_auser
+  end
 end

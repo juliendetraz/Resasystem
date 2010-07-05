@@ -38,13 +38,13 @@
     <td><%=h user.language %></td>
     <td><%=h user.has_subscribed %></td>
     <td><%=h user.firstday_week %></td>
-    <td><%= link_to 'Show', client_user_path(I18n.locale, user) %></td>
-    <td><%= link_to 'Edit', edit_client_user_path(I18n.locale, user) %></td>
-    <td><%= link_to 'Destroy', client_user_path(I18n.locale, user), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', get_module_path("%_user", user) %></td>
+    <td><%= link_to 'Edit', get_module_path("edit_%_user", user) %></td>
+    <td><%= link_to 'Destroy', get_module_path("%_user", user), :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New user', new_client_user_path %>
+<%= link_to 'New user', get_module_path("new_%_user") %>

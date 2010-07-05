@@ -1,6 +1,7 @@
 Resasystem::Application.routes.draw do
-  scope ':locale', :constraints => { :locale => /(fr)|(en)/ } do
-    #localized(I18n.available_locales, :verbose => true) do
+  # I18n.available_locales is set in config/initializers/locale.rb
+  scope ':locale', :constraints => { :locale => /(#{I18n.available_locales.join(')|(')})/ } do
+#    localized(I18n.available_locales, :verbose => true) do
       # The priority is based upon order of creation:
       # first created -> highest priority.
 
@@ -48,7 +49,8 @@ Resasystem::Application.routes.draw do
       #     resources :products
       #   end
 
-      namespace :client do
+      #scope '', :module => :client do # /locale:/client_controller#action
+      namespace :client do # /locale:/client/client_controller#action
         devise_for :cusers, :path => 'users', :class_name => 'User'
         resources :ads
         resources :users
@@ -68,26 +70,26 @@ Resasystem::Application.routes.draw do
         root :to => 'pages#index'
       end # namespace :client
 
-      namespace :admin do
-        devise_for :ausers, :path => 'users', :class_name => 'User'
-        resources :ads
-        resources :users
-        resources :news
-        resources :offers
-        resources :messages
-        resources :pictures
-        resources :rooms
-        resources :housings do
-          resources :rooms
-        end
-        resources :bathrooms
-        resources :calendars
-        resources :reservations
-        resources :organizations
-        resources :message_usergroups
-        root :to => 'pages#index'
-      end # namespace :admin
-
+#      namespace :admin do
+#        devise_for :ausers, :path => 'users', :class_name => 'User'
+#        resources :ads
+#        resources :users
+#        resources :news
+#        resources :offers
+#        resources :messages
+#        resources :pictures
+#        resources :rooms
+#        resources :housings do
+#          resources :rooms
+#        end
+#        resources :bathrooms
+#        resources :calendars
+#        resources :reservations
+#        resources :organizations
+#        resources :message_usergroups
+#        root :to => 'pages#index'
+#      end # namespace :admin
+#
       namespace :member do
         devise_for :musers, :path => 'users', :class_name => 'User'
         resources :ads
@@ -107,7 +109,7 @@ Resasystem::Application.routes.draw do
         resources :message_usergroups
         root :to => 'pages#index'
       end # namespace :member
-    #end # localized
+#    end # localized
 
     # You can have the root of your site routed with "root"
     # just remember to delete public/index.html.

@@ -19,5 +19,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_client_ad_path %> |
-<%= link_to 'Back', client_ads_path %>
+<%= link_to 'Edit', get_module_path("edit_%_ad", @ad) %> |
+<%= link_to 'Back', get_module_path("%_ads") %>
