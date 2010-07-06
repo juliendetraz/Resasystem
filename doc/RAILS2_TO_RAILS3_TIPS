@@ -1,3 +1,8 @@
+doc rails3
+http://guides.rails.info/
+rails3 release notes
+http://guides.rails.info/3_0_release_notes.html
+
 TIPS pour JS (remote...)
 http://www.scribd.com/doc/15010095/Rails-3-and-the-Real-Secret-to-High-Productivity
 page 20
@@ -12,3 +17,14 @@ afficher html:
 - ne plus faire de <%=h %>, <%= %> suffit
 - pour pas que ca escape du html : utiliser html_safe
     <%= '<b>ite</b>'.html_safe %>
+
+
+routes:
+cf routes.rb deja
+http://www.engineyard.com/blog/2010/the-lowdown-on-routes-in-rails-3/
+http://www.railsdispatch.com/posts/rails-routing
+http://yehudakatz.com/2009/12/26/the-rails-3-router-rack-it-up/
+
+bundler:
+http://gembundler.com/
+cf Gemfile aussi
