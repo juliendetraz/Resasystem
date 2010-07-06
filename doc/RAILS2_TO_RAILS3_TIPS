@@ -1,0 +1,14 @@
+TIPS pour JS (remote...)
+http://www.scribd.com/doc/15010095/Rails-3-and-the-Real-Secret-to-High-Productivity
+page 20
+
+
+<% %> DEPRECATED, le contenu s'affiche pas s'affiche pas
+- faire <%= form_for ... %> et pas <% form_for ... %>
+- pareil pour <%= f.fields ... %>
+
+
+afficher html:
+- ne plus faire de <%=h %>, <%= %> suffit
+- pour pas que ca escape du html : utiliser html_safe
+    <%= '<b>ite</b>'.html_safe %>

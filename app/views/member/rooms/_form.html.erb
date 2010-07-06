@@ -1,4 +1,4 @@
-<%= remote_form_for :room, :url => member_rooms_path, :update => "rooms_list", :position => :bottom do |f| %>
+<%= form_for :room, :remote => true, :url => member_rooms_path, :update => "rooms_list", :position => :bottom do |f| %>
   <%= f.hidden_field :housing_id, :value => params[:housing_id] %>
 
   <div id="line_add_room">

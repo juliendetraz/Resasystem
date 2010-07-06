@@ -1,0 +1,20 @@
+http://www.ruby-lang.org/en/downloads/
+Download / install : "Ruby 1.9.1-pXXX RubyInstaller"
+
+ftp://ftp.ruby-lang.org/pub/ruby/binaries/mswin32/unstable/
+Download / install : ruby-1.9.2-rcX-i386-mswin32.zip
+(ecraser l'install de 1.9.1)
+
+http://rubyinstaller.org/downloads/
+Download / install : devkit-3.4.5r3-20091110.7z
+(foutre a la racine du folder de ruby)
+
+gem update
+gem install --pre bundler (1.0.0.beta2 actuellment)
+
+git clone "repo de resasystem-rails3"
+
+cd resasystem-rails3
+bundle install
+ca va installer toutes les gems : rails3, devise, mysql (sqlite3 chie je crois, pas trop tested)
+bundle show devise :  affiche ou il a installed la gem
