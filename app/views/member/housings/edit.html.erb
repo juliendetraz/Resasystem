@@ -2,7 +2,7 @@
 <h2><%= t('member.housing.edit.title') + ' ' + @housing.name %></h2>
 
 <div id="content_member_left">
-  <% form_for [:member, @housing], :url => member_housing_path() do |f| %>
+  <%= form_for [get_module_name, @housing] do |f| %>
     <%= f.error_messages %>
     <%= render :partial => "form_addresses", :locals => { :f => f } %> 
     <%= render :partial => "form_fields", :locals => { :f => f } %> 
@@ -11,5 +11,5 @@
 </div>
 
 <div id="content_member_right">
-  <%= render :partial => 'member/users/right_column' %>
+  <%= render :partial => "#{get_module_name}/users/right_column" %>
 </div>

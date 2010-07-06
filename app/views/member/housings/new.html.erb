@@ -3,7 +3,7 @@
 
 <div id="content_member_left">
   <h3 class="blue-sky"><%= t('member.housing.add.step1_gite') %></h3>
-  <% form_for [:member, @housing] do |f| %>
+  <%= form_for [get_module_name, @housing] do |f| %>
     <%= f.error_messages %>
     <%= render :partial => "form_addresses", :locals => { :f => f } %> 
     <%= render :partial => "form_fields", :locals => { :f => f } %>
@@ -15,5 +15,5 @@
 </div>
 
 <div id="content_member_right">
-  <%= render :partial => 'member/users/right_column' %>
+  <%= render :partial => "#{get_module_name}/users/right_column" %>
 </div>

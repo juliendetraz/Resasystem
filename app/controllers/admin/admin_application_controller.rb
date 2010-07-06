@@ -8,6 +8,6 @@ class Admin::AdminApplicationController < ApplicationController
 
 private
   def resource_name
-    :admin_auser
+    :"#{get_module_name}_user"
   end
 end

@@ -1,5 +1,5 @@
 <h3 class="blue-bottom-bar"><%= t('member.housing.infos_housing') %></h3>
-<%= f.hidden_field :user_id, :value => current_muser.id %>
+<%= f.hidden_field :user_id, :value => current_devise_user.id %>
 <p class="p-text_field">
   <%= f.label :name, t('member.housing.name') %>
   <%= f.text_field :name %>

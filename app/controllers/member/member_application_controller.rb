@@ -6,8 +6,8 @@ class Member::MemberApplicationController < ApplicationController
   helper :all
   helper_method :resource_name
 
-private
+  private
   def resource_name
-    :member_muser
+    :"#{get_module_name}_user"
   end
 end

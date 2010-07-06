@@ -5,4 +5,3 @@ require File.expand_path('../config/application', __FILE__)
 require 'rake'
 
 Resasystem::Application.load_tasks
-#Rails::Application.load_tasks

@@ -51,7 +51,7 @@ class Member::RoomsController < Member::MemberApplicationController
     @room.destroy
 
     respond_to do |format|
-      format.html { redirect_to(rooms_url) }
+      format.html { redirect_to(get_module_url("%_housing_rooms", @room.housing)) }
       format.js {
         render Room.find_all_by_housing_id(@room.housing)
       }

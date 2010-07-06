@@ -1,36 +1,36 @@
 <p>
   <b>Address:</b>
-  <%=h @housing.address_id %>
+  <%= @housing.address_id %>
 </p>
 
 <p>
   <b>User:</b>
-  <%=h @housing.user_id %>
+  <%= @housing.user_id %>
 </p>
 
 <p>
   <b>Phone contact:</b>
-  <%=h @housing.phone_contact %>
+  <%= @housing.phone_contact %>
 </p>
 
 <p>
   <b>Email:</b>
-  <%=h @housing.email %>
+  <%= @housing.email %>
 </p>
 
 <p>
   <b>Website:</b>
-  <%=h @housing.website %>
+  <%= @housing.website %>
 </p>
 
 <p>
   <b>Name:</b>
-  <%=h @housing.name %>
+  <%= @housing.name %>
 </p>
 
 <p>
   <b>Is visible:</b>
-  <%=h @housing.is_visible %>
+  <%= @housing.is_visible %>
 </p>
 
 <p>
@@ -40,25 +40,25 @@
 
 <p>
   <b>Url alias:</b>
-  <%=h @housing.url_alias %>
+  <%= @housing.url_alias %>
 </p>
 
 <p>
   <b>Distance commerce:</b>
-  <%=h @housing.distance_commerce %>
+  <%= @housing.distance_commerce %>
 </p>
 
 <p>
   <b>Distance train:</b>
-  <%=h @housing.distance_train %>
+  <%= @housing.distance_train %>
 </p>
 
 <p>
   <b>Distance transport:</b>
-  <%=h @housing.distance_transport %>
+  <%= @housing.distance_transport %>
 </p>
 
-<%= link_to 'Nouvelle annonce pour cette housing', new_member_ad_path(I18n.locale, @housing) %>
+<%= link_to 'Nouvelle annonce pour cet housing', get_module_path("new_%_housing_ad", @housing) %>
 
-<%= link_to 'Edit', edit_member_housing_path(I18n.locale, @housing) %> |
-<%= link_to 'Back', member_housings_path %>
+<%= link_to 'Edit', get_module_path("edit_%_housing", @housing) %> |
+<%= link_to 'Back', get_module_path("%_housings") %>

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" dir="ltr" lang="fr-FR">
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <title><%= yield :title %><%= t('client.title') %> - Resasystem</title>
+    <title><%= yield :title %><%= t("#{get_module_name}.title") %> - Resasystem</title>
     <base href="<%= root_url %>" />
     <%= stylesheet_link_tag 'style_html' %>
     <%= stylesheet_link_tag 'style_layout' %>
@@ -21,9 +21,9 @@
         <%= link_to t("ads.add_ads"), get_module_path("%_ads"), :title => t("ads.add_ads"), :id => 'header_menu-item-last' %>
       </div> <!-- #header -->
       <div id="headbar">
-        <%= devise_user_signed_in? ? render(:partial => "#{get_module_name.to_s}/users/headbar_logged") : render(:partial => "#{get_module_name.to_s}/users/headbar_log_in") %>
+        <%= devise_user_signed_in? ? render(:partial => "#{get_module_name}/users/headbar_logged") : render(:partial => "#{get_module_name}/users/headbar_log_in") %>
       </div> <!-- #headbar -->
-      <div id="content">
+      <div id="content">>
         <% flash.each do |key, msg| %>
           <%= content_tag :div, msg, :id => key %>
         <% end %>
