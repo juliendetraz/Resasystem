@@ -2,7 +2,7 @@ class CreateKitchens < ActiveRecord::Migration
   def self.up
     create_table :kitchens do |t|
       t.integer :room_id
-      t.varchar :type
+      t.string :type
 
       t.timestamps
     end

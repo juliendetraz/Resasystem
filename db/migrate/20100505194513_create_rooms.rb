@@ -2,7 +2,7 @@ class CreateRooms < ActiveRecord::Migration
   def self.up
     create_table :rooms do |t|
       t.string :type
-      t.intger :surface_area
+      t.integer :surface_area
 
       t.timestamps
     end

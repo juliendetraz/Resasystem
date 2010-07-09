@@ -8,7 +8,7 @@ class CreateBedrooms < ActiveRecord::Migration
       t.integer :beds_cott_quantity
       t.boolean :has_shared_bathroom
       t.boolean :has_shared_toilets
-      t.varchar :name
+      t.string :name
 
       t.timestamps
     end

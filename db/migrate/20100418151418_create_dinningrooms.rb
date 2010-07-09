@@ -2,7 +2,7 @@ class CreateDinningrooms < ActiveRecord::Migration
   def self.up
     create_table :dinningrooms do |t|
       t.integer :room_id
-      t.varchar :sofa_bed_option
+      t.string :sofa_bed_option
 
       t.timestamps
     end

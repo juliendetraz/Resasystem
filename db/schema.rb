@@ -54,9 +54,9 @@ ActiveRecord::Schema.define(:version => 20100626074223) do
     t.integer  "beds_cott_quantity"
     t.boolean  "has_shared_bathroom"
     t.boolean  "has_shared_toilets"
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "name"
   end
 
   create_table "calendars", :force => true do |t|
@@ -70,9 +70,9 @@ ActiveRecord::Schema.define(:version => 20100626074223) do
 
   create_table "dinningrooms", :force => true do |t|
     t.integer  "room_id"
+    t.string   "sofa_bed_option"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "sofa_bed_option"
   end
 
   create_table "housing_pois", :force => true do |t|
@@ -119,6 +119,7 @@ ActiveRecord::Schema.define(:version => 20100626074223) do
 
   create_table "kitchens", :force => true do |t|
     t.integer  "room_id"
+    t.string   "type"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "kitchen_type"
@@ -221,6 +222,7 @@ ActiveRecord::Schema.define(:version => 20100626074223) do
 
   create_table "rooms", :force => true do |t|
     t.string   "room_type"
+    t.integer  "surface_area"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "housing_id"
