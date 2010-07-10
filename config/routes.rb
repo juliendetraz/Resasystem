@@ -99,6 +99,13 @@ Resasystem::Application.routes.draw do
         resources :messages
         resources :pictures
         resources :rooms
+        resources :rooms do
+          resources :bathrooms
+          resources :bedrooms
+          resources :dinningrooms
+          resources :kitchens
+          resources :livingrooms
+        end
         resources :housings do
           resources :ads
           resources :rooms

@@ -22,10 +22,7 @@ class Member::RoomsController < Member::MemberApplicationController
     respond_to do |format|
       if @room.save
         format.html { redirect_to(@room) }
-        format.js { 
-          @room
-          render :partial => 'form_room_type_' + params[:room][:room_type] if params[:room][:room_type]
-        }
+        format.js { @room }
       else
         format.html { render :action => "new" }
         format.js { }
@@ -53,7 +50,7 @@ class Member::RoomsController < Member::MemberApplicationController
     respond_to do |format|
       format.html { redirect_to(get_module_url("%_housing_rooms", @room.housing)) }
       format.js {
-        render Room.find_all_by_housing_id(@room.housing)
+        @rooms = Room.find_all_by_housing_id(@room.housing)
       }
     end
   end

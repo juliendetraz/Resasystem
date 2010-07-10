@@ -1,0 +1,17 @@
+<% @kitchen = room_type unless @kitchen %>
+<div class="line_room" id="line_room_<%= @kitchen.room_id %>">
+  <div class="col_room_type">
+    <strong><%= t('member.room.rooms_type.kitchen') %></strong>
+  </div>
+  <div class="col_room_submit">
+    <%= button_to '&nbsp;'.html_safe,
+                member_room_path(I18n.locale, @kitchen.room_id),
+                :remote => true,
+                :method => :delete,
+                :confirm => t('are_you_sure'),
+                :class => 'destroy_button' %>
+  </div>
+  <div class="col_room_offers">
+    <%= t("member.kitchen.kitchens_type.#{@kitchen.kitchen_type}") unless @kitchen.kitchen_type.blank? %>
+  </div>
+</div>

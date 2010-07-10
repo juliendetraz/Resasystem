@@ -543,3 +543,14 @@ a.link-blue-dot {
   .add_services_list li {
     list-style: none;
   }
+
+
+.destroy_button {
+  background: url(../images/icons/delete.png) 0 0 no-repeat;
+  cursor: pointer;
+  border: none;
+  width: 16px;
+}
+  .destroy_button span {
+    display: none;
+  }

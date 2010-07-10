@@ -1,6 +1,6 @@
 <% @room = room if defined?(room) %>
 <div id="form_line_room_<%= @room.id %>" class="line_room_form">
-  <% form_remote_for :dinningroom, :url => member_room_dinningrooms_path(:room_id => @room), :update => "form_line_room_#{@room.id}" do |f| %>
+  <%= form_for :dinningroom, :url => member_room_dinningrooms_path(:room_id => @room), :remote => true do |f| %>
     <%= f.hidden_field :room_id, :value => @room.id %>
   
     <div class="line_room" id="line_room_<%= @room.id %>">

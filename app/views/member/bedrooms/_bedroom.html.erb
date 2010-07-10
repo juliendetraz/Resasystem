@@ -1,0 +1,25 @@
+<% @bedroom = room_type unless @bedroom %>
+<div class="line_room" id="line_room_<%= @bedroom.room_id %>">
+  <div class="col_room_type">
+    <strong><%= t('member.room.rooms_type.bedroom') %></strong>
+  </div>
+  <div class="col_room_submit">
+    <%= button_to '&nbsp;'.html_safe,
+                member_room_path(I18n.locale, @bedroom.room_id),
+                :remote => true,
+                :confirm => t('are_you_sure'),
+                :method => :delete,
+                :class => 'destroy_button' %>
+  </div>
+  <div class="col_room_offers">
+    <%= "<strong>#{@bedroom.name} :</strong><br />".html_safe unless @bedroom.name.blank? %>
+    <%= "#{@bedroom.beds_simple_quantity} #{t("member.bedroom.bedrooms_type.beds_simple")} <br />".html_safe if @bedroom.beds_simple_quantity > 0 %>
+    <%= "#{@bedroom.beds_double_quantity} #{t("member.bedroom.bedrooms_type.beds_double")} <br />".html_safe if @bedroom.beds_double_quantity > 0 %>
+    <%= "#{@bedroom.beds_bunk_quantity} #{t("member.bedroom.bedrooms_type.beds_bunk")} <br />".html_safe if @bedroom.beds_bunk_quantity > 0 %>
+    <%= "#{@bedroom.beds_cott_quantity} #{t("member.bedroom.bedrooms_type.beds_cott")} <br />".html_safe if @bedroom.beds_cott_quantity > 0 %>
+    <%= "#{t("member.bedroom.has_shared_bathroom")} <br />".html_safe if @bedroom.has_shared_bathroom %>
+    <%= t("member.bedroom.has_shared_toilets") if @bedroom.has_shared_toilets %>
+  </div>
+</div>
+
+

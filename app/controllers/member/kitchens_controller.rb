@@ -9,7 +9,6 @@ class Member::KitchensController < Member::MemberApplicationController
 
   def new
     @kitchen = Kitchen.new
-    @rooms = Room.find_all_by_housing_id(params[:housing_id]) if params[:housing_id]
   end
 
   def edit
@@ -22,9 +21,7 @@ class Member::KitchensController < Member::MemberApplicationController
     respond_to do |format|
       if @kitchen.save
         format.html { redirect_to(@kitchen) }
-        format.js   {
-          render :partial => 'member/rooms/room_item', :locals => { :item => @kitchen }
-        }
+        format.js   { @kitchen }
       else
         format.html { render :action => "new" }
         format.js   { }
@@ -51,7 +48,7 @@ class Member::KitchensController < Member::MemberApplicationController
 
     respond_to do |format|
       format.html { redirect_to(kitchens_url) }
-      format.js { }
+      format.js   { }
     end
   end
 end

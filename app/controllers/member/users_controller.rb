@@ -7,13 +7,6 @@ class Member::UsersController < Member::MemberApplicationController
     @user = User.find(params[:id])
   end
   
-  def profile
-#    @user = current_user
-#    TODO: cette ligne est là pour continuer le dev'
-#    le temps que devise fonctionne avec les namespaces
-    @user = User.find 1
-  end
-
   def new
     @user = User.new
   end

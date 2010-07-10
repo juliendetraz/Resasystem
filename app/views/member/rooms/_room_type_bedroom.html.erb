@@ -1,7 +1,0 @@
-<%= '<strong>'.html_safe + room_type.name + ' :</strong><br />'.html_safe unless room_type.name.blank? %>
-<%= "#{room_type.beds_simple_quantity} " + t("member.bedroom.bedrooms_type.beds_simple") + '<br />'.html_safe if room_type.beds_simple_quantity > 0 %>
-<%= "#{room_type.beds_double_quantity} " + t("member.bedroom.bedrooms_type.beds_double") + '<br />'.html_safe if room_type.beds_double_quantity > 0 %>
-<%= "#{room_type.beds_bunk_quantity} " + t("member.bedroom.bedrooms_type.beds_bunk") + '<br />'.html_safe if room_type.beds_bunk_quantity > 0 %>
-<%= "#{room_type.beds_cott_quantity} " + t("member.bedroom.bedrooms_type.beds_cott") + '<br />'.html_safe if room_type.beds_cott_quantity > 0 %>
-<%= t("member.bedroom.has_shared_bathroom") + '<br />'.html_safe if room_type.has_shared_bathroom %>
-<%= t("member.bedroom.has_shared_toilets") if room_type.has_shared_toilets %>

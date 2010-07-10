@@ -13,10 +13,10 @@
   </div>
   
   <div id="rooms_list">
-    <%= render @rooms %> 
+    <%= render @rooms %>
   </div>
 
-  <%= render :partial => "form" %>
+  <%= render :partial => "form", :locals => { :room => Room.new } %>
   
   <div id="submit_go_next_step">
     <%#= link_to t('member.room.add.create_go_step3'), { :controller => :housings, :locale => I18n.locale, :id => params[:housing_id], :action => :add_services }, :title => t('member.room.add.create_go_step3') %>

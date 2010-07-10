@@ -4,13 +4,14 @@
     <strong><%= t("member.room.rooms_type.#{@room.room_type}") %></strong>
   </div>
   <div class="col_room_submit">
-    <%= link_to_remote	image_tag('icons/delete.png', :alt => 'delete'),
-												:update => "rooms_list", 
-												:url => member_room_path(I18n.locale, @room.id), 
-												:method => :delete, 
-												:confirm => t('are_you_sure') %>
+    <%= link_to	image_tag('icons/delete.png', :alt => 'delete'),
+                :remote => true,
+                :update => "rooms_list",
+                :url => member_room_path(I18n.locale, @room.id),
+                :method => :delete,
+                :confirm => t('are_you_sure') %>
   </div>
   <div class="col_room_offers">
-    <%= render :partial => "member/rooms/room_type_#{@room.room_type}", :locals => { :room_type => item } %>
+    <%= render :partial => @room.room_type, :locals => { :room_type => item } %>
   </div>
 </div>

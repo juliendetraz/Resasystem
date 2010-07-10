@@ -179,6 +179,9 @@ fr:
         even: "doit être pair"
         record_invalid: "La validation a échoué : {{errors}}"
 
+  are_you_sure: Etes-vous sûre ?
+  destroy: Supprimer
+
   homepage:
     homepage: Accueil
   

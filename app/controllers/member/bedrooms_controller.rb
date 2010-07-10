@@ -21,9 +21,7 @@ class Member::BedroomsController < Member::MemberApplicationController
     respond_to do |format|
       if @bedroom.save
         format.html { redirect_to(@bedroom) }
-        format.js  {
-          render :partial => 'member/rooms/room_item', :locals => { :item => @bedroom }
-        }
+        format.js  { @bedroom }
       else
         format.html { render :action => "new" }
         format.js   { }
