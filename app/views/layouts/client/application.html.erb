@@ -23,7 +23,7 @@
       <div id="headbar">
         <%= devise_user_signed_in? ? render(:partial => "#{get_module_name}/users/headbar_logged") : render(:partial => "#{get_module_name}/users/headbar_log_in") %>
       </div> <!-- #headbar -->
-      <div id="content">>
+      <div id="content">
         <% flash.each do |key, msg| %>
           <%= content_tag :div, msg, :id => key %>
         <% end %>
@@ -32,8 +32,8 @@
       <div id="footer">
         <div id="footer_lang_switcher">
           <ul>
-<%= locale_switch_tag :locale => 'fr' %>
-<%= locale_switch_tag :locale => 'en' %>
+            <%= locale_switch_tag :locale => 'fr' %>
+            <%= locale_switch_tag :locale => 'en' %>
           </ul>
           <div id="footer_links">
             <ul>

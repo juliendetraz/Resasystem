@@ -89,7 +89,7 @@ Resasystem::Application.routes.draw do
 #        resources :message_usergroups
 #        root :to => 'pages#index'
 #      end # namespace :admin
-#
+
       namespace :member do
         devise_for :users
         resources :ads
@@ -112,16 +112,17 @@ Resasystem::Application.routes.draw do
       end # namespace :member
 #    end # localized
 
-    # You can have the root of your site routed with "root"
-    # just remember to delete public/index.html.
-    # root :to => "welcome#index"
-
-    # See how all your routes lay out with "rake routes"
-
     # This is a legacy wild controller route that's not recommended for RESTful applications.
     # Note: This route will make all actions in every controller accessible via GET requests.
-    # match ':controller(/:action(/:id(.:format)))'
     match ':controller(/:action(/:id(.:format)))'
+  
+    match 'member', :to => 'member/user#profile'
+  
   end # scope :locale
+  
+  
+  # You can have the root of your site routed with "root"
   root :to => 'client/pages#index', :locale => I18n.default_locale
+
+
 end # routes

@@ -8,7 +8,7 @@ http://www.scribd.com/doc/15010095/Rails-3-and-the-Real-Secret-to-High-Productiv
 page 20
 
 
-<% %> DEPRECATED, le contenu s'affiche pas s'affiche pas
+<% %> DEPRECATED, le contenu s'affiche pas
 - faire <%= form_for ... %> et pas <% form_for ... %>
 - pareil pour <%= f.fields ... %>
 

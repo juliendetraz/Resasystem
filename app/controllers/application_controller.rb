@@ -8,7 +8,10 @@ class ApplicationController < ActionController::Base
                 :get_module_path,
                 :get_module_url,
                 :current_devise_user,
-                :devise_user_signed_in?
+                :devise_user_signed_in?,
+                :is_member?,
+                :is_admin?
+                
 
   def get_module_name
     self.class.name.split("::").first.downcase
@@ -39,18 +42,29 @@ class ApplicationController < ActionController::Base
     get_module_path("%_root")
   end
 
-  private
-    def set_locale
-      locale = params[:locale] if params[:locale] && I18n.available_locales.member?(params[:locale].to_sym)
-      I18n.locale = locale || session[:locale] || extract_locale_from_accept_language_header || I18n.default_locale
-      session[:locale] = I18n.locale
-    end
 
-    def self.default_url_options
-      { :locale => I18n.locale }
-    end
+protected
+  def is_member?
+    current_devise_user && current_devise_user.role == "member"
+  end
 
-    def extract_locale_from_accept_language_header
-      request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
-    end 
+  def is_admin?
+    current_devise_user && current_devise_user.role == "admin"
+  end
+
+
+private
+  def set_locale
+    locale = params[:locale] if params[:locale] && I18n.available_locales.member?(params[:locale].to_sym)
+    I18n.locale = locale || session[:locale] || extract_locale_from_accept_language_header || I18n.default_locale
+    session[:locale] = I18n.locale
+  end
+
+  def self.default_url_options
+    { :locale => I18n.locale }
+  end
+
+  def extract_locale_from_accept_language_header
+    request.env['HTTP_ACCEPT_LANGUAGE'].scan(/^[a-z]{2}/).first
+  end 
 end
