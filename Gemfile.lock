@@ -15,7 +15,7 @@ GIT
 
 GIT
   remote: git://github.com/rails/rails.git
-  revision: 80e47d7
+  revision: f33ee69
   specs:
     actionmailer (3.0.0.beta4)
       actionpack (= 3.0.0.beta4)
@@ -72,12 +72,14 @@ GEM
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
-    mysql (2.8.1)
+    mysql (2.8.1-x86-mswin32)
     polyglot (0.3.1)
     rack (1.2.1)
     rack-test (0.5.4)
       rack (>= 1.0)
     rake (0.8.7)
+    ruby-graphviz (0.9.13)
+      treetop
     thor (0.13.7)
     treetop (1.4.8)
       polyglot (>= 0.3.1)
@@ -86,10 +88,11 @@ GEM
       rack (>= 1.0.0)
 
 PLATFORMS
-  ruby
+  x86-mswin32
 
 DEPENDENCIES
   devise!
   i18n_routing!
   mysql
   rails!
+  ruby-graphviz

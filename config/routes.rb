@@ -1,5 +1,5 @@
 Resasystem::Application.routes.draw do
-  # I18n.available_locales is set in config/initializers/locale.rb
+ # I18n.available_locales is set in config/initializers/locale.rb
   scope ':locale', :constraints => { :locale => /#{I18n.available_locales.join('|')}/ } do
 #    localized(I18n.available_locales, :verbose => true) do
       # The priority is based upon order of creation:
