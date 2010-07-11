@@ -17,28 +17,4 @@ class Housing < ActiveRecord::Base
   accepts_nested_attributes_for :housing_pois, :allow_destroy => true
 
   validates :name, :presence => true
-
-  state_machine :initial => :parked do
-      before_transition :parked => any - :parked, :do => :put_on_seatbelt
-      after_transition any => :parked do |vehicle, transition|
-        vehicle.seatbelt = 'off'
-      end
-      around_transition :benchmark
-
-      event :ignite do
-        transition :parked => :idling
-      end
-
-      state :first_gear, :second_gear do
-        validates :seatbelt_on, :presence => true
-      end
-    end # state machine
-
-    def put_on_seatbelt
-
-    end
-
-    def benchmark
-
-    end
 end
