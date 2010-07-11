@@ -1,0 +1,12 @@
+<% picture = @picture unless picture %>
+<li id="item_picture_<%= picture.id %>">
+  <span class="item_picture"><%= image_tag picture.picture.url %></span>
+  <span class="item_picture_submit">
+    <%= button_to '&nbsp;'.html_safe,
+                member_picture_path(I18n.locale, picture),
+                :remote => true,
+                :method => :delete,
+                :confirm => t('are_you_sure'),
+                :class => 'destroy_button' %>
+  </span>
+</li>

@@ -56,6 +56,14 @@ GIT
       rake (>= 0.8.3)
       thor (~> 0.13.7)
 
+GIT
+  remote: git://github.com/thoughtbot/paperclip.git
+  revision: ae9d7e9
+  specs:
+    paperclip (2.3.3)
+      activerecord
+      activesupport
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -92,4 +100,5 @@ DEPENDENCIES
   devise!
   i18n_routing!
   mysql
+  paperclip!
   rails!

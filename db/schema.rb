@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100710205116) do
+ActiveRecord::Schema.define(:version => 20100711201238) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -113,6 +113,11 @@ ActiveRecord::Schema.define(:version => 20100710205116) do
     t.string   "state"
   end
 
+  create_table "housings_pictures", :id => false, :force => true do |t|
+    t.integer "housing_id"
+    t.integer "picture_id"
+  end
+
   create_table "housings_services", :id => false, :force => true do |t|
     t.integer "housing_id"
     t.integer "service_id"
@@ -202,6 +207,16 @@ ActiveRecord::Schema.define(:version => 20100710205116) do
     t.datetime "date_validated"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.binary   "picture_file"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+  end
+
+  create_table "pictures_rooms", :id => false, :force => true do |t|
+    t.integer "picture_id"
+    t.integer "room_id"
   end
 
   create_table "reservations", :force => true do |t|

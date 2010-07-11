@@ -57,4 +57,8 @@ class Member::HousingsController < Member::MemberApplicationController
 
     @housing_pois = HousingPoi.find_all_by_housing_id params[:id]
   end
+
+  def add_pictures
+    @housing = Housing.find params[:id]
+  end
 end

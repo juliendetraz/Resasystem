@@ -1,0 +1,16 @@
+<% title t('member.housing.add.title') + ' ' + @housing.name %>
+<h2><%= t('member.housing.add.title') + ' ' + @housing.name %></h2>
+
+<div id="content_member_left">
+  <h3 class="blue-sky"><%= t('member.housing.add.step4_gite') %></h3>
+
+  <h3 class="blue-bottom-bar"><%= t('member.housing.add_housing_pois') %></h3>
+  <ul id="pictures_list">
+    <%= render @housing.pictures %>
+  </ul>
+  <%= render :partial => "form_pictures" %>
+</div>
+
+<div id="content_member_right">
+  <%= render :partial => "#{get_module_name}/users/right_column" %>
+</div>

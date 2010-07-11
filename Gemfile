@@ -8,6 +8,7 @@ gem 'mysql'
 #gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'i18n_routing', :git => 'git://github.com/kwi/i18n_routing.git'
+gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
 
 # Use unicorn as the web server
 # gem 'unicorn'
