@@ -1,0 +1,28 @@
+<% title t('member.housing.add.title') + ' ' + @housing.name %>
+<h2><%= t('member.housing.add.title') + ' ' + @housing.name %></h2>
+
+<div id="content_member_left">
+  <h3 class="blue-sky"><%= t('member.housing.add.step4_gite') %></h3>
+
+  <%= form_for [get_module_name, @housing] do |f| %>
+    <%= f.error_messages %>
+
+    <%= render :partial => "fields_housing_distances", :locals => { :f => f } %>
+
+    <div id="housing_pois_list">
+      <%= render @housing_pois %>
+    </div>
+
+    <%= render :partial => "form_housing_pois" %>
+
+    <div id="submit_go_next_step_button">
+      <%= f.submit t('member.housing.add.create_go_step5') %>
+    </div>
+
+  <% end %>
+
+</div>
+
+<div id="content_member_right">
+  <%= render :partial => "#{get_module_name}/users/right_column" %>
+</div>

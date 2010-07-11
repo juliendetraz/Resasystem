@@ -14,7 +14,8 @@ class Housing < ActiveRecord::Base
   has_and_belongs_to_many :users, :class_name => "Favorites"
   
   accepts_nested_attributes_for :address, :allow_destroy => true
-  
+  accepts_nested_attributes_for :housing_pois, :allow_destroy => true
+
   validates :name, :presence => true
 
   state_machine :initial => :parked do

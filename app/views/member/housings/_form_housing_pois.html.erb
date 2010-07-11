@@ -1,0 +1,14 @@
+<%= form_for :housing_poi, HousingPoi.new, :url => member_housing_pois_path, :remote => true do |f| %>
+  <%= f.hidden_field :housing_id, :value => params[:housing_id] %>
+
+  <div id="line_add_housing_poi">
+    <p>
+      <%= t('member.housing_poi.add_housing_poi') %><br />
+      <%= f.label :name, t('member.housing_poi.name') %><br />
+      <%= f.text_field :name %>
+      <%= f.label :distance, t('member.housing_poi.distance') %><br />
+      <%= f.text_field :distance %>
+      <span style="float:right;"><%= f.submit t('member.housing_poi.add.submit') %></span>
+    </p>
+  </div>
+<% end %>

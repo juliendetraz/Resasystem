@@ -93,18 +93,19 @@ Resasystem::Application.routes.draw do
       namespace :member do
         devise_for :users
         resources :ads
-        resources :users
         resources :news
+        resources :users
         resources :offers
         resources :messages
         resources :pictures
+        resources :services
         resources :rooms
         resources :rooms do
-          resources :bathrooms
           resources :bedrooms
-          resources :dinningrooms
           resources :kitchens
+          resources :bathrooms
           resources :livingrooms
+          resources :dinningrooms
         end
         resources :housings do
           resources :ads
@@ -112,9 +113,11 @@ Resasystem::Application.routes.draw do
         end
         resources :bathrooms
         resources :calendars
+        resources :housing_pois
         resources :reservations
         resources :organizations
         resources :message_usergroups
+
         root :to => 'pages#index'
       end # namespace :member
 #    end # localized
