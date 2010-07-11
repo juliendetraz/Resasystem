@@ -74,5 +74,5 @@
 </p>
 
 
-<%= link_to 'Edit', edit_user_path(I18n.locale, @user) %> |
-<%= link_to 'Back', users_path(I18n.locale) %>
+<%= link_to 'Edit', get_module_path("edit_%_auser", @user) %> |
+<%= link_to 'Back', get_module_path("%_ausers") %>

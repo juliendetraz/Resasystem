@@ -1,25 +1,25 @@
 class Member::UsersController < Member::MemberApplicationController
   def index
-    @users = User.all
+    @users = Muser.all
   end
 
   def show
-    @user = User.find(params[:id])
+    @user = Muser.find(params[:id])
   end
   
   def new
-    @user = User.new
+    @user = Muser.new
   end
 
   def edit
-    @user = User.find(params[:id])
+    @user = Muser.find(params[:id])
   end
 
   def create
-    @user = User.new(params[:user])
+    @user = Muser.new(params[:muser])
 
     if @user.save
-      flash[:notice] = 'User was successfully created.'
+      flash[:notice] = 'Muser was successfully created.'
       redirect_to(@user)
     else
       render :action => "new"
@@ -27,10 +27,10 @@ class Member::UsersController < Member::MemberApplicationController
   end
 
   def update
-    @user = User.find(params[:id])
+    @user = Muser.find(params[:id])
 
-    if @user.update_attributes(params[:user])
-      flash[:notice] = 'User was successfully updated.'
+    if @user.update_attributes(params[:muser])
+      flash[:notice] = 'Muser was successfully updated.'
       redirect_to(@user)
     else
       render :action => "edit"
@@ -38,9 +38,9 @@ class Member::UsersController < Member::MemberApplicationController
   end
 
   def destroy
-    @user = User.find(params[:id])
+    @user = Muser.find(params[:id])
     @user.destroy
 
-    redirect_to(users_url)
+    redirect_to(get_module_url("%_musers"))
   end
 end

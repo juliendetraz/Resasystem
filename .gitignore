@@ -7,3 +7,4 @@ config/database.yml
 test/integration/webrat-*
 tmp
 nbproject
+Gemfile.lock

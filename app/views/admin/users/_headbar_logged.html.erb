@@ -8,19 +8,19 @@
     </div>
     <ul id="headbar_logged_icons">
       <li id="news">
-        <%= link_to '<span>'.html_safe + t("news.news_link") + '</span>'.html_safe, get_module_path("%_user", current_devise_user), :title => t("news.news_link") %>
+        <%= link_to '<span>'.html_safe + t("news.news_link") + '</span>'.html_safe, get_module_path("%_auser", current_devise_user), :title => t("news.news_link") %>
       </li>
       <li id="resa">
-        <%= link_to '<span>'.html_safe + t("users.your_reservations_link") + '</span>'.html_safe, get_module_path("%_user", current_devise_user), :title => t("users.your_reservations_link") %>
+        <%= link_to '<span>'.html_safe + t("users.your_reservations_link") + '</span>'.html_safe, get_module_path("%_auser", current_devise_user), :title => t("users.your_reservations_link") %>
       </li>
       <li id="email">
-        <%= link_to '<span>'.html_safe + t("messages.your_messages_link") + '</span>'.html_safe, get_module_path("%_user", current_devise_user), :title => t("messages.your_messages_link") %>
+        <%= link_to '<span>'.html_safe + t("messages.your_messages_link") + '</span>'.html_safe, get_module_path("%_auser", current_devise_user), :title => t("messages.your_messages_link") %>
       </li>
       <li id="coeur">
-        <%= link_to '<span>'.html_safe + t("users.favorites_link") + '</span>'.html_safe, get_module_path("%_user", current_devise_user), :title => t("users.favorites_link") %>
+        <%= link_to '<span>'.html_safe + t("users.favorites_link") + '</span>'.html_safe, get_module_path("%_auser", current_devise_user), :title => t("users.favorites_link") %>
       </li>
       <li id="profil">
-        <%= link_to '<span>'.html_safe + t("users.your_profile_link") + '</span>'.html_safe, get_module_path("%_user", current_devise_user), :title => t("users.your_profile_link") %>
+        <%= link_to '<span>'.html_safe + t("users.your_profile_link") + '</span>'.html_safe, get_module_path("%_auser", current_devise_user), :title => t("users.your_profile_link") %>
       </li>
     </ul>
   </div>
