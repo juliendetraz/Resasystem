@@ -499,7 +499,8 @@ a.link-blue-dot {
     text-decoration: underline;
   }
 
-#rooms_list_titles {
+#rooms_list_titles,
+#housing_pois_list_titles {
   border-bottom: 1px solid #1e4858;
   margin-bottom: 8px;
   font-weight: bold;
@@ -547,6 +548,19 @@ a.link-blue-dot {
   .add_services_list li {
     list-style: none;
   }
+
+.col_housing_poi_name {
+    margin-left: 10px;
+    width: 400px;
+    float: left;
+  }
+  .col_housing_poi_submit {
+    float: right;
+  }
+#span_housing_poi_name {
+  margin: 0 186px 0 10px;
+  float: left;
+}
 
 
 .destroy_button {

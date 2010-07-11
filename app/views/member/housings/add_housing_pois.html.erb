@@ -4,23 +4,18 @@
 <div id="content_member_left">
   <h3 class="blue-sky"><%= t('member.housing.add.step4_gite') %></h3>
 
-  <%= form_for [get_module_name, @housing] do |f| %>
-    <%= f.error_messages %>
+  <h3 class="blue-bottom-bar"><%= t('member.housing.add_housing_pois') %></h3>
+  <div id="housing_pois_list_titles">
+    <div class="col_housing_poi_name"><%= t('member.housing_poi.name') %></div>
+    <div class="col_housing_poi_distance"><%= t('member.housing_poi.distance') %></div>
+    <div class="col_housing_poi_submit"></div>
+  </div>
+  <div id="housing_pois_list">
+    <%= render @housing_pois %>
+  </div>
+  <%= render :partial => "form_housing_pois" %>
 
-    <%= render :partial => "fields_housing_distances", :locals => { :f => f } %>
-
-    <div id="housing_pois_list">
-      <%= render @housing_pois %>
-    </div>
-
-    <%= render :partial => "form_housing_pois" %>
-
-    <div id="submit_go_next_step_button">
-      <%= f.submit t('member.housing.add.create_go_step5') %>
-    </div>
-
-  <% end %>
-
+  <%= render :partial => "form_housing_distances" %>
 </div>
 
 <div id="content_member_right">

@@ -22,10 +22,10 @@ class Member::RoomsController < Member::MemberApplicationController
     respond_to do |format|
       if @room.save
         format.html { redirect_to(@room) }
-        format.js { @room }
+        format.js   { @room }
       else
         format.html { render :action => "new" }
-        format.js { }
+        format.js   { }
       end
     end
   end
