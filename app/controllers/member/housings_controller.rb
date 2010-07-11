@@ -46,9 +46,15 @@ class Member::HousingsController < Member::MemberApplicationController
   
   def add_services
     @housing = Housing.find(params[:id])
-    
+
     @assets = Service.find_all_by_service_type 'asset'
     @comforts = Service.find_all_by_service_type 'comfort'
     @activities = Service.find_all_by_service_type 'activity'
+  end
+
+  def add_housing_pois
+    @housing = Housing.find params[:id]
+
+    @housing_pois = HousingPoi.find_all_by_housing_id params[:id]
   end
 end

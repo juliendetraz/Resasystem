@@ -505,7 +505,8 @@ a.link-blue-dot {
   font-weight: bold;
   height: 18px;
 }
-.line_room {
+.line_room,
+.line_housing_poi {
   border-bottom: 1px solid #d1d1d1;
   min-height: 15px;
   padding: 8px 5px 8px 0;
@@ -525,15 +526,18 @@ a.link-blue-dot {
     .line_room .col_room_submit a img {
       border: none;
     }
-#line_add_room {
+#line_add_room,
+#line_add_housing_poi {
   background-color: #b1d5f7;
   padding: 5px;
 }
-  #line_add_room p {
+  #line_add_room p,
+  #line_add_housing_poi p {
     padding-bottom:3px;
     font-weight: bold;
   }
-  #line_add_room .col_room_submit {
+  #line_add_room .col_room_submit,
+  #line_add_housing_poi .col_housing_poi_submit {
     text-align: right;
   }
 

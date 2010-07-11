@@ -19,7 +19,7 @@
   <%= render :partial => "form", :locals => { :room => Room.new } %>
   
   <div id="submit_go_next_step">
-    <%#= link_to t('member.room.add.create_go_step3'), { :controller => :housings, :locale => I18n.locale, :id => params[:housing_id], :action => :add_services }, :title => t('member.room.add.create_go_step3') %>
+    <%= link_to t('member.room.add.create_go_step3'), { :controller => 'member/housings', :action => 'add_services', :id => params[:housing_id] }, :title => t('member.room.add.create_go_step3') %>
   </div>
 </div>
 

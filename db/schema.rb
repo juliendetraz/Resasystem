@@ -110,6 +110,7 @@ ActiveRecord::Schema.define(:version => 20100710205116) do
     t.integer  "floor"
     t.integer  "capacity"
     t.boolean  "is_visible"
+    t.string   "state"
   end
 
   create_table "housings_services", :id => false, :force => true do |t|
