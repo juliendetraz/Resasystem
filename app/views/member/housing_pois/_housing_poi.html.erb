@@ -1,16 +1,17 @@
-<div class="line_housing_poi" id="line_housing_poi_<%= @housing_poi.id %>">
+<% housing_poi = @housing_poi unless housing_poi %>
+<div class="line_housing_poi" id="line_housing_poi_<%= housing_poi.id %>">
   <div class="col_housing_poi_name">
-    <strong><%= @housing_poi.name %></strong>
+    <strong><%= housing_poi.name %></strong>
   </div>
   <div class="col_housing_poi_submit">
     <%= button_to '&nbsp;'.html_safe,
-                member_housing_poi_path(I18n.locale, @housing_poi),
+                member_housing_poi_path(I18n.locale, housing_poi),
                 :remote => true,
                 :method => :delete,
                 :confirm => t('are_you_sure'),
                 :class => 'destroy_button' %>
   </div>
   <div class="col_housing_poi_distance">
-    <%= @housing_poi.distance %>
+    <%= housing_poi.distance %>
   </div>
 </div>
