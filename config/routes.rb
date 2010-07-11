@@ -1,5 +1,5 @@
 Resasystem::Application.routes.draw do
-  # I18n.available_locales is set in config/initializers/locale.rb
+ # I18n.available_locales is set in config/initializers/locale.rb
   scope ':locale', :constraints => { :locale => /#{I18n.available_locales.join('|')}/ } do
 #    localized(I18n.available_locales, :verbose => true) do
       # The priority is based upon order of creation:
@@ -51,9 +51,9 @@ Resasystem::Application.routes.draw do
 
       #scope '', :module => :client do # /locale:/client_controller#action
       namespace :client do # /locale:/client/client_controller#action
-        devise_for :users
+        devise_for :cusers#, :path => 'users'
         resources :ads
-        resources :users
+        resources :cusers, :controller => "users"
 #        resources :news
 #        resources :offers
 #        resources :messages
@@ -71,9 +71,9 @@ Resasystem::Application.routes.draw do
       end # namespace :client
 
 #      namespace :admin do
-#        devise_for :users
+#        devise_for :ausers, :path => 'users'
 #        resources :ads
-#        resources :users
+#        resources :ausers, :controller => "users"
 #        resources :news
 #        resources :offers
 #        resources :messages
@@ -91,10 +91,10 @@ Resasystem::Application.routes.draw do
 #      end # namespace :admin
 
       namespace :member do
-        devise_for :users
+        devise_for :musers
         resources :ads
         resources :news
-        resources :users
+        resources :musers, :controller => "users"
         resources :offers
         resources :messages
         resources :pictures

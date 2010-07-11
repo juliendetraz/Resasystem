@@ -8,6 +8,6 @@ class Member::MemberApplicationController < ApplicationController
 
   private
   def resource_name
-    :"#{get_module_name}_user"
+    :"#{get_module_name}_muser"
   end
 end

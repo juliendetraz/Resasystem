@@ -2,7 +2,7 @@ class Admin::UsersController < Admin::AdminApplicationController
   # GET /users
   # GET /users.xml
   def index
-    @users = User.all
+    @users = Auser.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -13,7 +13,7 @@ class Admin::UsersController < Admin::AdminApplicationController
   # GET /users/1
   # GET /users/1.xml
   def show
-    @user = User.find(params[:id])
+    @user = Auser.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -24,7 +24,7 @@ class Admin::UsersController < Admin::AdminApplicationController
   # GET /users/new
   # GET /users/new.xml
   def new
-    @user = User.new
+    @user = Auser.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -34,17 +34,17 @@ class Admin::UsersController < Admin::AdminApplicationController
 
   # GET /users/1/edit
   def edit
-    @user = User.find(params[:id])
+    @user = Auser.find(params[:id])
   end
 
   # POST /users
   # POST /users.xml
   def create
-    @user = User.new(params[:user])
+    @user = Auser.new(params[:auser])
 
     respond_to do |format|
       if @user.save
-        flash[:notice] = 'User was successfully created.'
+        flash[:notice] = 'Auser was successfully created.'
         format.html { redirect_to(@user) }
         format.xml  { render :xml => @user, :status => :created, :location => @user }
       else
@@ -57,11 +57,11 @@ class Admin::UsersController < Admin::AdminApplicationController
   # PUT /users/1
   # PUT /users/1.xml
   def update
-    @user = User.find(params[:id])
+    @user = Auser.find(params[:id])
 
     respond_to do |format|
-      if @user.update_attributes(params[:user])
-        flash[:notice] = 'User was successfully updated.'
+      if @user.update_attributes(params[:auser])
+        flash[:notice] = 'Auser was successfully updated.'
         format.html { redirect_to(@user) }
         format.xml  { head :ok }
       else
@@ -74,11 +74,11 @@ class Admin::UsersController < Admin::AdminApplicationController
   # DELETE /users/1
   # DELETE /users/1.xml
   def destroy
-    @user = User.find(params[:id])
+    @user = Auser.find(params[:id])
     @user.destroy
 
     respond_to do |format|
-      format.html { redirect_to(users_url) }
+      format.html { redirect_to(get_module_url("%_ausers")) }
       format.xml  { head :ok }
     end
   end

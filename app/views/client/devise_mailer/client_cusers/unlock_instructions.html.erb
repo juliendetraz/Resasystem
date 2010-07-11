@@ -4,4 +4,4 @@
 
 <p>Click the link below to unlock your account:</p>
 
-<p><%= link_to 'Unlock my account', member_user_unlock_url(I18n.locale, @resource, :unlock_token => @resource.unlock_token) %></p>
+<p><%= link_to 'Unlock my account', client_cuser_unlock_url(I18n.locale, @resource, :unlock_token => @resource.unlock_token) %></p>

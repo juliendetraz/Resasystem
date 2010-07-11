@@ -1,3 +1,4 @@
+# generic user
 class User < ActiveRecord::Base
   has_many :housings
   has_many :messages

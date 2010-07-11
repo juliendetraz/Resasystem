@@ -9,6 +9,6 @@ class Client::ClientApplicationController < ApplicationController
 private
   #sometimes devise's resource_name is not available
   def resource_name
-    :"#{get_module_name}_user"
+    :"#{get_module_name}_cuser"
   end
 end

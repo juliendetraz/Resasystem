@@ -14,6 +14,6 @@
   <p><%= f.submit "Sign in" %></p>
 <% end %>
 
-<h2>Vous êtes adhérents ? <%= link_to 'Connectez-vous par ici', new_member_user_session_path, :title => 'Connectez-vous par ici' %></h2>
+<h2>Vous êtes adhérents ? <%= link_to 'Connectez-vous par ici', new_member_muser_session_path, :title => 'Connectez-vous par ici' %></h2>
 
 <%= render :partial => "#{get_module_name}/devise_shared/links" %>
