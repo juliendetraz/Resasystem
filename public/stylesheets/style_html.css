@@ -442,7 +442,7 @@ a.green_button-extensible span span span {
  */
 #content_member_left h2 {
   margin: 0 0 15px;
-  color: #113356;
+  color: #3996ea;
 }
 h3.blue-sky {
   color: #3996ea;
@@ -461,12 +461,42 @@ h3.grey-bg {
   padding: 4px 7px;
   background-color: #e5e5e5;
 }
+#welcome-resasystem {
+  background: url(../images/icons/note.png) -1px -1px no-repeat;
+  padding-left: 20px;
+  margin: 10px 0;
+}
 a.link-blue-dot {
   color: #3996ea;
   padding-left: 18px;
-  background: url(../images/blue-dot.gif) left 2px no-repeat;
+  background: url(../images/blue-dot.gif) 0 2px no-repeat;
 }
+#housings_list {
+  margin: -5px 0 10px 0;
+  padding: 0 0 0 7px;
+  list-style: none;
+}
+  #housings_list li {
+    background: url(../images/icons/house.png) 0 4px no-repeat;
+    padding: 5px 0 0 20px;
+  }
 
+
+/*
+** Member - Show housing
+*/
+#housing_show_addr {
+  line-height: 1.6em;
+}
+  #housing_show_addr span {
+    font-weight: bold;
+    width: 150px;
+    float: left;
+  }
+
+ /*
+ ** Member forms
+ */
 .p-text_field label {
   float: left;
   width: 200px;

@@ -16,42 +16,39 @@
   <%= f.label :website, t('member.housing.website') %>
   <%= f.text_field :website %>
 </p>
-<p class="p-text_field">
-  <%= f.label :url_alias, t('member.housing.url_alias') %>
-  <%= f.text_field :url_alias %>
-</p>
+
 
 <h3 class="blue-bottom-bar"><%= t('member.housing.infos_housing') %></h3>
 <p><%= t('member.housing.type.housing_type') %></p>
 <p class="p-radio-type">
-  <%= f.radio_button :housing_type, :house_alone %>
+  <%= f.radio_button :housing_type, 'house_alone' %>
   <%= f.label :housing_type_house_alone, t('member.housing.type.house_alone') %>
   
-  <%= f.radio_button :housing_type, :house_tween %>
+  <%= f.radio_button :housing_type, 'house_tween' %>
   <%= f.label :housing_type_house_tween, t('member.housing.type.house_tween') %>
   
-  <%= f.radio_button :housing_type, :flat %>
+  <%= f.radio_button :housing_type, 'flat' %>
   <%= f.label :housing_type_flat, t('member.housing.type.flat') %>
   
-  <%= f.radio_button :housing_type, :bungalo %>
+  <%= f.radio_button :housing_type, 'bungalo' %>
   <%= f.label :housing_type_bungalo, t('member.housing.type.bungalo') %>
 </p>
 <p>
-  <%= f.radio_button :housing_type, :other %>
+  <%= f.radio_button :housing_type, 'other' %>
   <%= f.label :housing_type_other, t('member.housing.type.other') %>&nbsp;
-  <%= f.text_field :housing_type %>
+  <%= f.text_field :housing_type_text %>
 </p>
 
-
+<h3 class="blue-bottom-bar"><%= t('member.housing.edit_housing_distances') %></h3>
 <p class="p-text_field">
   <%= f.label :distance_commerce, t('member.housing.distance_commerce') %>
-  <%= f.text_field :distance_commerce %>
+  <%= f.select :distance_commerce, list_housing_distances, :include_blank => true %>
 </p>
 <p class="p-text_field">
   <%= f.label :distance_train, t('member.housing.distance_train') %>
-  <%= f.text_field :distance_train %>
+  <%= f.select :distance_train, list_housing_distances, :include_blank => true %>
 </p>
 <p class="p-text_field">
   <%= f.label :distance_transport, t('member.housing.distance_transport') %>
-  <%= f.text_field :distance_transport %>
+  <%= f.select :distance_transport, list_housing_distances, :include_blank => true %>
 </p>

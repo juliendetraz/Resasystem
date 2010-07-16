@@ -5,11 +5,12 @@ fr:
       profile:
         title: Votre compte
         your_news: Vos actualités
-        personnal_infos: Informations personnelles
+        personal_infos: Informations personnelles
         define_offers: Définissez vos offres
         validate_reservations: Vos réservations à valider
         your_emails: Vos emails
         your_rent: Vos locations
+        welcome_resasystem: Bienvenue sur
     housing:
       add:
         title: Ajouter un gîte, maison ou appartement de vacances
@@ -56,7 +57,7 @@ fr:
         less_10km: A moins de 10km
         less_50km: A moins de 50km
         less_100km: A moins de 100km
-      add_housing_pois: Ajoutez les points d'intérêt (touristiques, sport, nature, culture, festival, etc.) les plus proches de chez vous, ainsi que la distance à parcourir pour s'y rendre
+      add_housing_pois: Ajoutez les points d'intérêt (touristiques, sport, nature, culture, etc.) près de chez vous
     room:
       add:
         title: Ajouter une pièce à votre gîte, maison ou appartement de vacances

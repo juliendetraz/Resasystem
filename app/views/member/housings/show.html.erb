@@ -1,64 +1,44 @@
-<p>
-  <b>Address:</b>
-  <%= @housing.address_id %>
-</p>
+<% title @housing.name %>
 
-<p>
-  <b>User:</b>
-  <%= @housing.user_id %>
-</p>
+<div id="content_member_left">
+  <h2><%= @housing.name %></h2>
 
-<p>
-  <b>Phone contact:</b>
-  <%= @housing.phone_contact %>
-</p>
+  <div id="housing_show_addr">
+    <%= "<span>#{t('member.housing.city')+t('2p')}</span> #{@housing.address.city}<br />".html_safe if @housing.address.city %>
+    <%= "<span>#{t('member.housing.country')+t('2p')}</span> #{@housing.address.country}<br />".html_safe if @housing.address.country %>
+    <%= "<span>#{t('member.housing.state_province_country')+t('2p')}</span> #{@housing.address.state_province_country}<br />".html_safe if @housing.address.state_province_country %>
+    <%= "<span>#{t('member.housing.phone_to_contact')+t('2p')}</span> #{@housing.phone_contact}<br />".html_safe if @housing.phone_contact %>
+    <%= "<span>#{t('member.housing.email_to_contact')+t('2p')}</span> #{mail_to @housing.email}<br />".html_safe if @housing.email %>
+    <%= "<span>#{t('member.housing.website')+t('2p')}</span> #{link_to @housing.website, @housing.website, :target => '_blank'}<br />".html_safe if @housing.email %>
+  </div>
 
-<p>
-  <b>Email:</b>
-  <%= @housing.email %>
-</p>
+  <div style="border: 1px solid grey; height: 300px; width: 600px; margin: 20px 0; background-color: #F9F9F9; font-size: 3em; text-align: center;">
+    GALLERIE PHOTOS
+  </div>
 
-<p>
-  <b>Website:</b>
-  <%= @housing.website %>
-</p>
 
-<p>
-  <b>Name:</b>
-  <%= @housing.name %>
-</p>
 
-<p>
-  <b>Is visible:</b>
-  <%= @housing.is_visible %>
-</p>
 
-<p>
-  <b>Type:</b>
-  <%= @housing.housing_type %>
-</p>
+  <p>
+    <b>Distance commerce:</b>
+    <%= @housing.distance_commerce %>
+  </p>
 
-<p>
-  <b>Url alias:</b>
-  <%= @housing.url_alias %>
-</p>
+  <p>
+    <b>Distance train:</b>
+    <%= @housing.distance_train %>
+  </p>
 
-<p>
-  <b>Distance commerce:</b>
-  <%= @housing.distance_commerce %>
-</p>
+  <p>
+    <b>Distance transport:</b>
+    <%= @housing.distance_transport %>
+  </p>
 
-<p>
-  <b>Distance train:</b>
-  <%= @housing.distance_train %>
-</p>
+  <%= link_to 'Nouvelle annonce pour cet housing', get_module_path("new_%_housing_ad", @housing) %> |
+  <%= link_to 'Edit', get_module_path("edit_%_housing", @housing) %>
 
-<p>
-  <b>Distance transport:</b>
-  <%= @housing.distance_transport %>
-</p>
+</div>
 
-<%= link_to 'Nouvelle annonce pour cet housing', get_module_path("new_%_housing_ad", @housing) %>
-
-<%= link_to 'Edit', get_module_path("edit_%_housing", @housing) %> |
-<%= link_to 'Back', get_module_path("%_housings") %>
+<div id="content_member_right" style="background-color: pink;">
+  content_member_right
+</div>

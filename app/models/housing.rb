@@ -16,5 +16,13 @@ class Housing < ActiveRecord::Base
   accepts_nested_attributes_for :address, :allow_destroy => true
   accepts_nested_attributes_for :housing_pois, :allow_destroy => true
 
+  validates :phone_contact, :presence => true
   validates :name, :presence => true
+  validates :housing_type, :presence => true
+  validates :distance_commerce, :presence => true
+  validates :distance_train, :presence => true
+  validates :distance_transport, :presence => true
+  validates :website, :format => /^(http|https):\/\/.*/
+
+  attr_accessor :housing_type_text
 end

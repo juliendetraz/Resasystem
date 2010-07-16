@@ -2,11 +2,8 @@
 <h2><%= t('member.user.profile.title') %></h2>
 
 
-<h3 class="blue-bottom-bar"><%= t('member.user.profile.your_news') %></h3>
+<%= render :partial => 'your_news' %>
 
-<h3 class="blue-bottom-bar"><%= t('member.user.profile.personnal_infos') %></h3>
+<%= render :partial => 'personal_infos' %>
 
-<h3 class="blue-bottom-bar"><%= t('member.user.profile.define_offers') %></h3>
-<p>
-  <%= link_to t('member.housing.add_house'), new_member_housing_path(I18n.locale), :title => t('member.housing.add_house'), :class => 'link-blue-dot'%>
-</p>
+<%= render :partial => 'define_offers' %>

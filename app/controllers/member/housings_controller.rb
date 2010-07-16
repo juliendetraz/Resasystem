@@ -16,6 +16,10 @@ class Member::HousingsController < Member::MemberApplicationController
   end
 
   def create
+    if params[:housing][:housing_type] && params[:housing][:housing_type] == 'other'
+      params[:housing][:housing_type] = params[:housing][:housing_type_text]
+    end
+
     @housing = Housing.new(params[:housing])
     if @housing.save
       flash[:notice] = 'Housing was successfully created.'
@@ -29,11 +33,17 @@ class Member::HousingsController < Member::MemberApplicationController
   def update
     @housing = Housing.find(params[:id])
 
+    from = params[:housing].delete(:from)
+    go_to = params[:housing].delete(:go_to)
     if @housing.update_attributes(params[:housing])
-      flash[:notice] = 'Housing was successfully updated.'
-      redirect_to get_module_path("%_housing", @housing)
+      if go_to
+        redirect_to eval(go_to)
+      else
+        flash[:notice] = 'Housing was successfully updated.'
+        redirect_to get_module_path("%_housing", @housing)
+      end
     else
-      render :action => "edit"
+      from ? redirect_to(from) : (render :action => "edit")
     end
   end
 

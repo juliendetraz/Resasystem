@@ -23,6 +23,7 @@
 #        edit: 'edition_utilisateur'
 
 fr:
+  2p: " : "
   path_names:
     new: 'nouveau'
     edit: 'modifier'

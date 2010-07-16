@@ -6,6 +6,7 @@
 
   <%= form_for [get_module_name, @housing] do |f| %>
     <%= f.error_messages %>
+    <%= f.hidden_field :go_to, :value => { :controller => 'member/housings', :action => 'add_housing_pois', :id => params[:id] } %>
 
     <%= render :partial => 'form_add_services', :locals => { :f => f, :services => @comforts } if @comforts.size > 0 %>
     <%= render :partial => 'form_add_services', :locals => { :f => f, :services => @assets } if @assets.size > 0 %>

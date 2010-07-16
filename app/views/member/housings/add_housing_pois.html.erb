@@ -15,7 +15,11 @@
   </div>
   <%= render :partial => "form_housing_pois" %>
 
-  <%= render :partial => "form_housing_distances" %>
+  <%#= render :partial => "form_housing_distances" %>
+
+  <div id="submit_go_next_step">
+    <%= link_to t('member.housing.add.create_go_step5'), { :controller => 'member/housings', :action => 'add_pictures', :id => params[:id] }, :title => t('member.housing.add.create_go_step5') %>
+  </div>
 </div>
 
 <div id="content_member_right">
