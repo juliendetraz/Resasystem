@@ -5,6 +5,10 @@
   <%= f.text_field :name %>
 </p>
 <p class="p-text_field">
+  <%= f.label :description, t('member.housing.description') %>
+  <%= f.text_area :description, :rows => 5, :cols => 50 %>
+</p>
+<p class="p-text_field">
   <%= f.label :phone_contact, t('member.housing.phone_to_contact') %>
   <%= f.text_field :phone_contact %>
 </p>

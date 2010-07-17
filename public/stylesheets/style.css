@@ -723,11 +723,20 @@ a.blue_button-extensible span span span {
 /* 
  * MEMBER PART
  */
-#content_member_left h2 {
+#content_member_left h1 {
+  text-transform: uppercase;
+  font-size: 1.6em;
   margin: 0 0 15px;
   color: #3996ea;
 }
+#content_member_left h2 {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  color: #88db37;
+}
+#content_member_left h3,
 #content_member_right h3 {
+  margin: 10px 0 5px;
   font-size: 1.05em;
   color: #3996ea;
 }
@@ -778,7 +787,7 @@ a.link-blue-dot {
 }
   #housing_show_addr span {
     font-weight: bold;
-    width: 180px;
+    width: 150px;
     float: left;
   }
   #housing_show_pois span {

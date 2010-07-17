@@ -42,6 +42,7 @@ fr:
       url_alias: Nom du site internet
       infos_housing: Informations sur le gîte
       name: Nom du gîte
+      description: Description
       phone_to_contact: Numéro à contacter
       email_to_contact: Email à contacter
       type:
