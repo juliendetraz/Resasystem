@@ -59,9 +59,10 @@ Resasystem::Application.routes.draw do
 #        resources :messages
 #        resources :pictures
 #        resources :rooms
-#        resources :housings do
-#          resources :rooms
-#        end
+        resources :housings do
+          get :search, :on => :collection
+          resources :rooms
+        end
 #        resources :bathrooms
 #        resources :calendars
 #        resources :reservations

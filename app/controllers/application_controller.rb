@@ -35,7 +35,7 @@ class ApplicationController < ActionController::Base
 
   # Devise: override helpers to redirect_to namespace_root
   def after_sign_in_path_for(resource)
-    get_module_path("%_root")
+    get_module_path("%_cuser", resource)
   end
 
   def after_sign_out_path_for(resource)

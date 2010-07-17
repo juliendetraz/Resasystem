@@ -82,4 +82,11 @@ class Client::HousingsController < Client::ClientApplicationController
       format.xml  { head :ok }
     end
   end
+
+  def search
+    respond_to do |format|
+      format.html {  }
+      format.json {  }
+    end
+  end
 end
