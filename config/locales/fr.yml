@@ -185,6 +185,9 @@ fr:
 
   homepage:
     homepage: Accueil
+    advantages: Avantages
+    subscription: Inscription
+    search_ad: Rechercher une annonce
   
   users:
     your_profile_link: Mon compte

@@ -5,17 +5,17 @@
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <title><%= yield :title %><%= t("#{get_module_name}.title") %> - Resasystem</title>
     <base href="<%= root_url %>" />
-    <%= stylesheet_link_tag 'style_html' %>
-    <%= stylesheet_link_tag 'style_layout' %>
+    <%= stylesheet_link_tag 'style' %>
     <%= javascript_include_tag :defaults %>
     <%= javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false&language=#{I18n.locale}&key=ABQIAAAAlElFxz29181IhLSoFhgbWxT2yXp_ZAY8_ufC3CFXhHIE1NvwkxSSXvmjx5BLsolNvzIE7TfFoNTGwg" %>
     <%= javascript_include_tag 'googlemap' %>
+    <%= csrf_meta_tag %>
     <%= yield :additional_css %>
     <%= yield :additional_js %>
   </head>
   <body>
     <div id="container">
-      <div id="header">
+      <div id="header" class="header-client">
         <%= link_to "<span><h1>Resasystem</h1></span>".html_safe, root_url, :title => t("homepage.homepage") %>
         <ul id="header_menu">
           <li id=""><%= link_to t("homepage.homepage"), root_url, :title => t("homepage.homepage") %></li>
@@ -24,7 +24,7 @@
         </ul>
         <%= link_to t("ads.add_ads"), get_module_path("%_ads"), :title => t("ads.add_ads"), :id => 'header_menu-item-last' %>
       </div> <!-- #header -->
-      <div id="headbar">
+      <div id="headbar" class="headbar-client">
         <%= devise_user_signed_in? ? render(:partial => "#{get_module_name}/users/headbar_logged") : render(:partial => "#{get_module_name}/users/headbar_log_in") %>
       </div> <!-- #headbar -->
       <div id="content">
