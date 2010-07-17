@@ -11,6 +11,12 @@ fr:
         your_emails: Vos emails
         your_rent: Vos locations
         welcome_resasystem: Bienvenue sur
+      news_link: Les news
+      your_reservations_link: Vos réservations
+      your_messages_link: Vos messages
+      rooms_link: Vos chambres
+      housing_link: Vos gîtes
+      your_profile_link: Votre profil
     housing:
       add:
         title: Ajouter un gîte, maison ou appartement de vacances

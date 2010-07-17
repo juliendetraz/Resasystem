@@ -4,8 +4,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <title><%= yield :title %><%= t("#{get_module_name}.title") %> - Resasystem</title>
     <base href="<%= root_url %>" />
-    <%= stylesheet_link_tag 'style_html' %>
-    <%= stylesheet_link_tag 'style_layout' %>
+    <%= stylesheet_link_tag 'style' %>
 
     <%= javascript_include_tag :defaults %>
     
@@ -16,16 +15,16 @@
   </head>
   <body>
     <div id="container">
-      <div id="header">
+      <div id="header" class="header-member">
         <%= link_to '<span><h1>Resasystem</h1></span>'.html_safe, get_module_url("%_root"), :title => t("homepage.homepage") %>
         <ul id="header_menu">
           <li id=""><%= link_to t("homepage.homepage"), get_module_url("%_root"), :title => t("homepage.homepage") %></li>
-          <li id=""><%= link_to t("ads.ads"), get_module_path("%_ads"), :title => t("ads.ads") %></li>
-          <li id=""><%= link_to t("offers.offers"), get_module_path("%_ads"), :title => t("offers.offers") %></li>
+          <li id=""><%= link_to t("homepage.advantages"), get_module_path("%_ads"), :title => t("homepage.advantages") %></li>
+          <li id=""><%= link_to t("homepage.subscription"), get_module_path("%_ads"), :title => t("homepage.subscription") %></li>
         </ul>
-        <%= link_to t("ads.add_ads"), get_module_path("%_ads"), :title => t("ads.add_ads"), :id => 'header_menu-item-last' %>
+        <%= link_to t("homepage.search_ad"), get_module_path("%_ads"), :title => t("homepage.search_ad"), :id => 'header_menu-item-last' %>
       </div> <!-- #header -->
-      <div id="headbar">
+      <div id="headbar" class="headbar-member">
         <%= devise_user_signed_in? ? render(:partial => "#{get_module_name}/users/headbar_logged") : render(:partial => "#{get_module_name}/users/headbar_log_in") %>
       </div> <!-- #headbar -->
       <div id="content">
