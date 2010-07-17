@@ -8,19 +8,19 @@
     </div>
     <ul id="headbar_logged_icons">
       <li id="news-member">
-        <%= link_to '<span class="nb">0</span><span class="hidden">'.html_safe + t("member.user.news_link") + '</span>'.html_safe, get_module_path("%_muser", current_devise_user), :title => t("member.user.news_link") %>
+        <%= link_to "<span class=\"nb\">0</span><span class=\"hidden\">".html_safe + t("member.user.news_link") + '</span>'.html_safe, get_module_path("%_muser", current_devise_user), :title => t("member.user.news_link") %>
       </li>
       <li id="resa-member">
-        <%= link_to '<span class="nb">0</span><span class="hidden">'.html_safe + t("member.user.your_reservations_link") + '</span>'.html_safe, get_module_path("%_muser", current_devise_user), :title => t("member.user.your_reservations_link") %>
+        <%= link_to "<span class=\"nb\">0</span><span class=\"hidden\">".html_safe + t("member.user.your_reservations_link") + '</span>'.html_safe, get_module_path("%_muser", current_devise_user), :title => t("member.user.your_reservations_link") %>
       </li>
       <li id="email-member">
-        <%= link_to '<span class="nb">0</span><span class="hidden">'.html_safe + t("member.user.your_messages_link") + '</span>'.html_safe, get_module_path("%_muser", current_devise_user), :title => t("member.user.your_messages_link") %>
+        <%= link_to "<span class=\"nb\">0</span><span class=\"hidden\">".html_safe + t("member.user.your_messages_link") + '</span>'.html_safe, get_module_path("%_muser", current_devise_user), :title => t("member.user.your_messages_link") %>
       </li>
       <li id="rooms-member">
-        <%= link_to '<span class="nb">0</span><span class="hidden">'.html_safe + t("member.user.rooms_link") + '</span>'.html_safe, get_module_path("%_muser", current_devise_user), :title => t("member.user.rooms_link") %>
+        <%= link_to "<span class=\"nb\">#{rooms_count}</span><span class=\"hidden\">".html_safe + t("member.user.rooms_link") + '</span>'.html_safe, get_module_path("%_muser", current_devise_user), :title => t("member.user.rooms_link") %>
       </li>
       <li id="housings-member">
-        <%= link_to '<span class="nb">0</span><span class="hidden">'.html_safe + t("member.user.housing_link") + '</span>'.html_safe, get_module_path("%_muser", current_devise_user), :title => t("member.user.housing_link") %>
+        <%= link_to "<span class=\"nb\">#{housings_count}</span><span class=\"hidden\">".html_safe + t("member.user.housing_link") + '</span>'.html_safe, get_module_path("%_muser", current_devise_user), :title => t("member.user.housing_link") %>
       </li>
       <li id="profile-member">
         <%= link_to '<span class="hidden">'.html_safe + t("member.user.your_profile_link") + '</span>'.html_safe, get_module_path("%_muser", current_devise_user), :title => t("member.user.your_profile_link") %>

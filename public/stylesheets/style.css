@@ -725,33 +725,24 @@ a.blue_button-extensible span span span {
  */
 #content_member_left h1 {
   text-transform: uppercase;
-  font-size: 1.6em;
+  font-size: 1.5em;
   margin: 0 0 15px;
   color: #3996ea;
 }
 #content_member_left h2 {
+  border-bottom: 1px solid #88DB37;
   text-transform: uppercase;
-  font-size: 1.2em;
+  margin: 20px 0 5px;
+  font-size: 1.1em;
   color: #88db37;
 }
 #content_member_left h3,
 #content_member_right h3 {
   margin: 10px 0 5px;
-  font-size: 1.05em;
-  color: #3996ea;
-}
-h3.blue-sky {
-  color: #3996ea;
-  margin-top: 0;
-}
-h3.blue-bottom-bar {
   font-size: 1em;
-  color: #113356;
-  padding: 0 0 0 5px;
-  text-transform: uppercase;
-  border-bottom: 1px solid #113356;
+  color: #3996ea;
 }
-h3.grey-bg {
+.grey-bg {
   font-size: 1em;
   color: #252525;
   padding: 4px 7px;
@@ -783,8 +774,13 @@ a.link-blue-dot {
 */
 #housing_show_addr,
 #housing_show_pois {
-  line-height: 1.6em;
+  line-height: 1.3em;
 }
+  #housing_show_pois {
+    border-left: 6px solid #EEE;
+    padding-left: 10px;
+    margin-top: 20px;
+  }
   #housing_show_addr span {
     font-weight: bold;
     width: 150px;

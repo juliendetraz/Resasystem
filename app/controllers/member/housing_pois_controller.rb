@@ -20,7 +20,6 @@ class Member::HousingPoisController < Member::MemberApplicationController
 
     respond_to do |format|
       if @housing_poi.save
-        flash[:notice] = 'HousingPoi was successfully created.'
         format.html { redirect_to(@housing_poi) }
         format.js   { @housing_poi }
       else
