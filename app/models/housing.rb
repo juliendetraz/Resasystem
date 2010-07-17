@@ -25,4 +25,14 @@ class Housing < ActiveRecord::Base
   validates :website, :format => /^(http|https):\/\/.*/
 
   attr_accessor :housing_type_text
+
+  def join_last(arr)
+    return '' if not arr
+    case arr.size
+      when 0 then ''
+      when 1 then arr[0]
+      when 2 then arr.join(' ' + I18n.t('and') + ' ')
+      else arr[0..-2].join(', ') + ' ' + I18n.t('and') + ' ' + arr[-1]
+    end
+  end
 end

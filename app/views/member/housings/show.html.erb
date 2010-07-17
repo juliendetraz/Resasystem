@@ -16,29 +16,34 @@
     GALLERIE PHOTOS
   </div>
 
+  <h3><%= t('member.housing.the_housing')+t('2p') %></h3>
+  <p><%= @housing.name %></p>
 
+  <h3><%= t('member.housing.housing_assets')+t('2p') %></h3>
+  <% @housing.services.where(:service_type => 'asset').join %>
+  <p></p>
 
+  <h3><%= t('member.housing.housing_activities')+t('2p') %></h3>
+  <% @housing.services.where(:service_type => 'activity').join %>
+  <p></p>
 
-  <p>
-    <b>Distance commerce:</b>
-    <%= @housing.distance_commerce %>
-  </p>
-
-  <p>
-    <b>Distance train:</b>
-    <%= @housing.distance_train %>
-  </p>
-
-  <p>
-    <b>Distance transport:</b>
-    <%= @housing.distance_transport %>
-  </p>
+  <h3><%= t('member.housing.housing_activities')+t('2p') %></h3>
+  <p><% @housing.services.where(:service_type => 'comfort').join %></p>
 
   <%= link_to 'Nouvelle annonce pour cet housing', get_module_path("new_%_housing_ad", @housing) %> |
   <%= link_to 'Edit', get_module_path("edit_%_housing", @housing) %>
 
 </div>
 
-<div id="content_member_right" style="background-color: pink;">
-  content_member_right
+<div id="content_member_right">
+  <h3><%= t('member.housing.near')+t('2p') %></h3>
+  <div id="housing_show_pois">
+    <%= "<span>#{t('member.housing.commerce')+t('2p')}</span>#{t("member.housing.housing_distances.#{@housing.distance_commerce}")}<br />".html_safe if @housing.distance_commerce %>
+    <%= "<span>#{t('member.housing.transport')+t('2p')}</span>#{t("member.housing.housing_distances.#{@housing.distance_transport}")}<br />".html_safe if @housing.distance_transport %>
+    <%= "<span>#{t('member.housing.train')+t('2p')}</span>#{t("member.housing.housing_distances.#{@housing.distance_train}")}<br />".html_safe if @housing.distance_train %>
+    <br />
+    <% @housing.housing_pois.each do |housing_poi| %>
+      <%= "<strong>#{housing_poi.name}</strong>#{t('2p')}#{housing_poi.distance.to_s}".html_safe %>km<br />
+    <% end  %>
+  </div>
 </div>

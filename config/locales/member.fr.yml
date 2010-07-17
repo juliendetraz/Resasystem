@@ -47,9 +47,16 @@ fr:
         other: Autre
       add_rooms: Indiquez les pièces disponibles
       edit_housing_distances: A quelle distance vos chambres d'hôtes sont-elles des lieux suivants
+      near: A proximité
+      the_housing: Le logement
+      housing_assets: Les atouts du logement
+      housing_activities: Les activités à proximité
       distance_commerce: Distance des commerces (km)
       distance_train: Distance du train (km)
       distance_transport: Distance des transport (km)
+      commerce: Commerces
+      train: Gare de trains
+      transport: Bus, Métro
       housing_distances:
         less_100m: A moins de 100m
         less_1km: A moins de 1km
@@ -93,10 +100,10 @@ fr:
         beds_simple_quantity: Lit(s) simple(s)
         beds_double: lits(s) double(s)
         beds_double_quantity: Lits(s) double(s)
-        beds_bunk: lit(s) bunk
-        beds_bunk_quantity: Lit(s) bunk
-        beds_cott: lit(s) cott
-        beds_cott_quantity: Lit(s) cott
+        beds_bunk: lit(s) superposé(s)
+        beds_bunk_quantity: Lit(s) superposé(s)
+        beds_cott: lit(s) d'appoint
+        beds_cott_quantity: Lit(s) d'appoint
     bathroom:
       add:
         submit: Ajouter la salle de bain
