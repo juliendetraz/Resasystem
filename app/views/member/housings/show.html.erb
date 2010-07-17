@@ -47,7 +47,7 @@
     <%= "<span>#{t('member.housing.transport')+t('2p')}</span>#{t("member.housing.housing_distances.#{@housing.distance_transport}")}<br />".html_safe if @housing.distance_transport %>
     <%= "<span>#{t('member.housing.train')+t('2p')}</span>#{t("member.housing.housing_distances.#{@housing.distance_train}")}".html_safe if @housing.distance_train %>
     <% if @housing.housing_pois.count > 0 %>
-      <ul>
+      <ul class="puce-green-plus">
         <% @housing.housing_pois.each do |housing_poi| %>
         <li><%= "<strong>#{housing_poi.name}</strong>#{t('2p')}#{housing_poi.distance.to_s}".html_safe %>km</li>
         <% end  %>

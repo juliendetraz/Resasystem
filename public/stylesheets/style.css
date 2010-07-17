@@ -790,6 +790,10 @@ a.link-blue-dot {
   #housing_show_pois span {
     font-weight: bold;
   }
+.puce-green-plus {
+  list-style-image: url(../images/icons/puce-housing_pois.png);
+  padding-left: 17px;
+}
 
  /*
  ** Member forms
