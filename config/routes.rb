@@ -109,6 +109,7 @@ Resasystem::Application.routes.draw do
           resources :dinningrooms
         end
         resources :housings do
+          get :search, :on => :collection
           resources :ads
           resources :rooms
         end

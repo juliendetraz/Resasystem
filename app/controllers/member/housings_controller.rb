@@ -71,4 +71,11 @@ class Member::HousingsController < Member::MemberApplicationController
   def add_pictures
     @housing = Housing.find params[:id]
   end
+
+  def search
+    respond_to do |format|
+      format.html {  }
+      format.json {  }
+    end
+  end
 end
