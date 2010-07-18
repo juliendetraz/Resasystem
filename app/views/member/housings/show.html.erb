@@ -58,9 +58,9 @@
 
 
 <% content_for :additional_js_bottom do %>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
   <% javascript_tag do %>
      jQuery.noConflict();
   <% end %>
-  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
   <%= javascript_include_tag 'jquery.galleriffic', 'jquery.history', 'jquery.opacityrollover', 'jquery.slideshow_housing' %>
 <% end %>
