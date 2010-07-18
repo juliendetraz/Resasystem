@@ -17,4 +17,7 @@ module ApplicationHelper
     content_for(:title) { page_title + ' - ' }
   end
 
+  def gmap_search_params
+    'housing_id=1'
+  end
 end

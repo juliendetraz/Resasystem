@@ -2,8 +2,7 @@
 	<div id="search_block-header">
 		<h2>Rechercher une location</h2>
 	</div>
-	<div id="gmap" style="width: 398px;height: 348px;">
-	</div> <!-- #gmap -->
+        <%= render :partial => 'client/housings/googlemap', :locals => { :width => 398, :height => 348 } %>
 	<div id="search_block-content">
 		<form id="search_rent" action="">
 			<p>

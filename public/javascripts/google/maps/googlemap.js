@@ -3,7 +3,7 @@ function	loadMap(pageUri, queryString)
     var mapElement = $('gmap');
     if (!mapElement)
         return ;
-    new Ajax.Request(pageUri+'.json?options='+queryString, {
+    new Ajax.Request(pageUri+'.json?'+queryString, {
         method: 'get',
         requestHeaders: {
             Accept: 'application/json'
