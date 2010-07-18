@@ -60,10 +60,11 @@
     </div> <!-- #container -->
     <script type="text/javascript">
       //<![CDATA[
-document.observe("dom:loaded", function(){
-  loadMap('<%= get_module_path('search_%_housings') %>', '');
-})
-    //]]>
+        document.observe("dom:loaded", function(){
+          loadMap('<%= get_module_path('search_%_housings') %>', '');
+        })
+      //]]>
     </script>
+    <%= yield :additional_js_bottom %>
   </body>
 </html>
