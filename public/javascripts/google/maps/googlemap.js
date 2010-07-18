@@ -38,12 +38,22 @@ function	loadMap(pageUri, queryString)
 
         var bounds = new google.maps.LatLngBounds();
         for (var i = 0; i < housings.length; ++i) {
-            var markerOptions = {
+            var marker = new MarkerWithLabel({
                 position: new google.maps.LatLng(housings[i].latitude, housings[i].longitude),
                 map: housingMap,
-                icon: 'images/icons/'+icons[housings[i].housingType]+'.png'
-            }
-            var marker = new google.maps.Marker(markerOptions);
+                icon: 'images/icons/'+icons[housings[i].housingType]+'.png',
+                labelContent: housings[i].numberPlaces+1,
+                labelAnchor: new google.maps.Point(25, 55),
+                labelClass: "gmap-icons-labels", // the CSS class for the label
+                labelInBackground: false
+            });
+
+//            var markerOptions = {
+//                position: new google.maps.LatLng(housings[i].latitude, housings[i].longitude),
+//                map: housingMap,
+//                icon: 'images/icons/'+icons[housings[i].housingType]+'.png'
+//            }
+//            var marker = new google.maps.Marker(markerOptions);
             bounds.extend(marker.getPosition());
             marker.setTitle(housings[i].name);
             addInfoWindow(housings[i], marker);

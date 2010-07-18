@@ -8,8 +8,9 @@
     <%= javascript_include_tag :defaults %>
     <%= javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false&language=#{I18n.locale}" %>
     <!--//#&key=ABQIAAAAlElFxz29181IhLSoFhgbWxT2yXp_ZAY8_ufC3CFXhHIE1NvwkxSSXvmjx5BLsolNvzIE7TfFoNTGwg//-->
-    <%= javascript_include_tag 'fluster2/Fluster2.packed' %>
-    <%= javascript_include_tag 'googlemap' %>
+    <%= javascript_include_tag 'google/maps/fluster2/Fluster2.packed' %>
+    <%= javascript_include_tag 'google/maps/labeled_marker/markerwithlabel_packed' %>
+    <%= javascript_include_tag 'google/maps/googlemap' %>
     <%= csrf_meta_tag %>
     <%= yield :additional_css %>
     <%= yield :additional_js %>
