@@ -62,12 +62,12 @@ function	loadMap(pageUri, queryString)
         housingMap.fitBounds(bounds);
 
         fluster.styles = {
-            // This style will be used for clusters with more than 0 markers
-            0: {
+            0: {// This style will be used for clusters with more than 0 markers
                 image: 'images/icons/gmap-icon-group.png',
                 textColor: '#FFFFFF',
                 width: 46,
-                height: 52
+                height: 52,
+                lineHeight: 45 //XXX west coast custom parameter added into Fluster2ClusterMarker.prototype.draw (packed)
             }
         };
         fluster.initialize();
