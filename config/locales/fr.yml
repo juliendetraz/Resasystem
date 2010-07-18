@@ -182,6 +182,9 @@ fr:
 
   are_you_sure: Etes-vous sûre ?
   destroy: Supprimer
+  add_to_favorites: Ajouter aux favoris
+  print_it: Imprimer
+  map: Plan
 
   homepage:
     homepage: Accueil

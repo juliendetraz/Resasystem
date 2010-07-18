@@ -724,10 +724,10 @@ a.blue_button-extensible span span span {
 /* 
  * MEMBER PART
  */
+#page_title,
 #content_member_left h1 {
   text-transform: uppercase;
   font-size: 1.5em;
-  margin: 0 0 15px;
   color: #3996ea;
 }
 #content_member_left h2 {
@@ -793,7 +793,48 @@ a.link-blue-dot {
 .puce-green-plus {
   list-style-image: url(../images/icons/puce-housing_pois.png);
   padding-left: 17px;
+  margin-top: 8px;
 }
+.list-3-columns li {
+  float: left;
+  width: 33%;
+}
+#button-add_to_favorites,
+#button-print_it {
+  background: #d9d9d8 url(../images/sprite-layout.png) 0 0 no-repeat;
+  padding: 8px 10px 5px 43px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  width: 97px;
+}
+#button-add_to_favorites {
+  background-position: -621px -212px;
+  padding: 8px 10px 5px 43px;
+  height: 32px;
+  float: left;
+}
+#button-print_it {
+  background-position: -771px -212px;
+  padding: 15px 10px 5px 43px;
+  margin-left: 150px;
+  height: 25px;
+}
+#map_block-container {
+  margin-top: 10px;
+  height: 330px;
+}
+  #map_block-header {
+    background: #ebf4fd url(../images/sprite-layout.png) -621px -257px no-repeat;
+    padding: 5px 0 0 45px;
+    font-weight: bold;
+    font-size: 1.5em;
+    color: #3996EA;
+    height: 30px;
+  }
+  #map_block-content {
+    border: 1px solid #999;
+  }
 
  /*
  ** Member forms

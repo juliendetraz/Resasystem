@@ -1,7 +1,7 @@
 <% title @housing.name %>
+<h1 id="page_title"><%= @housing.name %></h1>
 
 <div id="content_member_left">
-  <h1><%= @housing.name %></h1>
 
   <div id="housing_show_addr">
     <%= "<span>#{t('member.housing.city')+t('2p')}</span> #{@housing.address.city}<br />".html_safe if @housing.address.city %>
@@ -20,14 +20,9 @@
   <h3><%= t('member.housing.the_housing')+t('2p') %></h3>
   <p><%= @housing.description %></p>
 
-  <h3><%= t('member.housing.housing_assets')+t('2p') %></h3>
-  <p><% @housing.services.where(:service_type => 'asset').join %></p>
-
-  <h3><%= t('member.housing.housing_activities')+t('2p') %></h3>
-  <p><% @housing.services.where(:service_type => 'activity').join %></p>
-
-  <h3><%= t('member.housing.housing_activities')+t('2p') %></h3>
-  <p><% @housing.services.where(:service_type => 'comfort').join %></p>
+  <%= render :partial => 'list_services', :locals => { :service_type => 'asset' } %>
+  <%= render :partial => 'list_services', :locals => { :service_type => 'activity' } %>
+  <%= render :partial => 'list_services', :locals => { :service_type => 'comfort' } %>
 
 
   <h2>Tarifs</h2>
@@ -39,7 +34,15 @@
 
 <div id="content_member_right">
 
-  <img src="/images/fake-little-gmap.jpg" />
+  <div id="button-add_to_favorites"><%= t('add_to_favorites') %></div>
+  <div id="button-print_it"><%= t('print_it') %></div>
+
+  <div id="map_block-container">
+    <div id="map_block-header"><%= t('map') %></div>
+    <div id="map_block-content">
+      <img src="/images/fake-little-gmap.jpg" />
+    </div>
+  </div>
   
   <div id="housing_show_pois">
     <h3><%= t('member.housing.near')+t('2p') %></h3>
