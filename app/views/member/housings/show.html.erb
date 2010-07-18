@@ -10,8 +10,6 @@
     <%= "<span>#{t('member.housing.website')+t('2p')}</span> #{link_to @housing.website, @housing.website, :target => '_blank'}<br />".html_safe if @housing.email %>
   </div>
 
-
-  <h2>Gallerie photos</h2>
   <%= render :partial => 'slideshow' %>
 
 
@@ -74,7 +72,7 @@
   <script type="text/javascript">
       jQuery(document).ready(function($) {
           // We only want these styles applied when javascript is enabled
-          $('div.navigation').css({'width' : '240px', 'float' : 'left'});
+          $('div.navigation').css({'width' : '235px', 'float' : 'right'});
           $('div.content').css('display', 'block');
 
           // Initially set opacity on thumbs and add
@@ -91,15 +89,20 @@
           var gallery = $('#thumbs').galleriffic({
               delay:                     2500,
               numThumbs:                 6,
-              preloadAhead:              10,
+              preloadAhead:              3,
               enableTopPager:            true,
-              maxPagesToShow:            7,
+              enableBottomPager:         false,
+              maxPagesToShow:            5,
               imageContainerSel:         '#slideshow',
               controlsContainerSel:      '#controls',
               captionContainerSel:       '#caption',
               loadingContainerSel:       '#loading',
-              renderSSControls:          true,
-              renderNavControls:         true,
+              renderSSControls:          false,
+              renderNavControls:         false,
+              playLinkText:              'Play Slideshow',
+              pauseLinkText:             'Pause Slideshow',
+              prevLinkText:              '&lsaquo; Previous Photo',
+              nextLinkText:              'Next Photo &rsaquo;',
               nextPageLinkText:          'Next &rsaquo;',
               prevPageLinkText:          '&lsaquo; Prev',
               enableHistory:             true,

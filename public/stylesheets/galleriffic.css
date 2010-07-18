@@ -1,12 +1,26 @@
+#slideshow-container {
+  background: #f3fbea;
+}
+  #slideshow-header {
+    background: #f3fbea url(../images/sprite-layout.png) -310px -292px no-repeat;
+    height: 30px;
+  }
+    #slideshow-header h2 {
+      border: none;
+    }
+    #slideshow-content {
+      margin-top: -23px;
+    }
+
 div.content {
 	/* The display of content is enabled using jQuery so that the slideshow content won't display unless javascript is enabled. */
 	display: none;
-	float: right;
+	float: left;
 	width: 390px;
 }
 div.content a, div.navigation a {
 	text-decoration: none;
-	color: #777;
+	color: #3996EA;
 }
 div.content a:focus, div.content a:hover, div.content a:active {
 	text-decoration: underline;
@@ -53,7 +67,7 @@ div.slideshow a.advance-link {
 	width: 390px;
 	height: 278px; /* This should be set to be at least the height of the largest image in the slideshow */
 	line-height: 278px; /* This should be set to be at least the height of the largest image in the slideshow */
-	text-align: center;
+    margin: 0 5px;
 }
 div.slideshow a.advance-link:hover, div.slideshow a.advance-link:active, div.slideshow a.advance-link:visited {
 	text-decoration: none;
@@ -99,7 +113,7 @@ ul.thumbs {
 ul.thumbs li {
 	float: left;
 	padding: 0;
-	margin: 5px 10px 5px 0;
+	margin: 5px;
 	list-style: none;
 }
 a.thumb {
@@ -117,12 +131,13 @@ ul.thumbs img {
 	border: none;
 	display: block;
     width: 100px;
+    height: 81px;
 }
 div.pagination {
 	clear: both;
 }
 div.navigation div.top {
-	margin-bottom: 12px;
+	margin: 0 5px 12px 5px;
 	height: 11px;
 }
 div.navigation div.bottom {
@@ -133,7 +148,7 @@ div.pagination a, div.pagination span.current, div.pagination span.ellipsis {
 	float: left;
 	margin-right: 2px;
 	padding: 4px 7px 2px 7px;
-	border: 1px solid #ccc;
+	border: 1px solid #3996EA;
 }
 div.pagination a:hover {
 	background-color: #eee;
@@ -141,9 +156,9 @@ div.pagination a:hover {
 }
 div.pagination span.current {
 	font-weight: bold;
-	background-color: #000;
-	border-color: #000;
-	color: #fff;
+	background-color: #EBF4FD;
+	border-color: #3996EA;
+	color: #3996EA;
 }
 div.pagination span.ellipsis {
 	border: none;
@@ -152,5 +167,5 @@ div.pagination span.ellipsis {
 
 #slideshow img {
   height: 278px;
-  width: 370px;
+  width: 380px;
 }
