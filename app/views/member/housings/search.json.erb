@@ -1,14 +1,28 @@
 <%
 housingTypes = ['h', 'b']
 buffer = ""
-(1..200).each do |i|
+if @housings.count > 0
+@housings.each do |housing|
     buffer << "{
-    \"name\": \"Chez Bibi #{i}\",
+    \"name\": \"#{housing.name}\",
     \"housingType\": \"#{housingTypes[rand(2)]}\",
     \"numberPlaces\": #{rand(42)},
-    \"latitude\": #{(50 - (rand * rand(8)))},
-    \"longitude\": #{(6 - (rand * rand(10)))}
+    \"linkView\": \"#{get_module_path("%_housing", housing)}\",
+    \"latitude\": #{get_latitude},
+    \"longitude\": #{get_longitude}
   },"
+end
+else
+  (1..200).each do |i|
+    buffer << "{
+    \"name\": \"Chez bibi #{i}\",
+    \"housingType\": \"#{housingTypes[rand(2)]}\",
+    \"numberPlaces\": #{rand(42)},
+    \"linkView\": \"#\",
+    \"latitude\": #{get_latitude},
+    \"longitude\": #{get_longitude}
+  },"
+end
 end
 %>
 <%=raw "[#{buffer}]" %>

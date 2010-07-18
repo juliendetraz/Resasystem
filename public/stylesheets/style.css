@@ -326,8 +326,10 @@ p {
     line-height: 17px;
     text-align: center;
 }
-
-
+.gmap-infowindow {
+    
+}
+.gmap-infowindow div#housing-name {text-align: center;font-weight: bold;}
 /* Block : your favorits */
 #your_favorits-container {
   width: 225px;

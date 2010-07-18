@@ -3,7 +3,7 @@ function	loadMap(pageUri, queryString)
     var mapElement = $('gmap');
     if (!mapElement)
         return ;
-    new Ajax.Request(pageUri+'.json?options='+queryString, {
+    new Ajax.Request(pageUri+'.json?'+queryString, {
         method: 'get',
         requestHeaders: {
             Accept: 'application/json'
@@ -59,17 +59,26 @@ function	loadMap(pageUri, queryString)
             addInfoWindow(housings[i], marker);
             fluster.addMarker(marker);
         }
+        housingMap.fitBounds(bounds);
+
+        function makeInfoWindowContent(housing) {
+            var content = '<div class="gmap-infowindow">';
+            content += '<div id="housing-name">'+housing.name+'</div>';
+            content += '<p>places : '+housing.numberPlaces+'</p>';
+            content += '<a href="'+housing.linkView+'" title="Vois la fiche de '+housing.name+'">voir la fiche</a>';
+            content += '</div>';
+            return content;
+        }
 
         function addInfoWindow(housing, marker) {
             var infoWindowOptions = {
-                content: housing.name+'<br />places : '+housing.numberPlaces
+                content: makeInfoWindowContent(housing)
             }
             var infoWindow = new google.maps.InfoWindow(infoWindowOptions);
             google.maps.event.addListener(marker, 'click', function() {
                 infoWindow.open(housingMap, marker);
             });
         }
-        housingMap.fitBounds(bounds);
 
         fluster.styles = {
             0: {// This style will be used for clusters with more than 0 markers

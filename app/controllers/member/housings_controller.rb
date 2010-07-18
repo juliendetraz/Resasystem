@@ -71,7 +71,28 @@ class Member::HousingsController < Member::MemberApplicationController
   def search
     respond_to do |format|
       format.html {  }
-      format.json {  }
+      format.json {
+        @housings = Housing.joins(:address).where(get_search_where_condition)
+      }
     end
+  end
+
+  def get_search_where_condition
+    param_hash = {
+      :housing_id => 'id = ?',
+      :user_id => 'user_id = ?',
+      :city => "addresses.city LIKE ?",
+      :location => "(addresses.city LIKE ? OR addresses.state_province_country LIKE ?)"
+    }
+    condition_string = Array.new
+    condition_params = Array.new
+    param_hash.each_pair {|k,v|
+      if params[k]
+        condition_string << v
+        condition_params << params[k]
+      end
+    }
+    return nil if condition_string.empty?
+    condition_params.flatten(1).insert(0, condition_string.join(" AND "))
   end
 end
