@@ -8,3 +8,4 @@ test/integration/webrat-*
 tmp
 nbproject
 Gemfile.lock
+public/asset/*

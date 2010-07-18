@@ -28,7 +28,7 @@ jQuery(document).ready(function($) {
         enableHistory:             true,
         autoStart:                 true,
         syncTransitions:           true,
-        defaultTransitionDuration: 900,
+        defaultTransitionDuration: 600,
         onSlideChange:             function(prevIndex, nextIndex) {
             // 'this' refers to the gallery, which is an extension of $('#thumbs')
             this.find('ul.thumbs').children()

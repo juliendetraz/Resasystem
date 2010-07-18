@@ -604,7 +604,6 @@ p {
   }
     ul#headbar_logged_icons {
       list-style: none;
-      width: 671px;
       height: 61px;
       padding: 0;
       margin: 0;
@@ -612,10 +611,12 @@ p {
       .headbar-client ul#headbar_logged_icons {
         background: #f3fbea url(../images/sprite-layout.png) 0 -212px no-repeat;
         margin-top: 1px;
+        width: 621px;
       }
       .headbar-member ul#headbar_logged_icons {
         background: #e1effc url(../images/sprite-layout-member.png) 0 -68px no-repeat;
         padding-top: 1px;
+        width: 671px;
       }
       ul#headbar_logged_icons li a {
         text-decoration: none;
@@ -740,7 +741,7 @@ a.blue_button-extensible span span span {
   border-bottom: 1px solid #88DB37;
   text-transform: uppercase;
   margin: 20px 0 5px;
-  font-size: 1.2em;
+  font-size: 1.1em;
   color: #88db37;
 }
 #content_member_left h3,
@@ -835,11 +836,11 @@ a.link-blue-dot {
 }
   #map_block-header {
     background: #ebf4fd url(../images/sprite-layout.png) -621px -257px no-repeat;
-    padding: 5px 0 0 45px;
+    padding: 9px 0 0 45px;
     font-weight: bold;
-    font-size: 1.5em;
+    font-size: 1.4em;
     color: #3996EA;
-    height: 30px;
+    height: 26px;
   }
 /*  #map_block-content {
     border: 1px solid #999;
@@ -945,7 +946,7 @@ a.link-blue-dot {
 
 
 .destroy_button {
-  background: url(../images/icons/delete.png) 0 0 no-repeat;
+  background: url(../images/icons/bin_closed.png) 0 0 no-repeat;
   cursor: pointer;
   border: none;
   width: 16px;

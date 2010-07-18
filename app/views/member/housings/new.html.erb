@@ -1,8 +1,8 @@
 <% title t('member.housing.add.title') %>
-<h2><%= t('member.housing.add.title') %></h2>
+<h1 id="page_title"><%= t('member.housing.add.title') %></h2>
 
 <div id="content_member_left">
-  <h3 class="blue-sky"><%= t('member.housing.add.step1_gite') %></h3>
+  <h2><%= t('member.housing.add.step1_gite') %></h2>
   <%= form_for [get_module_name, @housing] do |f| %>
     <%= f.error_messages %>
     <%= render :partial => "form_addresses", :locals => { :f => f } %> 
