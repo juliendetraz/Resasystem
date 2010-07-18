@@ -42,8 +42,8 @@ function	loadMap(pageUri, queryString)
                 position: new google.maps.LatLng(housings[i].latitude, housings[i].longitude),
                 map: housingMap,
                 icon: 'images/icons/'+icons[housings[i].housingType]+'.png',
-                labelContent: housings[i].numberPlaces,
-                labelAnchor: new google.maps.Point(23, 53),
+                labelContent: housings[i].numberPlaces+1,
+                labelAnchor: new google.maps.Point(25, 55),
                 labelClass: "gmap-icons-labels", // the CSS class for the label
                 labelInBackground: false
             });
