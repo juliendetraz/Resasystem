@@ -9,7 +9,7 @@
       border: none;
     }
     #slideshow-content {
-      margin-top: -23px;
+      margin-top: -24px;
     }
 
 div.content {
@@ -52,9 +52,6 @@ div.loader {
 	background-position: center;
 	width: 350px;
 	height: 278px; /* This should be set to be at least the height of the largest image in the slideshow */
-}
-div.slideshow {
-
 }
 div.slideshow span.image-wrapper {
 	display: block;
@@ -130,6 +127,7 @@ a.thumb:focus {
 ul.thumbs img {
 	border: none;
 	display: block;
+/* TODO: Voir a mettre une taille correct */
     width: 100px;
     height: 81px;
 }
@@ -164,7 +162,7 @@ div.pagination span.ellipsis {
 	border: none;
 	padding: 5px 0 3px 2px;
 }
-
+/* TODO: Voir a mettre une taille correct */
 #slideshow img {
   height: 278px;
   width: 380px;
