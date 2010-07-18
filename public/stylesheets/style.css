@@ -318,7 +318,11 @@ p {
   border: 1px solid #999;
   margin: 0 0 10px 0;
 }
-
+.gmap-icons-labels {
+    color: #fff;
+    font-weight: bold;
+    font-size: 11px;
+}
 
 
 /* Block : your favorits */
