@@ -11,4 +11,11 @@ module HousingsHelper
     ]
   end
 
+  def get_latitude
+    (50 - (rand * rand(8)))
+  end
+
+  def get_longitude
+    (6 - (rand * rand(10)))
+  end
 end

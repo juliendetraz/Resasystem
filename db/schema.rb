@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(:version => 20100717212902) do
     t.integer  "housing_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "ad_id"
+    t.integer  "ad_id" # TODO virer
   end
 
   create_table "bathrooms", :force => true do |t|

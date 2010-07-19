@@ -2,13 +2,12 @@
 	<div id="search_block-header">
 		<h2>Rechercher une location</h2>
 	</div>
-	<div id="gmap" style="width: 398px;height: 348px;">
-	</div> <!-- #gmap -->
+        <%= render :partial => 'client/housings/googlemap', :locals => { :width => 398, :height => 348 } %>
 	<div id="search_block-content">
-		<form id="search_rent" action="">
+          <form id="search_rent" action="" method="get">
 			<p>
 				<label for="city">Ville, département, région de destination :</label><br />
-				<input type="text" id="city" class="input_text" />
+				<input type="text" id="city" name="city" class="input_text" />
 			</p>
 			<p>
 				<label for="date_start">Date de votre première nuit :</label><br />

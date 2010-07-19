@@ -17,4 +17,12 @@ module ApplicationHelper
     content_for(:title) { page_title + ' - ' }
   end
 
+  def gmap_search_params
+    query_string = Array.new
+    hid = params[:housing_id] || params[:id] if params[:controller].split('/').last == "housings"
+    query_string << "housing_id=#{hid}" if hid
+    query_string << "city=#{params[:city]}" if params[:city]
+    query_string << "location=#{params[:location]}" if params[:localtion]
+    query_string.join('&')
+  end
 end

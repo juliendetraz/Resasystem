@@ -104,6 +104,7 @@ Resasystem::Application.routes.draw do
         resources :rooms do
           resources :bedrooms
           resources :kitchens
+          resources :pictures
           resources :bathrooms
           resources :livingrooms
           resources :dinningrooms
@@ -112,6 +113,7 @@ Resasystem::Application.routes.draw do
           get :search, :on => :collection
           resources :ads
           resources :rooms
+          resources :pictures
         end
         resources :bathrooms
         resources :calendars

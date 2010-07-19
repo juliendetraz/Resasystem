@@ -1,39 +1,16 @@
-<h1>New picture</h1>
+<% title t('member.picture.add.title') %>
+<h1 id="page_title"><%= t('member.picture.add.title') %></h1>
 
-<% form_for(@picture) do |f| %>
-  <%= f.error_messages %>
+<div id="content_member_left">
+  <h2><%= t('member.picture.add.step5_gite') %></h2>
 
-  <p>
-    <%= f.label :url %><br />
-    <%= f.text_field :url %>
-  </p>
-  <p>
-    <%= f.label :path %><br />
-    <%= f.text_field :path %>
-  </p>
-  <p>
-    <%= f.label :order %><br />
-    <%= f.text_field :order %>
-  </p>
-  <p>
-    <%= f.label :is_default %><br />
-    <%= f.check_box :is_default %>
-  </p>
-  <p>
-    <%= f.label :is_visible %><br />
-    <%= f.check_box :is_visible %>
-  </p>
-  <p>
-    <%= f.label :is_validated %><br />
-    <%= f.check_box :is_validated %>
-  </p>
-  <p>
-    <%= f.label :date_validated %><br />
-    <%= f.datetime_select :date_validated %>
-  </p>
-  <p>
-    <%= f.submit 'Create' %>
-  </p>
-<% end %>
+  <%= render :partial => "form" %>
 
-<%= link_to 'Back', pictures_path %>
+  <div id="submit_go_next_step">
+    <%= link_to t('member.picture.add.create_go_step6'), member_housing_path(params[:housing_id]), :title => t('member.room.add.create_go_step3') %>
+  </div>
+</div>
+
+<div id="content_member_right">
+  <%= render :partial => "#{get_module_name}/users/right_column" %>
+</div>
