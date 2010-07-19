@@ -1,0 +1,14 @@
+<%= form_for [get_module_name, @ad] do |f| %>
+  <%= f.error_messages %>
+  <%= f.hidden_field :housing_id, :value => params[:housing_id] %>
+
+  <h3><%= f.label :title, t('member.ad.title') %></h3>
+  <p><%= f.text_field :title %></p>
+
+  <h3><%= f.label :description, t('member.ad.description') %></h3>
+  <p><%= f.text_area :description, :cols => 75, :rows => 5 %></p>
+
+  <div id="submit_go_next_step_button">
+    <p><%= f.submit t('member.ad.add.create_and_finalize') %></p>
+  </div>
+<% end %>

@@ -7,7 +7,7 @@
   <%= render :partial => "form" %>
 
   <div id="submit_go_next_step">
-    <%= link_to t('member.picture.add.create_go_step6'), member_housing_path(params[:housing_id]), :title => t('member.room.add.create_go_step3') %>
+    <%= link_to t('member.picture.add.create_go_step6'), new_member_housing_ad_path(params[:id]), :title => t('member.room.add.create_go_step3') %>
   </div>
 </div>
 

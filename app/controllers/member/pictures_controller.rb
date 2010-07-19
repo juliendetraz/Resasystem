@@ -56,7 +56,7 @@ class Member::PicturesController < Member::MemberApplicationController
 
     respond_to do |format|
       format.html { redirect_to(pictures_url) }
-      format.xml  { head :ok }
+      format.js   { }
     end
   end
 

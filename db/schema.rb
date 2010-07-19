@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100717212902) do
+ActiveRecord::Schema.define(:version => 20100719194954) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(:version => 20100717212902) do
     t.integer  "housing_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "ad_id" # TODO virer
   end
 
   create_table "bathrooms", :force => true do |t|
