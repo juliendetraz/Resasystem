@@ -20,7 +20,6 @@ class Member::PicturesController < Member::MemberApplicationController
 
     respond_to do |format|
       if @picture.save
-        flash[:notice] = 'Picture was successfully created.'
         format.html { redirect_to(@picture) }
         format.js   { @picture }
       else

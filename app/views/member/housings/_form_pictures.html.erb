@@ -1,17 +1,9 @@
-<%= form_for :picture, Picture.new, :url => member_pictures_path, :remote => true, :html => { :multipart => true } do |f| %>
+<%= form_for Picture.new, :as => :picture, :url => member_pictures_path, :html => { :multipart => true }, :remote => true do |f| %>
   <%= f.error_messages %>
 
   <p>
     <%= f.label :picture %><br />
     <%= f.file_field :picture %>
-  </p>
-  <p>
-    <%= f.label :is_default %><br />
-    <%= f.check_box :is_default %>
-  </p>
-  <p>
-    <%= f.label :is_visible %><br />
-    <%= f.check_box :is_visible %>
   </p>
   <p>
     <%= f.submit 'Create' %>
