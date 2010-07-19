@@ -9,10 +9,6 @@ gem 'mysql'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'i18n_routing', :git => 'git://github.com/kwi/i18n_routing.git'
 gem 'paperclip', :git => 'git://github.com/thoughtbot/paperclip.git'
-<<<<<<< HEAD
-gem 'remotipart'
-=======
->>>>>>> 4f05b8c872403e4906067858f78a52732209f2de
 
 #gem 'ruby-graphviz', :require => 'graphviz' # pour vendor/plugin/state_machine
 

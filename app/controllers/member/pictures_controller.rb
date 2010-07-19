@@ -1,5 +1,3 @@
-require 'mime/types'
-
 class Member::PicturesController < Member::MemberApplicationController
   def index
     @pictures = Picture.all
