@@ -23,12 +23,7 @@ class Member::PicturesController < Member::MemberApplicationController
       @picture = Picture.new(:picture => params[:Filedata])
       @picture.update_attributes(params[:picture])
       if @picture.save
-<<<<<<< HEAD
-        format.html { redirect_to(@picture) }
-        format.js   { @picture }
-=======
         render :partial => 'picture.html.erb', :object => @picture
->>>>>>> 4f05b8c872403e4906067858f78a52732209f2de
       else
         render :nothing => true, :status => 500
       end
