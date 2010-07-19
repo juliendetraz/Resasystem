@@ -22,7 +22,6 @@ class Housing < ActiveRecord::Base
   validates :distance_commerce, :presence => true
   validates :distance_train, :presence => true
   validates :distance_transport, :presence => true
-  validates :website, :format => /^(http|https):\/\/.*/
 
   attr_accessor :housing_type_text
 

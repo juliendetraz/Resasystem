@@ -199,7 +199,7 @@ fr:
     your_reservations_link: Mes réservations
     
   pagination_bar:
-    results_found: résultats trouvés
+    results_found: résultat(s) trouvé(s)
     page_prev: Page précédente
     page_next: Page suivante
     page: Page

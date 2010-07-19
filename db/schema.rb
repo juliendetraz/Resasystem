@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100719194954) do
+ActiveRecord::Schema.define(:version => 20100719204724) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -198,8 +198,6 @@ ActiveRecord::Schema.define(:version => 20100719194954) do
   end
 
   create_table "pictures", :force => true do |t|
-    t.string   "url"
-    t.string   "path"
     t.string   "order"
     t.boolean  "is_default"
     t.boolean  "is_visible"

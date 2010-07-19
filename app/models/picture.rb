@@ -9,8 +9,8 @@ class Picture < ActiveRecord::Base
                       :large => ['800x600>', :jpg]
                     },
                     :default_style => :thumb,
-                    :default_url => '/images/blank.gif',
-                    :convert_options => {:thumb => '-strip -background white -flatten', :large => '-strip -background white -flatten'},
+                    :default_url => '/images/no_image.gif',
+                    :url => '/assets/pictures/:id/:style.:extension',
                     :path => ':rails_root/public/assets/pictures/:id/:style.:extension',
-                    :url => '/assets/pictures/:id/:style.:extension'
+                    :convert_options => {:thumb => '-strip -background white -flatten', :large => '-strip -background white -flatten'}
 end

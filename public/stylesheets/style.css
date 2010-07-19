@@ -409,6 +409,11 @@ p {
 #search_block-container {
   background-color: #f3fbea;
   margin: 0 0 10px 0;
+}
+#content_right #search_block-container {
+  height: 750px;
+}
+#content_right_homepage #search_block-container {
   height: 404px;
 }
   #search_block-header {
@@ -475,10 +480,26 @@ p {
     border-left: 1px solid #d6d6d6;
     padding: 0 10px 10px;
     margin: 0 0 0 11px;
+    min-height: 120px;
   }
     .item_ad-content h2 {
+      font-size: 1.1em;
       margin: 0;
     }
+    .item-ad-left {
+      width: 370px;
+    }
+      .item-ad-left h3 {
+        font-size: 1em;
+        margin: 6px 0;
+      }
+    .item-ad-right {
+      float: right;
+    }
+      .item-ad-right img {
+        border: 1px solid #D6D6D6;
+        padding: 5px;
+      }
   .item_ad-footer {
     background: url(../images/sprite-ads.png) 0 -83px no-repeat;
     margin: 0 0 10px;
