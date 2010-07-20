@@ -7,6 +7,8 @@
     <base href="<%= root_url %>" />
     <%= stylesheet_link_tag 'style' %>
     <%= javascript_include_tag :defaults %>
+    <%= javascript_include_tag "http://maps.google.com/maps/api/js?sensor=false&language=#{I18n.locale}" %>
+    <!--//#&key=ABQIAAAAlElFxz29181IhLSoFhgbWxT2yXp_ZAY8_ufC3CFXhHIE1NvwkxSSXvmjx5BLsolNvzIE7TfFoNTGwg//-->
     <%= csrf_meta_tag %>
     <%= yield :additional_css %>
     <%= yield :additional_js %>

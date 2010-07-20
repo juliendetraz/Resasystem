@@ -1,0 +1,30 @@
+<% message_element = '' unless message_element %>
+<% lat_field = 'gmap_latitude' unless lat_field %>
+<% lng_field = 'gmap_longitude' unless lng_field %>
+<% city_field = 'gmap_longitude' unless city_field %>
+<% zip_field = 'gmap_longitude' unless zip_field %>
+<% country_field = 'gmap_longitude' unless country_field %>
+<% street_field = 'gmap_longitude' unless street_field %>
+<div id="gmap-picker" style="width: <%= width %>px;height: <%= height %>px;"></div><!-- #gmap -->
+lat : <input type="text" value="" id="gmap_latitude" name="gmap_latitude" /><br />
+lon : <input type="text" value="" id="gmap_longitude" name="gmap_longitude" />
+<input type="button" onclick="javascript:gmapPicker.geolocalize()" value="zomfg" />
+<% content_for :additional_js_bottom do %>
+  <%= javascript_include_tag 'google/maps/picker' %>
+  <%= javascript_tag do %>
+    document.observe("dom:loaded", function(){
+      var pickerOptions = {
+        gmapPickerId      : 'gmap-picker',
+        latFieldId        : '<%= lat_field %>',
+        lngFieldId        : '<%= lng_field %>',
+        cityFieldId       : '<%= city_field %>',
+        zipFieldId        : '<%= zip_field %>',
+        countryFieldId    : '<%= country_field %>',
+        streetFieldId     : '<%= street_field %>',
+
+        messageElementId  : '<%= message_element %>',
+      }
+      gmapPicker = new GoogleMapPicker(pickerOptions);
+    })
+  <% end %>
+<% end %>

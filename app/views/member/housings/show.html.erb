@@ -32,7 +32,7 @@
 
   <div id="map_block-container">
     <div id="map_block-header"><%= t('map') %></div>
-    <%= render :partial => 'client/housings/googlemap', :locals => { :width => 298, :height => 282 } %>
+    <%= render :partial => 'client/housings/googlemap', :locals => { :width => 298, :height => 282, :search_type => 'housing' } %>
   </div>
   
   <div id="housing_show_pois">

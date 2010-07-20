@@ -3,33 +3,36 @@ function	loadMap(pageUri, queryString)
     var mapElement = $('gmap');
     if (!mapElement)
         return ;
-    new Ajax.Request(pageUri+'.json?'+queryString, {
-        method: 'get',
-        requestHeaders: {
-            Accept: 'application/json'
-        },
-        onSuccess: function(transport){
-            var response = transport.responseText || "no response text";
-            response = response.evalJSON();
-            //mapElement.update("Success! <br /><pre>" + response + "</pre>");
-            placeMap(response);
-        },
-        onLoading: function(){
-            mapElement.update('LOADING...')
-        },
-        onFailure: function(){
-            mapElement.update('EPIC FAIL...')
-        }
-    });//Ajax.Request
 
-    function    placeMap(housings)
+    // Utility functions
+    function putLoading() {
+        putMessage('<img src="images/gmap-loading.gif" class="gmessage" />');
+    }
+
+    function logError(info) {
+        try { console.log('Google Map : '+info); } catch(e) { console = { log: function() {} } }
+    }
+
+    function putError(info) {
+        if (info)
+            info = ' ('+info+')';
+        putMessage('<span class="gmessage">Error'+info+'</span>');
+    }
+
+    function putMessage(content) {
+        mapElement.update(content);
+    }
+    // END Utility functions
+
+    // GMap functions
+    function placeMap(housings)
     {
         var icons = new Array();
         icons["h"] = 'gmap-icon-house';
         icons["b"] = 'gmap-icon-bed';
         var mapOptions = {
-            zoom: 6,
-            center: new google.maps.LatLng(47.390251,0.688877),
+            zoom: 5,
+            center: new google.maps.LatLng(46.943605722409444, 2.4922539062500038),
             mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var housingMap = new google.maps.Map(mapElement, mapOptions);
@@ -48,6 +51,7 @@ function	loadMap(pageUri, queryString)
                 labelInBackground: false
             });
 
+// Default Gmapv3 marker
 //            var markerOptions = {
 //                position: new google.maps.LatLng(housings[i].latitude, housings[i].longitude),
 //                map: housingMap,
@@ -59,7 +63,6 @@ function	loadMap(pageUri, queryString)
             addInfoWindow(housings[i], marker);
             fluster.addMarker(marker);
         }
-        housingMap.fitBounds(bounds);
 
         function makeInfoWindowContent(housing) {
             var content = '<div class="gmap-infowindow">';
@@ -80,6 +83,7 @@ function	loadMap(pageUri, queryString)
             });
         }
 
+        housingMap.fitBounds(bounds);
         fluster.styles = {
             0: {// This style will be used for clusters with more than 0 markers
                 image: 'images/icons/gmap-icon-group.png',
@@ -91,4 +95,35 @@ function	loadMap(pageUri, queryString)
         };
         fluster.initialize();
     }//placeMap
+    // END GMap functions
+
+    // Ajax Execution
+    new Ajax.Request(pageUri+'.json?'+queryString, {
+        method: 'get',
+        requestHeaders: {
+            Accept: 'application/json'
+        },
+        onSuccess: function(transport){
+            var response = transport.responseText || "no response text";
+            if (response.isJSON()) {
+                try {
+                    response = response.evalJSON();
+                    placeMap(response);
+                } catch (e) {
+                    putError('syntax');
+                    logError('caught exception : '+e.message);
+                }
+            }
+            else {
+                putError('not json');
+                logError('the data is not JSON !');
+            }
+        },
+        onLoading: putLoading,
+        onFailure: function(){
+            putError('server');
+            logError('server error !');
+        }
+    });//Ajax.Request
+    // END Ajax Execution
 }//loadMap

@@ -314,10 +314,12 @@ p {
 
 
 /* Google map */
-#gmap {
+#gmap, #gmap-picker {
   border: 1px solid #999;
   margin: 0 0 10px 0;
+  text-align: center;
 }
+#gmap .gmessage {position:relative;top:45%}
 .gmap-icons-labels {
     color: #fff;
     font-weight: bold;

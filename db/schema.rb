@@ -179,7 +179,7 @@ ActiveRecord::Schema.define(:version => 20100717212902) do
   end
 
   create_table "offers", :force => true do |t|
-    t.integer  "offers_id"
+    t.integer  "offers_id" # WTF
     t.integer  "housing_id"
     t.datetime "created_at"
     t.datetime "updated_at"

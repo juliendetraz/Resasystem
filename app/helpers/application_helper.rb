@@ -19,10 +19,12 @@ module ApplicationHelper
 
   def gmap_search_params
     query_string = Array.new
-    hid = params[:housing_id] || params[:id] if params[:controller].split('/').last == "housings"
-    query_string << "housing_id=#{hid}" if hid
+    housing_id = params[:housing_id] || params[:id] if params[:controller].split('/').last == "housings"
+    query_string << "housing_id=#{housing_id}" if housing_id
+    ad_id = params[:ad_id] || params[:id] if params[:controller].split('/').last == "ads"
+    query_string << "ad_id=#{ad_id}" if ad_id
     query_string << "city=#{params[:city]}" if params[:city]
-    query_string << "location=#{params[:location]}" if params[:localtion]
+    query_string << "location=#{params[:location]}" if params[:location]
     query_string.join('&')
   end
 end

@@ -31,7 +31,7 @@ fr:
       address: Adresse de votre gîte
       street: Rue
       complement: Complément d'adresse
-      zip: Code postale
+      zip: Code postal
       state_province_country: Etat / Province / Région
       other_address_details: Autres détails
       city: Ville

@@ -82,4 +82,39 @@ class Member::AdsController < Member::MemberApplicationController
       format.xml  { head :ok }
     end
   end
+
+  # GET
+  def search
+    respond_to do |format|
+      format.html {  }
+      format.json {
+        @ads = Ad.joins({:housing => [:address, :offer => [:calendar]]}).where(get_search_where_condition)
+      }
+    end
+  end
+
+  def get_search_where_condition
+    param_hash = {
+      :ad_id => 'id = ?',
+      :user_id => 'housings.user_id = ?',
+      :city => "housings.addresses.city LIKE ?",
+      :location => "(housings.addresses.city LIKE ? OR housings.addresses.state_province_country LIKE ?)",
+      :start_date => "housings.offers.calendars.start_date = ?",
+      :end_date => "housings.offers.calendars.end_date = ?",
+      :housing_type => "housings.housing_type = ?",
+#      :room_number => "",
+#      :adult_number => "",
+#      :child_number => ""
+    }
+    condition_string = Array.new
+    condition_params = Array.new
+    param_hash.each_pair {|k,v|
+      if params[k]
+        condition_string << v
+        condition_params << params[k]
+      end
+    }
+    return nil if condition_string.empty?
+    condition_params.flatten(1).insert(0, condition_string.join(" AND "))
+  end
 end

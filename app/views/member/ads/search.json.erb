@@ -1,0 +1,43 @@
+<%
+housingTypes = ['h', 'b']
+buffer = ""
+if @ads.count > 0
+@ads.each do |ad|
+    buffer << "{
+    \"name\": \"#{ad.housing.name}\",
+    \"housingType\": \"#{housingTypes[rand(2)]}\",
+    \"numberPlaces\": #{rand(42)},
+    \"linkView\": \"#{get_module_path("%_housing", ad.housing)}\",
+    \"latitude\": #{get_latitude},
+    \"longitude\": #{get_longitude}
+  },"
+end
+else
+  (1..200).each do |i|
+    buffer << "{
+    \"name\": \"Chez bibi #{i}\",
+    \"housingType\": \"#{housingTypes[rand(2)]}\",
+    \"numberPlaces\": #{rand(42)},
+    \"linkView\": \"#\",
+    \"latitude\": #{get_latitude},
+    \"longitude\": #{get_longitude}
+  },"
+end
+end
+%>
+<%=raw "[#{buffer}]" %>
+<%#=raw '[
+  {
+    "name": "Chez Bibi",
+    "housingType": "h",
+    "numberPlaces": 42,
+    "latitude": 48,
+    "longitude": 1
+}, {
+    "name": "Chew Toto",
+    "housingType": "b",
+    "numberPlaces": 3,
+    "latitude": 47.390251,
+    "longitude": 0.688877
+}
+]' %>

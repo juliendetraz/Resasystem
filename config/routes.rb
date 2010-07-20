@@ -52,7 +52,9 @@ Resasystem::Application.routes.draw do
       #scope '', :module => :client do # /locale:/client_controller#action
       namespace :client do # /locale:/client/client_controller#action
         devise_for :cusers#, :path => 'users'
-        resources :ads
+        resources :ads do
+          get :search, :on => :collection
+        end
         resources :cusers, :controller => "users"
 #        resources :news
 #        resources :offers
@@ -93,7 +95,9 @@ Resasystem::Application.routes.draw do
 
       namespace :member do
         devise_for :musers
-        resources :ads
+        resources :ads do
+          get :search, :on => :collection
+        end
         resources :news
         resources :musers, :controller => "users"
         resources :offers
