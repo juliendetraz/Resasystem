@@ -54,6 +54,8 @@
   :street_field           => 'housing_address_attributes_street',
   :message_element        => 'gmap-picker-message',
   :message_empty_address  => t('gmap_picker.empty_address'),
+  :message_zero_results   => t('gmap_picker.zero_results'),
+  :message_geo_error      => t('gmap_picker.geo_error'),
 } %>
   <%= render :partial => 'googlemap_picker', :locals => gmap_picker_locals %>
 <% end %>

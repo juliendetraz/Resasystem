@@ -170,3 +170,5 @@ en:
 
   gmap_picker:
     empty_address: "You did not fill the required fields : Street, City, Zip, Country"
+    geo_error: "An error occured while finding the coordinates, you can still place the pin manually"
+    zero_results: "No results were found, please position the pin manually"

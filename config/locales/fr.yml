@@ -221,3 +221,5 @@ fr:
 
   gmap_picker:
     empty_address: "Vous n'avez pas rempli les champs : Rue, Ville, Code postal, Pays"
+    geo_error: "Une erreur s'est produite pendant le recherceh des coordonnées, vous pouvez toujours placer le pin manuellement"
+    zero_results: "Aucun résultat trouvé, veuillez placer le pin manuellement"

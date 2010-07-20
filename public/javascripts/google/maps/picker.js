@@ -14,17 +14,26 @@ var GoogleMapPicker = function(options) {
 
     var placeMarker = function(location) {
         if (this.marker) this.marker.setMap(null);
-        this.marker = new google.maps.Marker({
-            position: location,
-            map: map,
-            icon: 'images/icons/gmap-icon-picker.png'
-        });
+        this.marker = GoogleMapPicker.prototype.getMarker(map, location, options);
         map.setCenter(location);
     }
     google.maps.event.addListener(this.map, 'click', function(event) {
         placeMarker(event.latLng);
         GoogleMapPicker.prototype.fillCoordFields(event.latLng, options);
     });
+}
+
+GoogleMapPicker.prototype.getMarker = function(map, location, options) {
+    var marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            draggable: true,
+            icon: 'images/icons/gmap-icon-picker.png'
+    });
+    google.maps.event.addListener(marker, 'dragend', function(event) {
+        GoogleMapPicker.prototype.fillCoordFields(event.latLng, options);
+    });
+    return marker;
 }
 
 GoogleMapPicker.prototype.fillCoordFields = function(location, options) {
@@ -53,8 +62,8 @@ GoogleMapPicker.prototype.getAddress = function() {
 GoogleMapPicker.prototype.geolocalize = function() {
     var address = this.getAddress();
     if (address == null) {
-        GoogleMapPicker.prototype.showMessage(this.options.messageEmptyAddress, this.options);
-        GoogleMapPicker.prototype.log('empty address');
+        this.showMessage(this.options.messageEmptyAddress, this.options);
+        this.log('empty address');
         return ;
     }
     var options = this.options;
@@ -70,13 +79,13 @@ GoogleMapPicker.prototype.geolocalize = function() {
                 map.setCenter(results[0].geometry.location);
                 map.setZoom(14);
                 GoogleMapPicker.prototype.fillCoordFields(results[0].geometry.location, options);
-                marker = new google.maps.Marker({
-                    map: map,
-                    position: results[0].geometry.location,
-                    icon: 'images/icons/gmap-icon-picker.png'
-                });
+                marker = GoogleMapPicker.prototype.getMarker(map, results[0].geometry.location, options);
+                GoogleMapPicker.prototype.showMessage('', options);
             } else {
-                GoogleMapPicker.prototype.showMessage('Error', options);
+                if (status == google.maps.GeocoderStatus.ZERO_RESULTS)
+                    GoogleMapPicker.prototype.showMessage(options.messageZeroResults, options);
+                else
+                    GoogleMapPicker.prototype.showMessage(options.messageGeoError, options);
                 GoogleMapPicker.prototype.log('status : '+status);
             }
         });
