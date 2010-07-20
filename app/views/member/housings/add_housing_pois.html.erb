@@ -1,10 +1,10 @@
-<% title t('member.housing.add.title') + ' ' + @housing.name %>
-<h2><%= t('member.housing.add.title') + ' ' + @housing.name %></h2>
+<% title t('member.housing_poi.add.title') %>
+<h1 id="page_title"><%= t('member.housing_poi.add.title') %></h1>
 
 <div id="content_member_left">
-  <h3 class="blue-sky"><%= t('member.housing.add.step4_gite') %></h3>
+  <h2><%= t('member.housing.add.step4_gite') %></h2>
 
-  <h3 class="blue-bottom-bar"><%= t('member.housing.add_housing_pois') %></h3>
+  <h3><%= t('member.housing.add_housing_pois') %></h3>
   <div id="housing_pois_list_titles">
     <div class="col_housing_poi_name"><%= t('member.housing_poi.name') %></div>
     <div class="col_housing_poi_distance"><%= t('member.housing_poi.distance') %></div>
@@ -18,7 +18,7 @@
   <%#= render :partial => "form_housing_distances" %>
 
   <div id="submit_go_next_step">
-    <%= link_to t('member.housing.add.create_go_step5'), { :controller => 'member/housings', :action => 'add_pictures', :id => params[:id] }, :title => t('member.housing.add.create_go_step5') %>
+    <%= link_to t('member.housing.add.create_go_step5'), new_member_housing_picture_path(params[:id]), :title => t('member.housing.add.create_go_step5') %>
   </div>
 </div>
 

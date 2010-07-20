@@ -9,6 +9,7 @@ class Member::PicturesController < Member::MemberApplicationController
 
   def new
     @picture = Picture.new
+    @housing = Housing.find params[:housing_id]
   end
 
   def edit
@@ -16,16 +17,20 @@ class Member::PicturesController < Member::MemberApplicationController
   end
 
   def create
-    @picture = Picture.new(params[:picture])
-
-    respond_to do |format|
+    if params[:Filedata]
+      @picture = Picture.new(:picture => params[:Filedata])
+      @picture.update_attributes(params[:picture])
       if @picture.save
-        flash[:notice] = 'Picture was successfully created.'
-        format.html { redirect_to(@picture) }
-        format.js   { @picture }
+        render :partial => 'picture.html.erb', :object => @picture
       else
-        format.html { render :action => "new" }
-        format.js   { }
+        render :nothing => true, :status => 500
+      end
+    else
+      @picture = Picture.new params[:picture]
+      if @picture.save
+        redirect_to @picture
+      else
+        render :action => "new"
       end
     end
   end
@@ -51,7 +56,13 @@ class Member::PicturesController < Member::MemberApplicationController
 
     respond_to do |format|
       format.html { redirect_to(pictures_url) }
-      format.xml  { head :ok }
+      format.js   { }
     end
+  end
+
+  # Fix the mime types. Make sure to require the mime-types gem
+  def swfupload_file=(data)
+    data.content_type = MIME::Types.type_for(data.original_filename).to_s
+    self.file = data
   end
 end

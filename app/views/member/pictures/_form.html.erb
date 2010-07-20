@@ -1,0 +1,93 @@
+<%= form_for @picture, :as => :picture, :url => member_housing_pictures_path, :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <%= hidden_field_tag "picture[housing_ids][]", params[:housing_id] -%>
+  <%= f.label :picture %><br />
+  <%= f.file_field :picture %>
+  <%= f.submit 'Create' %>
+<% end %>
+
+<div class="fieldset flash" id="fsUploadProgress">
+  <span class="legend"><%= t('member.picture.queue') %></span>
+</div>
+<div>
+  <span id="spanButtonPlaceHolder"></span>
+  <input id="btnCancel" type="button" value="Cancel All Uploads" onclick="swfu.cancelQueue();" disabled="disabled" style="margin-left: 2px; font-size: 8pt; height: 29px;" />
+</div>
+
+<ul id="pictures_list">
+  <%= render @housing.pictures %>
+</ul>
+<br style="clear: both;" />
+
+
+<% content_for :additional_css do %>
+  <%= stylesheet_link_tag 'swfupload' %>
+<% end %>
+
+
+<% session_key_name = Rails.application.config.session_options[:key] %>
+<% content_for :additional_js_bottom do %>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
+  <%= javascript_tag do %>
+     jQuery.noConflict();
+  <% end %>
+  <%= javascript_include_tag 'swfupload/swfupload', 'swfupload/swfupload.queue', 'swfupload/fileprogress', 'swfupload/handlers' %>
+  <script type="text/javascript">
+    var swfu
+
+    jQuery(document).ready(function() {
+      swfu = new SWFUpload({
+        upload_url                   : "<%= member_pictures_path %>",
+        file_post_name               : "Filedata",
+        post_params                  : {
+          '<%= session_key_name %>'  : '<%= u cookies[session_key_name] %>',
+          'authenticity_token'       : '<%= u form_authenticity_token %>',
+          'picture[housing_ids][]'   : '<%= params[:housing_id] %>',
+          'housing_id'               : '<%= params[:housing_id] %>'
+        },
+        use_query_string             : true,
+        requeue_on_error             : false,
+        file_types                   : '*.jpg;*.jpeg',
+        file_types_description       : "JPG Images",
+        file_size_limit              : "10 MB",
+        file_upload_limit            : 30,
+        file_queue_limit             : 30,
+        flash_url                    : "/flash/swfupload.swf",
+        debug                        : false,
+        button_placeholder_id        : "spanButtonPlaceHolder",
+        button_text                  : '<span class="browse"><%= t('browse') %></span>',
+        button_text_left_padding     : 12,
+        button_text_top_padding      : 3,
+        button_width                 : 80,
+        button_height                : 28,
+        button_action                : SWFUpload.BUTTON_ACTION.SELECT_FILES,
+        button_cursor                : SWFUpload.CURSOR.HAND,
+        button_window_mode           : SWFUpload.WINDOW_MODE.TRANSPARENT,
+        custom_settings              : {
+          progressTarget : 'fsUploadProgress',
+          cancelButtonId : 'btnCancel',
+          thumbnail_height: 1000,
+          thumbnail_width: 1000,
+          thumbnail_quality: 100
+         },
+
+
+        // The event handler functions are defined in handlers.js
+        swfupload_preload_handler     : preLoad,
+        swfupload_load_failed_handler : loadFailed,
+        file_queued_handler           : fileQueued,
+        file_queue_error_handler      : fileQueueError,
+        file_dialog_complete_handler  : fileDialogComplete,
+        upload_start_handler          : uploadStart,
+        upload_progress_handler       : uploadProgress,
+        upload_error_handler          : uploadError,
+        upload_success_handler        : uploadSuccess,
+        upload_complete_handler       : uploadComplete,
+        queue_complete_handler        : queueComplete	// Queue plugin event
+      })
+    })
+
+    // Disable Upload Form if JS is enabled
+    jQuery('#picture_new').addClass('hidden').attr('disabled', 'true');
+  </script>
+<% end %>

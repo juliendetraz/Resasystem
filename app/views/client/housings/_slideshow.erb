@@ -1,0 +1,24 @@
+<div id="slideshow-container">
+  <div id="slideshow-header">
+    <h2>Gallerie photos</h2>
+  </div>
+  <div id="slideshow-content">
+    <div id="thumbs" class="navigation">
+      <ul class="thumbs noscript">
+        <% @housing.pictures.each_with_index do |picture, i| %>
+          <li>
+            <%= link_to image_tag(picture.picture.url(:tsquare), :alt => "Picture #{i}"), picture.picture.url, :title => "Picture #{i}", :class => "thumb" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    <div id="gallery" class="content">
+      <div id="controls" class="controls"></div>
+      <div class="slideshow-container">
+        <div id="loading" class="loader"></div>
+        <div id="slideshow" class="slideshow"></div>
+      </div>
+    </div>
+    <div style="clear: both;"></div>
+  </div>
+</div>

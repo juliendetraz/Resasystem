@@ -9,21 +9,15 @@
     <%= "<span>#{t('member.housing.website')+t('2p')}</span> #{link_to @housing.website, @housing.website, :target => '_blank'}".html_safe if @housing.email %>
   </div>
 
-  <%= render :partial => 'slideshow' %>
+  <%= render :partial => 'client/housings/slideshow' %>
 
   <h2><%= t('member.housing.description') %></h2>
   <h3><%= t('member.housing.the_housing')+t('2p') %></h3>
   <p><%= @housing.description %></p>
 
-  <%= render :partial => 'list_services', :locals => { :service_type => 'asset' } %>
-  <%= render :partial => 'list_services', :locals => { :service_type => 'activity' } %>
-  <%= render :partial => 'list_services', :locals => { :service_type => 'comfort' } %>
-
-
-  <h2>Tarifs</h2>
-
-  <%= link_to 'Nouvelle annonce pour cet housing', get_module_path("new_%_housing_ad", @housing) %> |
-  <%= link_to 'Edit', get_module_path("edit_%_housing", @housing) %>
+  <%= render :partial => 'client/housings/list_services', :locals => { :service_type => 'asset' } %>
+  <%= render :partial => 'client/housings/list_services', :locals => { :service_type => 'activity' } %>
+  <%= render :partial => 'client/housings/list_services', :locals => { :service_type => 'comfort' } %>
 </div>
 
 <div id="content_member_right">
