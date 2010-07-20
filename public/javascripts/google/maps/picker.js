@@ -12,21 +12,19 @@ var GoogleMapPicker = function(options) {
     this.map = new google.maps.Map(mapElement, mapOptions);
     var map = this.map;
 
+    var placeMarker = function(location) {
+        if (this.marker) this.marker.setMap(null);
+        this.marker = new google.maps.Marker({
+            position: location,
+            map: map,
+            icon: 'images/icons/gmap-icon-picker.png'
+        });
+        map.setCenter(location);
+    }
     google.maps.event.addListener(this.map, 'click', function(event) {
-        GoogleMapPicker.prototype.placeMarker(event.latLng, map);
+        placeMarker(event.latLng);
         GoogleMapPicker.prototype.fillCoordFields(event.latLng, options);
     });
-}
-
-
-GoogleMapPicker.prototype.placeMarker = function(location, map) {
-    if (this.marker) this.marker.setMap(null);
-    this.marker = new google.maps.Marker({
-        position: location,
-        map: map,
-        icon: 'images/icons/gmap-icon-picker.png'
-    });
-    map.setCenter(location);
 }
 
 GoogleMapPicker.prototype.fillCoordFields = function(location, options) {
@@ -50,15 +48,16 @@ GoogleMapPicker.prototype.getAddress = function() {
     if (address.length < 1)
         return null;
     return address.join(',');
-//    return '19 rue Biot, 75017 Paris, France';
 }
 
 GoogleMapPicker.prototype.geolocalize = function() {
     var address = this.getAddress();
     if (address == null) {
-        alert('empty address');
+        GoogleMapPicker.prototype.showMessage(this.options.messageEmptyAddress, this.options);
+        GoogleMapPicker.prototype.log('empty address');
         return ;
     }
+    var options = this.options;
     var map = this.map;
     if (!this.geocoder) this.geocoder = new google.maps.Geocoder();
     if (this.geocoder) {
@@ -69,14 +68,31 @@ GoogleMapPicker.prototype.geolocalize = function() {
                 if (this.marker)
                     this.marker.setMap(null);
                 map.setCenter(results[0].geometry.location);
+                map.setZoom(14);
+                GoogleMapPicker.prototype.fillCoordFields(results[0].geometry.location, options);
                 marker = new google.maps.Marker({
                     map: map,
                     position: results[0].geometry.location,
                     icon: 'images/icons/gmap-icon-picker.png'
                 });
             } else {
-                console.log('fail geocoder');
+                GoogleMapPicker.prototype.showMessage('Error', options);
+                GoogleMapPicker.prototype.log('status : '+status);
             }
         });
     }
+}
+
+GoogleMapPicker.prototype.log = function(info) {
+    try {console.log('Google Map Picker : '+info);} catch(e) {console = {log: function() {}}}
+}
+
+GoogleMapPicker.prototype.showMessage = function(message, options) {
+    if (!options && !this.options) return ;
+    if (this.options)
+        options = this.options;
+    if (options.messageElementId.length < 1) return ;
+    var messageElement = $(options.messageElementId);
+    if (!messageElement) return ;
+    messageElement.update(message);
 }

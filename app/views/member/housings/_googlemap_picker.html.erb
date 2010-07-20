@@ -6,9 +6,6 @@
 <% country_field = 'gmap_longitude' unless country_field %>
 <% street_field = 'gmap_longitude' unless street_field %>
 <div id="gmap-picker" style="width: <%= width %>px;height: <%= height %>px;"></div><!-- #gmap -->
-lat : <input type="text" value="" id="gmap_latitude" name="gmap_latitude" /><br />
-lon : <input type="text" value="" id="gmap_longitude" name="gmap_longitude" />
-<input type="button" onclick="javascript:gmapPicker.geolocalize()" value="zomfg" />
 <% content_for :additional_js_bottom do %>
   <%= javascript_include_tag 'google/maps/picker' %>
   <%= javascript_tag do %>
@@ -23,6 +20,7 @@ lon : <input type="text" value="" id="gmap_longitude" name="gmap_longitude" />
         streetFieldId     : '<%= street_field %>',
 
         messageElementId  : '<%= message_element %>',
+        messageEmptyAddress: "<%= message_empty_address %>",
       }
       gmapPicker = new GoogleMapPicker(pickerOptions);
     })

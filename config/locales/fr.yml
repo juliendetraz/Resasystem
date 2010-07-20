@@ -218,3 +218,6 @@ fr:
     
   messages:
     your_messages_link: Mes messages
+
+  gmap_picker:
+    empty_address: "Vous n'avez pas rempli les champs : Rue, Ville, Code postal, Pays"

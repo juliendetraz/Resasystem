@@ -30,6 +30,9 @@
     <%= address_form.label :country, t('member.housing.country') %>
     <%= address_form.text_field :country %>
   </p>
+  <p>
+    TODO : mettre un joli message pour expliquer comment faire
+  </p>
   <p class="p-text_field">
     <%= address_form.label :gmap_latitude, t('member.housing.gmap_latitude') %>
     <%= address_form.text_field :gmap_latitude %>
@@ -38,5 +41,19 @@
     <%= address_form.label :gmap_longitude, t('member.housing.gmap_longitude') %>
     <%= address_form.text_field :gmap_longitude %>
   </p>
-  <p>TODO: Faire un GMap picker avec le pointer localisé en fonction de l'adresse saisie</p>
+  <input type="button" onclick="javascript:gmapPicker.geolocalize()" value="geocoder" />
+  <p id="gmap-picker-message"></p>
+<%  gmap_picker_locals = {
+  :width                  => 628,
+  :height                 => 402,
+  :lat_field              => 'housing_address_attributes_gmap_latitude',
+  :lng_field              => 'housing_address_attributes_gmap_longitude',
+  :city_field             => 'housing_address_attributes_city',
+  :zip_field              => 'housing_address_attributes_zip',
+  :country_field          => 'housing_address_attributes_country',
+  :street_field           => 'housing_address_attributes_street',
+  :message_element        => 'gmap-picker-message',
+  :message_empty_address  => t('gmap_picker.empty_address'),
+} %>
+  <%= render :partial => 'googlemap_picker', :locals => gmap_picker_locals %>
 <% end %>

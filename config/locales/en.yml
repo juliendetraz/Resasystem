@@ -167,3 +167,6 @@ en:
     
   messages:
     your_messages_link: My messages
+
+  gmap_picker:
+    empty_address: "You did not fill the required fields : Street, City, Zip, Country"
