@@ -86,7 +86,28 @@ class Client::HousingsController < Client::ClientApplicationController
   def search
     respond_to do |format|
       format.html {  }
-      format.json {  }
+      format.json {
+        @housings = Housing.includes(:address).where(get_search_where_condition)
+      }
     end
+  end
+
+  def get_search_where_condition
+    param_hash = {
+      :housing_id => '`housings`.`id` = ?',
+      :user_id => '`housings`.`user_id` = ?',
+      :city => "`addresses`.`city` LIKE ?",
+      :location => "`addresses`.`city` LIKE ? OR `addresses`.`state_province_country` LIKE ?"
+    }
+    condition_string = Array.new
+    condition_params = Array.new
+    param_hash.each_pair {|k,v|
+      if params[k]
+        condition_string << v
+        condition_params << Array.new(v.count('?'), params[k])
+      end
+    }
+    return nil if condition_string.empty?
+    condition_params.flatten(1).insert(0, condition_string.join(" AND "))
   end
 end

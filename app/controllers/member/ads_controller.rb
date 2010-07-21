@@ -1,6 +1,11 @@
 class Member::AdsController < Member::MemberApplicationController
   def index
-    @ads = Ad.all
+    search_condition = get_search_where_condition
+    unless search_condition
+      @ads = Ad.includes({:housing => [:address, :offers => [:calendar]]})
+    else
+      @ads = Ad.includes({:housing => [:address, :offers => [:calendar]]}).where(get_search_where_condition)
+    end
   end
 
   def show
@@ -49,20 +54,20 @@ class Member::AdsController < Member::MemberApplicationController
     respond_to do |format|
       format.html {  }
       format.json {
-        @ads = Ad.joins({:housing => [:address, :offer => [:calendar]]}).where(get_search_where_condition)
+        @ads = Ad.includes({:housing => [:address, :offers => [:calendar]]}).where(get_search_where_condition)
       }
     end
   end
 
   def get_search_where_condition
     param_hash = {
-      :ad_id => 'id = ?',
-      :user_id => 'housings.user_id = ?',
-      :city => "housings.addresses.city LIKE ?",
-      :location => "(housings.addresses.city LIKE ? OR housings.addresses.state_province_country LIKE ?)",
-      :start_date => "housings.offers.calendars.start_date = ?",
-      :end_date => "housings.offers.calendars.end_date = ?",
-      :housing_type => "housings.housing_type = ?",
+      :ad_id => '`ads`.id = ?',
+      :user_id => '`housings`.`user_id` = ?',
+      :city => "`addresses`.`city` LIKE ?",
+      :location => "`addresses`.`city` LIKE ? OR `addresses`.`state_province_country` LIKE ?",
+      :start_date => "`calendars`.`start_date` = ?",
+      :end_date => "`calendars`.`end_date` = ?",
+      :housing_type => "`housing`.`housing_type` = ?",
 #      :room_number => "",
 #      :adult_number => "",
 #      :child_number => ""
@@ -72,7 +77,7 @@ class Member::AdsController < Member::MemberApplicationController
     param_hash.each_pair {|k,v|
       if params[k]
         condition_string << v
-        condition_params << params[k]
+        condition_params << Array.new(v.count('?'), params[k])
       end
     }
     return nil if condition_string.empty?

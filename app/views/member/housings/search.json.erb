@@ -8,8 +8,8 @@ if @housings.count > 0
     \"housingType\": \"#{housingTypes[rand(2)]}\",
     \"numberPlaces\": #{rand(42)},
     \"linkView\": \"#{get_module_path("%_housing", housing)}\",
-    \"latitude\": #{get_latitude},
-    \"longitude\": #{get_longitude}
+    \"latitude\": #{housing.address.gmap_latitude},
+    \"longitude\": #{housing.address.gmap_longitude}
   },"
 end
 else
@@ -26,18 +26,4 @@ end
 end
 %>
 <%=raw "[#{buffer}]" %>
-<%#=raw '[
-  {
-    "name": "Chez Bibi",
-    "housingType": "h",
-    "numberPlaces": 42,
-    "latitude": 48,
-    "longitude": 1
-}, {
-    "name": "Chew Toto",
-    "housingType": "b",
-    "numberPlaces": 3,
-    "latitude": 47.390251,
-    "longitude": 0.688877
-}
-]' %>
+

@@ -1,10 +1,10 @@
 <% message_element = '' unless message_element %>
 <% lat_field = 'gmap_latitude' unless lat_field %>
 <% lng_field = 'gmap_longitude' unless lng_field %>
-<% city_field = 'gmap_longitude' unless city_field %>
-<% zip_field = 'gmap_longitude' unless zip_field %>
-<% country_field = 'gmap_longitude' unless country_field %>
-<% street_field = 'gmap_longitude' unless street_field %>
+<% city_field = '' unless city_field %>
+<% zip_field = '' unless zip_field %>
+<% country_field = '' unless country_field %>
+<% street_field = '' unless street_field %>
 <div id="gmap-picker" style="width: <%= width %>px;height: <%= height %>px;"></div><!-- #gmap -->
 <% content_for :additional_js_bottom do %>
   <%= javascript_include_tag 'google/maps/picker' %>

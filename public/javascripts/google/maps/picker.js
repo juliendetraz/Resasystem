@@ -4,28 +4,30 @@ var GoogleMapPicker = function(options) {
         return ;
     this.options = options;
     this.geocoder = null;
+    var startPoint = this.getInitialCoords();
     var mapOptions = {
         zoom: 5,
-        center: new google.maps.LatLng(46.943605722409444, 2.4922539062500038),
+        center: startPoint,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     this.map = new google.maps.Map(mapElement, mapOptions);
     var map = this.map;
 
     var placeMarker = function(location) {
-        if (this.marker) this.marker.setMap(null);
-        this.marker = GoogleMapPicker.prototype.getMarker(map, location, options);
-        map.setCenter(location);
+        if (!this.marker)
+            this.marker = GoogleMapPicker.prototype.getMarker(map, options);
+        this.marker.setPosition(location);
+        //map.setCenter(location);
     }
+    placeMarker(startPoint);
     google.maps.event.addListener(this.map, 'click', function(event) {
         placeMarker(event.latLng);
         GoogleMapPicker.prototype.fillCoordFields(event.latLng, options);
     });
 }
 
-GoogleMapPicker.prototype.getMarker = function(map, location, options) {
+GoogleMapPicker.prototype.getMarker = function(map, options) {
     var marker = new google.maps.Marker({
-            position: location,
             map: map,
             draggable: true,
             icon: 'images/icons/gmap-icon-picker.png'
@@ -36,7 +38,23 @@ GoogleMapPicker.prototype.getMarker = function(map, location, options) {
     return marker;
 }
 
+GoogleMapPicker.prototype.getInitialCoords = function() {
+    var point = {lat: 46.943605722409444, lng: 2.4922539062500038}
+    if (this.options.latFieldId && this.options.lngFieldId) {
+        var latFieldElement = $(this.options.latFieldId);
+        var lngFieldElement = $(this.options.lngFieldId);
+        var tmp = null;
+        if (latFieldElement && !isNaN(tmp = parseFloat(latFieldElement.value)))
+            point.lat = tmp;
+        if (lngFieldElement && !isNaN(tmp = parseFloat(lngFieldElement.value)))
+            point.lng = tmp;
+    }
+    return new google.maps.LatLng(point.lat, point.lng);
+}
+
 GoogleMapPicker.prototype.fillCoordFields = function(location, options) {
+    if (!options.latFieldId || !options.lngFieldId)
+        return ;
     var latFieldElement = $(options.latFieldId);
     var lngFieldElement = $(options.lngFieldId);
     if (latFieldElement) latFieldElement.value = location.lat();
@@ -74,12 +92,10 @@ GoogleMapPicker.prototype.geolocalize = function() {
             'address': address
         }, function(results, status) {
             if (status == google.maps.GeocoderStatus.OK) {
-                if (this.marker)
-                    this.marker.setMap(null);
                 map.setCenter(results[0].geometry.location);
                 map.setZoom(14);
                 GoogleMapPicker.prototype.fillCoordFields(results[0].geometry.location, options);
-                marker = GoogleMapPicker.prototype.getMarker(map, results[0].geometry.location, options);
+                this.marker.setPosition(results[0].geometry.location);
                 GoogleMapPicker.prototype.showMessage('', options);
             } else {
                 if (status == google.maps.GeocoderStatus.ZERO_RESULTS)

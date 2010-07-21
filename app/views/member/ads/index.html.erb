@@ -1,34 +1,34 @@
-<%= stylesheet_link_tag 'style_ads' %>
+<div id="content_left">
+  <%= render :partial => "pagination_bar", :locals => { :count => @ads.count } %>
 
-<div id="content_left" style="min-height:750px;">
-  <%= render :partial => "pagination_bar" %>
+  <div id="list_ads">
+    <% @ads.each_with_index do |ad, i| %>
+      <div id="item_ad-<%= i+1 %>" class="item_ad-container">
+        <div class="item_ad-header">
+          <span class="item-ad-nb"><%= i+1 %></span>
+        </div>
+        <div class="item_ad-content">
+          <h2><%= link_to ad.title, get_module_path("%_housing", ad.housing.id), :title => ad.title %></h2>
+          <div class="item-ad-right">
+            <% if ad.housing.pictures.first.nil? %>
+              <%= image_tag 'no_image-tsquare.jpg', :alt => ad.title %>
+            <% else %>
+              <%= image_tag ad.housing.pictures.first.picture.url(:tsquare), :alt => ad.title %>
+            <% end %>
+          </div>
+          <div class="item-ad-left">
+            <h3><%= "#{ad.housing.address.city}, #{ad.housing.address.country}" %></h3>
+            <p><%= ad.description %></p>
+          </div>
+        </div>
+        <div class="item_ad-footer">
+          <p><%= link_to t("ads.view_ad"), get_module_path("%_housing", ad.housing.id), :title => t("ads.view_ad") %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
-	<div id="list_ads">
-		<%= link_to t("ads.new_ad"), get_module_path("new_%_ad") %>
-
-		<% @ads.each do |ad| %>
-			<div id="item_ad-1" class="item_ad-container">
-				<div class="item_ad-header">
-					<span class="item-ad-nb">1</span>
-				</div>
-				<div class="item_ad-content">
-					<h2><%=h ad.title %></h2>
-					<div class="item-ad-left">
-						<h3>Le Beausset (83),  Provence Alpes Côtes d’Azur, France</h3>
-						<p><%=h ad.description %></p>
-					</div>
-					<div class="item-ad-right">
-						Photo
-					</div>
-				</div>
-				<div class="item_ad-footer">
-					<p><a href="#" title="<%= t("ads.view_ad") %>"><%= t("ads.view_ad") %></a></p>
-				</div>
-			</div>
-		<% end %>
-	</div>
-
-  <%= render :partial => "pagination_bar" %>
+  <%= render :partial => "pagination_bar", :locals => { :count => @ads.count } %>
 </div>
 
 <div id="content_right">

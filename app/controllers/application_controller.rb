@@ -34,8 +34,10 @@ class ApplicationController < ActionController::Base
   end
 
   # Devise: override helpers to redirect_to namespace_root
+  # FIXME quand on est logged dans member et qu'on est dans client le fait d'aller sur la page de login fait entrer ici : pas bon
   def after_sign_in_path_for(resource)
     return get_module_path("%_root") if resource.class.to_s == "Cuser"
+    return get_module_path(resource.to_s) if resource.class.to_s == "Symbol"
     get_module_path("%_#{resource.class.to_s.downcase}", resource)
   end
 

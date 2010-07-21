@@ -8,7 +8,7 @@
           <span class="item-ad-nb"><%= i+1 %></span>
         </div>
         <div class="item_ad-content">
-          <h2><%= link_to ad.title, client_housing_path(ad.housing.id), :title => ad.title %></h2>
+          <h2><%= link_to ad.title, get_module_path("%_housing", ad.housing.id), :title => ad.title %></h2>
           <div class="item-ad-right">
             <% if ad.housing.pictures.first.nil? %>
               <%= image_tag 'no_image-tsquare.jpg', :alt => ad.title %>
@@ -22,7 +22,7 @@
           </div>
         </div>
         <div class="item_ad-footer">
-          <p><%= link_to t("ads.view_ad"), client_housing_path(ad.housing.id), :title => t("ads.view_ad") %></p>
+          <p><%= link_to t("ads.view_ad"), get_module_path("%_housing", ad.housing.id), :title => t("ads.view_ad") %></p>
         </div>
       </div>
     <% end %>

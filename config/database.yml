@@ -20,7 +20,7 @@ connection: &connection
   pool: 5
   reconnect: false
   username: root
-  password: octopasswd
+  password: proute
   host: localhost
 
 development:
