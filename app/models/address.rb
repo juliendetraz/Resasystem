@@ -1,5 +1,6 @@
 class Address < ActiveRecord::Base
-  has_many :users
+  has_many :cusers
+  has_many :musers
   has_many :housings
 
   validates :street, :presence => true

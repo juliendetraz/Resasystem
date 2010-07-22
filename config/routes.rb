@@ -1,4 +1,7 @@
-Resasystem::Application.routes.draw do
+Resasystem::Application.routes.draw do |map|
+
+  Typus::Routes.draw(map)
+
  # I18n.available_locales is set in config/initializers/locale.rb
   scope ':locale', :constraints => { :locale => /#{I18n.available_locales.join('|')}/ } do
 #    localized(I18n.available_locales, :verbose => true) do

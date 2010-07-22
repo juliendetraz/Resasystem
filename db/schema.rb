@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100719204724) do
+ActiveRecord::Schema.define(:version => 20100722141806) do
 
   create_table "addresses", :force => true do |t|
     t.string   "street"
@@ -22,6 +22,20 @@ ActiveRecord::Schema.define(:version => 20100719204724) do
     t.string   "country"
     t.decimal  "gmap_latitude",          :precision => 10, :scale => 7
     t.decimal  "gmap_longitude",         :precision => 10, :scale => 7
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "admin_users", :force => true do |t|
+    t.string   "first_name",       :default => "",    :null => false
+    t.string   "last_name",        :default => "",    :null => false
+    t.string   "role",                                :null => false
+    t.string   "email",                               :null => false
+    t.boolean  "status",           :default => false
+    t.string   "token",                               :null => false
+    t.string   "salt",                                :null => false
+    t.string   "crypted_password",                    :null => false
+    t.string   "preferences"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -104,7 +118,6 @@ ActiveRecord::Schema.define(:version => 20100719204724) do
     t.string   "distance_transport"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "housings_id"
     t.boolean  "has_elevator"
     t.integer  "floor"
     t.integer  "capacity"
@@ -178,7 +191,7 @@ ActiveRecord::Schema.define(:version => 20100719204724) do
   end
 
   create_table "offers", :force => true do |t|
-    t.integer  "offers_id" # WTF
+    t.integer  "offers_id"
     t.integer  "housing_id"
     t.datetime "created_at"
     t.datetime "updated_at"
