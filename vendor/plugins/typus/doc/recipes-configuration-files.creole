@@ -1,0 +1,16 @@
+= Configuration Files Are Getting Big and Hard to Mantain
+
+You can split your configuration files in several files so it can be easier to 
+mantain.
+
+{{{
+config/typus/001-application.yml
+config/typus/001-application_roles.yml
+config/typus/002-newsletter.yml
+config/typus/002-newsletter_roles.yml
+config/typus/003-blog.yml
+config/typus/003-blog_roles.yml
+}}}
+
+NOTE: Remember files are loaded alphabetically and last loaded files overwrite 
+previous settings.

@@ -1,0 +1,28 @@
+= Contribute
+
+All of our hard work and help/support is free. We do have expenses to pay for 
+this project and your donations do allow us to spend more time building and 
+supporting the project.
+
+Some interesting ways to contribute to the project:
+
+* **Fork the project** - Fork the project on [[http://github.com/fesplugas/typus|GitHub]]
+and make it better.
+* **Tell everybody about Typus** - Let us know and we'll link back to you as well.
+* **Hire us** to work on your next project - we design/build websites large and 
+small.
+* **Contribute a few bucks**.
+
+Somehow involved in the project:
+
+* [[http://www.rubyist.net/~matz|Yukihiro "matz" Matsumoto]] creator of 
+[[http://ruby-lang.org/|Ruby]] the most beautiful programming ever kwnown.
+* [[http://loudthinking.com/|David Heinemeier Hansson]] for creating 
+[[http://rubyonrails.org/|Ruby on Rails]].
+* [[http://www.djangoproject.com/|Django Admin]] who inspired part of the 
+development, in special the templates rendering and UI.
+* [[http://github.com/bruce/paginator/tree/master|Paginator]] by 
+[[http://codefluency.com/|Bruce Williams]] which is used to paginate records.
+
+You can see a list of contributors and their commits on 
+[[http://github.com/fesplugas/typus/contributors|GitHub]].

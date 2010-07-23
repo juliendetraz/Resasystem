@@ -1,0 +1,29 @@
+= Does Typus Support Namespaced Models?
+
+If you want to be able to use {{{delayed_job}}} you need to add the following 
+two lines to your {{{config/routes.rb}}} file before 
+{{{Typus::Routes.draw(map)}}}.
+
+{{{
+map.connect "admin/delayed/jobs/:action/:id(.:format)", :controller => "admin/delayed/jobs"
+}}}
+
+And then create and configure {{{config/typus/delayed_job.yml}}} and 
+{{{config/typus/delayed_job_roles.yml}}} as you do with your other models.
+
+File {{{config/typus/delayed_job.yml}}}:
+
+{{{
+Delayed::Job:
+  fields:
+    list: ...
+    form: ...
+  search: ...
+}}}
+
+File {{{config/typus/delayed_job_roles.yml}}}:
+
+{{{
+admin:
+  Delayed::Job: all
+}}}

@@ -1,0 +1,290 @@
+Script started on Thu 22 Jul 2010 05:31:40 AM PDT
+]0;octo@OCTO-JME-VM: ~/rails_project/resasystem-rails3octo@OCTO-JME-VM:~/rails_project/resasystem-rails3$ rails s[4Ptoprails s[4Ptoprails s[Kl db/migrate/
+total 168K
+4.0K -rw-r--r-- 1 octo octo  317 2010-07-10 07:55 20100321120609_create_annonces.rb
+4.0K -rw-r--r-- 1 octo octo  592 2010-07-10 07:55 20100325163241_create_offres.rb
+4.0K -rw-r--r-- 1 octo octo  251 2010-07-10 07:55 20100325164621_create_hebergements.rb
+4.0K -rw-r--r-- 1 octo octo  352 2010-07-10 07:55 20100326131438_rename_annonces_to_ads.rb
+4.0K -rw-r--r-- 1 octo octo 1.1K 2010-07-10 07:55 20100326132108_rename_offres_to_housings.rb
+4.0K -rw-r--r-- 1 octo octo  559 2010-07-10 07:55 20100326135518_rename_hebergements_to_offers.rb
+4.0K -rw-r--r-- 1 octo octo  254 2010-07-10 07:55 20100326145358_create_services.rb
+4.0K -rw-r--r-- 1 octo octo  313 2010-07-10 07:55 20100326145629_create_housing_services.rb
+4.0K -rw-r--r-- 1 octo octo  329 2010-07-10 07:55 20100326145733_create_housing_pois.rb
+4.0K -rwxr-xr-x 1 octo octo  448 2010-07-10 07:55 [0m[01;32m20100418145404_create_bedrooms.rb[0m
+4.0K -rw-r--r-- 1 octo octo  292 2010-07-10 07:55 20100418145527_create_bathrooms.rb
+4.0K -rwxr-xr-x 1 octo octo  227 2010-07-10 07:55 [01;32m20100418151322_create_kitchens.rb[0m
+4.0K -rwxr-xr-x 1 octo octo  250 2010-07-10 07:55 [01;32m20100418151418_create_dinningrooms.rb[0m
+4.0K -rw-r--r-- 1 octo octo  240 2010-07-10 07:55 20100505194405_create_offer_rooms.rb
+4.0K -rwxr-xr-x 1 octo octo  223 2010-07-10 07:55 [01;32m20100505194513_create_rooms.rb[0m
+4.0K -rw-r--r-- 1 octo octo  248 2010-07-10 07:55 20100505194729_create_room_pictures.rb
+4.0K -rw-r--r-- 1 octo octo  215 2010-07-10 07:55 20100505194858_create_livingrooms.rb
+4.0K -rw-r--r-- 1 octo octo  363 2010-07-10 07:55 20100505195013_create_pictures.rb
+4.0K -rw-r--r-- 1 octo octo  501 2010-07-10 07:55 20100505201058_create_addresses.rb
+4.0K -rw-r--r-- 1 octo octo  294 2010-07-10 07:55 20100505201238_create_offer_prices.rb
+4.0K -rw-r--r-- 1 octo octo  299 2010-07-10 07:55 20100505201349_create_calendars.rb
+4.0K -rw-r--r-- 1 octo octo  321 2010-07-10 07:55 20100505201505_create_reservations.rb
+4.0K -rw-r--r-- 1 octo octo  568 2010-07-10 07:55 20100505203805_create_users.rb
+4.0K -rw-r--r-- 1 octo octo  217 2010-07-10 07:55 20100505205230_create_organizations.rb
+4.0K -rw-r--r-- 1 octo octo  368 2010-07-10 07:55 20100505205623_create_messages.rb
+4.0K -rw-r--r-- 1 octo octo  232 2010-07-10 07:55 20100505205658_create_message_usergroups.rb
+4.0K -rw-r--r-- 1 octo octo  235 2010-07-10 07:55 20100505205759_create_news.rb
+4.0K -rw-r--r-- 1 octo octo  244 2010-07-10 07:55 20100505211548_create_housing_user.rb
+4.0K -rw-r--r-- 1 octo octo  264 2010-07-10 07:55 20100505211607_create_organization_user.rb
+4.0K -rw-r--r-- 1 octo octo  267 2010-07-10 07:55 20100505215840_remove_fields_from_offer.rb
+4.0K -rw-r--r-- 1 octo octo 1002 2010-07-10 07:55 20100506145839_devise_create_users.rb
+4.0K -rw-r--r-- 1 octo octo  223 2010-07-10 07:55 20100508075159_rename_organization_user_table.rb
+4.0K -rw-r--r-- 1 octo octo  404 2010-07-10 07:55 20100622205805_rename_type_column_because_is_magic_column.rb
+4.0K -rw-r--r-- 1 octo octo  197 2010-07-10 07:55 20100623181701_add_housing_id_column_to_room.rb
+4.0K -rw-r--r-- 1 octo octo  721 2010-07-10 07:55 20100626074223_rename_service_column.rb
+4.0K -rwxrw-r-- 1 octo octo  284 2010-07-11 08:28 [01;32m20100710205116_rename_kitchen_type.rb[0m
+4.0K -rwxrw-r-- 1 octo octo  629 2010-07-11 12:53 [01;32m20100711193836_add_paperclip_to_pictures.rb[0m
+4.0K -rwxrw-r-- 1 octo octo  259 2010-07-11 13:05 [01;32m20100711200441_add_housings_pictures_table.rb[0m
+4.0K -rwxrw-r-- 1 octo octo  247 2010-07-11 13:13 [01;32m20100711201238_add_pictures_rooms_table.rb[0m
+4.0K -rwxrw-r-- 1 octo octo  196 2010-07-17 14:29 [01;32m20100717212902_add_description_field_to_housing.rb[0m
+4.0K -rwxr-xr-x 1 octo octo  166 2010-07-21 09:38 [01;32m20100719194954_remove_ad_id_from_ads.rb[0m
+4.0K -rwxr-xr-x 1 octo octo  264 2010-07-21 09:38 [01;32m20100719204724_remove_path_and_url_fields_from_pictures.rb[0m
+[m]0;octo@OCTO-JME-VM: ~/rails_project/resasystem-rails3octo@OCTO-JME-VM:~/rails_project/resasystem-rails3$ l db/migrate/[6Prails s[4Ptoprails s[4Ptoprails sl db/migrate/[Kscript generate remove_housings_id_from_housingmremove_housings_id_from_housingiremove_housings_id_from_housinggremove_housings_id_from_housing[Cremove_housings_id_from_housingaremove_housings_id_from_housingtremove_housings_id_from_housingiremove_housings_id_from_housingoremove_housings_id_from_housingnremove_housings_id_from_housing remove_housings_id_from_housing[1P[1P[1P[1P[1P[1P[1P
+generate: command not found
+]0;octo@OCTO-JME-VM: ~/rails_project/resasystem-rails3octo@OCTO-JME-VM:~/rails_project/resasystem-rails3$ generate migration remove_housings_id_from_housing[1@r[1@a[1@i[1@l[1@s[1@ 
+[1m[37m      invoke[0m  active_record
+[1m[32m      create[0m    db/migrate/20100722123220_remove_housings_id_from_housing.rb
+]0;octo@OCTO-JME-VM: ~/rails_project/resasystem-rails3octo@OCTO-JME-VM:~/rails_project/resasystem-rails3$ rake b[Kdb:migrate
+(in /home/octo/rails_project/resasystem-rails3)
+==  RemoveHousingsIdFromHousing: migrating ====================================
+rake aborted!
+An error has occurred, all later migrations canceled:
+
+wrong number of arguments (3 for 2)
+
+(See full trace by running task with --trace)
+]0;octo@OCTO-JME-VM: ~/rails_project/resasystem-rails3octo@OCTO-JME-VM:~/rails_project/resasystem-rails3$ rake db:migrate
+(in /home/octo/rails_project/resasystem-rails3)
+==  RemoveHousingsIdFromHousing: migrating ====================================
+-- remove_column(:housings, :housings_id)
+   -> 0.0873s
+==  RemoveHousingsIdFromHousing: migrated (0.0874s) ===========================
+
+]0;octo@OCTO-JME-VM: ~/rails_project/resasystem-rails3octo@OCTO-JME-VM:~/rails_project/resasystem-rails3$ rails c
+Loading development environment (Rails 3.0.0.beta4)
+ruby-1.9.2-preview3 > Housing.all
+ => [#<Housing id: 4, address_id: 5, user_id: 1, phone_contact: "06100339598", email: "jonathan@meiss.fr", website: "http://www.meiss.fr", name: "Gite OCTO Technology", housing_type: "flat", url_alias: "", distance_commerce: "less_100m", distance_train: "less_1km", distance_transport: "less_10km", created_at: "2010-07-16 15:10:28", updated_at: "2010-07-16 21:46:41", has_elevator: nil, floor: nil, capacity: nil, is_visible: nil, state: nil, description: nil>, #<Housing id: 5, address_id: 6, user_id: 1, phone_contact: "06100339598", email: "jonathan@meiss.fr", website: "http://www.meiss.fr", name: "Gite OCTO Technology", housing_type: "flat", url_alias: "De la Geekerie a la Patisserie", distance_commerce: "less_100m", distance_train: "less_1km", distance_transport: "less_50km", created_at: "2010-07-16 16:00:21", updated_at: "2010-07-17 21:35:05", has_elevator: nil, floor: nil, capacity: nil, is_visible: nil, state: nil, description: "Dans la plus belle vallee du Cantal, a proximite d'...">, #<Housing id: 6, address_id: 7, user_id: 1, phone_contact: "0610339598", email: "jonathan@meiss.fr", website: "http://www.meiss.fr", name: "Le gite de test", housing_type: "house_alone", url_alias: nil, distance_commerce: "less_1km", distance_train: "less_50km", distance_transport: "less_100m", created_at: "2010-07-17 12:55:47", updated_at: "2010-07-17 12:55:47", has_elevator: nil, floor: nil, capacity: nil, is_visible: nil, state: nil, description: nil>, #<Housing id: 7, address_id: 8, user_id: 1, phone_contact: "0610339598", email: "", website: "http://www.meiss.fr", name: "Gite OCTO Technology", housing_type: "house_alone", url_alias: nil, distance_commerce: "less_100km", distance_train: "less_1km", distance_transport: "less_5km", created_at: "2010-07-18 20:17:28", updated_at: "2010-07-18 20:17:28", has_elevator: nil, floor: nil, capacity: nil, is_visible: nil, state: nil, description: "La description">, #<Housing id: 8, address_id: 9, user_id: 2, phone_contact: "0610", email: "", website: "http://www.meiss.fr", name: "test", housing_type: "house_alone", url_alias: nil, distance_commerce: "less_100km", distance_train: "less_5km", distance_transport: "less_50km", created_at: "2010-07-19 14:03:54", updated_at: "2010-07-19 14:03:54", has_elevator: nil, floor: nil, capacity: nil, is_visible: nil, state: nil, description: "test">] 
+ruby-1.9.2-preview3 > User.all
+ => [#<User id: 1, email: "admin@resasystem.com", encrypted_password: "$2a$10$6hRm5ZMCCB5e/VabkdCgee5abbOKqcRi8a2GDjfzuOse...", password_salt: "$2a$10$6hRm5ZMCCB5e/VabkdCgee", confirmation_token: nil, confirmed_at: nil, confirmation_sent_at: nil, reset_password_token: nil, remember_token: nil, remember_created_at: nil, sign_in_count: 5, current_sign_in_at: "2010-07-17 20:56:43", last_sign_in_at: "2010-07-17 19:29:49", current_sign_in_ip: "192.168.0.10", last_sign_in_ip: "192.168.0.10", password: nil, gender: nil, first_name: "Jonathan", last_name: "Meiss", phone_contact: nil, phone_fax: nil, phone_mobile: nil, phone_pro: nil, phone_home: nil, role: nil, is_active: nil, language: nil, has_subscribed: nil, firstday_week: nil, created_at: "2010-07-11 15:30:20", updated_at: "2010-07-17 20:56:43">, #<User id: 2, email: "jonathan@meiss.fr", encrypted_password: "$2a$10$G1bswuSlr7LIz.mxV6h.1.yDlpXmVZp4MZGv7uv52ABc...", password_salt: "$2a$10$G1bswuSlr7LIz.mxV6h.1.", confirmation_token: nil, confirmed_at: nil, confirmation_sent_at: nil, reset_password_token: nil, remember_token: nil, remember_created_at: nil, sign_in_count: 4, current_sign_in_at: "2010-07-19 14:02:39", last_sign_in_at: "2010-07-19 14:02:25", current_sign_in_ip: "10.1.100.234", last_sign_in_ip: "10.1.100.234", password: nil, gender: nil, first_name: nil, last_name: nil, phone_contact: nil, phone_fax: nil, phone_mobile: nil, phone_pro: nil, phone_home: nil, role: nil, is_active: nil, language: nil, has_subscribed: nil, firstday_week: nil, created_at: "2010-07-17 18:35:11", updated_at: "2010-07-19 14:02:39">] 
+ruby-1.9.2-preview3 > exit
+]0;octo@OCTO-JME-VM: ~/rails_project/resasystem-rails3octo@OCTO-JME-VM:~/rails_project/resasystem-rails3$ rails generate typus_migration -h
+Could not find generator typus_migration.
+]0;octo@OCTO-JME-VM: ~/rails_project/resasystem-rails3octo@OCTO-JME-VM:~/rails_project/resasystem-rails3$ rails generate typus:migration
+[1m[32m      create[0m  db/migrate/20100722141806_create_admin_users.rb
+[1m[32m      create[0m  config/initializers/typus_session.rb
+[1m[32m      create[0m  config/typus/typus.yml
+[1m[32m      create[0m  config/typus/typus_roles.yml
+[1m[32m      create[0m  app/models/admin_user.rb
+[1m[32m      create[0m  test/fixtures/admin_users.yml
+[1m[32m      create[0m  app/controllers/admin/admin_users_controller.rb
+[1m[32m      create[0m  test/functional/admin/admin_users_controller_test.rb
+]0;octo@OCTO-JME-VM: ~/rails_project/resasystem-rails3octo@OCTO-JME-VM:~/rails_project/resasystem-rails3$ rake db:migrate
+(in /home/octo/rails_project/resasystem-rails3)
+==  CreateAdminUsers: migrating ===============================================
+-- create_table(:admin_users)
+   -> 0.0287s
+==  CreateAdminUsers: migrated (0.0288s) ======================================
+
+]0;octo@OCTO-JME-VM: ~/rails_project/resasystem-rails3octo@OCTO-JME-VM:~/rails_project/resasystem-rails3$ rals [K[K[Kils c
+Loading development environment (Rails 3.0.0.beta4)
+ruby-1.9.2-preview3 > Typ
+TypeError  Typus      
+ruby-1.9.2-preview3 > Typ
+TypeError  Typus      
+ruby-1.9.2-preview3 > Typus
+Typus
+ruby-1.9.2-preview3 > Typus
+Typus
+ruby-1.9.2-preview3 > Typus
+ => Typus 
+ruby-1.9.2-preview3 > Typus.all
+NoMethodError: undefined method `all' for Typus:Module
+	from (irb):2
+	from /home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands/console.rb:47:in `start'
+	from /home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands/console.rb:8:in `start'
+	from /home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-preview3 > Admi[KinUser.all
+ => [] 
+ruby-1.9.2-preview3 > AdminUser.all[K[K[Kcreate :first_name => ''[K[K""J"o"n"a"t"h"a"n"[C, ""[K[K:last_name )>[K[K=> ""M"e"i"[1P"[1P"E"I"S"S"[C, :raole )[K[K[K[K[K[Kole => ""a"d"m"i"n"[C, :email => ""j"o"n"a"t"h"a"n"@"m"e"i"s"s"."f"r"
+The {{key}} interpolation syntax in I18n messages is deprecated. Please use %{key} instead.
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n/backend/base.rb:162:in `block (2 levels) in interpolate'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n/backend/base.rb:157:in `gsub'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n/backend/base.rb:157:in `block in interpolate'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n/backend/base.rb:193:in `preserve_encoding'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n/backend/base.rb:156:in `interpolate'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n/backend/base.rb:49:in `translate'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n.rb:152:in `translate'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n/backend/base.rb:120:in `resolve'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n/backend/base.rb:105:in `block in default'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n/backend/base.rb:104:in `each'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n/backend/base.rb:104:in `default'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n/backend/base.rb:42:in `translate'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/gems/i18n-0.4.1/lib/i18n.rb:152:in `translate'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/errors.rb:318:in `generate_message'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/errors.rb:188:in `add'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/validations/length.rb:54:in `block in validate_each'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/validations/length.rb:41:in `each'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/validations/length.rb:41:in `validate_each'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/validator.rb:154:in `block in validate'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/validator.rb:151:in `each'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/validator.rb:151:in `validate'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activesupport/lib/active_support/callbacks.rb:309:in `_callback_before_65'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activesupport/lib/active_support/callbacks.rb:432:in `_run_validate_callbacks'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/validations.rb:201:in `run_validations!'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/validations/callbacks.rb:53:in `block in run_validations!'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activesupport/lib/active_support/callbacks.rb:408:in `_run_validation_callbacks'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/validations/callbacks.rb:53:in `run_validations!'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activemodel/lib/active_model/validations.rb:168:in `valid?'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/validations.rb:55:in `valid?'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/validations.rb:75:in `perform_validations'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/validations.rb:43:in `save'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/attribute_methods/dirty.rb:21:in `save'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/transactions.rb:237:in `block (2 levels) in save'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/transactions.rb:289:in `block in with_transaction_returning_status'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/connection_adapters/abstract/database_statements.rb:139:in `transaction'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/transactions.rb:204:in `transaction'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/transactions.rb:287:in `with_transaction_returning_status'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/transactions.rb:237:in `block in save'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/transactions.rb:248:in `rollback_active_record_state!'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/transactions.rb:236:in `save'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/activerecord/lib/active_record/base.rb:458:in `create'
+(irb):4:in `irb_binding'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb/workspace.rb:80:in `eval'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb/workspace.rb:80:in `evaluate'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb/context.rb:254:in `evaluate'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb.rb:159:in `block (2 levels) in eval_input'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb.rb:273:in `signal_status'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb.rb:156:in `block in eval_input'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb/ruby-lex.rb:243:in `block (2 levels) in each_top_level_statement'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb/ruby-lex.rb:229:in `loop'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb/ruby-lex.rb:229:in `block in each_top_level_statement'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb/ruby-lex.rb:228:in `catch'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb/ruby-lex.rb:228:in `each_top_level_statement'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb.rb:155:in `eval_input'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb.rb:70:in `block in start'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb.rb:69:in `catch'
+/home/octo/.rvm/rubies/ruby-1.9.2-preview3/lib/ruby/1.9.1/irb.rb:69:in `start'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands/console.rb:47:in `start'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands/console.rb:8:in `start'
+/home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands.rb:23:in `<top (required)>'
+script/rails:6:in `require'
+script/rails:6:in `<main>'
+ => #<AdminUser id: nil, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: nil, salt: nil, crypted_password: nil, preferences: nil, created_at: nil, updated_at: nil> 
+ruby-1.9.2-preview3 > AdminUser.create :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr"[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C, :password => ""j"2"k"5"9"9"a"t"
+ => #<AdminUser id: 1, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "c811f1cc3d9e", salt: "e99787d8fe3cde03088334326c971f1c9c1ffa99", crypted_password: "ef401a6eb02d891db03bd55d1f7459d761589d70", preferences: nil, created_at: "2010-07-22 14:42:58", updated_at: "2010-07-22 14:42:58"> 
+ruby-1.9.2-preview3 > AdminUser.create :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "j2k599at"[K[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Call[K
+ => [#<AdminUser id: 1, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "c811f1cc3d9e", salt: "e99787d8fe3cde03088334326c971f1c9c1ffa99", crypted_password: "ef401a6eb02d891db03bd55d1f7459d761589d70", preferences: nil, created_at: "2010-07-22 14:42:58", updated_at: "2010-07-22 14:42:58">] 
+ruby-1.9.2-preview3 > AdminUser.all[KAdminUser.all[K[K[Kfirst [1@a[1@ [1@=[1@ 
+ => #<AdminUser id: 1, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "c811f1cc3d9e", salt: "e99787d8fe3cde03088334326c971f1c9c1ffa99", crypted_password: "ef401a6eb02d891db03bd55d1f7459d761589d70", preferences: nil, created_at: "2010-07-22 14:42:58", updated_at: "2010-07-22 14:42:58"> 
+ruby-1.9.2-preview3 > a.update[K[K[K[K[K[Kpres[Kferences = ""n"o"n"e"[C
+ => "none" 
+ruby-1.9.2-preview3 > a.save
+ => true 
+ruby-1.9.2-preview3 > a.savepreferences = "none"[1P"[1P"[1P"[1P"z"e"n"i"t"h"[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1P[1@.[1@p[1@a[1@s[1@s[1@w[1@o[1@r[1@d
+ => "zenith" 
+ruby-1.9.2-preview3 > a.save
+ => false 
+ruby-1.9.2-preview3 > a.savepassword = "zenith"[1P"[1P"[1P"[1P"[1P"[1P"z"e"[1P"[1P"r"e"s"a"s"y"s"t"e"l"
+ => "resasystel" 
+ruby-1.9.2-preview3 > a.password = "resasystel"[1P"m"
+ => "resasystem" 
+ruby-1.9.2-preview3 > a.password = "resasystem"l"save[Kpassword = "zenith"save[K
+ => true 
+ruby-1.9.2-preview3 > a.savepassword = "resasystem"l"save[Kpassword = "zenith"save[Kpreferences = "none"[2P = AdminUser.first .preferences = "none"save[K[K[K[Ktatus = true
+ => true 
+ruby-1.9.2-preview3 > s.save
+NameError: undefined local variable or method `s' for main:Object
+	from (irb):16
+	from /home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands/console.rb:47:in `start'
+	from /home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands/console.rb:8:in `start'
+	from /home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-preview3 > s.save[1P.savea.save
+ => true 
+ruby-1.9.2-preview3 > a.saves.savea.status = true[9Ps.savea.status = true[K[K[K[K[K[K[K[K[K[K[K[K[K[K
+ => #<AdminUser id: 1, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: true, token: "c811f1cc3d9e", salt: "e99787d8fe3cde03088334326c971f1c9c1ffa99", crypted_password: "981507243281129fa46f08d5eda802fc8c282d8b", preferences: "none", created_at: "2010-07-22 14:42:58", updated_at: "2010-07-22 14:47:40"> 
+ruby-1.9.2-preview3 > a.saves.savea.status = true[K[K[K[K1
+ => 1 
+ruby-1.9.2-preview3 > a.status = 1[K.save
+ => true 
+ruby-1.9.2-preview3 > a.savetatus = 1[K
+ => #<AdminUser id: 1, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: true, token: "c811f1cc3d9e", salt: "e99787d8fe3cde03088334326c971f1c9c1ffa99", crypted_password: "981507243281129fa46f08d5eda802fc8c282d8b", preferences: "none", created_at: "2010-07-22 14:42:58", updated_at: "2010-07-22 14:47:40"> 
+ruby-1.9.2-preview3 > User.[KAdmin.all
+NameError: uninitialized constant UserAdmin
+	from (irb):22
+	from /home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands/console.rb:47:in `start'
+	from /home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands/console.rb:8:in `start'
+	from /home/octo/.rvm/gems/ruby-1.9.2-preview3/bundler/gems/rails-130bf3c/railties/lib/rails/commands.rb:23:in `<top (required)>'
+	from script/rails:6:in `require'
+	from script/rails:6:in `<main>'
+ruby-1.9.2-preview3 > AdminUser.all
+ => [#<AdminUser id: 1, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: true, token: "c811f1cc3d9e", salt: "e99787d8fe3cde03088334326c971f1c9c1ffa99", crypted_password: "981507243281129fa46f08d5eda802fc8c282d8b", preferences: "none", created_at: "2010-07-22 14:42:58", updated_at: "2010-07-22 14:47:40">] 
+ruby-1.9.2-preview3 > AdminUser.all[K[K[Kdestroy_all
+ => [#<AdminUser id: 1, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: true, token: "c811f1cc3d9e", salt: "e99787d8fe3cde03088334326c971f1c9c1ffa99", crypted_password: "981507243281129fa46f08d5eda802fc8c282d8b", preferences: "none", created_at: "2010-07-22 14:42:58", updated_at: "2010-07-22 14:47:40">] 
+ruby-1.9.2-preview3 > AdminUser.destroy_all
+ => [] 
+ruby-1.9.2-preview3 > AdminUser.destroy_allall[KUserAdmin.alla[K.savetatus = 1[K.saves.savea.status = trueave[Kpassword = "resasystem"l"save[Kpassword = "zenith"save[Kpreferences = "none"[2P = AdminUser.first [7PAdminUser.allcreate :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "j2k599at"[K, :password => "j2k599at"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"r"e"s"a"s"y"s"t"e"m"[C, :preferences => '':'e'n'[1Pen'
+ => #<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:05:56"> 
+ruby-1.9.2-preview3 > AdminUser.create :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdestroy_all[Kall[K
+ => [#<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:05:56">] 
+ruby-1.9.2-preview3 > AdminUser.allcreate :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Call[K[KAdminUser.allcreate :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdestroy_all[Kall[KUserAdmin.allAdminUser.all[K[K[Kfirst
+ => #<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:05:56"> 
+ruby-1.9.2-preview3 > AdminUser.firstaAdminUser.first AdminUser.first=AdminUser.first AdminUser.first
+ => #<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:05:56"> 
+ruby-1.9.2-preview3 > a.status = true
+ => true 
+ruby-1.9.2-preview3 > a.save
+ => true 
+ruby-1.9.2-preview3 > a.savetatus = true = AdminUser.first[4PAdminUser.firsta = AdminUser.first[4PAdminUser.first[K[K[K[K[Kall
+ => [#<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: true, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:06:39">] 
+ruby-1.9.2-preview3 > AdminUser.all[K[K[Kdestroy_all
+ => [#<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: true, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:06:39">] 
+ruby-1.9.2-preview3 > AdminUser.destroy_allall[K[7Pa.savetatus = true = AdminUser.first[4PAdminUser.first[2Pallcreate :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en', :status => true
+ => #<AdminUser id: 3, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "c116ba85c508", salt: "714e8f119d7e64434cb1a8985d1171a0cd91ef0d", crypted_password: "caafdc7f4a3e93cb57a2f2114fa778450a2731fa", preferences: "en", created_at: "2010-07-22 15:20:49", updated_at: "2010-07-22 15:20:49"> 
+ruby-1.9.2-preview3 > AdminUser.create :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en', :status => true[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdestroy_all[Kall[K
+ => [#<AdminUser id: 3, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "c116ba85c508", salt: "714e8f119d7e64434cb1a8985d1171a0cd91ef0d", crypted_password: "caafdc7f4a3e93cb57a2f2114fa778450a2731fa", preferences: "en", created_at: "2010-07-22 15:20:49", updated_at: "2010-07-22 15:20:49">] 
+ruby-1.9.2-preview3 > AdminUser.allcreate :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en', :status => true[K[K[K[K1
+ => #<AdminUser id: nil, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status, salt: "e99787d8fe3cde03088334326c971f1c9c1ffa99", crypted_password: "981507243281129fa46f08d5eda802fc8c282d8b", preferences: "none", created_at: "2010-07-22 14:42:58", updated_at: "2010-07-22 14:47:40">] 
+ruby-1.9.2-preview3 > AdminUser.all[K[K[Kdestroy_all
+ => [#<AdminUser id: 1, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: true, token: "c811f1cc3d9e", salt: "e99787d8fe3cde03088334326c971f1c9c1ffa99", crypted_password: "981507243281129fa46f08d5eda802fc8c282d8b", preferences: "none", created_at: "2010-07-22 14:42:58", updated_at: "2010-07-22 14:47:40">] 
+ruby-1.9.2-preview3 > AdminUser.destroy_all
+ => [] 
+ruby-1.9.2-preview3 > AdminUser.destroy_allall[KUserAdmin.alla[K.savetatus = 1[K.saves.savea.status = trueave[Kpassword = "resasystem"l"save[Kpassword = "zenith"save[Kpreferences = "none"[2P = AdminUser.first [7PAdminUser.allcreate :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "j2k599at"[K, :password => "j2k599at"[1P"[1P"[1P"[1P"[1P"[1P"[1P"[1P"r"e"s"a"s"y"s"t"e"m"[C, :preferences => '':'e'n'[1Pen'
+ => #<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:05:56"> 
+ruby-1.9.2-preview3 > AdminUser.create :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdestroy_all[Kall[K
+ => [#<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:05:56">] 
+ruby-1.9.2-preview3 > AdminUser.allcreate :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Call[K[KAdminUser.allcreate :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en'[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdestroy_all[Kall[KUserAdmin.allAdminUser.all[K[K[Kfirst
+ => #<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:05:56"> 
+ruby-1.9.2-preview3 > AdminUser.firstaAdminUser.first AdminUser.first=AdminUser.first AdminUser.first
+ => #<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:05:56"> 
+ruby-1.9.2-preview3 > a.status = true
+ => true 
+ruby-1.9.2-preview3 > a.save
+ => true 
+ruby-1.9.2-preview3 > a.savetatus = true = AdminUser.first[4PAdminUser.firsta = AdminUser.first[4PAdminUser.first[K[K[K[K[Kall
+ => [#<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: true, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:06:39">] 
+ruby-1.9.2-preview3 > AdminUser.all[K[K[Kdestroy_all
+ => [#<AdminUser id: 2, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: true, token: "93cf6b5f72b1", salt: "af992e7a19ca63e8045965526bb6ebe9df2c5d48", crypted_password: "c993a345c418de12eeebdcae8d2099a53309b463", preferences: "en", created_at: "2010-07-22 15:05:56", updated_at: "2010-07-22 15:06:39">] 
+ruby-1.9.2-preview3 > AdminUser.destroy_allall[K[7Pa.savetatus = true = AdminUser.first[4PAdminUser.first[2Pallcreate :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en', :status => true
+ => #<AdminUser id: 3, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "c116ba85c508", salt: "714e8f119d7e64434cb1a8985d1171a0cd91ef0d", crypted_password: "caafdc7f4a3e93cb57a2f2114fa778450a2731fa", preferences: "en", created_at: "2010-07-22 15:20:49", updated_at: "2010-07-22 15:20:49"> 
+ruby-1.9.2-preview3 > AdminUser.create :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en', :status => true[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdestroy_all[Kall[K
+ => [#<AdminUser id: 3, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "c116ba85c508", salt: "714e8f119d7e64434cb1a8985d1171a0cd91ef0d", crypted_password: "caafdc7f4a3e93cb57a2f2114fa778450a2731fa", preferences: "en", created_at: "2010-07-22 15:20:49", updated_at: "2010-07-22 15:20:49">] 
+ruby-1.9.2-preview3 > AdminUser.allcreate :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en', :status => true[K[K[K[K1
+ => #<AdminUser id: nil, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: nil, salt: nil, crypted_password: nil, preferences: "en", created_at: nil, updated_at: nil> 
+ruby-1.9.2-preview3 > AdminUser.create :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en', :status => 1[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Call[Kcreate :first_name => "Jonathan", :last_name => "MEISS", :role => "admin", :email => "jonathan@meiss.fr", :password => "resasystem", :preferences => 'en', :status => true[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[Cdestroy_all[Kall[K[7Pa.savetatus = true = AdminUser.first
+ => #<AdminUser id: 3, first_name: "Jonathan", last_name: "MEISS", role: "admin", email: "jonathan@meiss.fr", status: false, token: "c116ba85c508", salt: "714e8f119d7e64434cb1a8985d1171a0cd91ef0d", crypted_password: "caafdc7f4a3e93cb57a2f2114fa778450a2731fa", preferences: "en", created_at: "2010-07-22 15:20:49", updated_at: "2010-07-22 15:20:49"> 
+ruby-1.9.2-preview3 > a.status = true
+ => true 
+ruby-1.9.2-preview3 > a.save
+ => true 
+ruby-1.9.2-preview3 > a.save
+ => true 
+ruby-1.9.2-preview3 > a.savetatus = true = AdminUser.first
+ => #<AdminUser id: 3, first_name: "Jonathan", last_name: "MEISS", r

@@ -1,0 +1,29 @@
+= Roles Configuration
+
+Typus roles are stored on {{{yaml}}} files. The configuration is really easy. 
+On the {{{config/typus}}} folder there are {{{yaml}}} files which end with 
+{{{_roles.yml}}}. These files is where the setup is done.
+
+You can add as many roles as you want and the access control allow you to give 
+access to users from a role to the {{{CRUD}}} methods of a model and to custom 
+actions you define per model.
+
+{{{
+admin:
+  # Category has access to the default methods.
+  Category: create, read, update, delete
+  # Posts for example have a custom method called +rebuild+.
+  Post: create, read, update, delete, rebuild
+  # TypusUser has access to all methods.
+  TypusUser: all
+
+editor:
+  # An editor will only have access to create and update.
+  Category: create, update
+  # An editor will only have access to read posts. This means index, 
+  # search and show.
+  Post: read
+}}}
+
+TIP: Remember you can use the shortcut {{{all}}} to allow user have access to 
+**all** methods.

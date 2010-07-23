@@ -1,0 +1,18 @@
+= Testing the Plugin
+
+Clone the repository and run the tests.
+
+{{{
+$ git clone git://github.com/fesplugas/typus.git
+$ cd typus
+$ rake
+}}}
+
+By default tests are be performed against a SQLite3 database in memory. You can 
+also run tests against PostgreSQL and MySQL databases. (database name is 
+{{{typus_test}}})
+
+{{{
+$ rake DB=mysql
+$ rake DB=postgresql
+}}}
