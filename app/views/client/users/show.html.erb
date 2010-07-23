@@ -1,0 +1,78 @@
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%= @user.password %>
+</p>
+
+<p>
+  <b>Gender:</b>
+  <%= @user.gender %>
+</p>
+
+<p>
+  <b>First name:</b>
+  <%= @user.first_name %>
+</p>
+
+<p>
+  <b>Last name:</b>
+  <%= @user.last_name %>
+</p>
+
+<p>
+  <b>Phone contact:</b>
+  <%= @user.phone_contact %>
+</p>
+
+<p>
+  <b>Phone fax:</b>
+  <%= @user.phone_fax %>
+</p>
+
+<p>
+  <b>Phone mobile:</b>
+  <%= @user.phone_mobile %>
+</p>
+
+<p>
+  <b>Phone pro:</b>
+  <%= @user.phone_pro %>
+</p>
+
+<p>
+  <b>Phone home:</b>
+  <%= @user.phone_home %>
+</p>
+
+<p>
+  <b>Role:</b>
+  <%= @user.role %>
+</p>
+
+<p>
+  <b>Is active:</b>
+  <%= @user.is_active %>
+</p>
+
+<p>
+  <b>Language:</b>
+  <%= @user.language %>
+</p>
+
+<p>
+  <b>Has subscribed:</b>
+  <%= @user.has_subscribed %>
+</p>
+
+<p>
+  <b>Firstday week:</b>
+  <%= @user.firstday_week %>
+</p>
+
+
+<%= link_to 'Edit', get_module_path("edit_%_cuser", @user) %> |
+<%= link_to 'Back', get_module_path("%_cusers") %>

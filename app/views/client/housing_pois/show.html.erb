@@ -1,0 +1,23 @@
+<p>
+  <b>Housing poi:</b>
+  <%=h @housing_poi.housing_poi_id %>
+</p>
+
+<p>
+  <b>Housing:</b>
+  <%=h @housing_poi.housing_id %>
+</p>
+
+<p>
+  <b>Name:</b>
+  <%=h @housing_poi.name %>
+</p>
+
+<p>
+  <b>Distance:</b>
+  <%=h @housing_poi.distance %>
+</p>
+
+
+<%= link_to 'Edit', edit_housing_poi_path(@housing_poi) %> |
+<%= link_to 'Back', housing_pois_path %>

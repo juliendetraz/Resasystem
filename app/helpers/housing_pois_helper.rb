@@ -1,0 +1,2 @@
+module HousingPoisHelper
+end

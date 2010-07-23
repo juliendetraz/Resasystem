@@ -1,0 +1,12 @@
+<div id="gmap" style="width: <%= width %>px;height: <%= height %>px;"></div><!-- #gmap -->
+<% search_type = "housing" unless search_type %>
+<% content_for :additional_js_bottom do %>
+  <%= javascript_include_tag 'google/maps/fluster2/Fluster2.packed' %>
+  <%= javascript_include_tag 'google/maps/labeled_marker/markerwithlabel_packed' %>
+  <%= javascript_include_tag 'google/maps/googlemap' %>
+  <%= javascript_tag do %>
+    document.observe("dom:loaded", function(){
+      loadMap('<%= get_module_path("search_%_#{search_type}s") %>', '<%= gmap_search_params %>');
+    })
+  <% end %>
+<% end %>

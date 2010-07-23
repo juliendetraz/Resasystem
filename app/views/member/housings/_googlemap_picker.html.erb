@@ -1,0 +1,30 @@
+<% message_element = '' unless message_element %>
+<% lat_field = 'gmap_latitude' unless lat_field %>
+<% lng_field = 'gmap_longitude' unless lng_field %>
+<% city_field = '' unless city_field %>
+<% zip_field = '' unless zip_field %>
+<% country_field = '' unless country_field %>
+<% street_field = '' unless street_field %>
+<div id="gmap-picker" style="width: <%= width %>px;height: <%= height %>px;"></div><!-- #gmap -->
+<% content_for :additional_js_bottom do %>
+  <%= javascript_include_tag 'google/maps/picker' %>
+  <%= javascript_tag do %>
+    document.observe("dom:loaded", function(){
+      var pickerOptions = {
+        gmapPickerId      : 'gmap-picker',
+        latFieldId        : '<%= lat_field %>',
+        lngFieldId        : '<%= lng_field %>',
+        cityFieldId       : '<%= city_field %>',
+        zipFieldId        : '<%= zip_field %>',
+        countryFieldId    : '<%= country_field %>',
+        streetFieldId     : '<%= street_field %>',
+
+        messageElementId  : '<%= message_element %>',
+        messageEmptyAddress: "<%= message_empty_address %>",
+        messageGeoError   : "<%= message_geo_error %>",
+        messageZeroResults: "<%= message_zero_results %>",
+      }
+      gmapPicker = new GoogleMapPicker(pickerOptions);
+    })
+  <% end %>
+<% end %>

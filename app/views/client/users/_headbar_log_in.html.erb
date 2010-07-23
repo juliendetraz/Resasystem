@@ -1,0 +1,10 @@
+<div id="headbar_log_in">
+  <ul id="sign_list">
+    <li id="signup_button" class="signup_button-client">
+      <%= link_to '<span>'.html_safe + t("devise.sessions.link") + '</span>'.html_safe, new_session_path(resource_name), :title => t("devise.sessions.link") %>
+    </li>
+    <li id="signin_button">
+      <%= link_to '<span><span><span>'.html_safe + t("devise.registrations.link") + '</span></span></span>'.html_safe, new_registration_path(resource_name), :title => t("devise.registrations.link"), :class => "green_button-extensible" %>
+    </li>
+  </ul>
+</div>

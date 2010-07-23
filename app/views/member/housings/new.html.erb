@@ -1,0 +1,19 @@
+<% title t('member.housing.add.title') %>
+<h1 id="page_title"><%= t('member.housing.add.title') %></h2>
+
+<div id="content_member_left">
+  <h2><%= t('member.housing.add.step1_gite') %></h2>
+  <%= form_for [get_module_name, @housing] do |f| %>
+    <%= f.error_messages %>
+    <%= render :partial => "form_addresses", :locals => { :f => f } %> 
+    <%= render :partial => "form_fields", :locals => { :f => f } %>
+    
+    <div id="submit_go_next_step_button">
+      <p><%= f.submit t('member.housing.add.create_go_step2') %></p>
+    </div>
+  <% end %>
+</div>
+
+<div id="content_member_right">
+  <%= render :partial => "#{get_module_name}/users/right_column" %>
+</div>

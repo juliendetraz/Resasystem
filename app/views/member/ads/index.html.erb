@@ -1,0 +1,36 @@
+<div id="content_left">
+  <%= render :partial => "pagination_bar", :locals => { :count => @ads.count } %>
+
+  <div id="list_ads">
+    <% @ads.each_with_index do |ad, i| %>
+      <div id="item_ad-<%= i+1 %>" class="item_ad-container">
+        <div class="item_ad-header">
+          <span class="item-ad-nb"><%= i+1 %></span>
+        </div>
+        <div class="item_ad-content">
+          <h2><%= link_to ad.title, get_module_path("%_housing", ad.housing.id), :title => ad.title %></h2>
+          <div class="item-ad-right">
+            <% if ad.housing.pictures.first.nil? %>
+              <%= image_tag 'no_image-tsquare.jpg', :alt => ad.title %>
+            <% else %>
+              <%= image_tag ad.housing.pictures.first.picture.url(:tsquare), :alt => ad.title %>
+            <% end %>
+          </div>
+          <div class="item-ad-left">
+            <h3><%= "#{ad.housing.address.city}, #{ad.housing.address.country}" %></h3>
+            <p><%= ad.description %></p>
+          </div>
+        </div>
+        <div class="item_ad-footer">
+          <p><%= link_to t("ads.view_ad"), get_module_path("%_housing", ad.housing.id), :title => t("ads.view_ad") %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <%= render :partial => "pagination_bar", :locals => { :count => @ads.count } %>
+</div>
+
+<div id="content_right">
+  <%= render :partial => "layouts/#{get_module_name}/sidebar_search" %>
+</div>

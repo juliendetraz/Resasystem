@@ -1,0 +1,16 @@
+<% title t('member.picture.add.title') %>
+<h1 id="page_title"><%= t('member.picture.add.title') %></h1>
+
+<div id="content_member_left">
+  <h2><%= t('member.picture.add.step5_gite') %></h2>
+
+  <%= render :partial => "form" %>
+
+  <div id="submit_go_next_step">
+    <%= link_to t('member.picture.add.create_go_step6'), new_member_housing_ad_path(params[:id]), :title => t('member.room.add.create_go_step3') %>
+  </div>
+</div>
+
+<div id="content_member_right">
+  <%= render :partial => "#{get_module_name}/users/right_column" %>
+</div>

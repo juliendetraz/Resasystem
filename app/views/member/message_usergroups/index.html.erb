@@ -1,0 +1,20 @@
+<h1>Listing message_usergroups</h1>
+
+<table>
+  <tr>
+    <th>Group</th>
+  </tr>
+
+<% @message_usergroups.each do |message_usergroup| %>
+  <tr>
+    <td><%=h message_usergroup.group %></td>
+    <td><%= link_to 'Show', message_usergroup %></td>
+    <td><%= link_to 'Edit', edit_message_usergroup_path(message_usergroup) %></td>
+    <td><%= link_to 'Destroy', message_usergroup, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New message_usergroup', new_message_usergroup_path %>

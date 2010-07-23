@@ -1,0 +1,28 @@
+<% title t('member.room.add.title') %>
+<h1 id="page_title"><%= t('member.room.add.title') %></h1>
+
+<div id="content_member_left">
+  <h2><%= t('member.room.add.step2_gite') %></h2>
+  
+  <h2><%= t('member.housing.add_rooms') %></h2>
+  
+  <div id="rooms_list_titles">
+    <div class="col_room_type"><%= t('member.room.room_type') %></div>
+    <div class="col_room_offers"><%= t('member.room.room_type') %></div>
+    <div class="col_room_submit"></div>
+  </div>
+  
+  <div id="rooms_list">
+    <%= render @rooms %>
+  </div>
+
+  <%= render :partial => "form", :locals => { :room => Room.new } %>
+  
+  <div id="submit_go_next_step">
+    <%= link_to t('member.room.add.create_go_step3'), { :controller => 'member/housings', :action => 'add_services', :id => params[:housing_id] }, :title => t('member.room.add.create_go_step3') %>
+  </div>
+</div>
+
+<div id="content_member_right">
+  <%= render :partial => 'member/users/right_column' %>
+</div>

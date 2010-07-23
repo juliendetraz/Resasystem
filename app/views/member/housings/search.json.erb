@@ -1,0 +1,29 @@
+<%
+housingTypes = ['h', 'b']
+buffer = ""
+if @housings.count > 0
+@housings.each do |housing|
+    buffer << "{
+    \"name\": \"#{housing.name}\",
+    \"housingType\": \"#{housingTypes[rand(2)]}\",
+    \"numberPlaces\": #{rand(42)},
+    \"linkView\": \"#{get_module_path("%_housing", housing)}\",
+    \"latitude\": #{housing.address.gmap_latitude},
+    \"longitude\": #{housing.address.gmap_longitude}
+  },"
+end
+else
+  (1..200).each do |i|
+    buffer << "{
+    \"name\": \"Chez bibi #{i}\",
+    \"housingType\": \"#{housingTypes[rand(2)]}\",
+    \"numberPlaces\": #{rand(42)},
+    \"linkView\": \"#\",
+    \"latitude\": #{get_latitude},
+    \"longitude\": #{get_longitude}
+  },"
+end
+end
+%>
+<%=raw "[#{buffer}]" %>
+

@@ -1,0 +1,18 @@
+<p>
+  <b>Housing:</b>
+  <%=h @housing_service.housing_id %>
+</p>
+
+<p>
+  <b>Service:</b>
+  <%=h @housing_service.service_id %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%=h @housing_service.price %>
+</p>
+
+
+<%= link_to 'Edit', edit_housing_service_path(@housing_service) %> |
+<%= link_to 'Back', housing_services_path %>

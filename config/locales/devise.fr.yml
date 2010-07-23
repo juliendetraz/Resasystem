@@ -1,0 +1,39 @@
+fr:
+  devise:
+    sessions:
+      link: "S'identifier"
+      link_sign_out: "Déconnexion"
+      signed_in: "Vous êtes connecté"
+      signed_out: "Vous êtes déconnecté"
+    passwords:
+      link: "Mot de passe oublié ?"
+      send_instructions: "Dans quelques minutes vous allez recevoir un courriel avec les instructions pour récuperer votre mot de passe."
+      updated: "Mot de passe changé avec succes. Vous êtes connecté."
+    confirmations:
+      link: "Vous n'avez pas reçu les instructions de confirmation de votre compte ?"
+      send_instructions: "Dans quelques minutes vous allez recevoir un courriel avec les instructions pour activer votre compte."
+      confirmed: "Votre compte vient d'être activé. Vous êtes maintenant connecté."
+    registrations:
+      link: "S'inscrire"
+      signed_up: "Votre compte vient d'être créé. Un courriel de confirmation vient de vous être envoyé."
+      updated: "Votre compte a été mis à jour."
+      destroyed: "Votre compte a bien été supprimé."
+    unlocks:
+      link: "Vous n'avez toujours pas reçu les instructions pour debloquer votre compte ?"
+      send_instructions: "Dans quelques minutes vous allez recevoir un courriel avec les instructions pour debloquer votre compte."
+      unlocked: "Votre compte a été debloqué, vous êtes maintenant connecté."
+    failure:
+      unauthenticated: "Vous devez vous connecter ou créer un compte pour pouvoir continuer."
+      unconfirmed: "Vous devez activer votre compte avant de pouvoir continuer."
+      locked: "Votre compte est bloqué."
+      invalid: "Adresse email ou mot de passe incorrect."
+      invalid_token: "Invalid authentication token."
+      timeout: "Votre session a expiré, veuillez vous reconnecter pour continuer."
+      inactive: "Votre compte n'est pas encore activé."
+    mailer:
+      confirmation_instructions:
+        subject: "Instructions pour activer votre compte"
+      reset_password_instructions:
+        subject: "Instructions pour récuperer votre mot de passe perdu"
+      unlock_instructions:
+        subject: "Instructions pour débloquer votre compte"

@@ -1,0 +1,61 @@
+<h3><%= t('member.housing.address') %></h3>
+
+<% @housing.build_address unless @housing.address %>
+<%= f.fields_for :address do |address_form| %>
+  <p class="p-text_field">
+    <%= address_form.label :street, t('member.housing.street') %>
+    <%= address_form.text_field :street %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :complement, t('member.housing.complement') %>
+    <%= address_form.text_field :complement %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :zip, t('member.housing.zip') %>
+    <%= address_form.text_field :zip %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :state_province_country, t('member.housing.state_province_country') %>
+    <%= address_form.text_field :state_province_country %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :other_address_details, t('member.housing.other_address_details') %>
+    <%= address_form.text_field :other_address_details %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :city, t('member.housing.city') %>
+    <%= address_form.text_field :city %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :country, t('member.housing.country') %>
+    <%= address_form.text_field :country %>
+  </p>
+  <p>
+    TODO : mettre un joli message pour expliquer comment faire
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :gmap_latitude, t('member.housing.gmap_latitude') %>
+    <%= address_form.text_field :gmap_latitude %>
+  </p>
+  <p class="p-text_field">
+    <%= address_form.label :gmap_longitude, t('member.housing.gmap_longitude') %>
+    <%= address_form.text_field :gmap_longitude %>
+  </p>
+  <input type="button" onclick="javascript:gmapPicker.geolocalize()" value="geocoder" />
+  <p id="gmap-picker-message"></p>
+<%  gmap_picker_locals = {
+  :width                  => 628,
+  :height                 => 402,
+  :lat_field              => 'housing_address_attributes_gmap_latitude',
+  :lng_field              => 'housing_address_attributes_gmap_longitude',
+  :city_field             => 'housing_address_attributes_city',
+  :zip_field              => 'housing_address_attributes_zip',
+  :country_field          => 'housing_address_attributes_country',
+  :street_field           => 'housing_address_attributes_street',
+  :message_element        => 'gmap-picker-message',
+  :message_empty_address  => t('gmap_picker.empty_address'),
+  :message_zero_results   => t('gmap_picker.zero_results'),
+  :message_geo_error      => t('gmap_picker.geo_error'),
+} %>
+  <%= render :partial => 'googlemap_picker', :locals => gmap_picker_locals %>
+<% end %>

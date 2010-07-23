@@ -1,0 +1,40 @@
+<h1>Editing picture</h1>
+
+<% form_for(@picture) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :url %><br />
+    <%= f.text_field :url %>
+  </p>
+  <p>
+    <%= f.label :path %><br />
+    <%= f.text_field :path %>
+  </p>
+  <p>
+    <%= f.label :order %><br />
+    <%= f.text_field :order %>
+  </p>
+  <p>
+    <%= f.label :is_default %><br />
+    <%= f.check_box :is_default %>
+  </p>
+  <p>
+    <%= f.label :is_visible %><br />
+    <%= f.check_box :is_visible %>
+  </p>
+  <p>
+    <%= f.label :is_validated %><br />
+    <%= f.check_box :is_validated %>
+  </p>
+  <p>
+    <%= f.label :date_validated %><br />
+    <%= f.datetime_select :date_validated %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @picture %> |
+<%= link_to 'Back', pictures_path %>

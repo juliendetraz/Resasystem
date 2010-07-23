@@ -1,0 +1,11 @@
+log/*.log
+db/*.sqlite3
+config/database.yml
+.bundle
+.project
+.tmp_*
+test/integration/webrat-*
+tmp
+nbproject
+Gemfile.lock
+public/assets/*

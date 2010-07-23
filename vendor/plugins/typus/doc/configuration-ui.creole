@@ -1,0 +1,54 @@
+= User Interface Customization
+
+You can customize the admin panel interface overwriting the default templates 
+included with the plugin.
+
+== Views
+
+Add your own views to match your application requirements.
+
+{{{
+views/admin/<RESOURCE>|resources/index.html.erb
+views/admin/<RESOURCE>|resources/edit.html.erb
+views/admin/<RESOURCE>|resources/show.html.erb
+}}}
+
+Need a custom view on the Articles listing? Drop the file {{{index.html.erb}}} 
+on {{{app/views/admin/articles}}} and the default {{{index.html.erb}}} will be 
+replaced for the articles resource.
+
+Want to overwrite the show view for all resources of your application? Drop the 
+file {{{index.html.erb}}} on {{{app/views/admin/resources}}} and the default 
+{{{index.html.erb}}} template will be replaced for all resources.
+
+== Partials
+
+You can overwrite partials for all resources or by individual ones:
+
+{{{
+views/admin/<RESOURCE>|resources/_index.html.erb
+views/admin/<RESOURCE>|resources/_new.html.erb
+views/admin/<RESOURCE>|resources/_edit.html.erb
+views/admin/<RESOURCE>|resources/_show.html.erb
+}}}
+
+You can also overwrite the sidebar of the dashboard:
+
+{{{
+views/admin/dashboard/_sidebar.html.erb
+}}}
+
+== Attribute Templates
+
+It is possible to change the presentation for an attribute within the form. In 
+the example below the {{{published_at}}} attribute is datetime attribute and 
+will use the {{{_datetime.html.erb}}} template located on the templates folder 
+{{{app/views/admin/templates}}}. The resource and the attribute name will be 
+sent as local variables {{{resource}}} and {{{attribute}}}.
+
+{{{
+# app/views/admin/templates/_datetime.html.erb
+<li><label><%= t(attribute.humanize) %></label>
+  <%= calendar_date_select :item, attribute %>
+</li>
+}}}

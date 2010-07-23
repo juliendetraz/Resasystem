@@ -1,0 +1,39 @@
+<h1>New message</h1>
+
+<% form_for(@message) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :message_usergroup_id %><br />
+    <%= f.text_field :message_usergroup_id %>
+  </p>
+  <p>
+    <%= f.label :parent_message %><br />
+    <%= f.text_field :parent_message %>
+  </p>
+  <p>
+    <%= f.label :subject %><br />
+    <%= f.text_field :subject %>
+  </p>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.label :is_sent %><br />
+    <%= f.check_box :is_sent %>
+  </p>
+  <p>
+    <%= f.label :is_new %><br />
+    <%= f.check_box :is_new %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', messages_path %>

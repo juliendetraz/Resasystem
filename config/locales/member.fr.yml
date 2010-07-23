@@ -1,0 +1,182 @@
+fr:
+  member:
+    title: Adhérent
+    user:
+      profile:
+        title: Votre compte
+        your_news: Vos actualités
+        personal_infos: Informations personnelles
+        define_offers: Définissez vos offres
+        validate_reservations: Vos réservations à valider
+        your_emails: Vos emails
+        your_rent: Vos locations
+        welcome_resasystem: Bienvenue sur
+      news_link: Les news
+      your_reservations_link: Vos réservations
+      your_messages_link: Vos messages
+      rooms_link: Vos chambres
+      housing_link: Vos gîtes
+      your_profile_link: Votre profil
+    housing:
+      add:
+        title: Ajouter un gîte, maison ou appartement de vacances
+        step1_gite: "Etape 1/6 : Votre gîte"
+        create_go_step2: Valider et passer à l'étape 2
+        step4_gite: "Etape 4/6 : Votre localisation"
+        create_go_step5: Valider et passer à l'étape 5
+      edit:
+        title: 'Edition du gîte :'
+        submit: Valider les modifications
+      add_house: Ajouter un gîte, maison ou appartement de vacances
+      address: Adresse de votre gîte
+      street: Rue
+      complement: Complément d'adresse
+      zip: Code postal
+      state_province_country: Etat / Province / Région
+      other_address_details: Autres détails
+      city: Ville
+      country: Pays
+      gmap_latitude: Latitude
+      gmap_longitude: Longitude
+      website: Site internet
+      url_alias: Nom du site internet
+      infos_housing: Informations sur le gîte
+      name: Nom du gîte
+      description: Description
+      phone_to_contact: Numéro à contacter
+      email_to_contact: Email à contacter
+      type:
+        housing_type: "Le gîte se situe dans : "
+        house_alone: Une maison individuelle
+        house_tween: Une maison jumelée
+        flat: Un immeuble
+        bungalo: Un bungalo
+        other: Autre
+      add_rooms: Indiquez les pièces disponibles
+      edit_housing_distances: A quelle distance vos chambres d'hôtes sont-elles des lieux suivants
+      near: A proximité
+      the_housing: Le logement
+      housing_assets: Les atouts du logement
+      housing_activities: Les activités à proximité
+      housing_comforts: Les équipements de confort
+      distance_commerce: Distance des commerces (km)
+      distance_train: Distance du train (km)
+      distance_transport: Distance des transport (km)
+      commerce: Commerces
+      train: Gare de trains
+      transport: Bus, Métro
+      housing_distances:
+        less_100m: A moins de 100m
+        less_1km: A moins de 1km
+        less_5km: A moins de 5km
+        less_10km: A moins de 10km
+        less_50km: A moins de 50km
+        less_100km: A moins de 100km
+      add_housing_pois: Ajoutez les points d'intérêt (touristiques, sport, nature, culture, etc.) près de chez vous
+    room:
+      add:
+        title: Ajouter une pièce à votre gîte, maison ou appartement de vacances
+        step2_gite: "Etape 2/6 : Les pièces de votre gîte"
+        create_go_step3: Valider et passer à l'étape 3
+        submit: Ajouter une pièce
+      destroy:
+        submit: Supprimer
+      room_type: "Type de pièce : "
+      add_room: "Ajouter une pièce : "
+      rooms_type:
+        bedroom: Chambre
+        bathroom: Salle de bain
+        kitchen: Cuisine
+        dinningroom: Salle à manger
+        livingroom: Salon
+    kitchen:
+      add:
+        submit: Ajouter la cuisine
+      kitchen_type: "Type de cuisine :"
+      kitchens_type:
+        american: Américaine
+        separated: Séparée
+    bedroom:
+      add:
+        submit: Ajouter la chambre
+      name : Nom
+      has_shared_bathroom: salle de bain partagée
+      has_shared_toilets: toilettes partagés
+      name: "Nom : "
+      bedrooms_type:
+        beds_simple: lit(s) simple(s)
+        beds_simple_quantity: Lit(s) simple(s)
+        beds_double: lits(s) double(s)
+        beds_double_quantity: Lits(s) double(s)
+        beds_bunk: lit(s) superposé(s)
+        beds_bunk_quantity: Lit(s) superposé(s)
+        beds_cott: lit(s) d'appoint
+        beds_cott_quantity: Lit(s) d'appoint
+    bathroom:
+      add:
+        submit: Ajouter la salle de bain
+      has_bath: Baignoire
+      has_toilets: Toilettes
+      has_shower: Douche
+    dinningroom:
+      add:
+        submit: Ajouter la salle à manger
+      sofa_bed_option: "Type de lit d'appoint :"
+      sofa_bed_type:
+        clicclac: Clic-clac
+        bz: BZ
+    livingroom:
+      add:
+        submit: Ajouter le salon
+      livingroom: Salon
+    service:
+      add:
+        title: Ajouter des services à
+        step3_gite: "Etape 3/6 : Vos services"
+        create_go_step4: Valider et passer à l'étape 4
+      services_type:
+        comfort: Confort
+        asset: Atout
+        activity: Activité
+      comfort:
+        title: De quel(s) équiements de confort votre logement dispose ?
+        comfort_type:
+          washing_maching: Lave ligne
+          refrigerator: Réfrigérateur
+          microwave: Micro-ondes
+          television: Télévision
+          dryer: Séche ligne
+          freezer: Congélateur
+          hotplates: Plaques de cuisson
+          iron: Fer à repasser
+          oven: Four
+          dishwasher: Lave vaisselle
+      asset:
+        title: De quel(s) atout(s) votre logement bénéficie-t-il ?
+        asset_type:
+          swimming_pool: Piscine
+      activity:
+        title: De quelle(s) activité(s) de proximité votre logement bénéficie-t-il ?
+        activity_type:
+          swim: Baignade
+    housing_poi:
+      add_housing_poi: "Ajouter un lieu touristique : "
+      name: "Nom : "
+      distance: "Distance : "
+      add:
+        title: Ajouter des points d'intérêt
+        submit: Ajouter
+    picture:
+      add:
+        title: Ajouter des photos
+        step5_gite: "Etape 5/6 : Votre album photo"
+        create_go_step6: Valider et passer à l'étape 6
+      queue: File d'attente
+      pictures_uploaded: photo(s) ajoutée(s)
+    ad:
+      add:
+        title: Terminer et ajouter l'annonce
+        step6_gite: "Etape 6/6 : Terminer"
+        create_and_finalize: Valider et terminer
+      title: Choisissez un titre pour votre annonce
+      description: Déposez un texte de présentation de votre annonce

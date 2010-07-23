@@ -1,0 +1,111 @@
+<div id="content_left_homepage">
+        <%= render :partial => 'client/housings/googlemap', :locals => { :width => 628, :height => 402, :search_type => 'housing' } %>
+	<div id="your_favorits-container">
+		<div id="your_favorits-header">
+			<h2>Vos favoris</h2>
+		</div>
+		<div id="your_favorits-content">
+			The content
+		</div>
+		<div id="your_favorits-footer">&nbsp;</div>
+	</div> <!-- #your_favorits-container -->
+	<div id="our_loves-container">
+		<div id="our_loves-header">
+			<h2>Nos coups de coeurs</h2>
+		</div>
+		<div id="our_loves-content">
+			The content
+		</div>
+		<div id="our_loves-footer">&nbsp;</div>
+	</div> <!-- #our_loves-container -->
+</div> <!-- #content_left -->
+<div id="content_right_homepage">
+	<div id="search_block-container">
+		<div id="search_block_homepage-header">
+			<h2>Rechercher une location</h2>
+		</div>
+		<div id="search_block-content">
+                    <form id="search_rent" action="<%= get_module_path('%_ads') %>" method="get">
+				<p>
+					<label for="city">Ville, département, région de destination :</label><br />
+					<input type="text" id="city" name="location" class="input_text" />
+				</p>
+				<p>
+					<label for="date_start">Date de votre première nuit :</label><br />
+					<input type="text" id="date_start" class="input_text" />
+				</p>
+				<p>
+					<label for="date_end">Date de votre retour :</label><br />
+					<input type="text" id="date_end" class="input_text" />
+				</p>
+				<p>
+					<input type="checkbox" id="more_less_days" />
+					<label for="more_less_days">Réservation à plus ou moins 7 jours</label>
+				</p>
+				<p id="search_block_nb">
+					<span>
+						<label for="nb_adults">Adultes<br />(+19 ans) :</label><br />
+						<select id="nb_adults">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+						</select>
+					</span>
+					<span>
+						<label for="nb_childs">Enfants<br />(0 à 19 ans) :</label><br />
+						<select id="nb_childs">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+						</select>
+					</span>
+					<span>
+						<label for="nb_rooms">Nombre de chambre(s) :</label><br />
+						<select id="nb_rooms">
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+						</select>
+					</span>
+				</p>
+				<p>
+					Type de location :<br />
+					<input type="checkbox" id="bed_n_breakfast" />
+					<label for="bed_n_breakfast">Chambres d'hôte</label>
+					<input type="checkbox" id="shelter" />
+					<label for="shelter">Gîte</label>
+				</p>
+				<p id="p_search_button">
+					<input type="submit" value="Rechercher" name="search_button" />
+				</p>
+			</form>
+		</div>
+	</div> <!-- #search_block-container -->
+	<div id="promotions-container">
+		<div id="promotions-header">
+			<h2>Les promotions</h2>
+		</div>
+		<div id="promotions-content">
+			The content
+		</div>
+		<div id="promotions-footer">&nbsp;</div>
+	</div> <!-- #promotions-container -->
+</div> <!-- #content_right -->

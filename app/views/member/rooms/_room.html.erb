@@ -1,0 +1,5 @@
+<% if @room_type = eval(room.room_type.capitalize).find_by_room_id(room.id) %>
+  <%= render :partial => "member/#{room.room_type}s/#{room.room_type}", :locals => { :room_type => @room_type } %>
+<% else %>
+  <%= render :partial => "form_room_type_#{room.room_type}", :locals => { :room => room } %>
+<% end %>

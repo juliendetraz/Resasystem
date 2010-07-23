@@ -1,0 +1,28 @@
+<h1>Editing bathroom</h1>
+
+<% form_for(@bathroom) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :room_id %><br />
+    <%= f.text_field :room_id %>
+  </p>
+  <p>
+    <%= f.label :has_bath %><br />
+    <%= f.check_box :has_bath %>
+  </p>
+  <p>
+    <%= f.label :has_toilets %><br />
+    <%= f.check_box :has_toilets %>
+  </p>
+  <p>
+    <%= f.label :has_shower %><br />
+    <%= f.check_box :has_shower %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @bathroom %> |
+<%= link_to 'Back', bathrooms_path %>

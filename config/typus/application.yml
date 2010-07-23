@@ -1,0 +1,165 @@
+# Typus Models Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+Ad:
+  fields:
+    default: reference, title, is_validated, housing_id, housing
+    form: reference, title, description, is_validated, housing_id, housing
+  order_by: 
+  relationships: housing
+  filters: 
+  search: title
+  application: Resasystem
+
+Address:
+  fields:
+    default: street, complement, zip, state_province_country, other_address_details, city, country
+    form: street, complement, zip, state_province_country, other_address_details, city, country, gmap_latitude, gmap_longitude
+  order_by: 
+  relationships: housings, cusers, musers
+  filters: 
+  search: 
+  application: Resasystem
+
+Calendar:
+  fields:
+    default: offer_id, start_date, end_date, offer
+    form: offer_id, start_date, end_date, offer
+  order_by: 
+  relationships: offer, reservation
+  filters: 
+  search: 
+  application: Resasystem
+
+Housing:
+  fields:
+    default: phone_contact, email, website, name, url_alias, distance_commerce, distance_train, distance_transport, has_elevator, user, address
+    form: phone_contact, email, website, name, url_alias, distance_commerce, distance_train, distance_transport, has_elevator, floor, capacity, is_visible, state, description, user, address
+  order_by: 
+  relationships: address, ads, housing_pois, offers, pictures, rooms, services, user
+  filters: 
+  search: name
+  application: Resasystem
+
+HousingPoi:
+  fields:
+    default: housing_poi_id, housing_id, name, distance, housing
+    form: housing_poi_id, housing_id, name, distance, housing
+  order_by: 
+  relationships: housing
+  filters: 
+  search: name
+  application: Resasystem
+
+Message:
+  fields:
+    default: user_id, message_usergroup_id, parent_message, subject, is_sent, is_new, users, messages, message_usergroup
+    form: user_id, message_usergroup_id, parent_message, subject, body, is_sent, is_new, users, messages, message_usergroup
+  order_by: 
+  relationships: message, message_usergroup, messages, users
+  filters: 
+  search: 
+  application: Resasystem
+
+MessageUsergroup:
+  fields:
+    default: group
+    form: group
+  order_by: 
+  relationships: messages
+  filters: 
+  search: 
+  application: Resasystem
+
+News:
+  fields:
+    default: language, title
+    form: language, title, body
+  order_by: 
+  relationships: 
+  filters: 
+  search: title
+  application: Resasystem
+
+Offer:
+  fields:
+    default: offers_id, housing_id, housing
+    form: offers_id, housing_id, housing
+  order_by: 
+  relationships: calendar, housing, offer_price, rooms
+  filters: 
+  search: 
+  application: Resasystem
+
+OfferPrice:
+  fields:
+    default: offer_id, price, season, offer
+    form: offer_id, price, season, offer
+  order_by: 
+  relationships: offer
+  filters: 
+  search: 
+  application: Resasystem
+
+Organization:
+  fields:
+    default: name
+    form: name
+  order_by: 
+  relationships: 
+  filters: 
+  search: name
+  application: Resasystem
+
+Picture:
+  fields:
+    default: order, is_default, is_visible, is_validated, date_validated, picture
+    form: order, is_default, is_visible, is_validated, date_validated, picture
+  order_by: 
+  relationships: housings, rooms
+  filters: 
+  search: 
+  application: Resasystem
+
+Reservation:
+  fields:
+    default: customer_id, calendar_id, reservation_status, reservation_date, calendar
+    form: customer_id, calendar_id, reservation_status, reservation_date, calendar
+  order_by: 
+  relationships: calendar
+  filters: 
+  search: 
+  application: Resasystem
+
+Room:
+  fields:
+    default: surface_area, housing_id, housing
+    form: surface_area, housing_id, housing
+  order_by: 
+  relationships: bathrooms, bedrooms, dinningrooms, housing, kitchens, livingrooms
+  filters: 
+  search: 
+  application: Resasystem
+
+Service:
+  fields:
+    default: name, slug
+    form: name, slug
+  order_by: 
+  relationships: housings
+  filters: 
+  search: name, slug
+  application: Resasystem
+
+User:
+  fields:
+    default: email, confirmation_token, confirmed_at, confirmation_sent_at, remember_token, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip, gender, first_name, last_name, phone_contact, phone_fax, phone_mobile, phone_pro, phone_home, role, is_active, language, has_subscribed, firstday_week, address_id
+    form: email, confirmation_token, confirmed_at, confirmation_sent_at, reset_password_token, remember_token, sign_in_count, current_sign_in_at, last_sign_in_at, current_sign_in_ip, last_sign_in_ip, password, gender, first_name, last_name, phone_contact, phone_fax, phone_mobile, phone_pro, phone_home, role, is_active, language, has_subscribed, firstday_week, address_id
+  order_by: 
+  relationships: address, housings, messages
+  filters: 
+  search: 
+  application: Resasystem
+
+TypusUser: all

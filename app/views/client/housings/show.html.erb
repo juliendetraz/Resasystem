@@ -1,0 +1,59 @@
+<% title @housing.name %>
+<h1 id="page_title"><%= @housing.name %></h1>
+
+<div id="content_member_left">
+  <div id="housing_show_addr">
+    <%= "<span>#{t('member.housing.city')+t('2p')}</span> #{@housing.address.city}<br />".html_safe if @housing.address.city %>
+    <%= "<span>#{t('member.housing.country')+t('2p')}</span> #{@housing.address.country}<br />".html_safe if @housing.address.country %>
+    <%= "<span>#{t('member.housing.state_province_country')+t('2p')}</span> #{@housing.address.state_province_country}<br />".html_safe if @housing.address.state_province_country %>
+    <%= "<span>#{t('member.housing.website')+t('2p')}</span> #{link_to @housing.website, @housing.website, :target => '_blank'}".html_safe if @housing.email %>
+  </div>
+
+  <%= render :partial => 'slideshow' %>
+
+  <h2><%= t('member.housing.description') %></h2>
+  <h3><%= t('member.housing.the_housing')+t('2p') %></h3>
+  <p><%= @housing.description %></p>
+
+  <%= render :partial => 'list_services', :locals => { :service_type => 'asset' } %>
+  <%= render :partial => 'list_services', :locals => { :service_type => 'activity' } %>
+  <%= render :partial => 'list_services', :locals => { :service_type => 'comfort' } %>
+</div>
+
+<div id="content_member_right">
+  <div id="button-add_to_favorites"><%= t('add_to_favorites') %></div>
+  <div id="button-print_it"><%= t('print_it') %></div>
+
+  <div id="map_block-container">
+    <div id="map_block-header"><%= t('map') %></div>
+    <%= render :partial => 'client/housings/googlemap', :locals => { :width => 298, :height => 282 } %>
+  </div>
+  
+  <div id="housing_show_pois">
+    <h3><%= t('member.housing.near')+t('2p') %></h3>
+    <%= "<span>#{t('member.housing.commerce')+t('2p')}</span>#{t("member.housing.housing_distances.#{@housing.distance_commerce}")}<br />".html_safe if @housing.distance_commerce %>
+    <%= "<span>#{t('member.housing.transport')+t('2p')}</span>#{t("member.housing.housing_distances.#{@housing.distance_transport}")}<br />".html_safe if @housing.distance_transport %>
+    <%= "<span>#{t('member.housing.train')+t('2p')}</span>#{t("member.housing.housing_distances.#{@housing.distance_train}")}".html_safe if @housing.distance_train %>
+    <% if @housing.housing_pois.count > 0 %>
+      <ul class="puce-green-plus">
+        <% @housing.housing_pois.each do |housing_poi| %>
+        <li><%= "<strong>#{housing_poi.name}</strong>#{t('2p')}#{housing_poi.distance.to_s}".html_safe %>km</li>
+        <% end  %>
+      </ul>
+    <% end  %>
+  </div>
+</div>
+
+
+<% content_for :additional_css do %>
+  <%= stylesheet_link_tag 'galleriffic' %>
+<% end %>
+
+
+<% content_for :additional_js_bottom do %>
+  <%= javascript_include_tag 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js' %>
+  <%= javascript_tag do %>
+     jQuery.noConflict();
+  <% end %>
+  <%= javascript_include_tag 'jquery.galleriffic', 'jquery.history', 'jquery.opacityrollover', 'jquery.slideshow_housing' %>
+<% end %>

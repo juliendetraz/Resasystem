@@ -1,0 +1,87 @@
+= Typus: Admin Panel for Ruby on Rails Applications
+
+A few years ago I developed websites using [[http://movabletype.org/|Movable Type]], 
+[[http://drupal.com/|Drupal]], [[http://textpattern.com/|TextPattern]] and 
+[[http://b2evolution.net/|b2]], which later become [[http://wordpress.org/|Wordpress]]. 
+I decided to stop using all those content management systems and 
+started to develop web applications with [[http://rubyonrails.org/|Ruby on Rails]].
+
+Inspired by the tools I used, and with a simple idea "Trusted users editing 
+structured content", I started to develop a [[http://rubyonrails.org/|Rails]] 
+application to manage the sites I was building. This was the first attempt to 
+make a simple but powerful content management system. I adapted that application 
+to many projects, but I decided to extract the core functionality as a plugin 
+which is now known a **Typus**.
+
+{{http://media.intraducibles.com/assets/typus-screenshots-step2.png|Typus: Dashboard}}
+
+On December 2007, **Typus** was released under a [[mit-license.creole|MIT License]].
+
+== Key Features
+
+* CRUD and custom actions for your models on a clean interface.
+* Access control by users and roles.
+* Internationalized interface.
+* Extensible and overwritable templates.
+* Low memory footprint.
+* Easily manage your data, search, sort and filter.
+* Ruby 1.9 compatible.
+* Supports ActiveRecord.
+* Supports //Rails 3.0.0.beta3//.
+* Tested with //SQLite//, //MySQL// and //PostgreSQL//.
+* [[mit-license.creole|MIT License]], the same as Rails.
+
+IMPORTANT: Master branch is only compatible with //Rails 3.0.0.beta3//.
+
+== Demo Application
+
+A demo is running at [[http://typus.heroku.com/|Heroku]]. Use the following 
+credentials to log in.
+
+{{{
+Email: user@intraducibles.com
+Password: columbia
+}}}
+
+You can replicate the demo application hosted at http://www.heroku.com/ using 
+the {{{demo}}} template:
+
+{{{
+$ rails typus.demo -m http://typus.intraducibles.com/demo.rb
+}}}
+
+Start the application and log in into the admin panel.
+
+{{{
+$ cd typus.demo
+$ rails server
+}}}
+
+Go to http://0.0.0.0:3000/admin.
+
+== Installing and configuring
+
+* [[installation.creole|Installation]]
+* [[configuration.creole|Configuration]]
+* [[configuration-resources.creole|Configuration Resources]]
+* [[configuration-resource.creole|Configuration Resource]]
+* [[configuration-roles.creole|Configuration Roles]]
+* [[configuration-ui.creole|Configuration UI]]
+
+== Recipes
+
+Here's a list of recipes suggested by some of developers.
+
+* [[recipes-rich-text-editor.creole|Rich Text Editor]]
+* [[recipes-custom-actions.creole|Custom Actions]]
+* [[recipes-sti.creole|Single Table Inheritance]]
+* [[recipes-namespaced-models.creole|Namespaced Models]]
+* [[recipes-configuration-files.creole|Configuration files]]
+* [[recipes-testing-the-plugin.creole|Testing the plugin]]
+
+== Misc
+
+* [[contribute.creole|Contribute]]
+* [[services.creole|Services]]
+* [[known-issues.creole|Know Issues]]
+* [[mit-license.creole|MIT License]]

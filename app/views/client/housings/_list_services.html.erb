@@ -1,0 +1,10 @@
+<% services = @housing.services.where(:service_type => service_type) %>
+<% if services.count > 0 %>
+  <h3><%= t("member.housing.housing_#{service_type.pluralize}")+t('2p') %></h3>
+  <ul class="puce-green-plus list-3-columns">
+    <% services.each do |service| %>
+      <li><%= service.name %></li>
+    <% end %>
+  </ul>
+  <br style="clear: left;" />
+<% end %>

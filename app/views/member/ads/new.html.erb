@@ -1,0 +1,12 @@
+<% title t('member.ad.add.title') %>
+<h1 id="page_title"><%= t('member.ad.add.title') %></h1>
+
+<div id="content_member_left">
+  <h2><%= t('member.ad.add.step6_gite') %></h2>
+
+  <%= render :partial => "form" %>
+</div>
+
+<div id="content_member_right">
+  <%= render :partial => "#{get_module_name}/users/right_column" %>
+</div>

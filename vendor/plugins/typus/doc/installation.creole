@@ -1,0 +1,65 @@
+= Installation
+
+== Plugin Install
+
+To install Typus as a plugin:
+
+{{{
+$ rails plugin install git://github.com/fesplugas/typus.git
+}}}
+
+NOTE: To re-install the plugin use the {{{--force}}} option.
+
+== Gem Install
+
+To install **Typus** as a {{{gem}}}, edit the application {{{Gemfile}}} and add 
+the following line.
+
+{{{
+gem "typus"
+}}}
+
+Install the gem using the bundler:
+
+{{{
+$ bundle install
+}}}
+
+== Running the Generator
+
+Once the plugin or gem is installed you need to run a generator to copy 
+**Typus** stylesheets, images and other required files to your application.
+
+{{{
+$ rails generate typus
+}}}
+
+By default **Typus** will use an http authentication but if you want to use a 
+better authentication system you need to run a second generator.
+
+{{{
+$ rails generate typus:migration
+$ rake db:migrate
+}}}
+
+This generator will create a new model, {{{AdminUser}}}, in your application, 
+some settings which will be stored under {{{config/typus}}} folder and will also 
+create a migration. You can see some options of this generator running the 
+following command.
+
+{{{
+$ rails generate typus:migration -h
+}}}
+
+== Login into Typus
+
+Start the application server, go to http://0.0.0.0:3000/admin and follow the 
+instructions.
+
+== Rake Tasks
+
+To see a list of Typus related tasks run ...
+
+{{{
+$ rake -T typus
+}}}

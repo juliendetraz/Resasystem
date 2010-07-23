@@ -1,0 +1,27 @@
+# Typus Roles Configuration File
+#
+# Use the README file as a reference to customize settings.
+
+admin:
+  Ad: create, read, update, delete
+  Address: create, read, update, delete
+  Bathroom: create, read, update, delete
+  Bedroom: create, read, update, delete
+  Calendar: create, read, update, delete
+  Dinningroom: create, read, update, delete
+  Housing: create, read, update, delete
+  HousingPoi: create, read, update, delete
+  Kitchen: create, read, update, delete
+  Livingroom: create, read, update, delete
+  Message: create, read, update, delete
+  MessageUsergroup: create, read, update, delete
+  Muser: create, read, update, delete
+  News: create, read, update, delete
+  Offer: create, read, update, delete
+  OfferPrice: create, read, update, delete
+  Organization: create, read, update, delete
+  Picture: create, read, update, delete
+  Reservation: create, read, update, delete
+  Room: create, read, update, delete
+  Service: create, read, update, delete
+  User: create, read, update, delete

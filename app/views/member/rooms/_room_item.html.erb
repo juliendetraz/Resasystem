@@ -1,0 +1,17 @@
+<% @room = Room.find(params[:room_id]) if params[:room_id] %>
+<div class="line_room" id="line_room_<%= @room.id %>">
+  <div class="col_room_type">
+    <strong><%= t("member.room.rooms_type.#{@room.room_type}") %></strong>
+  </div>
+  <div class="col_room_submit">
+    <%= link_to	image_tag('icons/delete.png', :alt => 'delete'),
+                :remote => true,
+                :update => "rooms_list",
+                :url => member_room_path(I18n.locale, @room.id),
+                :method => :delete,
+                :confirm => t('are_you_sure') %>
+  </div>
+  <div class="col_room_offers">
+    <%= render :partial => @room.room_type, :locals => { :room_type => item } %>
+  </div>
+</div>
